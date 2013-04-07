@@ -4,12 +4,12 @@ layout: nil
 Options -Indexes
 IndexIgnore *
 
-ErrorDocument 404 {{ site.baseurl }}/404/
-ErrorDocument 500 {{ site.baseurl }}/500/
+ErrorDocument 404 {{ site.baseurl }}404/
+ErrorDocument 500 {{ site.baseurl }}500/
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase {{ site.baseurl }}/
+RewriteBase {{ site.baseurl }}
 
 # remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

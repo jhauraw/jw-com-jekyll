@@ -21,7 +21,7 @@ layout: nil
   <image>
     <title>{{ site.constants.name }}</title>
     <description>{{ site.constants.tagline }}</description>
-    <url>{{ site.url }}{{ site.baseurl }}/img/rss-logo.png</url>
+    <url>{{ site.url }}{{ site.baseurl }}{{ site.baseimg }}rss-logo.png</url>
     <link>{{ site.url }}{{ site.baseurl }}/feed/</link>
     <width>144</width>
     <height>72</height>
@@ -30,7 +30,8 @@ layout: nil
   {% for post in site.posts %}
     <entry>
       <author>
-        <name>{{ post.author }}</name>
+        <name>{% if post.author.name %}{{ post.author.name }}{% else %}{{ site.constants.author.name }}{% endif %}</name>
+        <url>http://{% if post.author.domain %}{{ post.author.domain }}{% else %}{{ site.constants.author.domain }}{% endif %}/</uri>
       </author>
       <title>{{ post.title }}</title>
       <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>

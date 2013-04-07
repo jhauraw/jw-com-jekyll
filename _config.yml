@@ -60,22 +60,58 @@ server: false
 #
 # For production, set to the HTTP server domain.
 # Be sure to use http://
+#
+# NO Trailing-Slash
 url: http://localhost:4000
 
-# To run the ENTIRE site from a sub-dir, e.g., /site
-# Yes leading-slash. No trailing-slash
-baseurl:
+# To run the ENTIRE site from a sub-dir, e.g., /sub
+# YES Front-Slash. NO Trailing-Slash
+#
+# This theme uses ABSOLUTE URLs in places like the XML Feed and
+# OG tags, so we need to set it to '' (empty) explicitly so
+# that the Jekyll default of '/' doesn't mess up our URLs with
+# // (double-slashes).
+#
+# YES Front-Slash. NO Trailing-Slash
+baseurl: ''
+
+# Not a part of Jekyll, but adding it here for grouping with
+# other base* and url* configs.
+#
+# Abstracts hardcoded image directory names out of the templates.
+#
+# In your YAML Front Matter reference images by a relative URL,
+# such as:
+# image.jpg
+# YEAR/image.jpg
+# CATEGORY/image.jpg
+#
+# In your Templates prepend any {{ page.img.url }} tags with:
+#
+# If you prefer ROOT RELATIVE URLS:
+# {{ site.baseurl }}{{ site.baseimg }}
+#
+# If you prefer ABSOLUTE URLS:
+# {{ site.url }}{{ site.baseurl }}{{ site.baseimg }}
+#
+# Now your templates, posts and pages will be fully abstracted
+# in terms of URL/Directory structure. *Smile* :-)
+#
+# YES Front-Slash. YES Trailing-Slash
+baseimg: /img/
 
 # You can use a directory name here to have just the _posts
-# served from an sub-directory, e.g., /blog
+# served from an sub-directory, e.g., /blog/
 #
 # In that case, your permalink value might be: /blog/:title/
 #
 # NOTE: This is different from the baseurl variable above;
 # as it only affects the _posts directory, a.k.a., Blog.
+#
+# YES Front-Slash. YES Trailing-Slash
 permalink: /blog/:title/
 
-# lsi: true
+#lsi: true
 markdown: redcarpet
 pygments: true
 paginate: 10

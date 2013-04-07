@@ -8,9 +8,9 @@
             <li class="toggle-menu menu-icon"><a href="#"></a></li>
 
             <li class="logo">
-              <a class="brand" href="{% if site.baseurl %}{{ site.baseurl }}{% else %}/{% endif %}">
+              <a class="brand" href="{{ site.baseurl }}/">
                 <span>{{ site.constants.name }}</span>
-                <img src="{{ site.baseurl }}/img/brand.png" alt="{{ site.constants.name }}" />
+                <img src="{{ site.baseurl }}{{ site.baseimg }}brand.png" alt="{{ site.constants.name }}" />
               </a>
             </li>
           </ul>
@@ -23,8 +23,8 @@
                 <div class="submenu-content">
                   <div class="page-container">
                     <ul class="left">
-                    <li><a href="{{ site.baseurl }}/blog/">Item 1 Sub Item 1</a></li>
-                    <li>Item 1 Sub Item 2</li>
+                    <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
+                    <li><a href="{{ site.baseurl }}/resume/">Resume</a></li>
                     <li>Item 1 Sub Item 3</li>
                     </ul>
 
@@ -59,7 +59,7 @@
             </ul>
 
             <ul class="right usermenu">
-              <li><a href="/search/">S</a></li>
+              <li><a href="{{ site.baseurl }}/search/">S</a></li>
               <li><a href="#">F</a></li>
               <li><a href="#">T</a></li>
             </ul>

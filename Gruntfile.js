@@ -126,21 +126,15 @@ module.exports = function(grunt) {
     },
     shell: {
       jekyll_build: {
-        command: 'jekyll',
+        command: 'jekyll build --trace',
         options: {
           stdout: true
         }
       },
-      jekyll_server: {
-        command: 'jekyll --server',
+      jekyll_serve: {
+        command: 'jekyll serve --trace',
         options: {
           stdout: true
-        }
-      },
-      jekyll_stop: {
-        command: '',
-        options: {
-          stdout: false
         }
       }
     },
@@ -148,7 +142,7 @@ module.exports = function(grunt) {
     watch: {
       js: {
         files: '_assets/js/**/*.js',
-        tasks: ['jshint', 'concat', 'copy', 'clean', 'shell:jekyll_server'],
+        tasks: ['jshint', 'concat', 'copy', 'clean', 'shell:jekyll_serve'],
         options: {
           nospawn: true,
           interrupt: true
@@ -156,7 +150,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: '_assets/sass/**/*.scss',
-        tasks: ['compass', 'clean', 'shell:jekyll_server'],
+        tasks: ['compass', 'clean', 'shell:jekyll_serve'],
         options: {
           nospawn: true,
           interrupt: true
@@ -164,7 +158,7 @@ module.exports = function(grunt) {
       },
       ext: {
         files: ['!_site/**/*', '!_assets/**/*', '!node_modules/**/*', '!bower_components/**/*', '**/*.md', '**/*.html', '**/*.yml', '**/*.txt', '**/*.xml'],
-        tasks: ['shell:jekyll_server'],
+        tasks: ['shell:jekyll_serve'],
         options: {
           nospawn: true,
           interrupt: true
@@ -187,7 +181,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['shell:jekyll_server', 'watch']); // 'livereload-start'
+  grunt.registerTask('default', ['shell:jekyll_serve', 'watch']); // 'livereload-start'
 
   // DEV Mode: Run this first one time to build out the _assets into /css and /js
   grunt.registerTask('build-dev', ['compass', 'jshint', 'concat', 'copy', 'clean', 'shell:jekyll_build']);

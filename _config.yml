@@ -80,5 +80,5 @@ markdown: redcarpet
 pygments: true
 paginate: 10
 
-include: ['.htaccess', '_pages']
+include: ['.htaccess']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules', 'bower_components']

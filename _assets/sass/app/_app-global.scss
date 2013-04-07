@@ -328,6 +328,9 @@ html #peek, body #peek {
   > article {
     //font-size: 15px;
     //line-height: 1.5;
+    ul, ol, dl {
+      margin-left: 2em;
+    }
     p {
       //font-size: 15px;
       //line-height: 1.5;

@@ -2,6 +2,9 @@
 author:
   name:
   domain:
+published: false
+layout: (post|page|home)
+title:
 excerpt: |
   Your_Excerpt_Here
 image:
@@ -9,9 +12,7 @@ image:
   title:
   alt:
   attribution:
-layout: post
-published: false
 tags:
--
-title:
+- tag1
+- tag2
 ---

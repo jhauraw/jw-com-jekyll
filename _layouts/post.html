@@ -18,7 +18,7 @@ type: post
         </figure>
 
         <div class="row">
-          <div class="large-9 columns large-centered">
+          <div class="large-8 large-centered columns">
             <p class="article-info">
 
               Posted <time class="published updated tdn" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: '%B %d %Y' }}</time> by <a rel="author" href="http://{% if page.author.domain %}{{ page.author.domain }}{% else %}{{ site.constants.author.domain }}{% endif %}" class="url fn tdn" target="_blank"><span class="author">{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.constants.author.name }}{% endif %}</span></a> <span class="amp">&amp;</span> filed under {{ page.categories }}.
@@ -32,8 +32,9 @@ type: post
       </header><!-- .article-header -->
 
       <div class="row">
-        <div class="large-9 columns large-centered">
+        <div class="large-8 large-centered columns">
           <section class="article-content" itemprop="articleBody">
+
           {{ content }}
 
           </section><!-- .article-content -->

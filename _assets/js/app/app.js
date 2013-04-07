@@ -1,3 +1,23 @@
+function getParameterByName(name) {
+
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+;(function($){
+
+    var q = getParameterByName('q');
+
+    if (q !== undefined)
+      $('#q').val(q);
+
+})(window.Zepto || window.jQuery);
+
 ;(function($){
   'use strict';
 

@@ -1,0 +1,23 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// Compass settings and mixins
+@import "compass/support";
+@import "compass/css3/transition";
+@import "compass/css3/transform";
+@import "compass/css3/box-shadow";
+
+// Compass Overrides
+$experimental-support-for-microsoft: false;
+$experimental-support-for-opera: false;
+
+// Required global settings and mixins for Foundation
+@import "foundation/foundation-global";
+
+// Foundation Overrides
+$row-width: 90.000em; // 90em = 1440px
+
+$paragraph-font-size: .95em;
+$paragraph-line-height: 1.5;
+
+//$list-style-position: inside;

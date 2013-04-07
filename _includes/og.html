@@ -1,0 +1,10 @@
+<meta name="robots" content="noodp,noydir" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.constants.name }} - {{ site.constants.tagline }}{% endif %}" />
+  <meta property="og:site_name" content="{{ site.constants.name }}" />
+  <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{% if page.url %}{{ page.url | remove: 'index.html' }}{% endif %}" />
+  <link rel="image_src" href="{{ site.url }}{{ site.baseurl }}{% if page.img.url %}{{ page.img.url }}{% else %}/img/meta.png{% endif %}" />
+  <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}{% if page.img.url %}{{ page.img.url }}{% else %}/img/meta.png{% endif %}" />
+  <meta property="og:type" content="{% if page.type == 'post' or page.type == 'page' %}article{% else %}website{% endif %}" />
+  <meta property="og:locale" content="{{ site.constants.locale }}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.constants.description | strip_html | strip_newlines }}{% endif %}" />
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines }}{% else %}{{ site.constants.description | strip_html | strip_newlines }}{% endif %}" />

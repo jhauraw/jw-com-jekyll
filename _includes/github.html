@@ -1,0 +1,28 @@
+{% if page.github %}
+  <div id="github">
+    <div id="github-header">
+      <a href="//github.com/{{ page.github }}"
+       title="Follow {{ page.github }} on Github" id="followGithub" class="noBg">
+       <img src="//github.com/favicon.ico" />Follow me on Github
+      </a>
+
+      <h3>Open Source Contributions</h3>
+    </div>
+
+    <ul id="gh_repos">
+      <div class="loading">Retrieving open source projects...</div>
+    </ul>
+
+    <script src="{{ site.baseurl }}/js/app.js"></script>
+    <script>
+      $(function() {
+        github.showRepos({
+          user: '{{ page.github }}',
+          count: 0,
+          skip_forks: false,
+          target: '#gh_repos'
+        });
+      });
+    </script>
+  </div>
+{% endif %}

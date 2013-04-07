@@ -1,0 +1,34 @@
+/* TEAM */
+
+Project Lead: Jhaura Wachsman
+Site: http://JhauraWachsman.com
+Twitter: @JhauraWachsman
+Location: Ojai, CA USA
+
+/* THANKS */
+
+GitHub
+Jekyll
+Zurb Foundation
+
+/* PROJECT */
+
+Standards: HTML5, CSS3, JS, Responsive, Mobile-First
+Components:
+  * Grunt
+  * Jekyll
+  * Zurb Foundation
+  * SaSS
+  * CoffeeScript
+  * Compass
+  * Zepto
+  * jQuery
+  * Modernizr
+  * Twitter Bower
+  * Node.js
+  * NPM
+  * PhantomJS
+
+Software: Sublime Text, iTerm, Grunt.js, MAC OS X
+
+Source: https://github.com/jhauraw/jhaurawachsman.com

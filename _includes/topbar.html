@@ -1,0 +1,71 @@
+  <div id="sticky">
+      <div class="navwrap">
+
+        <nav id="navbar">
+
+          <!-- Title / Menu Section -->
+          <ul class="title-area">
+            <li class="toggle-menu menu-icon"><a href="#"></a></li>
+
+            <li class="logo">
+              <a class="brand" href="{% if site.baseurl %}{{ site.baseurl }}{% else %}/{% endif %}">
+                <span>{{ site.constants.name }}</span>
+                <img src="{{ site.baseurl }}/img/brand.png" alt="{{ site.constants.name }}" />
+              </a>
+            </li>
+          </ul>
+
+          <section class="navsection">
+            <ul class="left navmenu">
+              <li class="submenu">
+                <a href="#">Item 1</a>
+
+                <div class="submenu-content">
+                  <div class="page-container">
+                    <ul class="left">
+                    <li><a href="{{ site.baseurl }}/blog/">Item 1 Sub Item 1</a></li>
+                    <li>Item 1 Sub Item 2</li>
+                    <li>Item 1 Sub Item 3</li>
+                    </ul>
+
+                    <ul class="right">
+                    <li>Item 1 Sub Item 4</li>
+                    <li>Item 1 Sub Item 5</li>
+                    <li>Item 1 Sub Item 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+
+              <li class="submenu">
+                <a href="#">Item 2</a>
+
+                <div class="submenu-content">
+                  <div class="page-container">
+                    <ul class="left">
+                      <li>Item 2 Sub Item 1</li>
+                      <li>Item 2 Sub Item 2</li>
+                      <li>Item 2 Sub Item 3</li>
+                    </ul>
+
+                    <ul class="right">
+                      <li>Item 2 Sub Item 4</li>
+                      <li>Item 2 Sub Item 5</li>
+                      <li>Item 2 Sub Item 6</li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul class="right usermenu">
+              <li><a href="/search/">S</a></li>
+              <li><a href="#">F</a></li>
+              <li><a href="#">T</a></li>
+            </ul>
+          </section><!-- .navsection -->
+
+        </nav><!-- #navbar -->
+
+      </div> <!-- .navwrap -->
+    </div><!-- #sticky -->

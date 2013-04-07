@@ -1,0 +1,16 @@
+tmp
+node_modules
+components
+bower_components
+*.sass-cache
+
+# OS, Editors
+*.DS_Store
+Thumbs.db
+Icon?
+.cache
+*.sublime-*
+
+# Jekyll Static
+_site
+_drafts

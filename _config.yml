@@ -1,0 +1,84 @@
+# Site CONSTANTS ===================================================== #
+
+constants:
+
+  # Locale and encoding
+  lang: en-US
+  locale: en_US
+  encoding: utf-8
+
+  # Name (Brand), Tagline and Meta Image (Og)
+  name: Jhaura Wachsman
+  tagline: Web Developer
+  description: |
+    Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
+
+  # Contact and Domain
+  email: jw@jhaurawachsman.com
+  domain: jhaurawachsman.com
+
+  # Social Media User Names (Not full URL)
+  github: jhauraw
+  twitter: JhauraWachsman
+  facebook: JhauraWachsman
+  gplus: 103492502746159725544
+  pinterest: jhaurawachsman
+  linkedin: jhaurawachsman
+
+  # Feedburner Feed Name
+  feed-name: jhaurawachsman
+
+  # Meta Admin / Verify IDs
+  facebook-admin: 1550453047
+  facebook-appid: 251689391563684
+  gplus-publisher: 103492502746159725544
+  disqus-user:
+
+  # Analytics / Metrics
+  google-analytics-id: UA-17276272-1
+
+  # Default author for Posts
+  author:
+    name: Jhaura Wachsman
+    domain: jhaurawachsman.com
+
+# Jekyll Config ====================================================== #
+
+auto: false
+server: false
+
+# To run the site from a sub-dir, e.g., /site
+# Yes leading-slash. No trailing-slash
+baseurl:
+
+# Used any place a where an absolute URL is required.
+#
+# REQUIRED if you want OG:TYPE meta tags to work and for the
+# XML feed.
+#
+# If using jekyll --server locally, use: http://localhost:PORT
+# Default PORT is usually 4000
+#
+# If using MAMP/XAMP locally, use your local host name such as
+# sitename.localhost
+#
+# For production, set to the HTTP server domain.
+# Be sure to use http://
+url: http://localhost:4000
+
+# You can use a directory name here to have just the _posts
+# served from an sub-directory, e.g., /blog
+#
+# In that case, your permalink value might be: /blog/:title/
+#
+# NOTE: This is different from the baseurl variable above;
+# as it only affects the _posts directory, a.k.a., Blog.
+permalink: /blog/:title/
+
+# lsi: true
+markdown: redcarpet
+pygments: true
+paginate: 10
+
+include: ['.htaccess', '_pages']
+exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules', 'bower_components']

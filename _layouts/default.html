@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="{{ site.constants.lang }}"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="{{ site.constants.lang }}"><!--<![endif]-->
+<head>
+  <meta charset="{{ site.constants.encoding }}" />
+  <meta name="viewport" content="width=device-width">
+
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.constants.name }}{% if page.type == 'home' %} - {{ site.constants.tagline }}{% endif %}</title>
+
+  <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.constants.name }}" href="//feeds.feedburner.com/{{ site.constants.feed-name }}" />
+
+  <meta property="fb:app_id" content="{{ site.constants.facebook-appid }}" />
+  <meta property="fb:admins" content="{{ site.constants.facebook-admin }}" />
+  <link rel="publisher" href="https://plus.google.com/{{ site.constants.gplus-publisher }}" />
+
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/img/apple-touch-icon-114.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/img/apple-touch-icon-72.png">
+  <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/img/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/vendor.css" />
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css" />
+
+  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+
+  {% include og.html %}
+
+</head>
+<body>
+
+  {% include panelnav.html %}
+
+  <div id="peek">
+
+    {% include topbar.html %}
+
+    <div id="scrollable">
+      <div id="container" class="row">
+        <div id="main">
+          {{ content }}
+        </div><!-- #main -->
+      </div><!-- #container.row -->
+
+      <footer id="footer-wrapper" role="contentinfo">
+        {% include footer.html %}
+      </footer><!-- footer -->
+
+    </div><!-- #scrollable -->
+  </div><!-- #peek -->
+
+  <div id="fb-root"></div>
+  {% include analytics.html %}
+
+  <script>document.write('<script src={{ site.baseurl }}/js/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>')</script>
+
+  <script src="{{ site.baseurl }}/js/vendor.js"></script>
+  <script src="{{ site.baseurl }}/js/app.js"></script>
+</body>
+</html>

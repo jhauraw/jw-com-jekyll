@@ -1,0 +1,61 @@
+---
+layout: default
+type: post
+---
+
+<div class="flex-row">
+  <div id="primary" class="large-9 columns flex-col" role="content">
+
+    <article class="{{ page.type }}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+      <header class="article-header">
+        <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
+
+        <figure class="article-image">
+          <a name="lead-image"></a>
+          {% if page.img %}
+            <img src="" alt="{{ page.title | escape }}" />
+          {% endif %}
+        </figure>
+
+        <div class="row">
+          <div class="large-9 columns large-centered">
+            <p class="article-info">
+
+              Posted <time class="published updated tdn" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: '%B %d %Y' }}</time> by <a rel="author" href="http://{% if page.author.domain %}{{ page.author.domain }}{% else %}{{ site.constants.author.domain }}{% endif %}" class="url fn tdn" target="_blank"><span class="author">{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.constants.author.name }}{% endif %}</span></a> <span class="amp">&amp;</span> filed under {{ page.categories }}.
+
+              <!--
+              This post was posted by {% include post/author.html %} on {% include post/date.html %}{{ time }} in {% include post/categories.html %}{% if site.disqus_short_name and post.comments != false and site.disqus_show_comment_count == true and post.url %} with  <a href="{{ root_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="http://nimbupani.com{{ post.url }}">Comments</a>{% endif %}. {% if article_date %} If you would like to update this post, <a href="{{site.githuburl}}/{{article_date | date: '%Y-%m-%d'}}-{{article_url | remove_first: '/', | replace_first: '.html','.md' }}">please send a pull request</a>.{% endif %}
+              -->
+            </p>
+          </div><!-- .columns.offset -->
+        </div><!-- .row -->
+      </header><!-- .article-header -->
+
+      <div class="row">
+        <div class="large-9 columns large-centered">
+          <section class="article-content" itemprop="articleBody">
+          {{ content }}
+
+          </section><!-- .article-content -->
+
+          <footer class="article-footer">
+            <p>Tags: {{ page.tags }}</p>
+
+          </footer><!-- .article-footer -->
+        </div><!-- .columns -->
+      </div><!-- .row -->
+    </article><!-- article -->
+
+    <div class="row">
+      <div class="small-12 columns">
+        {% include related.html %}
+        {% include comments.html %}
+
+      </div><!-- .columns.offset -->
+    </div><!-- .row -->
+
+  </div><!-- #primary.columns.flex-col -->
+
+  {% include sidebar.html %}
+
+</div><!-- .flex-row -->

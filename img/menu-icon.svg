@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="menu-icon-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+	<line fill="none" stroke="#ffffff" stroke-width="5" stroke-miterlimit="7" x1="0" y1="3" x2="24" y2="3"></line>
+	<line fill="none" stroke="#ffffff" stroke-width="5" stroke-miterlimit="7" x1="0" y1="12" x2="24" y2="12"></line>
+	<line fill="none" stroke="#ffffff" stroke-width="5" stroke-miterlimit="7" x1="0" y1="21" x2="24" y2="21"></line>
+	Menu
+</svg>

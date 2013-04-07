@@ -1,0 +1,21 @@
+---
+layout: nil
+---
+Options -Indexes
+IndexIgnore *
+
+ErrorDocument 404 {{ site.baseurl }}/404/
+ErrorDocument 500 {{ site.baseurl }}/500/
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase {{ site.baseurl }}/
+
+# remove www
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,QSA,L]
+
+# index.php to /
+# RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.php\ HTTP/
+# RewriteRule ^(.*)index\.php$ /$1 [R=301,QSA,L]
+</IfModule>

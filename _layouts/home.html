@@ -1,0 +1,22 @@
+---
+layout: default
+type: home
+---
+
+<h1>{{ page.title }} - HOME</h1>
+
+{% if site.posts %}
+  <ul>
+    {% for post in site.posts limit:3 %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="author">
+          <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+        </p>
+        {% if post.excerpt %}
+          <p class="excerpt">{{ post.excerpt | read_more: post.url | simple_format }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -1,0 +1,27 @@
+---
+layout: page
+title: Blog
+excerpt: |
+  Information, tutorials, howtos and great content on topics related to modern day responsive mobile-first web development and design with a focus on workflow optimization.
+---
+
+<h1>{{ page.title }}</h1>
+
+{% if paginator.posts %}
+  <ul>
+    {% for post in paginator.posts %}
+      <li>
+        <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+        <p class="author">
+          <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
+        </p>
+        {% if post.excerpt %}
+          <p class="excerpt">{{ post.excerpt }}</p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+
+{% endif %}

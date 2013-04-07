@@ -1,0 +1,42 @@
+---
+layout: nil
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title>{{ site.constants.name }}</title>
+  <subtitle>{{ site.constants.tagline }}</subtitle>
+  <link href="{{ site.url }}{{ site.baseurl }}/feed/" rel="self"/>
+  <link href="{{ site.url }}{{ site.baseurl }}/"/>
+  <rights>{{ site.constants.domain | capitalize }} is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.</rights>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ site.url }}{{ site.baseurl }}/</id>
+
+  <author>
+    <name>{{ site.constants.name }}</name>
+    <email>{{ site.constants.email }}</email>
+    <uri>{{ site.url }}{{ site.baseurl }}/about/</uri>
+  </author>
+
+  <image>
+    <title>{{ site.constants.name }}</title>
+    <description>{{ site.constants.tagline }}</description>
+    <url>{{ site.url }}{{ site.baseurl }}/img/rss-logo.png</url>
+    <link>{{ site.url }}{{ site.baseurl }}/feed/</link>
+    <width>144</width>
+    <height>72</height>
+  </image>
+
+  {% for post in site.posts %}
+    <entry>
+      <author>
+        <name>{{ post.author }}</name>
+      </author>
+      <title>{{ post.title }}</title>
+      <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
+      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <id>{{ site.url }}{{ site.baseurl }}{{ post.id }}</id>
+      <content type="html">{{ post.content | xml_escape }}</content>
+    </entry>
+  {% endfor %}
+</feed>

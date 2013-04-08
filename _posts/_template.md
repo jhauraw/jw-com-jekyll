@@ -1,4 +1,5 @@
 ---
+# required: layout, title
 author:
   name:
   domain:
@@ -9,7 +10,6 @@ excerpt: |
   Your_Excerpt_Here
 image:
   url:
-  title:
   alt:
   attribution:
 tags:

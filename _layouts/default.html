@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="{{ site.constants.lang }}"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="{{ site.constants.lang }}"><!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="{{ site.constants.lang }}" dir="{{ site.constants.dir }}"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="{{ site.constants.lang }}" dir="{{ site.constants.dir }}"><!--<![endif]-->
 <head>
   <meta charset="{{ site.constants.encoding }}" />
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="{{ site.constants.viewport }}">
 
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.constants.name }}{% if page.type == 'home' %} - {{ site.constants.tagline }}{% endif %}</title>
 

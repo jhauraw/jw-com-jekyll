@@ -10,6 +10,7 @@ module Jekyll
       self.read_yaml(File.join(base, '_layouts'), 'tag_index.html')
       self.data['tag'] = tag
       self.data['title'] = "Posts Tagged &ldquo;"+tag+"&rdquo;"
+      self.data['excerpt'] = "Indexed list of all Posts tagged with &#39;"+tag+"&#39;."
     end
   end
 

@@ -31,4 +31,4 @@ Components:
 
 Software: Sublime Text, iTerm, Grunt.js, MAC OS X
 
-Source: https://github.com/jhauraw/jhaurawachsman.com
+Source: http://github.com/jhauraw/jhaurawachsman.com

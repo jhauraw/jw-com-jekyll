@@ -75,7 +75,7 @@ url: http://localhost:4000
 # // (double-slashes).
 #
 # YES Front-Slash. NO Trailing-Slash
-baseurl: ''
+baseurl: null
 
 # Not a part of Jekyll, but adding it here for grouping with
 # other base* and url* configs.

@@ -67,14 +67,13 @@ server: false
 url: http://localhost:4000
 
 # To run the ENTIRE site from a sub-dir, e.g., /sub
-# YES Front-Slash. NO Trailing-Slash
 #
 # This theme uses ABSOLUTE URLs in places like the XML Feed and
-# OG tags, so we need to set it to '' (empty) explicitly so
-# that the Jekyll default of '/' doesn't mess up our URLs with
-# // (double-slashes).
+# OG tags, so we need to set it to null (no quotes) explicitly
+# so that the Jekyll default of '/' doesn't mess up our URLs
+# with // (double-slashes).
 #
-# YES Front-Slash. NO Trailing-Slash
+# YES Front-Slash. NO Trailing-Slash. Otherwise set to null.
 baseurl: null
 
 # Not a part of Jekyll, but adding it here for grouping with

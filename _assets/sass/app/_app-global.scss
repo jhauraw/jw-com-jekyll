@@ -176,6 +176,9 @@ html #peek, body #peek {
               border-bottom: 4px solid #ddf0f9;
               background: #ddf0f9;
             }
+            > a {
+              padding-right: emCalc(60px);
+            }
             &.active > a, &.locked > a {
               color: #00a4e2;
             }
@@ -309,6 +312,8 @@ html #peek, body #peek {
         vertical-align: middle;
       }
     } // a.brand
+    a.brand:hover {
+    }
   } // > li.logo
 }
 

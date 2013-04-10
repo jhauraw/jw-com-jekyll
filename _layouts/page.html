@@ -9,7 +9,6 @@ type: page
     <article class="{{ page.type }}">
       <header class="article-header">
         <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
-
       </header><!-- .article-header -->
 
       <div class="row">
@@ -17,6 +16,10 @@ type: page
           <section class="article-content" itemprop="articleBody">
 
             {{ content }}
+
+            {% if page.subtype == 'contact' %}
+            {% include contact.html %}
+            {% endif; %}
 
           </section><!-- .article-content -->
 

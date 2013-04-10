@@ -12,32 +12,35 @@
                 <span>{{ site.constants.name }}</span>
                 <img src="{{ site.baseurl }}{{ site.baseimg }}logo-light.svg" alt="{{ site.constants.name }}" />
               </a>
-            </li>
-          </ul>
+            </li> <!-- .logo -->
+          </ul> <!-- .title-area -->
 
           <section class="navsection">
             <ul class="left navmenu">
               <li class="submenu">
-                <a href="#">Item 1</a>
+                <a href="{{ site.baseurl }}/blog/">Blog</a>
 
                 <div class="submenu-content">
                   <div class="page-container">
-                    <ul class="left">
-                    <li><a href="{{ site.baseurl }}/blog/">Blog</a></li>
-                    <li><a href="{{ site.baseurl }}/resume/">Resume</a></li>
-                    <li>Item 1 Sub Item 3</li>
-                    </ul>
-
-                    <ul class="right">
-                    <li>Item 1 Sub Item 4</li>
-                    <li>Item 1 Sub Item 5</li>
-                    <li>Item 1 Sub Item 6</li>
+                    <ul class="inline-list">
+                      {% if site.posts %}
+                        {% for post in site.posts limit:3 %}
+                        <li>
+                          <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+                        </li>
+                        {% endfor %}
+                      {% else %}
+                        <li>No posts to list...</li>
+                      {% endif %}
                     </ul>
                   </div>
                 </div>
               </li>
+              <li><a href="{{ site.baseurl }}/portfolio/">Portfolio</a></li>
+              <li><a href="{{ site.baseurl }}/resume/">Résumé</a></li>
+              <li><a href="{{ site.baseurl }}/contact/">Contact</a></li>
 
-              <li class="submenu">
+              <!--<li class="submenu">
                 <a href="#">Item 2</a>
 
                 <div class="submenu-content">
@@ -55,14 +58,14 @@
                     </ul>
                   </div>
                 </div>
-              </li>
-            </ul>
+              </li>--> <!-- .submenu -->
+            </ul> <!-- .navmenu -->
 
             <ul class="right usermenu">
               <li><a href="{{ site.baseurl }}/search/">S</a></li>
-              <li><a href="#">F</a></li>
-              <li><a href="#">T</a></li>
-            </ul>
+              <li><a rel="nofollow" target="_blank" href="//facebook.com/{{ site.constants.facebook }}">F</a></li>
+              <li><a rel="nofollow" target="_blank" href="//twitter.com/{{ site.constants.twitter }}">T</a></li>
+            </ul> <!-- .usermenu -->
           </section><!-- .navsection -->
 
         </nav><!-- #navbar -->

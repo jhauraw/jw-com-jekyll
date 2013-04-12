@@ -44,6 +44,12 @@ constants:
     name: Jhaura Wachsman
     domain: jhaurawachsman.com
 
+# Dynamic Include Helpers ============================================ #
+is_home: false
+is_post: false
+is_page: false
+is_single: false
+
 # Jekyll Config ====================================================== #
 
 auto: false

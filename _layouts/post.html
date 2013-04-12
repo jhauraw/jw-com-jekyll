@@ -6,50 +6,9 @@ type: post
 <div class="flex-row">
   <div id="primary" class="large-9 columns flex-col" role="content">
 
-    <article class="{{ page.type }}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
-      <header class="article-header">
-        <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
+    {% include article.html %}
 
-        {% if page.image.url %}<figure class="article-image">
-          <a name="lead-image"></a>
-            <img src="{{ site.baseurl }}{{ site.baseimg }}{{ page.image.url }}" alt="{% if page.image.alt %}{{ page.image.alt | escape }}{% else %}{{ page.title | escape }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape }}"{% endif %} />
-        </figure>{% endif %}
-
-        <div class="row">
-          <div class="large-8 large-centered columns">
-            <p class="article-info">
-
-              {% include meta.html %}
-
-            </p>
-          </div><!-- .columns.offset -->
-        </div><!-- .row -->
-      </header><!-- .article-header -->
-
-      <div class="row">
-        <div class="large-8 large-centered columns">
-          <section class="article-content" itemprop="articleBody">
-
-          {{ content }}
-
-          </section><!-- .article-content -->
-
-          <footer class="article-footer">
-
-            {% include related.html %}
-
-          </footer><!-- .article-footer -->
-        </div><!-- .columns -->
-      </div><!-- .row -->
-    </article><!-- article -->
-
-    <div class="row">
-      <div class="small-12 columns">
-
-        {% include comments.html %}
-
-      </div><!-- .columns.offset -->
-    </div><!-- .row -->
+    {% include comments.html %}
 
   </div><!-- #primary.columns.flex-col -->
 

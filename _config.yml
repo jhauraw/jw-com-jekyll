@@ -118,4 +118,4 @@ pygments: true
 paginate: 10
 
 include: ['.htaccess']
-exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', 'package.json', 'node_modules', 'bower_components']
+exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

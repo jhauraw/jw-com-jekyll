@@ -4,6 +4,8 @@ TODO:
   flatterline jekyll github source for their blog
   blitz.io 0-250 in 10s, then sustain 250 for 50s
 
+  tags archive put title of each post in large-8 col, add image to left side.
+
 <ul class="navigation">
   {% for link in site.navigation %}
     {% assign current = nil %}

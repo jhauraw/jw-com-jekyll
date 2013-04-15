@@ -3,34 +3,13 @@ layout: default
 type: page
 ---
 
-<div class="flex-row">
-  <div id="primary" class="nine columns flex-col" role="content">
+<div class="flex-row row">
+  <div id="primary" class="large-9 columns flex-col" role="content">
 
-    <article class="{{ page.type }}">
-      <header class="article-header">
-        <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
-      </header><!-- .article-header -->
-
-      <div class="row">
-        <div class="large-8 large-centered columns">
-          <section class="article-content" itemprop="articleBody">
-
-            {{ content }}
-
-            {% if page.subtype == 'contact' %}
-            {% include contact.html %}
-            {% endif; %}
-
-          </section><!-- .article-content -->
-
-          <footer class="article-footer">
-          </footer><!-- .article-footer -->
-        </div> <!-- .columns -->
-      </div> <!-- .row -->
-    </article><!-- article -->
+    {% include page-article.html %}
 
   </div><!-- #primary.columns.flex-col -->
 
   {% include sidebar.html %}
 
-</div><!-- .flex-row -->
+</div><!-- .flex-row.row -->

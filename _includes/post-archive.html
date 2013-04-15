@@ -1,0 +1,44 @@
+<article class="post summary" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="row">
+    <div class="small-3 columns">
+
+      {% if page.image.url %}
+      <figure class="article-image">
+        <a name="lead-image"></a>
+          <img src="{{ site.baseurl }}{{ site.baseimg }}{{ page.image.url }}" alt="{% if page.image.alt %}{{ page.image.alt | escape }}{% else %}{{ page.title | escape }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape }}"{% endif %} />
+      </figure><!-- .article-image -->
+      {% endif %}
+
+    </div><!-- .columns -->
+    <div class="small-9 columns">
+
+      <header class="article-header">
+        <h2 class="article-title" itemprop="headline"><a href="{{ site.baseurl }}{{ post.url }}">{{ page.title }}</a></h2>
+
+        <aside class="article-info">
+          <div class="row">
+            <div class="columns">
+
+              <p>{% include meta.html %}</p>
+
+            </div><!-- .columns -->
+          </div><!-- .row -->
+        </aside><!-- .article-info -->
+      </header><!-- .article-header -->
+
+      <section class="article-content" itemprop="articleBody">
+        <div class="row">
+          <div class="columns">
+
+            <p>{{ page.excerpt }}</p>
+
+          </div><!-- .columns -->
+        </div><!-- .row -->
+      </section><!-- .article-content -->
+
+      <footer class="article-footer">
+      </footer><!-- .article-footer -->
+
+    </div><!-- .columns -->
+  </div><!-- .row -->
+</article><!-- .post -->

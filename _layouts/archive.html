@@ -1,16 +1,18 @@
 ---
 layout: default
-type: post
+type: archive
 ---
 
 <div class="flex-row row">
   <div id="primary" class="large-9 columns flex-col" role="content">
 
-    {% include post-article.html %}
+    <div class="row">
+      <div class="large-8 large-centered columns">
 
-    {% include related.html %}
+        {{ content }}
 
-    {% include comments.html %}
+      </div><!-- .columns -->
+    </div><!-- .row -->
 
   </div><!-- #primary.columns.flex-col -->
 

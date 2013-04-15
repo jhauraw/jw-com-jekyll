@@ -1,0 +1,22 @@
+<article class="{{ page.type }}">
+  <header class="article-header">
+    <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
+  </header><!-- .article-header -->
+
+  <section class="article-content" itemprop="articleBody">
+    <div class="row">
+      <div class="large-8 large-centered columns">
+
+        {{ content }}
+
+        {% if page.subtype == 'contact' %}
+          {% include contact.html %}
+        {% endif; %}
+
+      </div><!-- .columns -->
+    </div><!-- .row -->
+  </section><!-- .article-content -->
+
+  <footer class="article-footer">
+  </footer><!-- .article-footer -->
+</article><!-- article -->

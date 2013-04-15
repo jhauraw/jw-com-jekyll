@@ -30,7 +30,7 @@
   {% include og.html %}
 
 </head>
-<body>
+<body class="{{ page.type }}">
 
   {% include panelnav.html %}
 
@@ -39,13 +39,13 @@
     {% include topbar.html %}
 
     <div id="scrollable">
-      <div id="container" class="row">
+      <!-- <div id="container" class="row"> -->
         <div id="main">
 
           {{ content }}
 
         </div><!-- #main -->
-      </div><!-- #container.row -->
+      <!-- </div> --><!-- #container.row -->
 
       {% include footer.html %}
 

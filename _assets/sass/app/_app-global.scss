@@ -42,6 +42,11 @@ html #peek, body #peek {
   background-color: #fff;
 }
 
+#primary {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 @media #{$large} {
   #main {
     border: 1px solid #e3e3e3;
@@ -324,43 +329,69 @@ html #peek, body #peek {
   }
 }
 
-/* =Single/Page/Home =================================================== */
-#primary {
-  background: #fff;
-  article {
-    position: relative;
+/* =Articles =========================================================== */
+article {
+  position: relative;
+  ul, ol, dl {
+    margin-left: 2em;
   }
-  > article {
-    //font-size: 15px;
-    //line-height: 1.5;
-    ul, ol, dl {
-      margin-left: 2em;
-    }
-    p {
-      //font-size: 15px;
-      //line-height: 1.5;
-    }
+  .article-title {
+    line-height: 1.2;
+    margin-top: 0;
   }
   .article-info {
-    margin: emCalc(20px) 0;
+    p {
+      font-size: emCalc(12px);
+      color: #666;
+    }
+    a, a:active, a:visited {
+      color: #666;
+    }
+    a:hover {
+      color: #999;
+    }
+    .label.secondary {
+      color: #666;
+    }
+    a:hover .label.secondary {
+      color: #6d793d;
+      background-color: #ccff00;
+    }
   }
 }
 
-/* =Single ============================================================= */
+/* =Single/Page ======================================================== */
+article.fulltext {
+  .article-info {
+    margin: emCalc(20px) 0 0;
+  }
+}
+
 @media #{$small} {
-  #primary > article {
-    .article-image {
-      //padding-left: emCalc(40px);
-    }
-    &.post {
-      //width: auto;
-      //max-width: emCalc(980px);
-      /* padding reduces usable, 980 - (15 left + 15 right) = 950 inner */
-      //padding: emCalc(30px) emCalc(15px);
-    }
-    .row .columns.large-centered {
-      //min-width: emCalc(555px); ?
-      //max-width: emCalc(655px);
+}
+
+/* =Article Summary ==================================================== */
+article.summary {
+  .article-title {
+    font-size: emCalc(28px);
+    margin: 0;
+  }
+  .article-image {
+    margin-top: .35em;
+  }
+}
+
+/* =Archive ============================================================ */
+ul.archive {
+  font-size: inherit;
+  list-style: none;
+  margin: 0;
+  li {
+    padding-top: 1.15em;
+    border-top: 1px dashed #f3f3f3;
+    &:first-child {
+      padding-top: 0;
+      border-top: 0 none;
     }
   }
 }

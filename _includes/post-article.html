@@ -1,4 +1,4 @@
-<article class="{{ page.type }}" role="article" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="{{ page.type }} fulltext" role="article" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="article-header">
     <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
 
@@ -11,7 +11,7 @@
 
     <aside class="article-info">
       <div class="row">
-        <div class="columns">
+        <div class="large-8 large-centered columns">
 
           <p>{% include meta.html %}</p>
 
@@ -22,7 +22,7 @@
 
   <section class="article-content" itemprop="articleBody">
     <div class="row">
-      <div class="columns">
+      <div class="large-8 large-centered columns">
 
         {{ content }}
 
@@ -31,12 +31,5 @@
   </section><!-- .article-content -->
 
   <footer class="article-footer">
-    <div class="row">
-      <div class="columns">
-
-        {% include related.html %}
-
-      </div><!-- .columns -->
-    </div><!-- .row -->
   </footer><!-- .article-footer -->
 </article><!-- .{{ page.type }} -->

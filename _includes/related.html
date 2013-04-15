@@ -1,13 +1,21 @@
-{% if site.related_posts %}
-<div id="related-posts">
-  <h3>You might also be interested in:</h3>
+{% if site.related_posts != empty %}
+<section id="related">
+  <div class="row">
+    <div class="columns">
+      <h3>You might also be interested in...</h3>
 
-  <ul>
-    {% for post in site.related_posts limit:3 %}
-      <li>
-        <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>
+      <div class="row">
+        {% for post in site.related_posts limit:3 %}
+          <div class="small-4 columns">
+
+            <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+            <p>{{ post.excerpt }}</p>
+
+          </div><!-- .small-4.columns -->
+        {% endfor %}
+      </div><!-- .row -->
+    </div><!-- .columns -->
+  </div><!-- .row -->
+</section><!-- .related -->
 {% endif %}

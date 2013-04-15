@@ -52,6 +52,8 @@ is_single: false
 
 # Jekyll Config ====================================================== #
 
+timezone: America/Los_Angeles
+
 auto: false
 server: false
 
@@ -121,7 +123,7 @@ permalink: /blog/:title/
 #lsi: true
 markdown: redcarpet
 pygments: true
-paginate: 10
+paginate: 2
 
 include: ['.htaccess']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

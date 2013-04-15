@@ -1,0 +1,21 @@
+---
+layout: archive
+type: tag
+---
+
+<ul class="tags archive">
+  {% for post in site.posts %}
+    {% for tag in post.tags %}
+      {% if tag == page.tag %}
+        {% assign temp = page %}
+        {% assign page = post %}
+        <li>
+
+          {% include post-archive.html %}
+
+        </li>
+        {% assign page = temp %}
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>

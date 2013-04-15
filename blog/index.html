@@ -1,21 +1,18 @@
 ---
-layout: page
+layout: archive
+type: archive
 title: Blog
 excerpt: |
   Information, tutorials, howtos and great content on topics related to modern day responsive mobile-first web development and design with a focus on workflow optimization.
 ---
 
-{% if paginator.posts %}
-  <ul>
-    {% for post in paginator.posts %}
+{% if paginator.posts != empty %}
+  <ul class="archive">
+    {% for page in paginator.posts %}
       <li>
-        <h2><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
-        <p class="author">
-          <span class="date">{{ post.date | date: "%B %e, %Y" }}</span>
-        </p>
-        {% if post.excerpt %}
-          <p class="excerpt">{{ post.excerpt }}</p>
-        {% endif %}
+
+        {% include post-archive.html %}
+
       </li>
     {% endfor %}
   </ul>

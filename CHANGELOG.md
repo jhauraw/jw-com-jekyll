@@ -1,10 +1,12 @@
 TODO:
-  LINK ASSETS! GET ASSETS PARSED, COPIED AND MIN'D
+  default.html - delete #container, move styles to #main? #main needs .row
+
+  Images next to posts in TAG archive
+
+  absolute URLs in FEED, use regex to look for URL beggining with / (slash)
 
   flatterline jekyll github source for their blog
   blitz.io 0-250 in 10s, then sustain 250 for 50s
-
-  tags archive put title of each post in large-8 col, add image to left side.
 
 <ul class="navigation">
   {% for link in site.navigation %}

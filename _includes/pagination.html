@@ -1,17 +1,13 @@
 <div class="pagination">
-  <ul class="inline-list">
-    {% if paginator.previous_page %}
-      <li>
-        {% if paginator.previous_page > 1 %}
-          <a href="{{ site.baseurl }}/page/{{paginator.previous_page}}" class="previous">&laquo; Newer Articles</a>
-        {% else %}
-          <a href="{{ site.baseurl }}/" class="previous">&laquo; Newer Articles</a>
-        {% endif %}
-      </li>
-    {% endif %}
-
-    {% if paginator.next_page %}
-      <li class="next"><a href="{{ site.baseurl }}/page/{{paginator.next_page}}">Older Articles &raquo;</a></li>
-    {% endif %}
-  </ul>
+  {% if paginator.previous_page %}
+    <a href="{{ site.baseurl }}/{% if paginator.previous_page != 1 %}page{{ paginator.previous_page }}{% endif %}" class="previous">&#171; Newer</a>
+  {% else %}
+    <span class="previous disabled">&#171; Newer</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ site.baseurl }}/page{{ paginator.next_page }}" class="next">Older &#187;</a>
+  {% else %}
+    <span class="next disabled">Older &#187;</span>
+  {% endif %}
 </div>

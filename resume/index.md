@@ -5,27 +5,18 @@ excerpt: |
   Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 ---
 
-# Jhaura Wachsman
-## Web Developer, Internet Marketer
+## Jhaura Wachsman
+### Web Developer, Internet Marketer
 
 Jhaura is a senior level web developer with management skills which allows him to interface directly with clients and communicate effectively. His reputation for accuracy, timeliness and honesty make Jhaura an asset to the project.
-
-**Recent Sites** (most completed 100% from start to finish; graphics and
-coding):
-
-* [MontionUnlimited.net](http://motionunlimited.net)  -  *Wordpress port from Joomla, content redesign*
-* [LiteTrail.com](http://LiteTrail.com)  -  *Wordpress and OpenCart eCommerce custom templates, Global header and footer integration*
-* [AmalakiDirect.com](http://amalakidirect.com)  -  *LAMP eCommerce, custom jQuery modal shopping cart, 7% conversion rate on $120 product*
-* [Z4All.com](http://z4all.com)  -  *LAMP replicated website for Lead Generation over 500 customized user-sites*
-* [FamilyLegalHelp.org](http://familylegalhelp.org)  -  *Wordpress, custom template, Geo-based Lead generation and allocation to clients, 25% conversion rate*
 
 **Core Areas of Expertise**: Web Development (LAMP), PHP, MySQL, Wordpress (Templates, Plugins and Integration), Responsive frameworks (Foundation & Bootstrap), HTML5, CSS3 (Compass & SaSS), eCommerce, SSL, SEO, Internet Marketing, Email Marketing, Direct Marketing, Affiliate Marketing, Facebook Apps, Social Media integration and niche/startup business development.
 
 **Tools Used**: Sublime Text editor. Git version control. Ruby, Gem development environment. Photoshop & Illustrator CS. Google Adwords and Adsense, Microsoft AdCenter. Amazon AWS and Cloudfront CDN. Amazon Seller and Ads. Google Analytics and Webmaster tools for understanding where profit can be made from traffic and where more value can be created for users.
 
-# Experience
+## Experience
 
-## Web Developer, Internet Marketer at Consultant
+### Web Developer, Internet Marketer at Consultant
 
 June 2005 - Present (8 years)
 
@@ -69,7 +60,7 @@ Linux System Administration
 
 * Six years Linux system administration experience - local and remote
 
-## Principal, Founder, Web Developer/Programmer at Consultlogic, Inc.
+### Principal, Founder, Web Developer/Programmer at Consultlogic, Inc.
 
 April 2000 - January 2005 (4 years 10 months)
 
@@ -82,7 +73,7 @@ Conceptualized, engineered and programmed PHP/MySQL Web application credited for
 * Designed and coded over 100 HTML email newsletters and over 50 Websites
 * Conducted usability and QA testing on over 50 MUAs (mail user agents)
 
-## Adjunct Web Development/Design Instructor at Santa Barbara City College
+### Adjunct Web Development/Design Instructor at Santa Barbara City College
 
 December 2001 - January 2003 (1 year 2 months)
 
@@ -96,7 +87,7 @@ Created three department websites, including the SBCC Radio property. Provided i
 * Helped with student job placement and internships at local companies
 * Improved and polished public speaking and presentation skills
 
-## Web Product Manager at The Hendricks Institute, Inc.
+### Web Product Manager at The Hendricks Institute, Inc.
 
 July 1999 - May 2001 (1 year 11 months)
 
@@ -107,7 +98,7 @@ Project manager responsible for IIS/SQL E-Commerce site deployment. Implemented 
 * Produced CD, VHS, cassette and book products sold internationally
 * Presented new products at seminars to groups of 20-100 people
 
-## Store Manager at Channel Islands Surfboards
+### Store Manager at Channel Islands Surfboards
 
 June 1990 - July 1998 (8 years 2 months)
 
@@ -118,29 +109,26 @@ Started out as Sales Associate, promoted to manager. Managed a team of 10 crew m
 * Worked with sales representatives in store and at trade shows
 * Created a high standard of customer service
 
-# Education
+## Education
 
-## University of California, Santa Barbara
+### University of California, Santa Barbara
 
-Bachelor of Arts, Religious Studies, 1996 - 1998
+- Bachelor of Arts, Religious Studies, 1996 - 1998
+- Certificate, eCommerce, Web Development and Design, 2000 - 2001
+- Activities and Societies: Study abroad in India. Extension studies for professional development.
 
-Certificate, eCommerce, Web Development and Design, 2000 - 2001
+### Santa Barbara City College
 
-Activities and Societies: Study abroad in India. Extension studies for professional development.
-
-## Santa Barbara City College
-
-Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
-
-Activities and Societies: Study abroad in Mexico. Presidential honors.
+- Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
+- Activities and Societies: Study abroad in Mexico. Presidential honors.
 
 * * *
 
-## Interests
+### Interests
 
 Surfing, ultralight backpacking, meditation, traveling the world and gardening. Nature, the ocean and rivers, spirituality, Helping others create abundance in their lives. Philanthropy.
 
-## Recommendations from LinkedIn
+### Recommendations from LinkedIn
 
 *"Jhaura provided the necessary expertise that we lacked with our staff. Through a dedication to getting the job done right and training our staff, Jhaura left us with a better web presence than we could have ever expected."*
 

@@ -9,6 +9,21 @@ type: home
       <h1>Home</h1>
 
       <p>Home page...</p>
+
+      {% if paginator.posts != empty %}
+  <ul class="archive">
+    {% for page in paginator.posts %}
+      <li>
+
+        {% include post-archive.html %}
+
+      </li>
+    {% endfor %}
+  </ul>
+
+  {% include pagination.html %}
+
+{% endif %}
     </div><!-- .columns -->
   </div><!-- .row -->
 </section><!-- .masthead -->

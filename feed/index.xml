@@ -19,7 +19,7 @@ layout: nil
   </author>
 
   <icon>{{ site.url }}{{ site.baseurl }}/favicon.ico</icon>
-  <logo>{{ site.url }}{{ site.baseurl }}{{ site.baseimg }}rss-logo.png</logo>
+  <logo>{{ site.url }}{{ site.baseurl }}/img/rss-logo.png</logo>
 
   {% for post in site.posts %}
     <entry>
@@ -31,8 +31,8 @@ layout: nil
       <link href="{{ site.url }}{{ site.baseurl }}{{ post.url }}"/>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>{{ site.url }}{{ site.baseurl }}{{ post.id }}</id>
-      {% if post.img.url %}<logo>{{ site.url }}{{ site.baseurl }}{{ site.baseimg }}{{ post.img.url }}</logo>{% endif %}
-      <content type="html">{{ post.content | xml_escape }}</content>
+      {% if post.img.url %}<logo>{{ site.url }}{{ site.baseurl }}{{ post.img.url }}</logo>{% endif %}
+      <content type="html">{{ post.content | to_absolute_url | xml_escape }}</content>
     </entry>
   {% endfor %}
 </feed>

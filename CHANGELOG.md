@@ -1,7 +1,16 @@
 TODO:
-  default.html - delete #container, move styles to #main? #main needs .row
 
-  Images next to posts in TAG archive
+  Tag Pagination:
+  https://github.com/ilyakhokhryakov/jekyll-tagging-pagination/blob/master/tags-pagination.rb
+
+  http://realjenius.com/2012/12/01/jekyll-category-tag-paging-feeds/
+
+  http://www.marran.com/tech/category-pagination-in-jekyll/
+
+  http://www.nearinfinity.com/blogs/brandon_marc_aurele/2012/06/14/generating-jekyll-pages-with-pagination.html
+
+  http://stackoverflow.com/questions/15423665/jekyll-paginate-blog-as-subdirectory
+  https://github.com/MrWerewolf/jekyll-category-pagination
 
   absolute URLs in FEED, use regex to look for URL beggining with / (slash)
 

@@ -52,10 +52,9 @@ is_single: false
 
 # Jekyll Config ====================================================== #
 
+# Set the timezone (TZ ENV variable) you want the site to run from.
+# http://en.wikipedia.org/wiki/Tz_database
 timezone: America/Los_Angeles
-
-auto: false
-server: false
 
 # Used any place a where an absolute URL is required.
 #
@@ -83,31 +82,6 @@ url: http://localhost:4000
 #
 # YES Front-Slash. NO Trailing-Slash. Otherwise set to null.
 baseurl: null
-
-# Not a part of Jekyll, but adding it here for grouping with
-# other base* and url* configs.
-#
-# Abstracts hardcoded image directory names out of the templates.
-#
-# In your YAML Front Matter reference images by a relative URL,
-# such as:
-# image.jpg
-# YEAR/image.jpg
-# CATEGORY/image.jpg
-#
-# In your Templates prepend any {{ page.img.url }} tags with:
-#
-# If you prefer ROOT RELATIVE URLS:
-# {{ site.baseurl }}{{ site.baseimg }}
-#
-# If you prefer ABSOLUTE URLS:
-# {{ site.url }}{{ site.baseurl }}{{ site.baseimg }}
-#
-# Now your templates, posts and pages will be fully abstracted
-# in terms of URL/Directory structure. *Smile* :-)
-#
-# YES Front-Slash. YES Trailing-Slash
-baseimg: /img/
 
 # You can use a directory name here to have just the _posts
 # served from an sub-directory, e.g., /blog/

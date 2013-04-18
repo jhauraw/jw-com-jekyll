@@ -81,7 +81,7 @@ url: http://localhost:4000
 # with // (double-slashes).
 #
 # YES Front-Slash. NO Trailing-Slash. Otherwise set to null.
-baseurl: /base
+baseurl: null
 
 # You can use a directory name here to have just the _posts
 # served from an sub-directory, e.g., /blog/
@@ -97,7 +97,7 @@ permalink: /blog/:title/
 #lsi: true
 markdown: redcarpet
 pygments: true
-#paginate: 2
+paginate: 2
 
 include: ['.htaccess']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

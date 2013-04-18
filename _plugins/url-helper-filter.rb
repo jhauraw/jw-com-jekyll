@@ -27,12 +27,21 @@ module Jekyll
       input.gsub(/(href|src)="\//, '\1="' + url + baseurl + '/')
     end
 
+    def to_baseurl(input)
+
+      baseurl = @context.registers[:site].config['baseurl'].to_s
+
+      # baseurl << input # wouldn't work, created a huge concat chain
+      input = baseurl + input
+    end
+
     def to_absurl(input)
 
       url = @context.registers[:site].config['url'].to_s
       baseurl = @context.registers[:site].config['baseurl'].to_s
 
-      url + baseurl << input
+      # url + baseurl << input
+      input = url + baseurl + input
     end
   end
 end

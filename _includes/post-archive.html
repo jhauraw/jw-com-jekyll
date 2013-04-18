@@ -5,7 +5,7 @@
       {% if page.image.url %}
       <figure class="article-image">
         <a name="lead-image"></a>
-          <img src="{{ site.baseurl }}{{ page.image.url }}" alt="{% if page.image.alt %}{{ page.image.alt | escape }}{% else %}{{ page.title | escape }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape }}"{% endif %} />
+          <img src="{{ page.image.url | to_baseurl }}" alt="{% if page.image.alt %}{{ page.image.alt | escape }}{% else %}{{ page.title | escape }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape }}"{% endif %} />
       </figure><!-- .article-image -->
       {% endif %}
 
@@ -13,7 +13,7 @@
     <div class="small-9 columns">
 
       <header class="article-header">
-        <h2 class="article-title" itemprop="headline"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+        <h2 class="article-title" itemprop="headline"><a href="{{ page.url  | to_baseurl }}">{{ page.title }}</a></h2>
 
         <aside class="article-info">
           <div class="row">
@@ -30,7 +30,7 @@
         <div class="row">
           <div class="columns">
 
-            <p>{{ page.excerpt }}</p>
+            <p>{{ page.excerpt | to_baseurl }}</p>
 
           </div><!-- .columns -->
         </div><!-- .row -->

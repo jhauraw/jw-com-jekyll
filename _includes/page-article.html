@@ -11,7 +11,7 @@
     <div class="row">
       <div class="large-8 large-centered columns">
 
-        {{ content }}
+        {{ content | sub_baseurl }}
 
         {% if page.subtype == 'contact' %}
           {% include contact.html %}

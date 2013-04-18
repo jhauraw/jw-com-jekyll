@@ -9,7 +9,7 @@ layout: nil
   <subtitle>{{ site.constants.tagline }}</subtitle>
   <link href="{{ '/feed/' | to_absurl }}" rel="self"/>
   <link href="{{ '/' | to_absurl }}"/>
-  <rights>{{ site.constants.domain | capitalize }} is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.</rights>
+  <rights>{{ site.constants.domain | capitalize }} is licensed under GPL 3. All Rights Reserved.</rights>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ '/' | to_absurl }}</id>
 

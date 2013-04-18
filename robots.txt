@@ -1,7 +1,8 @@
 ---
 layout: nil
 ---
+
 User-agent: *
 Disallow:
 
-Sitemap: {{ site.url }}{{ site.baseurl }}/sitemap.xml.gz
+Sitemap: {{ '/sitemap.xml.gz' | to_absurl }}

@@ -7,7 +7,7 @@
 
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.constants.name }}{% if page.type == 'home' %} - {{ site.constants.tagline }}{% endif %}</title>
 
-  <link type="text/plain" rel="author" href="{{ site.baseurl }}/humans.txt" />
+  <link type="text/plain" rel="author" href="{{ '/humans.txt' | to_baseurl }}" />
 
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.constants.name }} - ATOM RSS Feed" href="//feeds.feedburner.com/{{ site.constants.feed-name }}" />
@@ -16,16 +16,16 @@
   <meta property="fb:admins" content="{{ site.constants.facebook-admin }}" />
   <link rel="publisher" href="https://plus.google.com/{{ site.constants.gplus-publisher }}" />
 
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ site.baseurl }}/img/apple-touch-icon-114.png">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ site.baseurl }}/img/apple-touch-icon-72.png">
-  <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/img/apple-touch-icon.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ '/img/apple-touch-icon-114.png' | to_baseurl }}">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/img/apple-touch-icon-72.png' | to_baseurl }}">
+  <link rel="apple-touch-icon-precomposed" href="{{ '/img/apple-touch-icon-precomposed.png' | to_baseurl }}">
+  <link rel="shortcut icon" href="{{ '/img/apple-touch-icon.png' | to_baseurl }}">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | to_baseurl }}">
 
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/vendor.css" />
-  <link rel="stylesheet" href="{{ site.baseurl }}/css/app.css" />
+  <link rel="stylesheet" href="{{ '/css/vendor.css' | to_baseurl }}" />
+  <link rel="stylesheet" href="{{ '/css/app.css' | to_baseurl }}" />
 
-  <script src="{{ site.baseurl }}/js/modernizr.js"></script>
+  <script src="{{ '/js/modernizr.js' | to_baseurl }}"></script>
 
   {% include og.html %}
 
@@ -55,9 +55,9 @@
   <div id="fb-root"></div>
   {% include analytics.html %}
 
-  <script>document.write('<script src={{ site.baseurl }}/js/' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js><\/script>')</script>
+  <script>document.write('<script src="{{ '/js/' | to_baseurl }}' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js"><\/script>')</script>
 
-  <script src="{{ site.baseurl }}/js/vendor.js"></script>
-  <script src="{{ site.baseurl }}/js/app.js"></script>
+  <script src="{{ '/js/vendor.js' | to_baseurl }}"></script>
+  <script src="{{ '/js/app.js' | to_baseurl }}"></script>
 </body>
 </html>

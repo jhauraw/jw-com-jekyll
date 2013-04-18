@@ -3,27 +3,19 @@ layout: default
 type: home
 ---
 
-<section class="masthead">
-  <div class="row">
-    <div class="columns">
-      <h1>Home</h1>
+<div class="row">
+  <div id="primary" class="large-12 columns" role="content">
 
-      <p>Home page...</p>
+    <section class="masthead">
+      <div class="row">
+        <div class="columns">
+          <h1>Home</h1>
 
-      {% if paginator.posts != empty %}
-  <ul class="archive">
-    {% for page in paginator.posts %}
-      <li>
+          <p>Home page...</p>
 
-        {% include post-archive.html %}
+        </div><!-- .columns -->
+      </div><!-- .row -->
+    </section><!-- .masthead -->
 
-      </li>
-    {% endfor %}
-  </ul>
-
-  {% include pagination.html %}
-
-{% endif %}
-    </div><!-- .columns -->
-  </div><!-- .row -->
-</section><!-- .masthead -->
+  </div><!-- #primary.columns -->
+</div><!-- .row -->

@@ -1,5 +1,7 @@
 TODO:
 
+  Set max-width on #main
+
   Tag Pagination:
   https://github.com/ilyakhokhryakov/jekyll-tagging-pagination/blob/master/tags-pagination.rb
 

@@ -1,13 +1,13 @@
   <nav id="panelnav">
     <ul class="panelmenu">
       <li class="logo">
-        <a class="brand" href="{{ site.baseurl }}/">
+        <a class="brand" href="{{ '/' | to_baseurl }}">
           <span>{{ site.constants.name }}</span>
-          <img src="{{ site.baseurl }}/img/logo-light.svg" alt="{{ site.constants.name }}" />
+          <img src="{{ '/img/logo-light.svg' | to_baseurl }}" alt="{{ site.constants.name }}" />
         </a>
       </li>
-      <li><a href="{{ site.baseurl }}/blog/placeholder-post/">Nav Item 1</a></li>
-      <li><a href="{{ site.baseurl }}/blog/">Nav Item 2</a></li>
+      <li><a href="{{ '/blog/placeholder-post/' | to_baseurl }}">Nav Item 1</a></li>
+      <li><a href="{{ '/blog/' | to_baseurl }}">Nav Item 2</a></li>
       <li><a href="#">Nav Item 3</a></li>
       <li><a href="#">Nav Item 4</a></li>
       <li><a href="#">Nav Item 5</a></li>

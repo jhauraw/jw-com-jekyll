@@ -1,15 +1,16 @@
 ---
 layout: nil
 ---
+
 Options -Indexes
 IndexIgnore *
 
-ErrorDocument 404 {{ site.baseurl }}/404.html
-ErrorDocument 500 {{ site.baseurl }}/500.html
+ErrorDocument 404 {{ '/404.html' | to_baseurl }}
+ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase {% if site.baseurl %}{{ site.baseurl }}{% else %}/{% endif %}
+RewriteBase {{ '/' | to_baseurl }}
 
 # remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

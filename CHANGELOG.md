@@ -1,8 +1,8 @@
 TODO:
 
-  Set max-width on featured image to 910px
+  Post Images in feed not working.
 
-  Reduce font size on related posts
+  Set max-width on featured image to 910px
 
   Tag Pagination:
   https://github.com/ilyakhokhryakov/jekyll-tagging-pagination/blob/master/tags-pagination.rb

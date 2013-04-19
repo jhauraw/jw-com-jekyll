@@ -32,7 +32,7 @@ layout: nil
       <link href="{{ post.url | to_absurl }}"/>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | to_absurl }}</id>
-      {% if post.img.url %}<logo>{{ post.img.url | to_absurl }}</logo>{% endif %}
+      {% if page.img.url %}<logo>{{ page.img.url | to_absurl }}</logo>{% endif %}
       <content type="html">{{ post.content | sub_absurl | xml_escape }}</content>
     </entry>
   {% endfor %}

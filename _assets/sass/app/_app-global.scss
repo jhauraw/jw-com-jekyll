@@ -31,15 +31,18 @@ html #peek, body #peek {
   }
 }
 
+/*
 #container {
   @include translateZ(0);
 }
 
 #container.row {
 }
+*/
 
 #main {
   background-color: #fff;
+  @include translateZ(0);
 }
 
 #primary {
@@ -49,16 +52,22 @@ html #peek, body #peek {
 
 @media #{$large} {
   #main {
-    border: 1px solid #e3e3e3;
+    border: 1px solid red; // e3e3e3
   }
 }
 
 @media #{$small} {
+  #main {
+    margin: 0 auto;
+    max-width: $row-width;
+  }
+
   .flex-row {
     display: table;
     table-layout: fixed;
     width: 100%; /* required! */
   }
+
   .flex-col {
     float: none !important;
     display: table-cell;
@@ -88,7 +97,7 @@ html #peek, body #peek {
   height: 44px;
   min-height: 44px;
   background-color: #2aa4cf;
-  position: relative;
+  //position: relative; # prevented submenu from going 100% width
   overflow: hidden;
 
   > ul, section > ul {
@@ -132,9 +141,9 @@ html #peek, body #peek {
   } // .title-area
 
   .navsection {
-    left: 0;
-    position: relative;
-    width: auto;
+    //left: 0;
+    //position: relative; # prevented submenu from going 100% width
+    //width: 100%;
     @include transition(left 300ms ease-out);
     ul {
       &.navmenu {
@@ -448,30 +457,51 @@ ul.archive {
 /* =Comments =========================================================== */
 
 /* =Footer ============================================================= */
-#footer-wrapper {
+#footer {
   z-index: 5;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
+  color: #777;
+  padding: emCalc(15px);
   background: #fff;
   @include box-shadow(0px 1px 3px #aaa inset);
   @include translateZ(0); /* to prevent flash in mobile w/.panel */
-}
-
-#footer {
-  color: #777;
-  padding: emCalc(15px);
   p, ul {
     margin-bottom: 0;
-  }
-  p, li {
     font-size: emCalc(12px);
+  }
+
+  .footer-meta {
+    text-align: center;
+  }
+
+  .footer-links {
+    text-align: center;
+    margin-top: 1em;
+    li {
+      display: inline-block;
+      margin-left: 1em;
+      &:first-child {
+        margin-left: 0;
+      }
+    }
   }
 }
 
 @media #{$small} {
   #footer {
     padding: emCalc(30px);
+    .footer-meta {
+      text-align: left;
+    }
+    .footer-links {
+      float: right;
+      margin-top: 0;
+      li {
+        float: left;
+      }
+    }
   }
 }

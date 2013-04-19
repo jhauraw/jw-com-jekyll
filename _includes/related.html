@@ -7,21 +7,24 @@
       <ul class="large-block-grid-3">
         {% for post in site.related_posts limit: 3 %}
           <li>
-            <div class="row">
-              <div class="small-3 large-6 columns">
+            <article>
+              <div class="row">
+                <div class="small-3 large-6 columns">
 
-                <img class="article-image" src="{% if page.image.url %}{{ page.image.url | to_baseurl }}{% endif %}" />
+                  <figure class="article-image">
+                    <img src="{% if page.image.url %}{{ page.image.url | to_baseurl }}{% endif %}" />
+                  </figure><!-- .article-image -->
 
-              </div><!-- .columns -->
-            <div class="small-9 large-6 columns">
+                </div><!-- .columns -->
+              <div class="small-9 large-6 columns">
 
-              <h3 class="article-title"><a href="{{ post.url | to_baseurl }}">{{ post.title }}</a></h3>
+                <h3 class="article-title"><a href="{{ post.url | to_baseurl }}">{{ post.title }}</a></h3>
 
-              <p class="article-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 10 }}</p>
+                <p class="article-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncatewords: 10 }}</p>
 
-              </div><!-- .columns -->
-            </div><!-- .row -->
-
+                </div><!-- .columns -->
+              </div><!-- .row -->
+            </article>
           </li><!-- .small-4.columns -->
         {% endfor %}
       </ul><!-- .row -->

@@ -367,12 +367,22 @@ article {
       background-color: #ccff00;
     }
   }
+  .article-image {
+    img {
+      vertical-align: middle;
+    }
+  }
 }
 
 /* =Single/Page ======================================================== */
 article.fulltext {
   .article-info {
     margin: emCalc(20px) 0 0;
+  }
+  .article-image {
+    max-width: emCalc(910px);
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -393,7 +403,7 @@ article.fulltext {
     color: #666;
   }
   .article-image {
-    margin-top: .35em;
+    margin-top: .15em;
     background: #fff;
     border: 1px solid #e3e3e3;
   }

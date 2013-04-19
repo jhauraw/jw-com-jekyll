@@ -8,7 +8,7 @@ layout: (post|page|home)
 title:
 excerpt: |
   Your_Excerpt_Here
-image:
+image: # optimum size 16:9 960 x 540
   url:
   alt:
   attribution:

@@ -7,21 +7,22 @@ excerpt: |
 ---
 
 <div class="row collapse">
-  <form method="get" id="searchbox_010973157552660894590:skbudg1fj70" action="/search/">
+  <form method="get" id="searchbox_010973157552660894590:skbudg1fj70" action="{{ '/search/' | to_baseurl }}">
     <input type="hidden" name="cx" value="010973157552660894590:skbudg1fj70" />
     <input type="hidden" name="cof" value="FORID:11" />
     <input type="hidden" name="ie" value="utf-8" />
 
     <div class="large-9 columns">
       <input type="text" id="q" name="q" size="70" value="" accesskey="s" autocomplete="off" placeholder="Search..." />
-    </div>
+    </div><!-- .columns -->
     <div class="large-3 columns">
       <button type="submit" id="search-button" class="button prefix">Search</button>
-    </div>
+    </div><!-- .columns -->
   </form>
-</div>
+</div><!-- .row.collapse -->
 
-<div id="cse" style="width:100%;">Loading</div>
+<div id="cse"></div>
+
 <script src="//www.google.com/jsapi"></script>
 <script>
   google.load('search', '1', {language : 'en', style : google.loader.themes.V2_DEFAULT});
@@ -67,6 +68,7 @@ excerpt: |
   /* must be below output to override */
   .gsc-control-cse{padding:0;border:0 none;}
   .gsc-control-cse table, .gsc-control-cse th,.gsc-control-cse td{border:0 none;padding:0;}
+  .gsc-control-cse table tr th, .gsc-control-cse table tr td {font-size: 1em;}
   .gsc-above-wrapper-area{padding:0;}
   .gsc-result-info{padding:0;}
   .gsc-webResult,.gsc-webResult .gsc-result{padding:0;}

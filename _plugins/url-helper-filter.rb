@@ -14,6 +14,18 @@ module Jekyll
       baseurl = @context.registers[:site].config['baseurl'].to_s
     end
 
+    def to_baseurl(input)
+
+      # baseurl << input # wouldn't work, created a huge concat chain
+      input = get_baseurl + input
+    end
+
+    def to_absurl(input)
+
+      # url + baseurl << input
+      input = get_url + get_baseurl + input
+    end
+
     def sub_baseurl(input)
 
       # Append @baseurl to Root-Relative URLs in templates
@@ -28,18 +40,6 @@ module Jekyll
       # templates to make an Absolute URL. Looks for ="/ in
       # href or src tags.
       input.gsub(/(href|src)="\//, '\1="' + get_url + get_baseurl + '/')
-    end
-
-    def to_baseurl(input)
-
-      # baseurl << input # wouldn't work, created a huge concat chain
-      input = get_baseurl + input
-    end
-
-    def to_absurl(input)
-
-      # url + baseurl << input
-      input = get_url + get_baseurl + input
     end
   end
 end

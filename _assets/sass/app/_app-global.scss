@@ -52,7 +52,7 @@ html #peek, body #peek {
 
 @media #{$large} {
   #main {
-    border: 1px solid red; // e3e3e3
+    border: 1px solid #e3e3e3;
   }
 }
 
@@ -379,6 +379,33 @@ article.fulltext {
 @media #{$small} {
 }
 
+/* =Related Posts ====================================================== */
+#related {
+  > .row {
+    padding-top: 1em;
+    background: #f3f3f3;
+    border-top: 1px dashed #e3e3e3;
+  }
+  .related-title {
+    color: #999;
+  }
+  .article-excerpt {
+    color: #666;
+  }
+  .article-image {
+    margin-top: .35em;
+    border: 1px solid #e3e3e3;
+  }
+}
+
+@media #{$small} {
+  #related {
+    .related-title, .article-title, .article-excerpt {
+      font-size: .85em;
+    }
+  }
+}
+
 /* =Article Summary ==================================================== */
 article.summary {
   .article-title {
@@ -397,7 +424,7 @@ ul.archive {
   margin: 0;
   li {
     padding-top: 1.15em;
-    border-top: 1px dashed #f3f3f3;
+    border-top: 1px dashed #e3e3e3;
     &:first-child {
       padding-top: 0;
       border-top: 0 none;
@@ -455,6 +482,13 @@ ul.archive {
 }
 
 /* =Comments =========================================================== */
+#comments {
+  padding-top: 1em;
+  border-top: 1px dashed #e3e3e3;
+  #disqus_thread {
+    margin-bottom: -1em;
+  }
+}
 
 /* =Footer ============================================================= */
 #footer {
@@ -472,11 +506,9 @@ ul.archive {
     margin-bottom: 0;
     font-size: emCalc(12px);
   }
-
   .footer-meta {
     text-align: center;
   }
-
   .footer-links {
     text-align: center;
     margin-top: 1em;

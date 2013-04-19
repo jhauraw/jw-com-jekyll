@@ -1,6 +1,8 @@
 TODO:
 
-  Set max-width on #main
+  Set max-width on featured image to 910px
+
+  Reduce font size on related posts
 
   Tag Pagination:
   https://github.com/ilyakhokhryakov/jekyll-tagging-pagination/blob/master/tags-pagination.rb

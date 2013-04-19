@@ -55,7 +55,7 @@ html #peek, body #peek {
 @media only screen and (min-width: 90em) {
   /* line 54, ../_assets/sass/app/_app-global.scss */
   #main {
-    border: 1px solid red;
+    border: 1px solid #e3e3e3;
   }
 }
 @media only screen and (min-width: 48em) {
@@ -398,43 +398,70 @@ article.fulltext .article-info {
   margin: 1.25em 0 0;
 }
 
-/* =Article Summary ==================================================== */
+/* =Related Posts ====================================================== */
 /* line 384, ../_assets/sass/app/_app-global.scss */
+#related > .row {
+  padding-top: 1em;
+  background: #f3f3f3;
+  border-top: 1px dashed #e3e3e3;
+}
+/* line 389, ../_assets/sass/app/_app-global.scss */
+#related .related-title {
+  color: #999;
+}
+/* line 392, ../_assets/sass/app/_app-global.scss */
+#related .article-excerpt {
+  color: #666;
+}
+/* line 395, ../_assets/sass/app/_app-global.scss */
+#related .article-image {
+  margin-top: .35em;
+  border: 1px solid #e3e3e3;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 403, ../_assets/sass/app/_app-global.scss */
+  #related .related-title, #related .article-title, #related .article-excerpt {
+    font-size: .85em;
+  }
+}
+/* =Article Summary ==================================================== */
+/* line 411, ../_assets/sass/app/_app-global.scss */
 article.summary .article-title {
   font-size: 1.75em;
   margin: 0;
 }
-/* line 388, ../_assets/sass/app/_app-global.scss */
+/* line 415, ../_assets/sass/app/_app-global.scss */
 article.summary .article-image {
   margin-top: .35em;
 }
 
 /* =Archive ============================================================ */
-/* line 394, ../_assets/sass/app/_app-global.scss */
+/* line 421, ../_assets/sass/app/_app-global.scss */
 ul.archive {
   font-size: inherit;
   list-style: none;
   margin: 0;
 }
-/* line 398, ../_assets/sass/app/_app-global.scss */
+/* line 425, ../_assets/sass/app/_app-global.scss */
 ul.archive li {
   padding-top: 1.15em;
-  border-top: 1px dashed #f3f3f3;
+  border-top: 1px dashed #e3e3e3;
 }
-/* line 401, ../_assets/sass/app/_app-global.scss */
+/* line 428, ../_assets/sass/app/_app-global.scss */
 ul.archive li:first-child {
   padding-top: 0;
   border-top: 0 none;
 }
 
 /* =Sidebar ============================================================ */
-/* line 409, ../_assets/sass/app/_app-global.scss */
+/* line 436, ../_assets/sass/app/_app-global.scss */
 .sidebar.flex-col {
   display: none;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 414, ../_assets/sass/app/_app-global.scss */
+  /* line 441, ../_assets/sass/app/_app-global.scss */
   .sidebar.flex-col {
     border-left: 1px solid #eaeaea;
     border-bottom: 1px solid #e0e0e0;
@@ -445,39 +472,39 @@ ul.archive li:first-child {
   }
 }
 @media screen and (min-width: 48em) and (min-width: 58.125em) {
-  /* line 423, ../_assets/sass/app/_app-global.scss */
+  /* line 450, ../_assets/sass/app/_app-global.scss */
   .sidebar.flex-col {
     display: table-cell;
     width: 21.6875em;
   }
-  /* line 426, ../_assets/sass/app/_app-global.scss */
+  /* line 453, ../_assets/sass/app/_app-global.scss */
   .sidebar.flex-col .panel {
     margin-top: 0.9375em;
     margin-bottom: 0.9375em;
   }
 }
 @media only screen and (min-width: 90em) {
-  /* line 434, ../_assets/sass/app/_app-global.scss */
+  /* line 461, ../_assets/sass/app/_app-global.scss */
   .sidebar.flex-col {
     display: table-cell;
     width: 25.4375em;
   }
 }
 @media only screen and (min-width: 48em) {
-  /* line 441, ../_assets/sass/app/_app-global.scss */
+  /* line 468, ../_assets/sass/app/_app-global.scss */
   .sidebar-inset {
     padding: 1.25em 0.3125em 0.3125em;
   }
 }
 /* 347px for screen min 768-930px on .sidebar.flex-col above results in 306px; 407px for screen min 1440px results in 366px. */
-/* line 447, ../_assets/sass/app/_app-global.scss */
+/* line 474, ../_assets/sass/app/_app-global.scss */
 .article-aside {
   margin-bottom: 1.875em;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   box-shadow: 1px 1px 2px 0 #d0d0d0;
 }
-/* line 450, ../_assets/sass/app/_app-global.scss */
+/* line 477, ../_assets/sass/app/_app-global.scss */
 .article-aside article {
   background: #fff;
   border: 1px solid #ccc;
@@ -485,8 +512,18 @@ ul.archive li:first-child {
 }
 
 /* =Comments =========================================================== */
+/* line 485, ../_assets/sass/app/_app-global.scss */
+#comments {
+  padding-top: 1em;
+  border-top: 1px dashed #e3e3e3;
+}
+/* line 488, ../_assets/sass/app/_app-global.scss */
+#comments #disqus_thread {
+  margin-bottom: -1em;
+}
+
 /* =Footer ============================================================= */
-/* line 460, ../_assets/sass/app/_app-global.scss */
+/* line 494, ../_assets/sass/app/_app-global.scss */
 #footer {
   z-index: 5;
   position: absolute;
@@ -504,45 +541,45 @@ ul.archive li:first-child {
   transform: translateZ(0);
   /* to prevent flash in mobile w/.panel */
 }
-/* line 471, ../_assets/sass/app/_app-global.scss */
+/* line 505, ../_assets/sass/app/_app-global.scss */
 #footer p, #footer ul {
   margin-bottom: 0;
   font-size: 0.75em;
 }
-/* line 476, ../_assets/sass/app/_app-global.scss */
+/* line 509, ../_assets/sass/app/_app-global.scss */
 #footer .footer-meta {
   text-align: center;
 }
-/* line 480, ../_assets/sass/app/_app-global.scss */
+/* line 512, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links {
   text-align: center;
   margin-top: 1em;
 }
-/* line 483, ../_assets/sass/app/_app-global.scss */
+/* line 515, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links li {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 486, ../_assets/sass/app/_app-global.scss */
+/* line 518, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links li:first-child {
   margin-left: 0;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 494, ../_assets/sass/app/_app-global.scss */
+  /* line 526, ../_assets/sass/app/_app-global.scss */
   #footer {
     padding: 1.875em;
   }
-  /* line 496, ../_assets/sass/app/_app-global.scss */
+  /* line 528, ../_assets/sass/app/_app-global.scss */
   #footer .footer-meta {
     text-align: left;
   }
-  /* line 499, ../_assets/sass/app/_app-global.scss */
+  /* line 531, ../_assets/sass/app/_app-global.scss */
   #footer .footer-links {
     float: right;
     margin-top: 0;
   }
-  /* line 502, ../_assets/sass/app/_app-global.scss */
+  /* line 534, ../_assets/sass/app/_app-global.scss */
   #footer .footer-links li {
     float: left;
   }

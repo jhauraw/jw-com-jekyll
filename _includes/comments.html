@@ -1,10 +1,10 @@
-{% if site.constants.discus-user %}
+{% if site.constants.disqus-user %}
 <section id="comments">
   <div class="row">
     <div class="columns">
       <div id="disqus_thread"></div>
       <script>
-        var disqus_user = '{{ site.constants.discus-user }}';
+        var disqus_shortname = '{{ site.constants.disqus-user }}';
 
         (function() {
           var dsq = document.createElement('script');

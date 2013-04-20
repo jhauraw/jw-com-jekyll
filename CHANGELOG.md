@@ -1,9 +1,5 @@
 TODO:
 
-  Post Images in feed not working.
-
-  Set max-width on featured image to 910px
-
   Tag Pagination:
   https://github.com/ilyakhokhryakov/jekyll-tagging-pagination/blob/master/tags-pagination.rb
 
@@ -15,8 +11,6 @@ TODO:
 
   http://stackoverflow.com/questions/15423665/jekyll-paginate-blog-as-subdirectory
   https://github.com/MrWerewolf/jekyll-category-pagination
-
-  absolute URLs in FEED, use regex to look for URL beggining with / (slash)
 
   flatterline jekyll github source for their blog
   blitz.io 0-250 in 10s, then sustain 250 for 50s

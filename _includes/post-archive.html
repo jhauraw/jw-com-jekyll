@@ -5,7 +5,7 @@
       {% if page.image.url %}
       <figure class="article-image">
         <a name="lead-image"></a>
-          <img src="{{ page.image.url | to_baseurl }}" alt="{% if page.image.alt %}{{ page.image.alt | escape }}{% else %}{{ page.title | escape }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape }}"{% endif %} />
+          <img src="{{ page.image.url | to_baseurl }}" alt="{% if page.image.alt %}{{ page.image.alt | escape_once }}{% else %}{{ page.title | escape_once }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape_once }}"{% endif %} />
       </figure><!-- .article-image -->
       {% endif %}
 

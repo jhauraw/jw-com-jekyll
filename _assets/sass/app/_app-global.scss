@@ -338,7 +338,7 @@ html #peek, body #peek {
   }
 }
 
-/* =Articles =========================================================== */
+/* =Article ============================================================ */
 article {
   position: relative;
   ul, ol, dl {
@@ -374,7 +374,7 @@ article {
   }
 }
 
-/* =Single/Page ======================================================== */
+/* =Single/Page Article ================================================ */
 article.fulltext {
   .article-info {
     margin: emCalc(20px) 0 0;
@@ -389,8 +389,59 @@ article.fulltext {
 @media #{$small} {
 }
 
+/* =Aside Article ====================================================== */
+article.aside {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  &.last {
+    margin-bottom: 0;
+  }
+  .article-image {
+    margin: 0 0 .75em 0;
+  }
+  .article-header, .article-info, .article-content {
+    padding: 0 1em;
+  }
+  .article-content {
+    color: #666;
+  }
+  .article-content {
+    p {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* =Archive Posts ====================================================== */
+.archive {
+  font-size: inherit;
+  list-style: none;
+  margin: 0;
+  li {
+    padding-bottom: 0;
+  }
+}
+
+@media #{$small} {
+  .archive {
+    article {
+      &.last {
+        margin-bottom: 1em;
+      }
+      .article-title {
+        font-size: emCalc(20px);
+      }
+      .article-content p {
+        font-size: emCalc(14px);
+      }
+    }
+  }
+}
+
 /* =Related Posts ====================================================== */
-#related {
+.related {
   > .row {
     padding-top: 1em;
     padding-bottom: 1em;
@@ -399,69 +450,18 @@ article.fulltext {
     border-style: dashed;
     border-width: 1px 0;
   }
-  article {
-    background: #FFF;
-    border: 1px solid #E3E3E3;
-    padding: 1em;
-    margin-bottom: 1em;
-    &.last {
-      margin-bottom: 0;
-    }
-  }
-  .related-title {
-    color: #999;
-  }
-  .article-image {
-    margin: 0 0 .5em 0;
-    background: #fff;
-  }
-  .article-excerpt {
-    color: #666;
-    margin-bottom: 0;
-  }
 }
 
 @media #{$small} {
-  #related {
-    .related-title {
-      font-size: .85em;
-    }
+  .related {
     article {
       margin-bottom: 0;
-    }
-    .article-image {
-    }
-    .article-title {
-      font-size: .85em;
-    }
-    .article-excerpt {
-      font-size: .75em;
-    }
-  }
-}
-
-/* =Article Summary ==================================================== */
-article.summary {
-  .article-title {
-    font-size: emCalc(28px);
-    margin: 0;
-  }
-  .article-image {
-    margin-top: .35em;
-  }
-}
-
-/* =Archive ============================================================ */
-ul.archive {
-  font-size: inherit;
-  list-style: none;
-  margin: 0;
-  li {
-    padding-top: 1.15em;
-    border-top: 1px dashed #e3e3e3;
-    &:first-child {
-      padding-top: 0;
-      border-top: 0 none;
+      .article-title {
+        font-size: emCalc(20px);
+      }
+      .article-content p {
+        font-size: emCalc(14px);
+      }
     }
   }
 }

@@ -355,7 +355,7 @@ html #peek, body #peek {
     padding-right: 1.5625em;
   }
 }
-/* =Articles =========================================================== */
+/* =Article ============================================================ */
 /* line 342, ../_assets/sass/app/_app-global.scss */
 article {
   position: relative;
@@ -396,7 +396,7 @@ article .article-image img {
   vertical-align: middle;
 }
 
-/* =Single/Page ======================================================== */
+/* =Single/Page Article ================================================ */
 /* line 379, ../_assets/sass/app/_app-global.scss */
 article.fulltext .article-info {
   margin: 1.25em 0 0;
@@ -408,9 +408,64 @@ article.fulltext .article-image {
   margin-right: auto;
 }
 
+/* =Aside Article ====================================================== */
+/* line 393, ../_assets/sass/app/_app-global.scss */
+article.aside {
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+}
+/* line 398, ../_assets/sass/app/_app-global.scss */
+article.aside.last {
+  margin-bottom: 0;
+}
+/* line 401, ../_assets/sass/app/_app-global.scss */
+article.aside .article-image {
+  margin: 0 0 .75em 0;
+}
+/* line 404, ../_assets/sass/app/_app-global.scss */
+article.aside .article-header, article.aside .article-info, article.aside .article-content {
+  padding: 0 1em;
+}
+/* line 407, ../_assets/sass/app/_app-global.scss */
+article.aside .article-content {
+  color: #666;
+}
+/* line 411, ../_assets/sass/app/_app-global.scss */
+article.aside .article-content p {
+  margin-bottom: 0;
+}
+
+/* =Archive Posts ====================================================== */
+/* line 418, ../_assets/sass/app/_app-global.scss */
+.archive {
+  font-size: inherit;
+  list-style: none;
+  margin: 0;
+}
+/* line 422, ../_assets/sass/app/_app-global.scss */
+.archive li {
+  padding-bottom: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  /* line 430, ../_assets/sass/app/_app-global.scss */
+  .archive article.last {
+    margin-bottom: 1em;
+  }
+  /* line 433, ../_assets/sass/app/_app-global.scss */
+  .archive article .article-title {
+    font-size: 1.25em;
+  }
+  /* line 436, ../_assets/sass/app/_app-global.scss */
+  .archive article .article-content p {
+    font-size: 0.875em;
+  }
+}
 /* =Related Posts ====================================================== */
-/* line 394, ../_assets/sass/app/_app-global.scss */
-#related > .row {
+/* line 445, ../_assets/sass/app/_app-global.scss */
+.related > .row {
   padding-top: 1em;
   padding-bottom: 1em;
   background: #f3f3f3;
@@ -418,79 +473,21 @@ article.fulltext .article-image {
   border-style: dashed;
   border-width: 1px 0;
 }
-/* line 402, ../_assets/sass/app/_app-global.scss */
-#related article {
-  background: #FFF;
-  border: 1px solid #E3E3E3;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-/* line 407, ../_assets/sass/app/_app-global.scss */
-#related article.last {
-  margin-bottom: 0;
-}
-/* line 411, ../_assets/sass/app/_app-global.scss */
-#related .related-title {
-  color: #999;
-}
-/* line 414, ../_assets/sass/app/_app-global.scss */
-#related .article-image {
-  margin: 0 0 .5em 0;
-  background: #fff;
-}
-/* line 418, ../_assets/sass/app/_app-global.scss */
-#related .article-excerpt {
-  color: #666;
-  margin-bottom: 0;
-}
 
 @media only screen and (min-width: 48em) {
-  /* line 426, ../_assets/sass/app/_app-global.scss */
-  #related .related-title {
-    font-size: .85em;
-  }
-  /* line 429, ../_assets/sass/app/_app-global.scss */
-  #related article {
+  /* line 457, ../_assets/sass/app/_app-global.scss */
+  .related article {
     margin-bottom: 0;
   }
-  /* line 434, ../_assets/sass/app/_app-global.scss */
-  #related .article-title {
-    font-size: .85em;
+  /* line 459, ../_assets/sass/app/_app-global.scss */
+  .related article .article-title {
+    font-size: 1.25em;
   }
-  /* line 437, ../_assets/sass/app/_app-global.scss */
-  #related .article-excerpt {
-    font-size: .75em;
+  /* line 462, ../_assets/sass/app/_app-global.scss */
+  .related article .article-content p {
+    font-size: 0.875em;
   }
 }
-/* =Article Summary ==================================================== */
-/* line 445, ../_assets/sass/app/_app-global.scss */
-article.summary .article-title {
-  font-size: 1.75em;
-  margin: 0;
-}
-/* line 449, ../_assets/sass/app/_app-global.scss */
-article.summary .article-image {
-  margin-top: .35em;
-}
-
-/* =Archive ============================================================ */
-/* line 455, ../_assets/sass/app/_app-global.scss */
-ul.archive {
-  font-size: inherit;
-  list-style: none;
-  margin: 0;
-}
-/* line 459, ../_assets/sass/app/_app-global.scss */
-ul.archive li {
-  padding-top: 1.15em;
-  border-top: 1px dashed #e3e3e3;
-}
-/* line 462, ../_assets/sass/app/_app-global.scss */
-ul.archive li:first-child {
-  padding-top: 0;
-  border-top: 0 none;
-}
-
 /* =Sidebar ============================================================ */
 /* line 470, ../_assets/sass/app/_app-global.scss */
 .sidebar.flex-col {

@@ -97,7 +97,7 @@ permalink: /blog/:title/
 #lsi: true
 markdown: redcarpet
 pygments: true
-paginate: 3
+paginate: 15
 
 include: ['.htaccess']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

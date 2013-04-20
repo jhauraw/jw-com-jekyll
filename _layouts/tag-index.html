@@ -1,9 +1,11 @@
 ---
 layout: archive
-type: tag
+subtype: tag
 ---
 
-<ul class="tags archive">
+{% assign showmeta = true %}
+{% assign truncatewords = 20 %}
+<ul class="tags archive large-block-grid-3">
   {% for post in site.posts %}
     {% for tag in post.tags %}
       {% if tag == page.tag %}
@@ -11,11 +13,11 @@ type: tag
         {% assign page = post %}
         <li>
 
-          {% include post-archive.html %}
+          {% include post-aside.html %}
 
         </li>
         {% assign page = temp %}
       {% endif %}
     {% endfor %}
   {% endfor %}
-</ul>
+</ul><!-- .tags.archive -->

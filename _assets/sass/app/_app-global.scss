@@ -394,10 +394,6 @@ article.aside {
   background: #fff;
   border: 1px solid #e3e3e3;
   padding-bottom: 1em;
-  margin-bottom: 1em;
-  &.last {
-    margin-bottom: 0;
-  }
   .article-image {
     margin: 0 0 .75em 0;
   }
@@ -414,22 +410,23 @@ article.aside {
   }
 }
 
-/* =Archive Posts ====================================================== */
-.archive {
+/* =Index Posts ======================================================== */
+.index {
   font-size: inherit;
   list-style: none;
-  margin: 0;
-  li {
-    padding-bottom: 0;
+}
+
+@media only screen and (max-width: $small-screen) {
+  .index {
+    li {
+      width: 100%;
+    }
   }
 }
 
 @media #{$small} {
-  .archive {
+  .index {
     article {
-      &.last {
-        margin-bottom: 1em;
-      }
       .article-title {
         font-size: emCalc(20px);
       }
@@ -452,15 +449,31 @@ article.aside {
   }
 }
 
+@media only screen and (max-width: $small-screen) {
+  .related {
+    .index {
+      li {
+        &.last {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+}
+
 @media #{$small} {
   .related {
+    .index {
+      li {
+        padding-bottom: 0;
+      }
+    }
     article {
-      margin-bottom: 0;
       .article-title {
-        font-size: emCalc(20px);
+        font-size: emCalc(18px);
       }
       .article-content p {
-        font-size: emCalc(14px);
+        font-size: emCalc(13px);
       }
     }
   }

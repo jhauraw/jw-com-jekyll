@@ -6,10 +6,11 @@ excerpt: |
   Information, tutorials, howtos and great content on topics related to modern day responsive mobile-first web development and design with a focus on workflow optimization.
 ---
 
-{% assign showmeta = true %}
-{% assign truncatewords = 20 %}
 {% if paginator.posts != empty %}
-  <ul class="archive large-block-grid-3">
+  {% assign showmeta = true %}
+  {% assign showexcerpt = true %}
+  {% assign truncatewords = 20 %}
+  <ul class="date index large-block-grid-3">
     {% for page in paginator.posts %}
       <li>
 

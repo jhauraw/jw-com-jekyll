@@ -1,74 +1,74 @@
-  <div id="sticky">
-      <div class="navwrap">
+<div id="sticky">
+  <div class="navwrap">
 
-        <nav id="navbar">
+    <nav id="navbar">
 
-          <!-- Title / Menu Section -->
-          <ul class="title-area">
-            <li class="toggle-menu menu-icon"><a href="#"></a></li>
+      <!-- Title / Menu Section -->
+      <ul class="title-area">
+        <li class="toggle-menu menu-icon"><a href="#"></a></li>
 
-            <li class="logo">
-              <a class="brand" href="{{ '/' | to_baseurl }}">
-                <span>{{ site.constants.name }}</span>
-                <img src="{{ '/img/logo-light.svg' | to_baseurl }}" alt="{{ site.constants.name }}" />
-              </a>
-            </li> <!-- .logo -->
-          </ul> <!-- .title-area -->
+        <li class="logo">
+          <a class="brand" href="{{ '/' | to_baseurl }}">
+            <span>{{ site.constants.name }}</span>
+            <img src="{{ '/img/logo-light.svg' | to_baseurl }}" alt="{{ site.constants.name }}" />
+          </a>
+        </li> <!-- .logo -->
+      </ul> <!-- .title-area -->
 
-          <section class="navsection">
-            <ul class="left navmenu">
-              <li class="submenu">
-                <a href="{{ '/blog/' | to_baseurl }}">Blog</a>
+      <section class="navsection">
+        <ul class="left navmenu">
+          <li class="submenu">
+            <a href="{{ '/blog/' | to_baseurl }}">Blog</a>
 
-                <div class="submenu-content">
-                  <div class="page-container">
-                    <ul class="inline-list">
-                      {% if site.posts %}
-                        {% for post in site.posts limit:3 %}
-                        <li>
-                          <a href="{{ post.url | to_baseurl }}">{{ post.title }}</a>
-                        </li>
-                        {% endfor %}
-                      {% else %}
-                        <li>No posts to list...</li>
-                      {% endif %}
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li><a href="{{ '/portfolio/' | to_baseurl }}">Portfolio</a></li>
-              <li><a href="{{ '/resume/' | to_baseurl }}">Résumé</a></li>
-              <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>
+            <div class="submenu-content">
+              <div class="page-container">
+                <ul class="inline-list">
+                  {% if site.posts %}
+                    {% for post in site.posts limit:3 %}
+                    <li>
+                      <a href="{{ post.url | to_baseurl }}">{{ post.title }}</a>
+                    </li>
+                    {% endfor %}
+                  {% else %}
+                    <li>No posts to list...</li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href="{{ '/portfolio/' | to_baseurl }}">Portfolio</a></li>
+          <li><a href="{{ '/resume/' | to_baseurl }}">Résumé</a></li>
+          <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>
 
-              <!--<li class="submenu">
-                <a href="#">Item 2</a>
+          <!--<li class="submenu">
+            <a href="#">Item 2</a>
 
-                <div class="submenu-content">
-                  <div class="page-container">
-                    <ul class="left">
-                      <li>Item 2 Sub Item 1</li>
-                      <li>Item 2 Sub Item 2</li>
-                      <li>Item 2 Sub Item 3</li>
-                    </ul>
+            <div class="submenu-content">
+              <div class="page-container">
+                <ul class="left">
+                  <li>Item 2 Sub Item 1</li>
+                  <li>Item 2 Sub Item 2</li>
+                  <li>Item 2 Sub Item 3</li>
+                </ul>
 
-                    <ul class="right">
-                      <li>Item 2 Sub Item 4</li>
-                      <li>Item 2 Sub Item 5</li>
-                      <li>Item 2 Sub Item 6</li>
-                    </ul>
-                  </div>
-                </div>
-              </li>--> <!-- .submenu -->
-            </ul> <!-- .navmenu -->
+                <ul class="right">
+                  <li>Item 2 Sub Item 4</li>
+                  <li>Item 2 Sub Item 5</li>
+                  <li>Item 2 Sub Item 6</li>
+                </ul>
+              </div>
+            </div>
+          </li>--> <!-- .submenu -->
+        </ul> <!-- .navmenu -->
 
-            <ul class="right usermenu">
-              <li><a href="{{ '/search/' | to_baseurl }}">S</a></li>
-              <li><a rel="nofollow" target="_blank" href="//facebook.com/{{ site.constants.facebook }}">F</a></li>
-              <li><a rel="nofollow" target="_blank" href="//twitter.com/{{ site.constants.twitter }}">T</a></li>
-            </ul> <!-- .usermenu -->
-          </section><!-- .navsection -->
+        <ul class="right usermenu">
+          <li><a href="{{ '/search/' | to_baseurl }}">S</a></li>
+          <li><a rel="nofollow" href="{{ '/facebook/' | to_baseurl }}">F</a></li>
+          <li><a rel="nofollow" href="{{ '/twitter/' | to_baseurl }}">T</a></li>
+        </ul> <!-- .usermenu -->
+      </section><!-- .navsection -->
 
-        </nav><!-- #navbar -->
+    </nav><!-- #navbar -->
 
-      </div> <!-- .navwrap -->
-    </div><!-- #sticky -->
+  </div> <!-- .navwrap -->
+</div><!-- #sticky -->

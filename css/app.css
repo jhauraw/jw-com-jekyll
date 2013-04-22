@@ -62,7 +62,7 @@ html #peek, body #peek {
   /* line 60, ../_assets/sass/app/_app-global.scss */
   #main {
     margin: 0 auto;
-    max-width: 90em;
+    max-width: 90.125em;
   }
 
   /* line 65, ../_assets/sass/app/_app-global.scss */
@@ -490,6 +490,7 @@ article.aside .article-content p {
   /* line 479, ../_assets/sass/app/_app-global.scss */
   .sidebar.flex-col {
     display: table-cell;
+    padding: 0;
     border-left: 1px solid #eaeaea;
     border-bottom: 1px solid #e0e0e0;
     background: #fff;
@@ -497,11 +498,11 @@ article.aside .article-content p {
     -moz-box-shadow: 2px 2px 6px -2px #dddddd inset;
     box-shadow: 2px 2px 6px -2px #dddddd inset;
   }
-}
-@media only screen and (min-width: 48em) {
-  /* line 489, ../_assets/sass/app/_app-global.scss */
+
+  /* line 488, ../_assets/sass/app/_app-global.scss */
   .sidebar-list {
-    margin: 0.9375em 0;
+    margin: 0;
+    padding: 0.9375em;
   }
   /* line 491, ../_assets/sass/app/_app-global.scss */
   .sidebar-list li {
@@ -512,15 +513,35 @@ article.aside .article-content p {
     margin-bottom: 0;
   }
 }
+/* =Aside Box ========================================================== */
+/* line 507, ../_assets/sass/app/_app-global.scss */
+.aside-muted {
+  background: #f6f5f2;
+}
+
+/* =Ribbons ============================================================ */
+/* line 515, ../_assets/sass/app/_app-global.scss */
+.ribbon {
+  font-size: 1em;
+  color: #fff;
+  margin: 0;
+  padding: 0.625em 1em;
+}
+/* line 520, ../_assets/sass/app/_app-global.scss */
+.ribbon.hot {
+  background-color: #7fc04c;
+  border-bottom: 1px solid #70b03e;
+}
+
 /* =Comments =========================================================== */
-/* line 501, ../_assets/sass/app/_app-global.scss */
+/* line 527, ../_assets/sass/app/_app-global.scss */
 #comments {
   padding-top: 1em;
   border-top: 1px dashed #e3e3e3;
 }
 
 /* =Footer ============================================================= */
-/* line 510, ../_assets/sass/app/_app-global.scss */
+/* line 536, ../_assets/sass/app/_app-global.scss */
 #footer {
   z-index: 5;
   position: absolute;
@@ -538,45 +559,45 @@ article.aside .article-content p {
   transform: translateZ(0);
   /* to prevent flash in mobile w/.panel */
 }
-/* line 521, ../_assets/sass/app/_app-global.scss */
+/* line 547, ../_assets/sass/app/_app-global.scss */
 #footer p, #footer ul {
   margin-bottom: 0;
   font-size: 0.75em;
 }
-/* line 525, ../_assets/sass/app/_app-global.scss */
+/* line 551, ../_assets/sass/app/_app-global.scss */
 #footer .footer-meta {
   text-align: center;
 }
-/* line 528, ../_assets/sass/app/_app-global.scss */
+/* line 554, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links {
   text-align: center;
   margin-top: 1em;
 }
-/* line 531, ../_assets/sass/app/_app-global.scss */
+/* line 557, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links li {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 534, ../_assets/sass/app/_app-global.scss */
+/* line 560, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links li:first-child {
   margin-left: 0;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 542, ../_assets/sass/app/_app-global.scss */
+  /* line 568, ../_assets/sass/app/_app-global.scss */
   #footer {
     padding: 1.875em;
   }
-  /* line 544, ../_assets/sass/app/_app-global.scss */
+  /* line 570, ../_assets/sass/app/_app-global.scss */
   #footer .footer-meta {
     text-align: left;
   }
-  /* line 547, ../_assets/sass/app/_app-global.scss */
+  /* line 573, ../_assets/sass/app/_app-global.scss */
   #footer .footer-links {
     float: right;
     margin-top: 0;
   }
-  /* line 550, ../_assets/sass/app/_app-global.scss */
+  /* line 576, ../_assets/sass/app/_app-global.scss */
   #footer .footer-links li {
     float: left;
   }

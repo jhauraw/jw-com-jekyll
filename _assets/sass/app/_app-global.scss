@@ -59,7 +59,7 @@ html #peek, body #peek {
 @media #{$small} {
   #main {
     margin: 0 auto;
-    max-width: $row-width;
+    max-width: emCalc(1442px);
   }
 
   .flex-row {
@@ -478,22 +478,48 @@ article.aside {
 @media #{$small} {
   .sidebar.flex-col {
     display: table-cell;
+    padding: 0;
     border-left: 1px solid #eaeaea;
     border-bottom: 1px solid #e0e0e0;
     background: #fff;
     @include box-shadow(2px 2px 6px -2px #ddd inset);
   }
-}
 
-@media #{$small} {
   .sidebar-list {
-    margin: $half-gutter 0; // 50% of $column-gutter
+    margin: 0;
+    padding: $half-gutter; // 50% of $column-gutter
     li {
       margin-bottom: emCalc(20px);
       &.last {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+/* =Aside Box ========================================================== */
+.aside-box {
+  li {
+
+  }
+}
+
+.aside-muted {
+  background: #f6f5f2;
+  li {
+
+  }
+}
+
+/* =Ribbons ============================================================ */
+.ribbon {
+  font-size: 1em;
+  color: #fff;
+  margin: 0;
+  padding: emCalc(10px) emCalc(16px);
+  &.hot {
+    background-color: #7fc04c;
+    border-bottom: 1px solid #70b03e;
   }
 }
 

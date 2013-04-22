@@ -93,7 +93,7 @@ baseurl: null
 # as it only affects the _posts directory, a.k.a., Blog.
 #
 # YES Front-Slash. YES Trailing-Slash
-permalink: /blog/:title/
+permalink: /:year/:title/
 
 paginate_path: /page/:num
 paginate: 5

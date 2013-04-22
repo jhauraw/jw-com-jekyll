@@ -129,11 +129,11 @@ function getParameterByName(name) {
 
           if (window.Zepto) {
 
-            peek.animate({translate: '250px, 0'}, 290);
+            peek.animate({translate: '250px, 0'}, 150);
           }
           else {
 
-            peek.css({'transition': 'all 290ms linear', 'transform': 'translate(250px ,0)'});
+            peek.css({'transition': 'all 150ms linear', 'transform': 'translate(250px ,0)'});
           }
 
           page.click(function (e) {

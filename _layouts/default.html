@@ -9,7 +9,6 @@
 
   <link type="text/plain" rel="author" href="{{ '/humans.txt' | to_baseurl }}" />
 
-
   <link rel="alternate" type="application/atom+xml" title="{{ site.constants.name }} - ATOM RSS Feed" href="//feeds.feedburner.com/{{ site.constants.feed-name }}" />
 
   <meta property="fb:app_id" content="{{ site.constants.facebook-appid }}" />
@@ -39,13 +38,11 @@
     {% include topbar.html %}
 
     <div id="scrollable">
-      <!-- <div id="container" class="row"> -->
-        <div id="main">
+      <div id="main">
 
-          {{ content }}
+        {{ content }}
 
-        </div><!-- #main -->
-      <!-- </div> --><!-- #container.row -->
+      </div><!-- #main -->
 
       {% include footer.html %}
 

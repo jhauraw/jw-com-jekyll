@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-full
 subtype: resume
 title: Résumé
 excerpt: |

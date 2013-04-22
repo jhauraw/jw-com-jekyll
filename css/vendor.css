@@ -1824,7 +1824,7 @@ th.hide-for-touch {
 }
 /* line 106, ../bower_components/foundation/scss/foundation/components/_type.scss */
 p.lead {
-  font-size: 1.16875em;
+  font-size: 1.21875em;
   line-height: 1.6;
 }
 
@@ -1884,8 +1884,8 @@ a img {
 p {
   font-family: inherit;
   font-weight: normal;
-  font-size: 0.95em;
-  line-height: 1.5;
+  font-size: 1em;
+  line-height: 1.6;
   margin-bottom: 1.25em;
   text-rendering: optimizeLegibility;
 }
@@ -1987,8 +1987,8 @@ code {
 ul,
 ol,
 dl {
-  font-size: 0.95em;
-  line-height: 1.5;
+  font-size: 1em;
+  line-height: 1.6;
   margin-bottom: 1.25em;
   list-style-position: outside;
   font-family: inherit;
@@ -2085,7 +2085,7 @@ blockquote cite a:visited {
 /* line 321, ../bower_components/foundation/scss/foundation/components/_type.scss */
 blockquote,
 blockquote p {
-  line-height: 1.5;
+  line-height: 1.6;
   color: #6f6f6f;
 }
 

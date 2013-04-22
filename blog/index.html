@@ -10,14 +10,14 @@ excerpt: |
   {% assign showmeta = true %}
   {% assign showexcerpt = true %}
   {% assign truncatewords = 20 %}
-  <ul class="date index large-block-grid-3">
+  <ul class="date index large-block-grid-5">
     {% for page in paginator.posts %}
-      <li>
+      <li{% if forloop.first %} class="first"{% elsif forloop.last %} class="last"{% endif %}>
 
         {% include post-aside.html %}
 
       </li>
     {% endfor %}
   </ul><!-- .archive -->
-  {% include pagination.html %}
+  {% include post-pager.html %}
 {% endif %}

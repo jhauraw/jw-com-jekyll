@@ -292,7 +292,7 @@ html #peek, body #peek {
         margin: 0;
         padding: 0 emCalc(20px);
         color: #fff;
-        font-size: emCalc(11px);
+        font-size: emCalc(12px);
         line-height: 44px;
         text-transform: uppercase;
       }
@@ -350,7 +350,7 @@ article {
   }
   .article-info {
     p {
-      font-size: emCalc(12px);
+      font-size: emCalc(13px);
       color: #666;
     }
     a, a:active, a:visited {
@@ -391,17 +391,16 @@ article.fulltext {
 
 /* =Aside Article ====================================================== */
 article.aside {
-  background: #fff;
-  border: 1px solid #e3e3e3;
   padding-bottom: 1em;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  @include box-shadow(1px 1px 2px 0 #d0d0d0);
   .article-image {
     margin: 0 0 .75em 0;
   }
   .article-header, .article-info, .article-content {
     padding: 0 1em;
-  }
-  .article-content {
-    color: #666;
   }
   .article-content {
     p {
@@ -412,14 +411,13 @@ article.aside {
 
 /* =Index Posts ======================================================== */
 .index {
-  font-size: inherit;
   list-style: none;
-}
-
-@media only screen and (max-width: $small-screen) {
-  .index {
-    li {
-      width: 100%;
+  li {
+    list-style-type: none;
+  }
+  &[class*="block-grid-"] {
+    > li {
+      padding-bottom: emCalc(20px);
     }
   }
 }
@@ -428,7 +426,7 @@ article.aside {
   .index {
     article {
       .article-title {
-        font-size: emCalc(20px);
+        font-size: emCalc(22px);
       }
       .article-content p {
         font-size: emCalc(14px);
@@ -468,18 +466,11 @@ article.aside {
         padding-bottom: 0;
       }
     }
-    article {
-      .article-title {
-        font-size: emCalc(18px);
-      }
-      .article-content p {
-        font-size: emCalc(13px);
-      }
-    }
   }
 }
 
 /* =Sidebar ============================================================ */
+/* 347px for screen min 768-930px on .sidebar.flex-col above results in 306px; 407px for screen min 1440px results in 366px. */
 .sidebar.flex-col {
   display: none;
 }
@@ -487,7 +478,6 @@ article.aside {
 @media #{$small} {
   .sidebar.flex-col {
     display: table-cell;
-    width: emCalc(347px);
     border-left: 1px solid #eaeaea;
     border-bottom: 1px solid #e0e0e0;
     background: #fff;
@@ -495,39 +485,15 @@ article.aside {
   }
 }
 
-/*
-@media screen and (min-width: $small-screen) and (min-width: emCalc(930px)) {
-  .sidebar.flex-col {
-    display: table-cell;
-    width: emCalc(347px);
-    .panel {
-      margin-top: emCalc(15px);
-      margin-bottom: emCalc(15px);
-    }
-  }
-}
-*/
-
-@media #{$large} {
-  .sidebar.flex-col {
-    width: emCalc(407px);
-  }
-}
-
 @media #{$small} {
-  .sidebar-inset {
-    padding: emCalc(20px) emCalc(5px) emCalc(5px);
-  }
-}
-
-/* 347px for screen min 768-930px on .sidebar.flex-col above results in 306px; 407px for screen min 1440px results in 366px. */
-.article-aside {
-  margin-bottom: emCalc(30px);
-  @include box-shadow(1px 1px 2px 0 #d0d0d0);
-  article {
-    background: #fff;
-    border: 1px solid #ccc;
-    border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  .sidebar-list {
+    margin: $half-gutter 0; // 50% of $column-gutter
+    li {
+      margin-bottom: emCalc(20px);
+      &.last {
+        margin-bottom: 0;
+      }
+    }
   }
 }
 

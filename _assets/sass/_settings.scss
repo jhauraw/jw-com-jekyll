@@ -15,10 +15,22 @@ $experimental-support-for-opera: false;
 @import "foundation/foundation-global";
 
 // Foundation Overrides
+// _grid.scss: Wider row
 $row-width: 90.000em; // 90em = 1440px
 
-$paragraph-font-size: .95em;
-$paragraph-line-height: 1.5;
+// _grid.scss: Not overriding these, but putting them
+// here for use in app.css
+$column-gutter: emCalc(30px) !default;
+$total-columns: 12 !default;
 
-// Would like a 480px breakpoint for small devices.
+// _grid.scss. Not an override, just a helper:
+$half-gutter: $column-gutter / 2;
+
+// Commenting out because it messes up ul, ol tags
+// which use the $paragraph-font-size var too.
+// _type.scss: Smaller <p> font size and line
+// $paragraph-font-size: .95em; // .95em = 15px
+// $paragraph-line-height: 1.5;
+
+// Want a 480px breakpoint for small devices.
 // 480, 768 and 1024 breakpoints would be best.

@@ -95,10 +95,12 @@ baseurl: null
 # YES Front-Slash. YES Trailing-Slash
 permalink: /blog/:title/
 
+paginate_path: /page/:num
+paginate: 5
+
 #lsi: true
 markdown: redcarpet
 pygments: true
-paginate: 15
 
 include: ['.htaccess']
 exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

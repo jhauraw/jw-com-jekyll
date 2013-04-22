@@ -1,12 +1,12 @@
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{% if paginator.previous_page != 1 %}{{ paginator.previous_page | prepend: '/blog/page' | append: '/' | to_baseurl }}{% endif %}" class="previous">&#171; Newer</a>
+    <a href="{{ '/blog' | to_baseurl }}{% if paginator.previous_page == 1 %}/{% else %}{{ paginator.previous_page_path }}{% endif %}" class="previous">&#171; Newer</a>
   {% else %}
     <span class="previous disabled">&#171; Newer</span>
   {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  <span class="page-number">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page | prepend: '/blog/page' | append: '/' | to_baseurl }}" class="next">Older &#187;</a>
+    <a href="{{ '/blog' | to_baseurl }}{{ paginator.next_page_path }}" class="next">Older &#187;</a>
   {% else %}
     <span class="next disabled">Older &#187;</span>
   {% endif %}

@@ -95,7 +95,7 @@ baseurl: null
 # YES Front-Slash. YES Trailing-Slash
 permalink: /:year/:title/
 
-paginate_path: /page/:num
+paginate_path: /page/:num/
 paginate: 5
 
 #lsi: true

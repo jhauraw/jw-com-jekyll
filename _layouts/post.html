@@ -8,12 +8,12 @@ type: post
 
     {% include post-article.html %}
 
-    {% include post-comments.html %}
-
-    {% include post-related.html %}
+    {% comment %}{% include post-comments.html %}{% endcomment %}
 
   </div><!-- #primary.columns.flex-col -->
 
   {% include post-sidebar.html %}
 
 </div><!-- .flex-row.row -->
+
+{% include post-related.html %}

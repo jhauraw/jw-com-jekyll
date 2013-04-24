@@ -59,8 +59,7 @@ html #peek, body #peek {
 @media #{$small} {
   #main {
     margin: 0 auto;
-    max-width: emCalc(1442px);
-  }
+    max-width: $row-width; }
 
   .flex-row {
     display: table;
@@ -372,6 +371,9 @@ article {
       vertical-align: middle;
     }
   }
+  .article-content {
+    color: #555;
+  }
 }
 
 /* =Single/Page Article ================================================ */
@@ -395,7 +397,6 @@ article.aside {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  @include box-shadow(1px 1px 2px 0 #d0d0d0);
   .article-image {
     margin: 0 0 .75em 0;
   }
@@ -409,21 +410,44 @@ article.aside {
   }
 }
 
-/* =Index Posts ======================================================== */
-.index {
+@media #{$small} {
+  article.aside {
+    @include box-shadow(1px 1px 2px 0 #d0d0d0);
+  }
+}
+
+/* =Item Index ========================================================= */
+.item-index {
   list-style: none;
+  margin-bottom: 0;
   li {
     list-style-type: none;
+    padding-bottom: $half-gutter;
   }
-  &[class*="block-grid-"] {
-    > li {
-      padding-bottom: emCalc(20px);
+}
+
+.item-list {
+  padding: $half-gutter;
+  &:last-child {
+    //padding-bottom: 0;
+  }
+  li {
+    &:last-child {
+      padding-bottom: 0;
     }
   }
 }
 
+.item-grid {
+
+}
+
+.item-muted {
+  background: #f6f5f2;
+}
+
 @media #{$small} {
-  .index {
+  .item-index {
     article {
       .article-title {
         font-size: emCalc(22px);
@@ -435,35 +459,64 @@ article.aside {
   }
 }
 
-/* =Related Posts ====================================================== */
-.related {
-  > .row {
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background: #f3f3f3;
-    border-color: #e3e3e3;
-    border-style: dashed;
-    border-width: 1px 0;
+/* =Ribbons ============================================================ */
+.ribbon {
+  font-size: 1em;
+  color: #555;
+  margin: 0;
+  padding: emCalc(10px) emCalc(16px);
+  border-color: #e3e3e3;
+  border-style: solid;
+  border-width: 0 0 1px 0; // puts border only on bottom
+  background-color: #fff;
+  &.hot {
+    color: #fff;
+    border-color: #70b03e;
+    background-color: #7fc04c;
   }
 }
 
-@media only screen and (max-width: $small-screen) {
-  .related {
-    .index {
-      li {
-        &.last {
-          padding-bottom: 0;
-        }
-      }
-    }
+/* =Related ====================================================== */
+.related {
+  > .row {
+    border-color: #e3e3e3;
+    border-style: solid;
+    border-width: 0 0 1px 0; // puts border only on sides
+  }
+  .item-hot {
+    background: #fdfcfc;
+  }
+  .item-trend {
+    background: #f3f3f3;
+  }
+  .ribbon {
+    border-width: 1px 0;
   }
 }
 
 @media #{$small} {
   .related {
-    .index {
+    > .row {
+      //border-width: 0;
+    }
+    /*
+    .item-index {
       li {
-        padding-bottom: 0;
+        padding-bottom: $column-gutter;
+      }
+    }
+    .item-list {
+      padding: $column-gutter;
+    }
+    */
+    .flex-col {
+      border-right: 1px solid #ccc;
+      @include box-shadow(3px 0 12px -9px rgba(0, 0, 0, 0.7) inset);
+      &:last-child {
+        border-right: 0 none;
+      }
+      .item-index {
+        @include box-shadow(0 3px 12px -7px rgba(0, 0, 0, 0.7) inset);
       }
     }
   }
@@ -484,43 +537,6 @@ article.aside {
     background: #fff;
     @include box-shadow(2px 2px 6px -2px #ddd inset);
   }
-
-  .sidebar-list {
-    margin: 0;
-    padding: $half-gutter; // 50% of $column-gutter
-    li {
-      margin-bottom: emCalc(20px);
-      &.last {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
-
-/* =Aside Box ========================================================== */
-.aside-box {
-  li {
-
-  }
-}
-
-.aside-muted {
-  background: #f6f5f2;
-  li {
-
-  }
-}
-
-/* =Ribbons ============================================================ */
-.ribbon {
-  font-size: 1em;
-  color: #fff;
-  margin: 0;
-  padding: emCalc(10px) emCalc(16px);
-  &.hot {
-    background-color: #7fc04c;
-    border-bottom: 1px solid #70b03e;
-  }
 }
 
 /* =Comments =========================================================== */
@@ -528,7 +544,7 @@ article.aside {
   padding-top: 1em;
   border-top: 1px dashed #e3e3e3;
   #disqus_thread {
-    //margin-bottom: -1em;
+    margin-bottom: -1em;
   }
 }
 

@@ -1,8 +1,7 @@
 <div id="secondary" class="sidebar large-3 columns flex-col" role="complementary">
   {% if site.related_posts != empty %}
-    <ul class="sidebar-list aside-muted index">
+    <ul class="item-index item-muted">
       <li>
-        <p>adsf asdf asdf asdf asdf asdf asfsad</p>
         <script><!--
           google_ad_client = "ca-pub-2370025526926082";
           /* JW Right Side 300x250 */
@@ -11,15 +10,15 @@
           google_ad_height = 250;
           //-->
         </script>
-        <script src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+        <script src="//pagead2.googlesyndication.com/pagead/show_ads.js"></script>
       </li>
     </ul>
 
     <h1 class="ribbon hot">What's Hot</h1>
 
-    <ul class="sidebar-list index">
+    <ul class="item-index item-list">
       {% for page in site.related_posts limit: 3 %}
-        <li{% if forloop.first %} class="first"{% elsif forloop.last %} class="last"{% endif %}>
+        <li>
 
           {% include post-aside.html %}
 

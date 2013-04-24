@@ -1,17 +1,47 @@
-{% if site.related_posts != empty %}
-  <section class="related">
-    <div class="row">
-      <div class="columns">
-        <ul class="index small-block-grid-1 large-block-grid-3">
+<section class="related">
+  <div class="row flex-row collapse">
+    <div class="item-new large-3 columns flex-col">
+      <h1 class="ribbon">The New Stuff</h1>
+
+      <ul class="item-index item-list">
+        {% if site.related_posts != empty %}
           {% for page in site.related_posts limit: 3 %}
-            <li{% if forloop.first %} class="first"{% elsif forloop.last %} class="last"{% endif %}>
+            <li>
 
               {% include post-aside.html %}
 
             </li>
           {% endfor %}
-        </ul><!-- .archive -->
-      </div><!-- .columns -->
-    </div><!-- .row -->
-  </section><!-- .related -->
-{% endif %}
+        {% endif %}
+      </ul><!-- .archive -->
+    </div><!-- .columns -->
+
+    <div class="item-hot large-4 columns flex-col">
+      <h1 class="ribbon hot">Trending</h1>
+
+      <ul class="item-index item-list">
+        {% for page in site.related_posts limit: 5 %}
+          <li>
+
+            {% include post-aside.html %}
+
+          </li>
+        {% endfor %}
+      </ul><!-- .archive -->
+    </div><!-- .columns -->
+
+    <div class="item-trend large-5 columns flex-col">
+      <h1 class="ribbon">What's Hot</h1>
+
+      <ul class="item-index item-list">
+        {% for page in site.related_posts limit: 2 %}
+          <li>
+
+            {% include post-aside.html %}
+
+          </li>
+        {% endfor %}
+      </ul><!-- .archive -->
+    </div><!-- .columns -->
+  </div><!-- .row -->
+</section><!-- .related -->

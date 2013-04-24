@@ -511,12 +511,21 @@ article.aside {
     */
     .flex-col {
       border-right: 1px solid #ccc;
-      @include box-shadow(3px 0 12px -9px rgba(0, 0, 0, 0.7) inset);
+      @include box-shadow(3px 0 12px -7px rgba(0, 0, 0, 0.7) inset);
       &:last-child {
         border-right: 0 none;
       }
       .item-index {
         @include box-shadow(0 3px 12px -7px rgba(0, 0, 0, 0.7) inset);
+      }
+      .item-list {
+        padding: $column-gutter;
+        li {
+          padding-bottom: $column-gutter;
+          &:last-child {
+            padding-bottom: 0;
+          }
+        }
       }
     }
   }

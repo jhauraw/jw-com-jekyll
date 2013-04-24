@@ -533,9 +533,9 @@ article.aside .article-content p {
   /* line 512, ../_assets/sass/app/_app-global.scss */
   .related .flex-col {
     border-right: 1px solid #ccc;
-    -webkit-box-shadow: 3px 0 12px -9px rgba(0, 0, 0, 0.7) inset;
-    -moz-box-shadow: 3px 0 12px -9px rgba(0, 0, 0, 0.7) inset;
-    box-shadow: 3px 0 12px -9px rgba(0, 0, 0, 0.7) inset;
+    -webkit-box-shadow: 3px 0 12px -7px rgba(0, 0, 0, 0.7) inset;
+    -moz-box-shadow: 3px 0 12px -7px rgba(0, 0, 0, 0.7) inset;
+    box-shadow: 3px 0 12px -7px rgba(0, 0, 0, 0.7) inset;
   }
   /* line 515, ../_assets/sass/app/_app-global.scss */
   .related .flex-col:last-child {
@@ -547,16 +547,28 @@ article.aside .article-content p {
     -moz-box-shadow: 0 3px 12px -7px rgba(0, 0, 0, 0.7) inset;
     box-shadow: 0 3px 12px -7px rgba(0, 0, 0, 0.7) inset;
   }
+  /* line 521, ../_assets/sass/app/_app-global.scss */
+  .related .flex-col .item-list {
+    padding: 1.875em;
+  }
+  /* line 523, ../_assets/sass/app/_app-global.scss */
+  .related .flex-col .item-list li {
+    padding-bottom: 1.875em;
+  }
+  /* line 525, ../_assets/sass/app/_app-global.scss */
+  .related .flex-col .item-list li:last-child {
+    padding-bottom: 0;
+  }
 }
 /* =Sidebar ============================================================ */
 /* 347px for screen min 768-930px on .sidebar.flex-col above results in 306px; 407px for screen min 1440px results in 366px. */
-/* line 527, ../_assets/sass/app/_app-global.scss */
+/* line 536, ../_assets/sass/app/_app-global.scss */
 .sidebar.flex-col {
   display: none;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 532, ../_assets/sass/app/_app-global.scss */
+  /* line 541, ../_assets/sass/app/_app-global.scss */
   .sidebar.flex-col {
     display: table-cell;
     padding: 0;
@@ -569,18 +581,18 @@ article.aside .article-content p {
   }
 }
 /* =Comments =========================================================== */
-/* line 543, ../_assets/sass/app/_app-global.scss */
+/* line 552, ../_assets/sass/app/_app-global.scss */
 #comments {
   padding-top: 1em;
   border-top: 1px dashed #e3e3e3;
 }
-/* line 546, ../_assets/sass/app/_app-global.scss */
+/* line 555, ../_assets/sass/app/_app-global.scss */
 #comments #disqus_thread {
   margin-bottom: -1em;
 }
 
 /* =Footer ============================================================= */
-/* line 552, ../_assets/sass/app/_app-global.scss */
+/* line 561, ../_assets/sass/app/_app-global.scss */
 #footer {
   z-index: 5;
   position: absolute;
@@ -598,45 +610,45 @@ article.aside .article-content p {
   transform: translateZ(0);
   /* to prevent flash in mobile w/.panel */
 }
-/* line 563, ../_assets/sass/app/_app-global.scss */
+/* line 572, ../_assets/sass/app/_app-global.scss */
 #footer p, #footer ul {
   margin-bottom: 0;
   font-size: 0.75em;
 }
-/* line 567, ../_assets/sass/app/_app-global.scss */
+/* line 576, ../_assets/sass/app/_app-global.scss */
 #footer .footer-meta {
   text-align: center;
 }
-/* line 570, ../_assets/sass/app/_app-global.scss */
+/* line 579, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links {
   text-align: center;
   margin-top: 1em;
 }
-/* line 573, ../_assets/sass/app/_app-global.scss */
+/* line 582, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links li {
   display: inline-block;
   margin-left: 1em;
 }
-/* line 576, ../_assets/sass/app/_app-global.scss */
+/* line 585, ../_assets/sass/app/_app-global.scss */
 #footer .footer-links li:first-child {
   margin-left: 0;
 }
 
 @media only screen and (min-width: 48em) {
-  /* line 584, ../_assets/sass/app/_app-global.scss */
+  /* line 593, ../_assets/sass/app/_app-global.scss */
   #footer {
     padding: 1.875em;
   }
-  /* line 586, ../_assets/sass/app/_app-global.scss */
+  /* line 595, ../_assets/sass/app/_app-global.scss */
   #footer .footer-meta {
     text-align: left;
   }
-  /* line 589, ../_assets/sass/app/_app-global.scss */
+  /* line 598, ../_assets/sass/app/_app-global.scss */
   #footer .footer-links {
     float: right;
     margin-top: 0;
   }
-  /* line 592, ../_assets/sass/app/_app-global.scss */
+  /* line 601, ../_assets/sass/app/_app-global.scss */
   #footer .footer-links li {
     float: left;
   }

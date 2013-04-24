@@ -37,6 +37,8 @@
         {% for page in site.related_posts limit: 2 %}
           <li>
 
+            {% assign showexcerpt = true %}
+            {% assign truncatewords = 25 %}
             {% include post-aside.html %}
 
           </li>

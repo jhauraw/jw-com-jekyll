@@ -3,21 +3,27 @@
 {% unless truncatewords %}{% assign truncatewords = 10 %}{% endunless %}
 <article class="post aside" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
+  {% if page.image.url %}
   <figure class="article-image">
-    {% if page.image.url %}<a href="{{ page.url  | to_baseurl }}"><img src="{{ page.image.url | to_baseurl }}" alt="{% if page.image.alt %}{{ page.image.alt | escape_once }}{% else %}{{ page.title | escape_once }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape_once }}"{% endif %} /></a>{% endif %}
+    <a href="{{ page.url  | to_baseurl }}"><img src="{{ page.image.url | to_baseurl }}" alt="{% if page.image.alt %}{{ page.image.alt | escape_once }}{% else %}{{ page.title | escape_once }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape_once }}"{% endif %} /></a>
   </figure><!-- .article-image -->
+  {% endif %}
 
   <header class="article-header">
     <h2 class="article-title"><a href="{{ page.url | to_baseurl }}">{{ page.title }}</a></h2>
   </header>
 
+  {% if showmeta %}
   <aside class="article-info">
-    {% if showmeta %}<p>{% include post-meta.html %}</p>{% endif %}
+    <p>{% include post-meta.html %}</p>
   </aside><!-- .article-info -->
+  {% endif %}
 
+  {% if showexcerpt %}
   <section class="article-content" itemprop="articleBody">
-    {% if showexcerpt %}<p>{{ page.excerpt | strip_html | strip_newlines | truncatewords: truncatewords }}</p>{% endif %}
+    <p>{{ page.excerpt | strip_html | strip_newlines | truncatewords: truncatewords }}</p>
   </section>
+  {% endif %}
 
   <footer class="article-footer">
   </footer><!-- .article-footer -->

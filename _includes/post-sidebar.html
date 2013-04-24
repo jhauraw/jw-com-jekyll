@@ -1,5 +1,4 @@
 <div id="secondary" class="sidebar large-3 columns flex-col" role="complementary">
-  {% if site.related_posts != empty %}
     <ul class="item-index item-muted">
       <li>
         <script><!--
@@ -14,10 +13,11 @@
       </li>
     </ul>
 
+    {% if site.posts != empty %}
     <h1 class="ribbon hot">What's Hot</h1>
 
     <ul class="item-index item-list">
-      {% for page in site.related_posts limit: 3 %}
+      {% for page in site.posts limit: 3 %}
         <li>
 
           {% include post-aside.html %}

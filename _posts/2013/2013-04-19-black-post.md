@@ -8,9 +8,7 @@ image:
   url:
 layout: post
 published: true
-tags:
-- web
-- javascript
+category: blog
 title: Placeholder Post 4 Test post
 ---
 

@@ -9,6 +9,7 @@
   {% endif %}
 
   <header class="article-header">
+    {% if page.category %}<aside class="article-meta article-category"><a href="{{ page.category | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a></aside>{% endif %}
     <h2 class="article-title"><a href="{{ page.url | to_baseurl }}">{{ page.title }}</a></h2>
   </header>
 
@@ -18,7 +19,7 @@
   </section>
   {% endif %}
 
-  <footer class="article-footer article-info">
-    <p>{% include aside-meta.html %}</p>
+  <footer class="article-footer">
+    <aside class="article-meta article-date"><time class="published updated tdn" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: '%B %d %Y' }}</time></aside>
   </footer><!-- .article-footer .article-info -->
 </article>

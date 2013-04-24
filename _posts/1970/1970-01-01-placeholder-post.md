@@ -11,9 +11,7 @@ image:
   attribution:
 layout: post
 published: true
-tags:
-- post
-- blog
+category: blog
 title: Placeholder Post
 categories:
 - cat1

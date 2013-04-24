@@ -13,18 +13,13 @@
     <h2 class="article-title"><a href="{{ page.url | to_baseurl }}">{{ page.title }}</a></h2>
   </header>
 
-  {% if showmeta %}
-  <aside class="article-info">
-    <p>{% include post-meta.html %}</p>
-  </aside><!-- .article-info -->
-  {% endif %}
-
   {% if showexcerpt %}
   <section class="article-content" itemprop="articleBody">
     <p>{{ page.excerpt | strip_html | strip_newlines | truncatewords: truncatewords }}</p>
   </section>
   {% endif %}
 
-  <footer class="article-footer">
-  </footer><!-- .article-footer -->
+  <footer class="article-footer article-info">
+    <p>{% include post-meta.html %}</p>
+  </footer><!-- .article-footer .article-info -->
 </article>

@@ -393,7 +393,6 @@ article.fulltext {
 
 /* =Aside Article ====================================================== */
 article.aside {
-  padding-bottom: 1em;
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
@@ -401,19 +400,20 @@ article.aside {
     margin: 0;
   }
   .article-header {
-    padding: 1em 1em 0;
+    padding: 0.75em 1em 1em;
     .article-title {
       margin: 0;
     }
   }
-  .article-info {
-    padding: 1em 1em 0;
+  .article-content {
+    padding: 0 1em 1em;
     p {
       margin: 0;
     }
   }
-  .article-content {
-    padding: 0.5em 1em 0;
+  .article-info {
+    padding: 0.25em 0.5em;
+    background: #f3f3f3;
     p {
       margin: 0;
     }
@@ -423,6 +423,11 @@ article.aside {
 @media #{$small} {
   article.aside {
     @include box-shadow(1px 1px 2px 0 #d0d0d0);
+    .article-info {
+      p {
+        font-size: emCalc(12px);
+      }
+    }
   }
 }
 

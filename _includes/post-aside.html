@@ -1,4 +1,3 @@
-{% unless showmeta %}{% assign showmeta = false %}{% endunless %}
 {% unless showexcerpt %}{% assign showexcerpt = false %}{% endunless %}
 {% unless truncatewords %}{% assign truncatewords = 10 %}{% endunless %}
 <article class="post aside" role="article" itemscope itemtype="http://schema.org/BlogPosting">
@@ -20,6 +19,6 @@
   {% endif %}
 
   <footer class="article-footer article-info">
-    <p>{% include post-meta.html %}</p>
+    <p>{% include aside-meta.html %}</p>
   </footer><!-- .article-footer .article-info -->
 </article>

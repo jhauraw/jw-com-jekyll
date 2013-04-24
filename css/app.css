@@ -372,19 +372,19 @@ article .article-title {
 /* line 351, ../_assets/sass/app/_app-global.scss */
 article .article-info p {
   font-size: 0.8125em;
-  color: #666;
+  color: #888;
 }
 /* line 355, ../_assets/sass/app/_app-global.scss */
 article .article-info a, article .article-info a:active, article .article-info a:visited {
-  color: #666;
+  color: #888;
 }
 /* line 358, ../_assets/sass/app/_app-global.scss */
 article .article-info a:hover {
-  color: #999;
+  color: #ccc;
 }
 /* line 361, ../_assets/sass/app/_app-global.scss */
 article .article-info .label.secondary {
-  color: #666;
+  color: #888;
 }
 /* line 364, ../_assets/sass/app/_app-global.scss */
 article .article-info a:hover .label.secondary {
@@ -442,7 +442,7 @@ article.aside .article-content p {
 /* line 414, ../_assets/sass/app/_app-global.scss */
 article.aside .article-info {
   padding: 0.25em 0.5em;
-  background: #f3f3f3;
+  border-left: 20px solid #f3f3f3;
 }
 /* line 417, ../_assets/sass/app/_app-global.scss */
 article.aside .article-info p {

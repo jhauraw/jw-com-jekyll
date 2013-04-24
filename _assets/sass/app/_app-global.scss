@@ -350,16 +350,16 @@ article {
   .article-info {
     p {
       font-size: emCalc(13px);
-      color: #666;
+      color: #888;
     }
     a, a:active, a:visited {
-      color: #666;
+      color: #888;
     }
     a:hover {
-      color: #999;
+      color: #ccc;
     }
     .label.secondary {
-      color: #666;
+      color: #888;
     }
     a:hover .label.secondary {
       color: #6d793d;
@@ -413,7 +413,7 @@ article.aside {
   }
   .article-info {
     padding: 0.25em 0.5em;
-    background: #f3f3f3;
+    border-left: 20px solid #f3f3f3;
     p {
       margin: 0;
     }

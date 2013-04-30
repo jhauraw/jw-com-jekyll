@@ -11,11 +11,8 @@ image:
   attribution:
 layout: post
 published: true
-category: blog
+category: javascript
 title: Placeholder Post
-categories:
-- cat1
-- cat2
 ---
 
 **{{ page.title }}** written in Markdown.

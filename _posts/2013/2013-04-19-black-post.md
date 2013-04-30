@@ -8,7 +8,7 @@ image:
   url:
 layout: post
 published: true
-category: blog
+category: web
 title: Placeholder Post 4 Test post
 ---
 

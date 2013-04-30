@@ -1,1 +1,0 @@
-<time class="published updated tdn" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: '%B %d %Y' }}</time>{% if page.tags %}{% assign t = page.tags | first %}&nbsp;&nbsp;/&nbsp;&nbsp;<a href="{{ '/tag/' | append: t | append: '/' | to_baseurl }}"><span class="tag">{{ t | upcase }}</span></a>{% endif %}

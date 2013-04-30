@@ -11,7 +11,7 @@ image:
   attribution:
 layout: post
 published: true
-category: javascript
+category: western
 title: Placeholder Post
 ---
 

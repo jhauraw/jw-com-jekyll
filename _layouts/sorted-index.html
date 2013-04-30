@@ -1,6 +1,6 @@
 ---
 layout: archive
-subtype: category
+subtype: sorted
 ---
 
 {% if paginator.posts != empty %}
@@ -11,14 +11,13 @@ subtype: category
 
   <ul class="item-index item-grid large-block-grid-5">
     {% for page in paginator.posts %}
-
         <li>
 
           {% include post-aside.html %}
 
         </li>
     {% endfor %}
-  </ul><!-- .category.archive -->
-  {% assign pagebase = page.category %}
+  </ul><!-- .sorted.archive -->
+  {% assign pagebase = page.group %}
   {% include post-pager.html %}
 {% endif %}

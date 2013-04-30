@@ -3,33 +3,33 @@
 
 module Jekyll
 
-  class CategoryIndex < Page
-    def initialize(site, base, dir, category)
+  class SortedIndex < Page
+    def initialize(site, base, dir, group)
       @site = site
       @base = base
       @dir = dir
       @name = 'index.html'
 
       self.process(@name)
-      self.read_yaml(File.join(base, '_layouts'), 'category-index.html')
-      self.data['category'] = category
-      self.data['title'] = "Posts categorized &ldquo;"+category+"&rdquo;"
-      self.data['excerpt'] = "Indexed list of all Posts in category &#39;"+category+"&#39;."
+      self.read_yaml(File.join(base, '_layouts'), 'sorted-index.html')
+      self.data['group'] = group
+      self.data['title'] = "Posts grouped by &ldquo;"+group+"&rdquo;"
+      self.data['excerpt'] = "Indexed list of all Posts in &#39;"+group+"&#39;."
     end
   end
 
-  class CategoryGenerator < Generator
+  class SortedGenerator < Generator
     safe true
 
     def generate(site)
-      if site.layouts.key? 'category-index'
-        site.categories.each do |category|
-          write_category_index(site, category)
+      if site.layouts.key? 'sorted-index'
+        site.categories.each do |posts|
+          write_sorted_index(site, posts)
         end
       end
     end
 
-    def write_category_index(site, posts)
+    def write_sorted_index(site, posts)
       posts[1] = posts[1].sort_by { |p| -p.date.to_f }
 
       pages = Pager.calculate_pages(posts[1], site.config['paginate'].to_i)
@@ -42,7 +42,7 @@ module Jekyll
           path = path + "/page/#{num_page}"
         end
 
-        newpage = CategoryIndex.new(site, site.source, path, posts[0])
+        newpage = SortedIndex.new(site, site.source, path, posts[0])
         newpage.pager = pager
         site.pages << newpage
       end

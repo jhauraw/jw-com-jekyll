@@ -357,7 +357,7 @@ article {
       color: #ccc;
     }
   }
-  .article-image {
+  .article-feature {
     img {
       vertical-align: middle;
     }
@@ -369,7 +369,7 @@ article {
 
 /* =Single/Page Article ================================================ */
 article.fulltext {
-  .article-image {
+  .article-feature {
     max-width: emCalc(910px);
     margin-left: auto;
     margin-right: auto;
@@ -387,7 +387,7 @@ article.aside {
   background: #fff;
   border: 1px solid #ccc;
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
-  .article-image {
+  .article-feature {
     margin: 0;
   }
   .article-header {

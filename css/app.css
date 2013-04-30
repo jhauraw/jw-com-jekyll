@@ -383,7 +383,7 @@ article .article-meta a:hover {
   color: #ccc;
 }
 /* line 361, ../_assets/sass/app/_app-global.scss */
-article .article-image img {
+article .article-feature img {
   vertical-align: middle;
 }
 /* line 365, ../_assets/sass/app/_app-global.scss */
@@ -393,7 +393,7 @@ article .article-content {
 
 /* =Single/Page Article ================================================ */
 /* line 372, ../_assets/sass/app/_app-global.scss */
-article.fulltext .article-image {
+article.fulltext .article-feature {
   max-width: 56.875em;
   margin-left: auto;
   margin-right: auto;
@@ -411,7 +411,7 @@ article.aside {
   border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
 }
 /* line 390, ../_assets/sass/app/_app-global.scss */
-article.aside .article-image {
+article.aside .article-feature {
   margin: 0;
 }
 /* line 393, ../_assets/sass/app/_app-global.scss */

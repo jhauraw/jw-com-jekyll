@@ -2,11 +2,22 @@
   <header class="article-header">
     <h1 class="article-title" itemprop="headline">{{ page.title }}</h1>
 
-    {% if page.image.url %}
-    <figure class="article-image">
-      <a name="lead-image"></a>
-        <img src="{{ page.image.url | to_baseurl }}" alt="{% if page.image.alt %}{{ page.image.alt | escape }}{% else %}{{ page.title | escape }}{% endif %}"{% if page.image.attribution %} attribution="{{ page.image.attribution | escape }}"{% endif %} />
-    </figure><!-- .article-image -->
+    {% if page.feature != empty %}
+    <figure class="article-feature">
+      <a name="feature"></a>
+      {% if page.feature.video %}
+        <!-- <video src="{{ page.feature.video | to_baseurl }}" /> -->
+        <iframe width="853" height="480" src="{{ page.feature.video }}" frameborder="0" allowfullscreen></iframe>
+      {% elsif page.feature.gallery %}
+        <ul>
+          {% for t in page.feature.gallery %}
+            <li><img src="{{ t.url | to_baseurl }}" alt="{{ t.caption | escape_once }}" /></li>
+          {% endfor %}
+        </ul>
+      {% elsif page.feature.image %}
+        <img src="{{ page.feature.image | to_baseurl }}" alt="{{ page.title | escape_once }}" />
+      {% endif %}
+    </figure><!-- .article-feature -->
     {% endif %}
 
     <aside class="article-meta">

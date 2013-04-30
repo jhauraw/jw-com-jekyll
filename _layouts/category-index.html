@@ -3,19 +3,22 @@ layout: archive
 subtype: category
 ---
 
-{% assign showmeta = true %}
-{% assign showexcerpt = true %}
-{% assign truncatewords = 20 %}
+{% if paginator.posts != empty %}
+
+  {% assign showmeta = true %}
+  {% assign showexcerpt = true %}
+  {% assign truncatewords = 20 %}
 
   <ul class="item-index item-grid large-block-grid-5">
-    {% for post in site.posts %}
-      {% if post.categories.first == page.category %}
-        {% assign page = post %}
+    {% for page in paginator.posts %}
+
         <li>
 
           {% include post-aside.html %}
 
         </li>
-      {% endif %}
     {% endfor %}
   </ul><!-- .category.archive -->
+  {% assign pagebase = page.category %}
+  {% include post-pager.html %}
+{% endif %}

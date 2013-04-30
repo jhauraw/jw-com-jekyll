@@ -1,4 +1,8 @@
+# mimic this one:
+# https://github.com/realjenius/realjenius.com/blob/master/_plugins/cat_and_tag_generator.rb
+
 module Jekyll
+
   class CategoryIndex < Page
     def initialize(site, base, dir, category)
       @site = site
@@ -19,32 +23,29 @@ module Jekyll
 
     def generate(site)
       if site.layouts.key? 'category-index'
-        dir = ''
-        site.categories.keys.each do |category|
-          write_category_index(site, File.join(dir, category), category)
+        site.categories.each do |category|
+          write_category_index(site, category)
         end
       end
     end
 
-    def write_category_index(site, dir, category)
-      index = CategoryIndex.new(site, site.source, dir, category)
+    def write_category_index(site, posts)
+      posts[1] = posts[1].sort_by { |p| -p.date.to_f }
 
-      #pages = Pager.calculate_pages(site.posts, site.config['paginate'].to_i)
-      #(1..pages).each do |num_page|
-      #  pager = Pager.new(site.config, num_page, site.posts, pages)
-      #  if num_page > 1
-      #    newpage = CategoryIndex.new(site, site.source, dir, category)
-      #    newpage.pager = pager
-      #    newpage.dir = File.join(category, "page/#{num_page}")
-      #    site.pages << newpage
-      #  else
-      #    index.pager = pager
-      #  end
-      #end
+      pages = Pager.calculate_pages(posts[1], site.config['paginate'].to_i)
+      (1..pages).each do |num_page|
+        pager = Pager.new(site.config, num_page, posts[1], pages)
 
-      index.render(site.layouts, site.site_payload)
-      index.write(site.dest)
-      site.pages << index
+        path = "/#{posts[0]}"
+
+        if num_page > 1
+          path = path + "/page/#{num_page}"
+        end
+
+        newpage = CategoryIndex.new(site, site.source, path, posts[0])
+        newpage.pager = pager
+        site.pages << newpage
+      end
     end
   end
 end

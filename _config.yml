@@ -96,7 +96,7 @@ baseurl: null
 permalink: /:year/:title/
 
 paginate_path: /page/:num/
-paginate: 5
+paginate: 25
 
 #lsi: true
 markdown: redcarpet

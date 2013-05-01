@@ -34,8 +34,9 @@
 
   "dependencies": {
     "zepto": "~1.0.0",
-    "jquery": "~1.8.0",
-    "foundation": "~4.0.0"
+    "jquery": "~1.9.0",
+    "foundation": "~4.0.0",
+    "font-awesome": "~3.0.0"
   },
 
   "devDependencies": {

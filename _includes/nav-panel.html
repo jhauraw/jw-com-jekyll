@@ -6,10 +6,24 @@
         <img src="{{ '/img/logo-light.svg' | to_baseurl }}" alt="{{ site.constants.name }}" />
       </a>
     </li>
-    <li><a href="{{ '/blog/' | to_baseurl }}">Blog</a></li>
-    <li><a href="{{ '/portfolio/' | to_baseurl }}">Portfolio</a></li>
-    <li><a href="{{ '/resume/' | to_baseurl }}">Resume</a></li>
-    <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>
-    <li><a href="{{ '/search/' | to_baseurl }}">Search</a></li>
+
+    {% for i in site.constants.panelnav %}
+
+      {% assign slug = page.url | remove: '/' | remove: 'index.html' %}
+
+      {% assign css = nil %}
+      {% if forloop.first %}
+        {% capture css %}{{ css | append: 'first,' }}{% endcapture %}
+      {% elsif forloop.last %}
+        {% capture css %}{{ css | append: 'last,' }}{% endcapture %}
+      {% endif %}
+      {% if slug == i[0] %}
+        {% capture css %}{{ css | append: 'current,' }}{% endcapture %}
+      {% endif %}
+
+      <li{% if css %} class="{{ css | split: ',' | join: ' ' }}"{% endif %}>
+        <a href="{{ i[0] | prepend: '/' | append: '/' | to_baseurl }}">{{ i[1] }}</a>
+      </li>
+    {% endfor %}
   </ul>
 </nav><!-- #panelnav -->

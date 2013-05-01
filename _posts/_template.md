@@ -8,8 +8,10 @@ author:
   name:
   domain:
 feature:
-  image: # required for video, audio and gallery
-    src: # /DIR/YYYY/NAME.ext. Absolute or Relative URL. Optimum size 16:9, 960 x 540
+  # required for video, audio and gallery
+  image:
+    # /DIR/YYYY/NAME.ext. Absolute or Relative URL. Optimum size 16:9, 960 x 540
+    src:
 
   video:
     aspect: (normal|wide)

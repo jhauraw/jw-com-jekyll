@@ -2,14 +2,14 @@
 {% unless truncatewords %}{% assign truncatewords = 10 %}{% endunless %}
 <article class="post aside" role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% if page.feature.image %}
+  {% if page.feature.image.src %}
   <figure class="feature article-feature">
-    <a href="{{ page.url  | to_baseurl }}"><img src="{{ page.feature.image | to_baseurl }}" alt="{{ page.title | escape_once }}" /></a>
+    <a href="{{ page.url | to_baseurl }}"><img src="{{ page.feature.image.src | to_baseurl }}" alt="{{ page.title | escape_once }}" /></a>
   </figure><!-- .article-feature -->
   {% endif %}
 
   <header class="article-header">
-    {% if page.category %}<aside class="article-meta article-category"><a href="{{ page.category | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a>{% if page.feature.video %}&nbsp;&nbsp;<span class="radius label">video</span>{% endif %}</aside>{% endif %}
+    {% if page.category %}<aside class="article-meta article-category"><a href="{{ page.category | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a>{% for f in page.feature %}{% unless f[0] == 'image' %}&nbsp;&nbsp;<span class="radius label">{{ f[0] | downcase }}</span>{% endunless %}{% endfor %}</aside>{% endif %}
     <h2 class="article-title"><a href="{{ page.url | to_baseurl }}">{{ page.title }}</a></h2>
   </header>
 

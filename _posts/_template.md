@@ -1,6 +1,5 @@
 ---
 # REQUIRED: layout, published, category, title, excerpt
-# REQUIRED: feature: -> image: (if using video or gallery)
 layout: (post|page|home)
 published: (true|false)
 category: (development|javascript|frontend|backend|news|howto)
@@ -9,18 +8,28 @@ author:
   name:
   domain:
 feature:
-  image: # /DIR/YYYY/NAME.ext Absolute or Relative URL. Optimum size 16:9, 960 x 540
+  image: # required for video, audio and gallery
+    src: # /DIR/YYYY/NAME.ext. Absolute or Relative URL. Optimum size 16:9, 960 x 540
+
   video:
+    aspect: (normal|wide)
+    host: (self|youtube|vimeo)
+    src: # video source URL
+
+  audio:
+    src: # audio source URL
+
   gallery:
-    -
-      url:
-      caption:
-    -
-      url:
-      caption:
-    -
-      url:
-      caption:
+    items: # YAML array of gallery images
+      -
+        src: # image source URL
+        caption: # textual information about image
+      -
+        src:
+        caption:
+      -
+        src:
+        caption:
 excerpt: |
   Your excerpt here, 255 chars max.
 ---

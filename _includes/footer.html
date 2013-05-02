@@ -1,19 +1,32 @@
 <footer id="footer" role="contentinfo">
-  <div class="row">
-    <div class="large-5 columns">
+  <div class="row collapse">
+    <div class="large-7 push-5 columns">
 
-      <p class="footer-meta">&copy; {{ site.constants.name }}. {{ site.constants.tagline }}.</p>
+      <ul class="footer-links inline-justified">
+        <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>
+        <li><a href="{{ '/disclosure/' | to_baseurl }}">Disclosure</a></li>
+        <li><a href="{{ '/privacy/' | to_baseurl }}">Privacy</a></li>
+        <li><a href="{{ '/terms/' | to_baseurl }}">Terms</a></li>
+      </ul>
 
     </div><!-- .columns -->
-    <div class="large-7 columns">
+    <div class="large-5 pull-7 columns">
 
-      <ul class="footer-links">
-        <li><a href="{{ '/articles/' | to_baseurl }}">Articles</a></li>
-        <li><a href="{{ '/portfolio/' | to_baseurl }}">Portfolio</a></li>
-        <li><a href="{{ '/resume/' | to_baseurl }}">Résumé</a></li>
-        <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>
-        <li><a href="{{ '/search/' | to_baseurl }}">Search</a></li>
-      </ul>
+      <p class="logo">
+        <a class="brand" href="{{ '/' | to_baseurl }}">
+          <img src="{{ '/img/logo-dark.svg' | to_baseurl }}" alt="{{ site.constants.name }}" />
+        </a>
+      </p>
+
+      <p class="copyright">
+        &copy; 2000-{{ site.time | date: '%Y' }} {{site.constants.name }}.
+        <br />
+        {{ site.constants.tagline }}.
+      </p>
+
+      <p class="thanks">
+        Made with &amp; Thanks to: <a rel="nofollow" target="_blank" href="//jekyllrb.com/">Jekyll</a>, <a rel="nofollow" target="_blank" href="//foundation.zurb.com/">Zurb Foundation</a>, <a rel="nofollow" target="_blank" href="//sass-lang.com/">SaSS</a>, <a rel="nofollow" target="_blank" href="//gruntjs.com/">Grunt JS</a>, <a rel="nofollow" target="_blank" href="//sublimetext.com/">Sublime Text</a>.
+      </p>
 
     </div><!-- .columns -->
   </div><!-- .row -->

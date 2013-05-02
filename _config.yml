@@ -58,7 +58,7 @@ constants:
     -
       slug: resume
       name: Résumé
-      icon: file
+      icon: file-alt
     -
       slug: contact
       name: Contact

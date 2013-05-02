@@ -117,12 +117,6 @@ select {
   width: 100%;
 }
 
-/* line 42, ../_assets/sass/_settings.scss */
-[class^="icon-"],
-[class*=" icon-"] {
-  font-size: 14px;
-}
-
 /* normalize.css v2.1.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions

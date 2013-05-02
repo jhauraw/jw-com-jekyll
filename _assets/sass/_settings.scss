@@ -34,12 +34,3 @@ $half-gutter: $column-gutter / 2;
 
 // Want a 480px breakpoint for small devices.
 // 480, 768 and 1024 breakpoints would be best.
-
-// Font Awesome made for Bootstrap 14px base,
-// Foundation is 16px, so we need to lock icons
-// at 14px
-[class^="icon-"],
-[class*=" icon-"] {
-  font-size: 14px; //0.875em
-}
-$icon-size-2x: 28px;

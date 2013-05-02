@@ -151,18 +151,15 @@ html #peek, body #peek {
       &.usermenu {
         li {
           border-left: solid 1px #248cb1;
-          &:hover i {
+          &:hover a {
             color: #ccff00;
           }
-          a {
-            text-decoration: none;
-            padding: 0 emCalc(10px);
-          }
           i {
-            margin: 0 emCalc(4px);
-            &.icon-facebook {
-              margin-left: 0;
-            }
+            font-size: 1.1em;
+            width: 2em;
+          }
+          &.search i, &.feed i {
+            width: 2.5em;
           }
         }
       }
@@ -442,11 +439,27 @@ article.fulltext {
 @media #{$small} {
 }
 
-.connect {
+.article-content .connect {
   color: #999;
-  text-align: center;
-  ul {
-    display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    margin-bottom: 1em;
+    padding: 0 1.25em;
+    &:first-child {
+      background-color: #e3e3e3;
+      h3 {
+        text-align: center;
+        margin: 0;
+        padding: 0.35em 0;
+        color: #999;
+        font-size: emCalc(18px);
+        font-weight: bold;
+      }
+    }
+    &:last-child {
+    }
   }
   a {
     color: #999;
@@ -454,8 +467,8 @@ article.fulltext {
       color: #666;
     }
   }
-  i {
-    font-size: $icon-size-2x;
+  [class^="icon-"], [class*=" icon-"] {
+    font-size: 1.15em;
   }
 }
 

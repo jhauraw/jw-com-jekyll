@@ -88,7 +88,7 @@ function getParameterByName(name) {
           peek   = $('#peek'),
           sticky = $('#sticky'),
           page   = $('#scrollable'),
-          panel  = $('#panelnav');
+          panel  = $('#navpanel');
 
       if (window.Zepto) {
 
@@ -192,7 +192,7 @@ function getParameterByName(name) {
     iosfix : function(){
 
       var sticky = $('#sticky'),
-          panel  = $('#panelnav');
+          panel  = $('#navpanel');
 
       if(!/(ip(hone|od|ad))/i.test(navigator.userAgent))
         return false;

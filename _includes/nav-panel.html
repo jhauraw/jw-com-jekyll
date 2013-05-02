@@ -1,5 +1,5 @@
-<nav id="panelnav">
-  <ul class="panelmenu">
+<nav id="navpanel">
+  <ul class="navmenu">
     <li class="logo">
       <a class="brand" href="{{ '/' | to_baseurl }}">
         <span>{{ site.constants.name }}</span>
@@ -7,9 +7,9 @@
       </a>
     </li>
 
-    {% for i in site.constants.panelnav %}
+    {% for i in site.constants.navpanel %}
 
-      {% assign slug = page.url | remove: '/' | remove: 'index.html' %}
+      {% assign curpage = page.url | remove: '/' | remove: 'index.html' %}
 
       {% assign css = nil %}
       {% if forloop.first %}
@@ -17,13 +17,13 @@
       {% elsif forloop.last %}
         {% capture css %}{{ css | append: 'last,' }}{% endcapture %}
       {% endif %}
-      {% if slug == i[0] %}
-        {% capture css %}{{ css | append: 'current,' }}{% endcapture %}
+      {% if curpage == i['slug'] %}
+        {% capture css %}{{ css | append: 'active,' }}{% endcapture %}
       {% endif %}
 
       <li{% if css %} class="{{ css | split: ',' | join: ' ' }}"{% endif %}>
-        <a href="{{ i[0] | prepend: '/' | append: '/' | to_baseurl }}">{{ i[1] }}</a>
+        <a href="{{ i['slug'] | prepend: '/' | append: '/' | to_baseurl }}"><i class="icon-{{ i['icon'] }}"></i> {{ i['name'] }}</a>
       </li>
     {% endfor %}
   </ul>
-</nav><!-- #panelnav -->
+</nav><!-- #navpanel -->

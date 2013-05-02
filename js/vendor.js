@@ -13,21 +13,22 @@
 // See http://docs.jquery.com/Using_jQuery_with_Other_Libraries
 // and http://zeptojs.com/
 var libFuncName = null;
+
 if (typeof jQuery === "undefined" &&
     typeof Zepto === "undefined" &&
     typeof $ === "function") {
-    libFuncName = $;
+  libFuncName = $;
 } else if (typeof jQuery === "function") {
-    libFuncName = jQuery;
+  libFuncName = jQuery;
 } else if (typeof Zepto === "function") {
-    libFuncName = Zepto;
+  libFuncName = Zepto;
 } else {
-    throw new TypeError();
+  throw new TypeError();
 }
 
-(function ($) {
+(function ($, window, document, undefined) {
+  'use strict';
 
-(function () {
   // add dusty browser stuff
   if (!Array.prototype.filter) {
     Array.prototype.filter = function(fun /*, thisp */) {
@@ -36,17 +37,13 @@ if (typeof jQuery === "undefined" &&
       if (this == null) {
         throw new TypeError();
       }
-   
+
       var t = Object(this),
           len = t.length >>> 0;
       if (typeof fun != "function") {
-        try {
-          throw new TypeError();
-        } catch (e) {
           return;
-        }
       }
-   
+
       var res = [],
           thisp = arguments[1];
       for (var i = 0; i < len; i++) {
@@ -57,32 +54,65 @@ if (typeof jQuery === "undefined" &&
           }
         }
       }
-   
-      return res;
-    };
 
-    if (!Function.prototype.bind) {
-      Function.prototype.bind = function (oThis) {
-        if (typeof this !== "function") {
-          // closest thing possible to the ECMAScript 5 internal IsCallable function
-          throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+      return res;
+    }
+  }
+
+  if (!Function.prototype.bind) {
+    Function.prototype.bind = function (oThis) {
+      if (typeof this !== "function") {
+        // closest thing possible to the ECMAScript 5 internal IsCallable function
+        throw new TypeError("Function.prototype.bind - what is trying to be bound is not callable");
+      }
+   
+      var aArgs = Array.prototype.slice.call(arguments, 1), 
+          fToBind = this, 
+          fNOP = function () {},
+          fBound = function () {
+            return fToBind.apply(this instanceof fNOP && oThis
+               ? this
+               : oThis,
+             aArgs.concat(Array.prototype.slice.call(arguments)));
+          };
+   
+      fNOP.prototype = this.prototype;
+      fBound.prototype = new fNOP();
+   
+      return fBound;
+    };
+  }
+
+  if (!Array.prototype.indexOf) {
+    Array.prototype.indexOf = function (searchElement /*, fromIndex */ ) {
+      "use strict";
+      if (this == null) {
+        throw new TypeError();
+      }
+      var t = Object(this);
+      var len = t.length >>> 0;
+      if (len === 0) {
+        return -1;
+      }
+      var n = 0;
+      if (arguments.length > 1) {
+        n = Number(arguments[1]);
+        if (n != n) { // shortcut for verifying if it's NaN
+          n = 0;
+        } else if (n != 0 && n != Infinity && n != -Infinity) {
+          n = (n > 0 || -1) * Math.floor(Math.abs(n));
         }
-     
-        var aArgs = Array.prototype.slice.call(arguments, 1), 
-            fToBind = this, 
-            fNOP = function () {},
-            fBound = function () {
-              return fToBind.apply(this instanceof fNOP && oThis
-                 ? this
-                 : oThis,
-               aArgs.concat(Array.prototype.slice.call(arguments)));
-            };
-     
-        fNOP.prototype = this.prototype;
-        fBound.prototype = new fNOP();
-     
-        return fBound;
-      };
+      }
+      if (n >= len) {
+          return -1;
+      }
+      var k = n >= 0 ? n : Math.max(len - Math.abs(n), 0);
+      for (; k < len; k++) {
+        if (k in t && t[k] === searchElement) {
+          return k;
+        }
+      }
+      return -1;
     }
   }
 
@@ -90,15 +120,11 @@ if (typeof jQuery === "undefined" &&
   $.fn.stop = $.fn.stop || function() {
     return this;
   };
-}());
-
-;(function (window, document, undefined) {
-  'use strict';
 
   window.Foundation = {
     name : 'Foundation',
 
-    version : '4.1.0',
+    version : '4.1.5',
 
     // global Foundation cache object
     cache : {},
@@ -108,11 +134,10 @@ if (typeof jQuery === "undefined" &&
           args = [scope, method, options, response],
           responses = [],
           nc = nc || false;
-          
+
       // disable library error catching,
       // used for development only
       if (nc) this.nc = nc;
-
 
       // check RTL
       this.rtl = /rtl/i.test($('html').attr('dir'));
@@ -145,9 +170,9 @@ if (typeof jQuery === "undefined" &&
     },
 
     response_obj : function (response_arr, args) {
-      for (var callback in args) {
-        if (typeof args[callback] === 'function') {
-          return args[callback]({
+      for (var i = 0, len = args.length; i < len; i++) {
+        if (typeof args[i] === 'function') {
+          return args[i]({
             errors: response_arr.filter(function (s) {
               if (typeof s === 'string') return s;
             })
@@ -197,11 +222,11 @@ if (typeof jQuery === "undefined" &&
 
     random_str : function (length) {
       var chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.split('');
-      
+
       if (!length) {
           length = Math.floor(Math.random() * chars.length);
       }
-      
+
       var str = '';
       for (var i = 0; i < length; i++) {
           str += chars[Math.floor(Math.random() * chars.length)];
@@ -362,7 +387,7 @@ if (typeof jQuery === "undefined" &&
         return jQuery;
       }
     }()
-  },
+  };
 
   $.fn.foundation = function () {
     var args = Array.prototype.slice.call(arguments, 0);
@@ -373,10 +398,7 @@ if (typeof jQuery === "undefined" &&
     });
   };
 
-}(this, this.document));
-
-})(libFuncName);
-
+}(libFuncName, this, this.document));
 /*jslint unparam: true, browser: true, indent: 2 */
 
 ;(function ($, window, document, undefined) {
@@ -435,7 +457,7 @@ if (typeof jQuery === "undefined" &&
   Foundation.libs.clearing = {
     name : 'clearing',
 
-    version : '4.1.0',
+    version : '4.1.3',
 
     settings : {
       templates : {
@@ -454,8 +476,9 @@ if (typeof jQuery === "undefined" &&
       locked : false
     },
 
-    init : function (method, options) {
-      Foundation.inherit(this, 'set_data get_data remove_data throttle');
+    init : function (scope, method, options) {
+      var self = this;
+      Foundation.inherit(this, 'set_data get_data remove_data throttle data_options');
 
       if (typeof method === 'object') {
         options = $.extend(true, this.settings, method);
@@ -463,15 +486,15 @@ if (typeof jQuery === "undefined" &&
 
       if (typeof method != 'string') {
         $(this.scope).find('ul[data-clearing]').each(function () {
-          var self = Foundation.libs.clearing,
-              $el = $(this),
+          var $el = $(this),
               options = options || {},
+              lis = $el.find('li'),
               settings = self.get_data($el);
 
-          if (!settings) {
+          if (!settings && lis.length > 0) {
             options.$parent = $el.parent();
 
-            self.set_data($el, $.extend(true, self.settings, options));
+            self.set_data($el, $.extend({}, self.settings, options, self.data_options($el)));
 
             self.assemble($el.find('li'));
 
@@ -498,13 +521,24 @@ if (typeof jQuery === "undefined" &&
           function (e, current, target) {
             var current = current || $(this),
                 target = target || current,
-                settings = self.get_data(current.parent());
+                next = current.next('li'),
+                settings = self.get_data(current.parent()),
+                image = $(e.target);
 
             e.preventDefault();
             if (!settings) self.init();
 
+            // if clearing is open and the current image is
+            // clicked, go to the next image in sequence
+            if (target.hasClass('visible') 
+              && current[0] === target[0] 
+              && next.length > 0 && self.is_open(current)) {
+              target = next;
+              image = target.find('img');
+            }
+
             // set current and target to the clicked li if not otherwise defined.
-            self.open($(e.target), current, target);
+            self.open(image, current, target);
             self.update_paddles(target);
           })
 
@@ -518,7 +552,7 @@ if (typeof jQuery === "undefined" &&
           function (e) { this.keydown(e) }.bind(this));
 
       $(window).on('resize.fndtn.clearing',
-        function (e) { this.resize() }.bind(this));
+        function () { this.resize() }.bind(this));
 
       this.settings.init = true;
       return this;
@@ -572,7 +606,10 @@ if (typeof jQuery === "undefined" &&
     },
 
     assemble : function ($li) {
-      var $el = $li.parent(),
+      var $el = $li.parent();
+      $el.after('<div id="foundationClearingHolder"></div>');
+
+      var holder = $('#foundationClearingHolder'),
           settings = this.get_data($el),
           grid = $el.detach(),
           data = {
@@ -582,7 +619,7 @@ if (typeof jQuery === "undefined" &&
           wrapper = '<div class="clearing-assembled"><div>' + data.viewing +
             data.grid + '</div></div>';
 
-      return settings.$parent.append(wrapper);
+      return holder.after(wrapper).remove();
     },
 
     // event callbacks
@@ -595,9 +632,12 @@ if (typeof jQuery === "undefined" &&
 
       if (!this.locked()) {
         // set the image to the selected thumbnail
-        image.attr('src', this.load($image));
+        image
+          .attr('src', this.load($image))
+          .css('visibility', 'hidden');
 
         this.loaded(image, function () {
+          image.css('visibility', 'visible');
           // toggle the gallery
           root.addClass('clearing-blackout');
           container.addClass('clearing-container');
@@ -625,7 +665,7 @@ if (typeof jQuery === "undefined" &&
           }($(el))), container, visible_image;
 
       if (el === e.target && root) {
-        container = root.find('div').first(),
+        container = root.find('div').first();
         visible_image = container.find('.visible-img');
         this.settings.prev_index = 0;
         root.find('ul[data-clearing]')
@@ -636,6 +676,10 @@ if (typeof jQuery === "undefined" &&
       }
 
       return false;
+    },
+
+    is_open : function (current) {
+      return current.parent().attr('style').length > 0;
     },
 
     keydown : function (e) {
@@ -685,17 +729,17 @@ if (typeof jQuery === "undefined" &&
         .closest('.carousel')
         .siblings('.visible-img');
 
-      if (target.next().length) {
+      if (target.next().length > 0) {
         visible_image
-          .find('.clearing-main-right')
+          .find('.clearing-main-next')
           .removeClass('disabled');
       } else {
         visible_image
-          .find('.clearing-main-right')
+          .find('.clearing-main-next')
           .addClass('disabled');
       }
 
-      if (target.prev().length) {
+      if (target.prev().length > 0) {
         visible_image
           .find('.clearing-main-prev')
           .removeClass('disabled');
@@ -724,7 +768,11 @@ if (typeof jQuery === "undefined" &&
     // image loading and preloading
 
     load : function ($image) {
-      var href = $image.parent().attr('href');
+      if ($image[0].nodeName === "A") {
+        var href = $image.attr('href');
+      } else {
+        var href = $image.parent().attr('href');
+      }
 
       this.preload($image);
 
@@ -909,6 +957,10 @@ if (typeof jQuery === "undefined" &&
       $(window).off('.fndtn.clearing');
       this.remove_data(); // empty settings cache
       this.settings.init = false;
+    },
+
+    reflow : function () {
+      this.init();
     }
   };
 
@@ -996,10 +1048,12 @@ if (typeof jQuery === "undefined" &&
   Foundation.libs.dropdown = {
     name : 'dropdown',
 
-    version : '4.1.0',
+    version : '4.1.3',
 
     settings : {
-      activeClass: 'open'
+      activeClass: 'open',
+      opened: function(){},
+      closed: function(){}
     },
 
     init : function (scope, method, options) {
@@ -1025,18 +1079,26 @@ if (typeof jQuery === "undefined" &&
     events : function () {
       var self = this;
 
-      $(this.scope).on('click.fndtn.dropdown', '[data-dropdown]', function (e) {
-        e.preventDefault();
-        e.stopPropagation();
-        self.toggle($(this));
-      });
+      $(this.scope)
+        .on('click.fndtn.dropdown', '[data-dropdown]', function (e) {
+            e.preventDefault();
+            self.toggle($(this));
+        })
+        .on('opened.fndtn.dropdown', '[data-dropdown-content]', this.settings.opened)
+        .on('closed.fndtn.dropdown', '[data-dropdown-content]', this.settings.closed);
 
-      $('*, html, body').on('click.fndtn.dropdown', function (e) {
-        if (!$(e.target).data('dropdown')) {
-          $('[data-dropdown-content]')
-            .css(Foundation.rtl ? 'right':'left', '-99999px')
-            .removeClass(self.settings.activeClass);
+      $('body').on('click.fndtn.dropdown', function (e) {
+        var parent = $(e.target).closest('[data-dropdown-content]');
+
+        if ($(e.target).data('dropdown')) {
+          return;
         }
+        if (parent.length > 0 && ($(e.target).is('[data-dropdown-content]') || $.contains(parent.first()[0], e.target))) {
+          e.stopPropagation();
+          return;
+        }
+
+        self.close.call(self, $('[data-dropdown-content]'));
       });
 
       $(window).on('resize.fndtn.dropdown', self.throttle(function () {
@@ -1046,19 +1108,34 @@ if (typeof jQuery === "undefined" &&
       this.settings.init = true;
     },
 
-    toggle : function (target, resize) {
-      var dropdown = $('#' + target.data('dropdown'));
+    close: function (dropdown) {
+      var self = this;
+      dropdown.each(function () {
+        if ($(this).hasClass(self.settings.activeClass)) {
+          $(this)
+            .css(Foundation.rtl ? 'right':'left', '-99999px')
+            .removeClass(self.settings.activeClass);
+          $(this).trigger('closed');
+        }
+      });
+    },
 
-      $('[data-dropdown-content]').not(dropdown).css(Foundation.rtl ? 'right':'left', '-99999px').removeClass(this.settings.activeClass);
-
-      if (dropdown.hasClass(this.settings.activeClass)) {
-        dropdown
-          .css(Foundation.rtl ? 'right':'left', '-99999px')
-          .removeClass(this.settings.activeClass);
-      } else {
+    open: function (dropdown, target) {
         this
           .css(dropdown
             .addClass(this.settings.activeClass), target);
+        dropdown.trigger('opened');
+    },
+
+    toggle : function (target) {
+      var dropdown = $('#' + target.data('dropdown'));
+
+      this.close.call(this, $('[data-dropdown-content]').not(dropdown));
+
+      if (dropdown.hasClass(this.settings.activeClass)) {
+        this.close.call(this, dropdown);
+      } else {
+        this.open.call(this, dropdown, target);
       }
     },
 
@@ -1072,9 +1149,14 @@ if (typeof jQuery === "undefined" &&
     },
 
     css : function (dropdown, target) {
-      var position = target.position();
-      position.top += target.offsetParent().offset().top;
-      position.left += target.offsetParent().offset().left;
+      // temporary workaround until 4.2
+      if (/body/i.test(dropdown.offsetParent()[0].nodeName)) {
+        var position = target.offset();
+        position.top -= dropdown.offsetParent().offset().top;
+        position.left -= dropdown.offsetParent().offset().left;
+      } else {
+        var position = target.position();
+      }
 
       if (this.small()) {
         dropdown.css({
@@ -1157,7 +1239,9 @@ if (typeof jQuery === "undefined" &&
         .each(this.append_custom_markup);
       $('form.custom input[type="checkbox"]', $(this.scope)).not('[data-customforms="disabled"]')
         .each(this.append_custom_markup);
-      $('form.custom select', $(this.scope)).not('[data-customforms="disabled"]')
+      $('form.custom select', $(this.scope))
+          .not('[data-customforms="disabled"]')
+          .not('[multiple=multiple]')
         .each(this.append_custom_select);
     },
 
@@ -1299,7 +1383,7 @@ if (typeof jQuery === "undefined" &&
     },
 
     append_custom_markup : function (idx, sel) {
-      var $this = $(sel).hide(),
+      var $this = $(sel).addClass('hidden-field'),
           type  = $this.attr('type'),
           $span = $this.next('span.custom.' + type);
 
@@ -1342,7 +1426,7 @@ if (typeof jQuery === "undefined" &&
         $currentSelect = $customSelect.prepend('<a href="#" class="current">' + $selectedOption.html() + '</a>' ).find( ".current" );
         $this
           .after( $customSelect )
-          .hide();
+          .addClass('hidden-field');
 
       } else {
         liHtml = $options.map(function() {
@@ -1553,18 +1637,21 @@ if (typeof jQuery === "undefined" &&
   Foundation.libs.joyride = {
     name: 'joyride',
 
-    version : '4.0.0',
+    version : '4.1.2',
 
     defaults : {
+      expose               : false,      // turn on or off the expose feature
+      modal                : false,      // Whether to cover page with modal during the tour
       tipLocation          : 'bottom',  // 'top' or 'bottom' in relation to parent
       nubPosition          : 'auto',    // override on a per tooltip bases
-      scrollSpeed          : 300,       // Page scrolling speed in milliseconds
+      scrollSpeed          : 300,       // Page scrolling speed in milliseconds, 0 = no scroll animation
       timer                : 0,         // 0 = no timer , all other numbers = timer in milliseconds
       startTimerOnClick    : true,      // true or false - true requires clicking the first button start the timer
       startOffset          : 0,         // the index of the tooltip you want to start on (index of the li)
       nextButton           : true,      // true or false to control whether a next button is used
       tipAnimation         : 'fade',    // 'pop' or 'fade' in each tip
       pauseAfter           : [],        // array of indexes where to pause the tour after
+      exposed              : [],        // array of expose elements
       tipAnimationFadeSpeed: 300,       // when tipAnimation = 'fade' this is speed in milliseconds for the transition
       cookieMonster        : false,     // true or false to control whether cookies are used
       cookieName           : 'joyride', // Name the cookie you'll use
@@ -1573,12 +1660,18 @@ if (typeof jQuery === "undefined" &&
       tipContainer         : 'body',    // Where will the tip be attached
       postRideCallback     : function (){},    // A method to call once the tour closes (canceled or complete)
       postStepCallback     : function (){},    // A method to call after each step
+      preStepCallback      : function (){},    // A method to call before each step
+      preRideCallback      : function (){},    // A method to call before the tour starts (passed index, tip, and cloned exposed element)
+      postExposeCallback   : function (){},    // A method to call after an element has been exposed
       template : { // HTML segments for tip layout
         link    : '<a href="#close" class="joyride-close-tip">&times;</a>',
         timer   : '<div class="joyride-timer-indicator-wrap"><span class="joyride-timer-indicator"></span></div>',
         tip     : '<div class="joyride-tip-guide"><span class="joyride-nub"></span></div>',
         wrapper : '<div class="joyride-content-wrapper"></div>',
-        button  : '<a href="#" class="small button joyride-next-tip"></a>'
+        button  : '<a href="#" class="small button joyride-next-tip"></a>',
+        modal   : '<div class="joyride-modal-bg"></div>',
+        expose  : '<div class="joyride-expose-wrapper"></div>',
+        exposeCover: '<div class="joyride-expose-cover"></div>'
       }
     },
 
@@ -1631,6 +1724,16 @@ if (typeof jQuery === "undefined" &&
 
       $(window).on('resize.fndtn.joyride', self.throttle(function () {
         if ($('[data-joyride]').length > 0 && self.settings.$next_tip) {
+          if (self.settings.exposed.length > 0) {
+            var $els = $(self.settings.exposed);
+
+            $els.each(function () {
+              var $this = $(this);
+              self.un_expose($this);
+              self.expose($this);
+            });
+          }
+
           if (self.is_phone()) {
             self.pos_phone();
           } else {
@@ -1652,6 +1755,7 @@ if (typeof jQuery === "undefined" &&
       
       // non configureable settings
       this.settings.$content_el = $this;
+      this.settings.$body = $(this.settings.tipContainer);
       this.settings.body_offset = $(this.settings.tipContainer).position();
       this.settings.$tip_content = this.settings.$content_el.find('> li');
       this.settings.paused = false;
@@ -1766,6 +1870,18 @@ if (typeof jQuery === "undefined" &&
         this.settings.attempts = 0;
 
         if (this.settings.$li.length && this.settings.$target.length > 0) {
+          if (init) { //run when we first start
+            this.settings.preRideCallback(this.settings.$li.index(), this.settings.$next_tip);
+            if (this.settings.modal) {
+              this.show_modal();
+            }
+          }
+
+          this.settings.preStepCallback(this.settings.$li.index(), this.settings.$next_tip);
+
+          if (this.settings.modal && this.settings.expose) {
+            this.expose();
+          }
 
           this.settings.tipSettings = $.extend(this.settings, this.data_options(this.settings.$li));
 
@@ -1790,7 +1906,7 @@ if (typeof jQuery === "undefined" &&
 
             $timer.width(0);
 
-            if (thsi.settings.timer > 0) {
+            if (this.settings.timer > 0) {
 
               this.settings.$next_tip.show();
 
@@ -1853,14 +1969,20 @@ if (typeof jQuery === "undefined" &&
         return Modernizr.mq('only screen and (max-width: 767px)') || $('.lt-ie9').length > 0;
       }
 
-      return (this.settings.$window.width() < 767) ? true : false;
+      return (this.settings.$window.width() < 767);
     },
 
     hide : function () {
+      if (this.settings.modal && this.settings.expose) {
+        this.un_expose();
+      }
+
+      if (!this.settings.modal) {
+        $('.joyride-modal-bg').hide();
+      }
+      this.settings.$current_tip.hide();
       this.settings.postStepCallback(this.settings.$li.index(),
         this.settings.$current_tip);
-      $('.joyride-modal-bg').hide();
-      this.settings.$current_tip.hide();
     },
 
     set_li : function (init) {
@@ -1908,11 +2030,7 @@ if (typeof jQuery === "undefined" &&
     },
 
     paused : function () {
-      if (($.inArray((this.settings.$li.index() + 1), this.settings.pauseAfter) === -1)) {
-        return true;
-      }
-
-      return false;
+      return ($.inArray((this.settings.$li.index() + 1), this.settings.pauseAfter) === -1);
     },
 
     restart : function () {
@@ -1925,6 +2043,7 @@ if (typeof jQuery === "undefined" &&
       var half_fold = Math.ceil($(window).height() / 2),
           tip_position = this.settings.$next_tip.offset(),
           $nub = this.settings.$next_tip.find('.joyride-nub'),
+          nub_width = Math.ceil(this.outerWidth($nub) / 2),
           nub_height = Math.ceil(this.outerHeight($nub) / 2),
           toggle = init || false;
 
@@ -1934,7 +2053,10 @@ if (typeof jQuery === "undefined" &&
         this.settings.$next_tip.show();
       }
 
-      if (typeof resizing === 'undefined') resizing = false;
+      if (typeof resizing === 'undefined') {
+        resizing = false;
+      }
+
       if (!/body/i.test(this.settings.$target.selector)) {
 
           if (this.bottom()) {
@@ -1963,7 +2085,7 @@ if (typeof jQuery === "undefined" &&
 
             this.settings.$next_tip.css({
               top: this.settings.$target.offset().top,
-              left: (this.outerWidth(this.settings.$target) + this.settings.$target.offset().left)});
+              left: (this.outerWidth(this.settings.$target) + this.settings.$target.offset().left + nub_width)});
 
             this.nub_position($nub, this.settings.tipSettings.nubPosition, 'left');
 
@@ -1971,7 +2093,7 @@ if (typeof jQuery === "undefined" &&
 
             this.settings.$next_tip.css({
               top: this.settings.$target.offset().top,
-              left: (this.settings.$target.offset().left - this.outerWidth(this.settings.$next_tip) - nub_height)});
+              left: (this.settings.$target.offset().left - this.outerWidth(this.settings.$next_tip) - nub_width)});
 
             this.nub_position($nub, this.settings.tipSettings.nubPosition, 'right');
 
@@ -2050,15 +2172,165 @@ if (typeof jQuery === "undefined" &&
     pos_modal : function ($nub) {
       this.center();
       $nub.hide();
+
+      this.show_modal();
+    },
+
+    show_modal : function () {
       if (!this.settings.$next_tip.data('closed')) {
         if ($('.joyride-modal-bg').length < 1) {
-          $('body').append('<div class="joyride-modal-bg">').show();
+          $('body').append(this.settings.template.modal).show();
         }
 
         if (/pop/i.test(this.settings.tipAnimation)) {
           $('.joyride-modal-bg').show();
         } else {
           $('.joyride-modal-bg').fadeIn(this.settings.tipAnimationFadeSpeed);
+        }
+      }
+    },
+
+    expose : function () {
+      var expose,
+          exposeCover,
+          el,
+          origCSS,
+          randId = 'expose-'+Math.floor(Math.random()*10000);
+
+      if (arguments.length > 0 && arguments[0] instanceof $) {
+        el = arguments[0];
+      } else if(this.settings.$target && !/body/i.test(this.settings.$target.selector)){
+        el = this.settings.$target;
+      }  else {
+        return false;
+      }
+
+      if(el.length < 1){
+        if(window.console){
+          console.error('element not valid', el);
+        }
+        return false;
+      }
+
+      expose = $(this.settings.template.expose);
+      this.settings.$body.append(expose);
+      expose.css({
+        top: el.offset().top,
+        left: el.offset().left,
+        width: this.outerWidth(el, true),
+        height: this.outerHeight(el, true)
+      });
+      
+      exposeCover = $(this.settings.template.exposeCover);
+
+      origCSS = {
+        zIndex: el.css('z-index'),
+        position: el.css('position')
+      };
+
+      el.css('z-index',expose.css('z-index')*1+1);
+
+      if (origCSS.position == 'static') {
+        el.css('position','relative');
+      }
+
+      el.data('expose-css',origCSS);
+
+      exposeCover.css({
+        top: el.offset().top,
+        left: el.offset().left,
+        width: this.outerWidth(el, true),
+        height: this.outerHeight(el, true)
+      });
+
+      this.settings.$body.append(exposeCover);
+      expose.addClass(randId);
+      exposeCover.addClass(randId);
+      el.data('expose', randId);
+      this.settings.postExposeCallback(this.settings.$li.index(), this.settings.$next_tip, el);
+      this.add_exposed(el);
+    },
+
+    un_expose : function () {
+      var exposeId,
+          el,
+          expose ,
+          origCSS,
+          clearAll = false;
+
+      if (arguments.length > 0 && arguments[0] instanceof $) {
+        el = arguments[0];
+      } else if(this.settings.$target && !/body/i.test(this.settings.$target.selector)){
+        el = this.settings.$target;
+      }  else {
+        return false;
+      }
+
+      if(el.length < 1){
+        if (window.console) {
+          console.error('element not valid', el);
+        }
+        return false;
+      }
+
+      exposeId = el.data('expose');
+      expose = $('.' + exposeId);
+
+      if (arguments.length > 1) {
+        clearAll = arguments[1];
+      }
+
+      if (clearAll === true) {
+        $('.joyride-expose-wrapper,.joyride-expose-cover').remove();
+      } else {
+        expose.remove();
+      }
+
+      origCSS = el.data('expose-css');
+
+      if (origCSS.zIndex == 'auto') {
+        el.css('z-index', '');
+      } else {
+        el.css('z-index', origCSS.zIndex);
+      }
+
+      if (origCSS.position != el.css('position')) {
+        if(origCSS.position == 'static') {// this is default, no need to set it.
+          el.css('position', '');
+        } else {
+          el.css('position', origCSS.position);
+        }
+      }
+
+      el.removeData('expose');
+      el.removeData('expose-z-index');
+      this.remove_exposed(el);
+    },
+
+    add_exposed: function(el){
+      this.settings.exposed = this.settings.exposed || [];
+      if (el instanceof $ || typeof el === 'object') {
+        this.settings.exposed.push(el[0]);
+      } else if (typeof el == 'string') {
+        this.settings.exposed.push(el);
+      }
+    },
+
+    remove_exposed: function(el){
+      var search, count;
+      if (el instanceof $) {
+        search = el[0]
+      } else if (typeof el == 'string'){
+        search = el;
+      }
+
+      this.settings.exposed = this.settings.exposed || [];
+      count = this.settings.exposed.length;
+
+      for (var i=0; i < count; i++) {
+        if (this.settings.exposed[i] == search) {
+          this.settings.exposed.splice(i, 1);
+          return;
         }
       }
     },
@@ -2092,14 +2364,31 @@ if (typeof jQuery === "undefined" &&
 
     corners : function (el) {
       var w = $(window),
+          window_half = w.height() / 2,
+          //using this to calculate since scroll may not have finished yet.
+          tipOffset = Math.ceil(this.settings.$target.offset().top - window_half + this.settings.$next_tip.outerHeight()),
           right = w.width() + this.scrollLeft(w),
-          bottom = w.width() + w.scrollTop();
+          offsetBottom =  w.height() + tipOffset,
+          bottom = w.height() + w.scrollTop(),
+          top = w.scrollTop();
+
+      if (tipOffset < top) {
+        if (tipOffset < 0) {
+          top = 0;
+        } else {
+          top = tipOffset;
+        }
+      }
+
+      if (offsetBottom > bottom) {
+        bottom = offsetBottom;
+      }
 
       return [
-        el.offset().top <= w.scrollTop(),
-        right <= el.offset().left + this.outerWidth(el),
-        bottom <= el.offset().top + this.outerHeight(el),
-        this.scrollLeft(w) >= el.offset().left
+        el.offset().top < top,
+        right < el.offset().left + el.outerWidth(),
+        bottom < el.offset().top + el.outerHeight(),
+        this.scrollLeft(w) > el.offset().left
       ];
     },
 
@@ -2140,6 +2429,10 @@ if (typeof jQuery === "undefined" &&
 
       if (this.settings.timer > 0) {
         clearTimeout(this.settings.automate);
+      }
+
+      if (this.settings.modal && this.settings.expose) {
+        this.un_expose();
       }
 
       this.settings.$next_tip.data('closed', true);
@@ -2310,6 +2603,8 @@ if (typeof jQuery === "undefined" &&
       animation_speed: 500,
       bullets: true,
       stack_on_small: true,
+      navigation_arrows: true,
+      slide_number: true,
       container_class: 'orbit-container',
       stack_on_small_class: 'orbit-stack-on-small',
       next_class: 'orbit-next',
@@ -2394,13 +2689,17 @@ if (typeof jQuery === "undefined" &&
       
       $.extend(true, self.settings, self.data_options($slides_container));
 
-      $container.append(self._prev_html());
-      $container.append(self._next_html());
+      if (self.settings.navigation_arrows) {
+          $container.append(self._prev_html());
+          $container.append(self._next_html());
+      }
       $slides_container.addClass(self.settings.slides_container_class);
       if (self.settings.stack_on_small) {
         $container.addClass(self.settings.stack_on_small_class);
       }
-      $container.append(self._slide_number_html(1, $slides.length));
+      if (self.settings.slide_number) {
+        $container.append(self._slide_number_html(1, $slides.length));
+      }
       $container.append(self._timer_html());
       if (self.settings.bullets) {
         $container.after(self._bullets_container_html($slides));
@@ -2558,7 +2857,7 @@ if (typeof jQuery === "undefined" &&
           $container = $slides_container.parent(),
           $timer = $container.find('.' + self.settings.timer_container_class),
           $progress = $timer.find('.' + self.settings.timer_progress_class),
-          progress_pct = $progress.width() / $timer.width()
+          progress_pct = $progress.width() / $timer.width();
       self._rebuild_timer($container, progress_pct * 100 + '%');
       // $progress.stop();
       $slides_container.trigger('orbit:timer-stopped');
@@ -2830,7 +3129,7 @@ if (typeof jQuery === "undefined" &&
   Foundation.libs.reveal = {
     name: 'reveal',
 
-    version : '4.0.9',
+    version : '4.1.3',
 
     locked : false,
 
@@ -2865,6 +3164,8 @@ if (typeof jQuery === "undefined" &&
 
       if (typeof method === 'object') {
         $.extend(true, this.settings, method);
+      } else if (typeof options !== 'undefined') {
+        $.extend(true, this.settings, options);
       }
 
       if (typeof method != 'string') {
@@ -2891,6 +3192,11 @@ if (typeof jQuery === "undefined" &&
         .on('click.fndtn.reveal touchend.click.fndtn.reveal', this.close_targets(), function (e) {
           e.preventDefault();
           if (!self.locked) {
+            var settings = $.extend({}, self.settings, self.data_options($('.reveal-modal.open')));
+            if ($(e.target)[0] === $('.' + settings.bgClass)[0] && !settings.closeOnBackgroundClick) {
+              return;
+            }
+
             self.locked = true;
             self.close.call(self, $(this).closest('.reveal-modal'));
           }
@@ -2925,7 +3231,7 @@ if (typeof jQuery === "undefined" &&
         if (open_modal.length < 1) {
           this.toggle_bg(modal);
         }
-        this.hide(open_modal, this.settings.css.open);
+        this.hide(open_modal, this.settings.css.close);
         this.show(modal, this.settings.css.open);
       }
     },
@@ -2974,7 +3280,7 @@ if (typeof jQuery === "undefined" &&
           var end_css = {
             top: $(window).scrollTop() + el.data('css-top') + 'px',
             opacity: 1
-          }
+          };
 
           return this.delay(function () {
             return el
@@ -3100,17 +3406,27 @@ if (typeof jQuery === "undefined" &&
   Foundation.libs.section = {
     name: 'section',
 
-    version : '4.1.1',
+    version : '4.1.3',
 
     settings : {
       deep_linking: false,
       one_up: true,
+      section_selector : '[data-section]',
+      region_selector : 'section, .section, [data-section-region]',
+      title_selector : '.title, [data-section-title]',
+      active_region_selector : 'section.active, .section.active, .active[data-section-region]',
+      content_selector : '.content, [data-section-content]',
+      nav_selector : '[data-section="vertical-nav"], [data-section="horizontal-nav"]',
       callback: function (){}
     },
 
     init : function (scope, method, options) {
       var self = this;
       Foundation.inherit(this, 'throttle data_options position_right offset_right');
+
+      if (typeof method === 'object') {
+        $.extend(true, self.settings, method);
+      }
 
       if (typeof method != 'string') {
         this.set_active_from_hash();
@@ -3126,11 +3442,12 @@ if (typeof jQuery === "undefined" &&
       var self = this;
 
       $(this.scope)
-        .on('click.fndtn.section', '[data-section] .title', function (e) {
+        .on('click.fndtn.section', '[data-section] .title, [data-section] [data-section-title]', function (e) {
           var $this = $(this),
-              section = $this.closest('[data-section]');
+              section = $this.closest(self.settings.section_selector);
 
           self.toggle_active.call(this, e, self);
+          self.reflow();
         });
 
       $(window)
@@ -3146,9 +3463,9 @@ if (typeof jQuery === "undefined" &&
 
       $(document)
         .on('click.fndtn.section', function (e) {
-          if ($(e.target).closest('.title').length < 1) {
-            $('[data-section="vertical-nav"], [data-section="horizontal-nav"]')
-              .find('section, .section')
+          if ($(e.target).closest(self.settings.title_selector).length < 1) {
+            $(self.settings.nav_selector)
+              .children(self.settings.region_selector)
               .removeClass('active')
               .attr('style', '');
           }
@@ -3158,11 +3475,13 @@ if (typeof jQuery === "undefined" &&
 
     toggle_active : function (e, self) {
       var $this = $(this),
-          section = $this.closest('section, .section'),
-          content = section.find('.content'),
-          parent = section.closest('[data-section]'),
           self = Foundation.libs.section,
-          settings = $.extend({}, self.settings, self.data_options(parent));
+          region = $this.closest(self.settings.region_selector),
+          content = $this.siblings(self.settings.content_selector),
+          parent = region.parent(),
+          settings = $.extend({}, self.settings, self.data_options(parent)),
+          prev_active_section = parent
+            .children(self.settings.active_region_selector);
 
       self.settings.toggled = true;
 
@@ -3170,39 +3489,60 @@ if (typeof jQuery === "undefined" &&
         e.preventDefault();
       }
 
-      if (section.hasClass('active')) {
+      if (region.hasClass('active')) {
+        // this is causing the style flash.
         if (self.small(parent)
-          || self.is_vertical(parent)
-          || self.is_horizontal(parent)
+          || self.is_vertical_nav(parent)
+          || self.is_horizontal_nav(parent)
           || self.is_accordion(parent)) {
-          section
-            .removeClass('active')
-            .attr('style', '');
+            if (prev_active_section[0] !== region[0] 
+              || (prev_active_section[0] === region[0] && !settings.one_up)) {
+              region
+                .removeClass('active')
+                .attr('style', '');
+            }
         }
       } else {
-        var prev_active_section = null,
-            title_height = self.outerHeight(section.find('.title'));
+        var prev_active_section = parent
+              .children(self.settings.active_region_selector),
+            title_height = self.outerHeight(region
+              .children(self.settings.title_selector));
 
         if (self.small(parent) || settings.one_up) {
-          prev_active_section = $this.closest('[data-section]').find('section.active, .section.active');
 
           if (self.small(parent)) {
             prev_active_section.attr('style', '');
           } else {
-            prev_active_section.attr('style', 'visibility: hidden; padding-top: '+title_height+'px;');
+            prev_active_section.attr('style', 
+              'visibility: hidden; padding-top: '+title_height+'px;');
           }
         }
 
         if (self.small(parent)) {
-          section.attr('style', '');
+          region.attr('style', '');
         } else {
-          section.css('padding-top', title_height);
+          region.css('padding-top', title_height);
         }
 
-        section.addClass('active');
+        region.addClass('active');
 
-        if (prev_active_section !== null) {
-          prev_active_section.removeClass('active').attr('style', '');
+        if (prev_active_section.length > 0) {
+          prev_active_section
+            .removeClass('active')
+            .attr('style', '');
+        }
+
+        // Toggle the content display attribute. This is done to
+        // ensure accurate outerWidth measurements that account for
+        // the scrollbar.
+        if (self.is_vertical_tabs(parent)) {
+          content.css('display', 'block');
+
+          if (prev_active_section !== null) {
+            prev_active_section
+              .children(self.settings.content_selector)
+              .css('display', 'none');
+          }
         }
       }
 
@@ -3214,12 +3554,13 @@ if (typeof jQuery === "undefined" &&
     },
 
     resize : function () {
-      var sections = $('[data-section]'),
-          self = Foundation.libs.section;
+      var self = Foundation.libs.section,
+          sections = $(self.settings.section_selector);
 
       sections.each(function() {
         var $this = $(this),
-            active_section = $this.find('section.active, .section.active'),
+            active_section = $this
+              .children(self.settings.active_region_selector),
             settings = $.extend({}, self.settings, self.data_options($this));
 
         if (active_section.length > 1) {
@@ -3228,29 +3569,35 @@ if (typeof jQuery === "undefined" &&
             .removeClass('active')
             .attr('style', '');
         } else if (active_section.length < 1
-          && !self.is_vertical($this)
-          && !self.is_horizontal($this)
+          && !self.is_vertical_nav($this)
+          && !self.is_horizontal_nav($this)
           && !self.is_accordion($this)) {
 
-          var first = $this.find('section, .section').first();
-          first.addClass('active');
+          var first = $this.children(self.settings.region_selector).first();
+
+          if (settings.one_up || !self.small($this)) {
+            first.addClass('active');
+          }
 
           if (self.small($this)) {
             first.attr('style', '');
           } else {
-            first.css('padding-top', self.outerHeight(first.find('.title')));
+            first.css('padding-top', self.outerHeight(first
+              .children(self.settings.title_selector)));
           }
         }
 
         if (self.small($this)) {
           active_section.attr('style', '');
         } else {
-          active_section.css('padding-top', self.outerHeight(active_section.find('.title')));
+          active_section.css('padding-top', self.outerHeight(active_section
+            .children(self.settings.title_selector)));
         }
 
         self.position_titles($this);
 
-        if (self.is_horizontal($this) && !self.small($this)) {
+        if ( (self.is_horizontal_nav($this) && !self.small($this))
+          || self.is_vertical_tabs($this)) {
           self.position_content($this);
         } else {
           self.position_content($this, false);
@@ -3258,11 +3605,11 @@ if (typeof jQuery === "undefined" &&
       });
     },
 
-    is_vertical : function (el) {
+    is_vertical_nav : function (el) {
       return /vertical-nav/i.test(el.data('section'));
     },
 
-    is_horizontal : function (el) {
+    is_horizontal_nav : function (el) {
       return /horizontal-nav/i.test(el.data('section'));
     },
 
@@ -3270,8 +3617,12 @@ if (typeof jQuery === "undefined" &&
       return /accordion/i.test(el.data('section'));
     },
 
-    is_tabs : function (el) {
-      return /tabs/i.test(el.data('section'));
+    is_horizontal_tabs : function (el) {
+      return /^tabs$/i.test(el.data('section'));
+    },
+
+    is_vertical_tabs : function (el) {
+      return /vertical-tabs/i.test(el.data('section'));
     },
 
     set_active_from_hash : function () {
@@ -3284,21 +3635,29 @@ if (typeof jQuery === "undefined" &&
             settings = $.extend({}, self.settings, self.data_options(section));
 
         if (hash.length > 0 && settings.deep_linking) {
-          section
-            .find('section, .section')
+          var regions = section
+            .children(self.settings.region_selector)
             .attr('style', '')
             .removeClass('active');
-          section
-            .find('.content[data-slug="' + hash + '"]')
-            .closest('section, .section')
+          regions
+            .map(function () {
+              return $(this).children('.content[data-slug="' + hash + '"], [data-section-content][data-slug="' + hash + '"]');
+            })
+            .parent()
             .addClass('active');
         }
       });
     },
 
     position_titles : function (section, off) {
-      var titles = section.find('.title'),
+      var self = this,
+          titles = section
+            .children(this.settings.region_selector)
+            .map(function () {
+              return $(this).children(self.settings.title_selector);
+            }),
           previous_width = 0,
+          previous_height = 0,
           self = this;
 
       if (typeof off === 'boolean') {
@@ -3306,59 +3665,125 @@ if (typeof jQuery === "undefined" &&
 
       } else {
         titles.each(function () {
-          if (!self.rtl) {
-            $(this).css('left', previous_width);
+          if (self.is_vertical_tabs(section)) {
+            $(this).css('top', previous_height);
+            previous_height += self.outerHeight($(this));
           } else {
-            $(this).css('right', previous_width);
+            if (!self.rtl) {
+              $(this).css('left', previous_width);
+            } else {
+              $(this).css('right', previous_width);
+            }
+            previous_width += self.outerWidth($(this));
           }
-          previous_width += self.outerWidth($(this));
         });
       }
     },
 
     position_content : function (section, off) {
-      var titles = section.find('.title'),
-          content = section.find('.content'),
-          self = this;
+      var self = this,
+          regions = section.children(self.settings.region_selector),
+          titles = regions
+            .map(function () {
+              return $(this).children(self.settings.title_selector);
+            }),
+          content = regions
+            .map(function () {
+              return $(this).children(self.settings.content_selector);
+            });
 
       if (typeof off === 'boolean') {
         content.attr('style', '');
         section.attr('style', '');
       } else {
-        section.find('section, .section').each(function () {
-          var title = $(this).find('.title'),
-              content = $(this).find('.content');
-          if (!self.rtl) {
-            content.css({left: title.position().left - 1, top: self.outerHeight(title) - 2});
-          } else {
-            content.css({right: self.position_right(title) + 1, top: self.outerHeight(title) - 2});
-          }
-        });
+        if (self.is_vertical_tabs(section)
+            && !self.small(section)) {
+          var content_min_height = 0,
+              content_min_width = Number.MAX_VALUE,
+              title_width = null;
 
-        // temporary work around for Zepto outerheight calculation issues.
-        if (typeof Zepto === 'function') {
-          section.height(this.outerHeight(titles.first()));
+          regions.each(function () {
+            var region = $(this),
+                title = region.children(self.settings.title_selector),
+                content = region.children(self.settings.content_selector),
+                content_width = 0;
+
+            title_width = self.outerWidth(title);
+            content_width = self.outerWidth(section) - title_width;
+            if (content_width < content_min_width) {
+              content_min_width = content_width;
+            }
+
+            // Increment the minimum height of the content region
+            // to align with the height of the titles.
+            content_min_height += self.outerHeight(title);
+
+            // Set all of the inactive tabs to 'display: none'
+            // The CSS sets all of the tabs as 'display: block'
+            // in order to account for scrollbars when measuring the width
+            // of the content regions.
+            if (!$(this).hasClass('active')) {
+              content.css('display', 'none');
+            }
+          });
+
+          regions.each(function () {
+            var content = $(this).children(self.settings.content_selector);
+            content.css('minHeight', content_min_height);
+
+            // Remove 2 pixels to account for the right-shift in the CSS
+            content.css('maxWidth', content_min_width - 2);
+          });
+
+          // Adjust the outer section container width to match
+          // the width of the title and content
+          section.css('maxWidth', title_width + content_min_width);
         } else {
-          section.height(this.outerHeight(titles.first()) - 2);
+          regions.each(function () {
+            var region = $(this),
+                title = region.children(self.settings.title_selector),
+                content = region.children(self.settings.content_selector);
+            if (!self.rtl) {
+              content
+                .css({left: title.position().left - 1, 
+                  top: self.outerHeight(title) - 2});
+            } else {
+              content
+                .css({right: self.position_right(title) + 1, 
+                  top: self.outerHeight(title) - 2});
+            }
+          });
+
+          // temporary work around for Zepto outerheight calculation issues.
+          if (typeof Zepto === 'function') {
+            section.height(this.outerHeight(titles.first()));
+          } else {
+            section.height(this.outerHeight(titles.first()) - 2);
+          }
         }
       }
-
     },
 
     position_right : function (el) {
-      var section = el.closest('[data-section]'),
-          section_width = el.closest('[data-section]').width(),
-          offset = section.find('.title').length;
+      var self = this,
+          section = el.closest(this.settings.section_selector),
+          regions = section.children(this.settings.region_selector),
+          section_width = el.closest(this.settings.section_selector).width(),
+          offset = regions
+            .map(function () {
+              return $(this).children(self.settings.title_selector);
+            }).length;
       return (section_width - el.position().left - el.width() * (el.index() + 1) - offset);
     },
 
-    reflow : function () {
-      $('[data-section]').trigger('resize');
+    reflow : function (scope) {
+      var scope = scope || document;
+      $(this.settings.section_selector, scope).trigger('resize');
     },
 
     small : function (el) {
       var settings = $.extend({}, this.settings, this.data_options(el));
-      if (this.is_tabs(el)) {
+      if (this.is_horizontal_tabs(el)) {
         return false;
       }
       if (el && this.is_accordion(el)) {
@@ -3380,6 +3805,7 @@ if (typeof jQuery === "undefined" &&
     }
   };
 }(Foundation.zj, this, this.document));
+
 /*jslint unparam: true, browser: true, indent: 2 */
 
 ;(function ($, window, document, undefined) {
@@ -3388,12 +3814,13 @@ if (typeof jQuery === "undefined" &&
   Foundation.libs.tooltips = {
     name: 'tooltips',
 
-    version : '4.1.0',
+    version : '4.1.3',
 
     settings : {
       selector : '.has-tip',
       additionalInheritableClasses : [],
       tooltipClass : '.tooltip',
+      appendTo: 'body',
       tipTemplate : function (selector, content) {
         return '<span data-selector="' + selector + '" class="' 
           + Foundation.libs.tooltips.settings.tooltipClass.substring(1) 
@@ -3480,10 +3907,10 @@ if (typeof jQuery === "undefined" &&
     },
 
     create : function ($target) {
-      var $tip = $(this.settings.tipTemplate(this.selector($target), $('<div>').html($target.attr('title')).html())),
+      var $tip = $(this.settings.tipTemplate(this.selector($target), $('<div></div>').html($target.attr('title')).html())),
           classes = this.inheritable_classes($target);
 
-      $tip.addClass(classes).appendTo('body');
+      $tip.addClass(classes).appendTo(this.settings.appendTo);
       if (Modernizr.touch) {
         $tip.append('<span class="tap-to-close">tap to close </span>');
       }

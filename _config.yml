@@ -45,12 +45,27 @@ constants:
     name: Jhaura Wachsman
     domain: jhaurawachsman.com
 
-  panelnav:
-    blog: Blog
-    portfolio: Portfolio
-    resume: Résumé
-    contact: Contact
-    search: Search
+  navpanel:
+    -
+      slug: blog
+      name: Blog
+      icon: beaker
+    -
+      slug: portfolio
+      name: Portfolio
+      icon: picture
+    -
+      slug: resume
+      name: Résumé
+      icon: fire
+    -
+      slug: contact
+      name: Contact
+      icon: envelope
+    -
+      slug: search
+      name: Search
+      icon: search
 
 # Dynamic Include Helpers ============================================ #
 is_home: false

@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         options: {
           /* require: 'zurb-foundation', */
           sassDir: '_assets/sass',
-          importPath: 'bower_components/foundation/scss',
+          importPath: ['bower_components/foundation/scss', 'bower_components/font-awesome/sass'],
           cssDir: 'css',
           outputStyle: 'expanded',
           noLineComments: false,
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
       vendor: {
         options: {
           /* Because cssmin won't keepSpecialComments :( */
-          banner: '/*! normalize.css v2.1.0 | MIT License | git.io/normalize *//*! foundation.css v4.1.1 | MIT License | foundation.zurb.com *//*! pygments.css v1.6 | BSD License | pygments.org */'
+          banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.5 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */'
         },
         files: {
           'css/vendor.css': ['css/vendor.css']
@@ -51,10 +51,23 @@ module.exports = function(grunt) {
       main: {
         files: [
           {src: ['bower_components/foundation/js/vendor/custom.modernizr.js'], dest: 'js/modernizr.js', filter: 'isFile'},
-          /* issue with 'mouse' events on 1.0.0rc1, rolled back to 1.0, maybe bower is getting too hot of a version */
+
+          /* Issue with 'mouse' events on 1.0.0rc1
+             Rolled back to 1.0, maybe bower is getting too hot of a version
+
+             Custom build, not supported in Bower, so build with this, then
+             copy into Bower :-(
+             $ cd /tmp
+             $ git clone https://github.com/madrobby/zepto.git
+             $ cd zepto
+             $ coffee make dist
+             $ MODULES="polyfill zepto detect event ajax form fx touch" ./make dist
+          */
           {src: ['bower_components/zepto/zepto.min.js'], dest: 'js/zepto.js', filter: 'isFile'},
+
           {src: ['bower_components/jquery/jquery.min.js'], dest: 'js/jquery.js', filter: 'isFile'},
-          {src: ['_assets/js/app/app.js'], dest: 'js/app.js', filter: 'isFile'}
+          {src: ['_assets/js/app/app.js'], dest: 'js/app.js', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['bower_components/font-awesome/font/*-webfont*'], dest: 'font/', filter: 'isFile'}
         ]
       }
     },

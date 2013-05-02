@@ -22,15 +22,26 @@
 
             <div class="submenu-content">
               <div class="page-container">
-                <ul class="inline-list">
-                  {% if site.posts %}
-                    {% for post in site.posts limit:3 %}
+                <ul class="inline-list submenu-posts">
+                  <li>
+                    <ul class="submenu-categories">
+                      <li><a href="{{ '/news/' | to_baseurl }}">News</a></li>
+                      <li><a href="{{ '/howto/' | to_baseurl }}">How To</a></li>
+                      <li><a href="{{ '/frontend/' | to_baseurl }}">Front End</a></li>
+                      <li><a href="{{ '/javascript/' | to_baseurl }}">JavaScript</a></li>
+                      <li><a href="{{ '/backend/' | to_baseurl }}">Back End</a></li>
+                      <li><a href="{{ '/development/' | to_baseurl }}">Development</a></li>
+                    </ul>
+                  </li>
+                  {% if site.posts != empty %}
+                    {% for page in site.posts limit: 5 %}
                     <li>
-                      <a href="{{ post.url | to_baseurl }}">{{ post.title }}</a>
+                      {% if page.feature.image.src %}
+                        <a href="{{ page.url | to_baseurl }}"><img src="{{ page.feature.image.src | to_baseurl }}" alt="{{ page.title | escape_once }}" /></a>
+                      {% endif %}
+                      <a class="title" href="{{ page.url | to_baseurl }}">{{ page.title }}</a>
                     </li>
                     {% endfor %}
-                  {% else %}
-                    <li>No posts to list...</li>
                   {% endif %}
                 </ul>
               </div>
@@ -62,9 +73,9 @@
         </ul> <!-- .navmenu -->
 
         <ul class="right usermenu">
-          <li><a href="{{ '/search/' | to_baseurl }}">S</a></li>
-          <li><a rel="nofollow" href="{{ '/facebook/' | to_baseurl }}">F</a></li>
-          <li><a rel="nofollow" href="{{ '/twitter/' | to_baseurl }}">T</a></li>
+          <li><a href="{{ '/search/' | to_baseurl }}"><i class="icon-search"></i></a></li>
+          <li><a rel="nofollow" href="{{ '/contact/' | to_baseurl }}"><i class="icon-facebook"></i><i class="icon-twitter"></i><i class="icon-google-plus"></i></a></li>
+          <li><a rel="nofollow" href="{{ '/feed/' | to_baseurl }}"><i class="icon-rss"></i></a></li>
         </ul> <!-- .usermenu -->
       </section><!-- .navsection -->
 

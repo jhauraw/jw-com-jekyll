@@ -11,7 +11,7 @@ constants:
 
   # Name (Brand), Tagline and Meta Image (Og)
   name: Jhaura Wachsman
-  tagline: Web Developer
+  tagline: 'Web Developer, Internet Marketer'
   description: |
     Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 
@@ -48,8 +48,8 @@ constants:
 
   navpanel:
     -
-      slug: blog
-      name: Blog
+      slug: articles
+      name: Articles
       icon: beaker
     -
       slug: portfolio

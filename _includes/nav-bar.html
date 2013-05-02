@@ -18,19 +18,20 @@
       <section class="navsection">
         <ul class="left navmenu">
           <li class="submenu">
-            <a href="{{ '/blog/' | to_baseurl }}">Blog</a>
+            <a href="{{ '/articles/' | to_baseurl }}">Articles</a>
 
             <div class="submenu-content">
               <div class="page-container">
                 <ul class="inline-list submenu-posts">
                   <li>
                     <ul class="submenu-categories">
-                      <li><a href="{{ '/news/' | to_baseurl }}">News</a></li>
-                      <li><a href="{{ '/howto/' | to_baseurl }}">How To</a></li>
-                      <li><a href="{{ '/frontend/' | to_baseurl }}">Front End</a></li>
-                      <li><a href="{{ '/javascript/' | to_baseurl }}">JavaScript</a></li>
-                      <li><a href="{{ '/backend/' | to_baseurl }}">Back End</a></li>
-                      <li><a href="{{ '/development/' | to_baseurl }}">Development</a></li>
+                      <li><a href="{{ '/articles/' | to_baseurl }}">All Articles</a></li>
+                      <li><a href="{{ '/news/' | to_baseurl }}">Industry News</a></li>
+                      <li><a href="{{ '/web-development/' | to_baseurl }}">Web Development</a></li>
+                      <li><a href="{{ '/internet-marketing/' | to_baseurl }}">Internet Marketing</a></li>
+                      <li><a href="{{ '/how-to/' | to_baseurl }}">How To</a></li>
+                      <li><a href="{{ '/lifestyle/' | to_baseurl }}">Lifestyle</a></li>
+                      <li><a href="{{ '/business/' | to_baseurl }}">Business</a></li>
                     </ul>
                   </li>
                   {% if site.posts != empty %}

@@ -417,7 +417,7 @@ html #peek, body #peek {
   #navbar .navsection > ul.navmenu > li.submenu .submenu-content .page-container .submenu-categories {
     list-style: none;
     margin: 0;
-    padding: 1em 0;
+    padding: 0.5em 0;
     background: #c7e6f5;
   }
   /* line 277, ../_assets/sass/app/_app-global.scss */
@@ -436,7 +436,7 @@ html #peek, body #peek {
   }
   /* line 291, ../_assets/sass/app/_app-global.scss */
   #navbar .navsection > ul.navmenu > li > a {
-    font-size: 0.6875em;
+    font-size: 0.75em;
     line-height: 44px;
     text-transform: uppercase;
     white-space: nowrap;
@@ -489,7 +489,7 @@ html #peek, body #peek {
 }
 /* line 339, ../_assets/sass/app/_app-global.scss */
 #navpanel ul.navmenu > li.active a {
-  color: #ccff00;
+  color: #ccc;
 }
 /* line 342, ../_assets/sass/app/_app-global.scss */
 #navpanel ul.navmenu > li a {
@@ -498,7 +498,7 @@ html #peek, body #peek {
   margin: 0;
   padding: 0 1.25em;
   color: #fff;
-  font-size: 0.75em;
+  font-size: 0.9375em;
   line-height: 44px;
   text-transform: uppercase;
 }
@@ -508,7 +508,7 @@ html #peek, body #peek {
 }
 /* line 355, ../_assets/sass/app/_app-global.scss */
 #navpanel ul.navmenu > li i {
-  margin-right: 1em;
+  margin-right: 0.5em;
 }
 
 /* =Logo / Brand ======================================================= */

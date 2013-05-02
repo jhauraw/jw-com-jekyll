@@ -272,7 +272,7 @@ html #peek, body #peek {
                 .submenu-categories {
                   list-style: none;
                   margin: 0;
-                  padding:1em 0;
+                  padding: 0.5em 0;
                   background: #c7e6f5;
                   li {
                     padding: 0 1em;
@@ -289,7 +289,7 @@ html #peek, body #peek {
               }
             } // .submenu
             > a {
-              font-size: emCalc(11px);
+              font-size: emCalc(12px);
               line-height: 44px;
               text-transform: uppercase;
               white-space: nowrap;
@@ -337,7 +337,7 @@ html #peek, body #peek {
         border-bottom: 1px solid #3b3f44;
       }
       &.active a {
-        color: #ccff00;
+        color: #ccc;
       }
       a {
         z-index: 10001;
@@ -345,7 +345,7 @@ html #peek, body #peek {
         margin: 0;
         padding: 0 emCalc(20px);
         color: #fff;
-        font-size: emCalc(12px);
+        font-size: emCalc(15px);
         line-height: 44px;
         text-transform: uppercase;
       }
@@ -353,7 +353,7 @@ html #peek, body #peek {
         background-color: #484e56;
       }
       i {
-        margin-right: 1em;
+        margin-right: 0.5em;
       }
     }
   }

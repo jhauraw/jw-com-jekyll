@@ -12,7 +12,7 @@ By requesting a free offer, you are granting permission to be contacted by telep
 
 The contact information you provide us to receive your __FREE__ information will be used in the following manner:
 
-  To share your information with an individual in the company affiliated with this ad. This individual may contact you, by email or phone, to provide you more information about the offer advertised.
+  To share your information with an individual in the company affiliated with the ad. This individual may contact you, by email or phone, to provide you more information about the offer advertised.
 
 ### What information do we collect?
 

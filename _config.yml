@@ -1,3 +1,17 @@
+# Release ============================================================ #
+
+# The current site version for use in 'virtual versioned' URLs and an
+# Origin Pull CDN setup such as CloudFront. This method does not require
+# one to use 'invalidate' on every site update and syncs automatically
+# with Cloudfront, so you don't need to use S3.
+#
+# Minimum 6 digit integer. Increment by 1 for every LIVE release.
+#
+# Release id, f not set or null, the current day's date will be used
+# with two digit century; given 2025/01/15, release will equal 250115
+
+release: 100001
+
 # Site CONSTANTS ===================================================== #
 
 constants:
@@ -69,12 +83,14 @@ constants:
       icon: search
 
 # Dynamic Include Helpers ============================================ #
+
 is_home: false
 is_post: false
 is_page: false
 is_single: false
 
 # CDN ================================================================ #
+
 # Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
 # Change to CNAME hosts if you don't need SSL.
 cdn_hosts:

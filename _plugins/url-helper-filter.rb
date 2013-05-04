@@ -23,15 +23,23 @@ module Jekyll
       input = "#{get_url}#{get_baseurl}#{input}"
     end
 
-    # Using crc32 to return consistent numeric value of string.
-    # input.hash sucks and returns diff value for same string.
+    # Prepend a 'virtual versioned' CDN URL for any relative URL resource,
     #
-    # Using input value of string to match with same CDN Host
-    # upon successive site regenerations.
+    # Example input value for a relative image resource:
+    # /images/dog.jpg
     #
-    # time.usec to get a nice short numeric Release id.
+    # Example return value for an Amazon Cloudfront CDN URL:
+    # //xxx.cloudfront.net/BASE_URL/RELEASE/images/dog.jpg
     #
-    # Expects 4 CDN hosts in an array
+    # Using crc32 to return consistent cross-machine numeric value of string.
+    # input.hash sucks and returns diff value for same string, even on same
+    # machine.
+    #
+    # Using value of @input string to match with same CDN Host upon successive
+    # site regenerations.
+    #
+    # Release id, f not set or null, the current day's date will be used with
+    # two digit century; given 2025/01/15, release will equal 250115
     def to_cdnurl(input)
 
       require 'zlib'
@@ -43,11 +51,15 @@ module Jekyll
       cdn_sub = hash % cdn_num
       cdn_host = cdn_hosts[cdn_sub]
 
-      release = @context.registers[:site].time.usec
+      release = @context.registers[:site].config['release']
 
-      # puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n"
+      if !release
+        release = @context.registers[:site].time.strftime('%y%m%d')
+      end
 
-      input = "//#{cdn_host}#{get_baseurl}/assets-#{release}#{input}"
+      # puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/v#{release}#{input}\n"
+
+      input = "//#{cdn_host}#{get_baseurl}/v#{release}#{input}"
     end
 
     def sub_baseurl(input)

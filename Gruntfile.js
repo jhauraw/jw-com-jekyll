@@ -35,7 +35,7 @@ module.exports = function(grunt) {
           banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.5 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */'
         },
         files: {
-          'css/vendor.css': ['css/vendor.css']
+          'assets/css/vendor.css': ['assets/css/vendor.css']
         }
       },
       app: {
@@ -43,14 +43,14 @@ module.exports = function(grunt) {
           banner: '<%= banner %>'
         },
         files: {
-          'css/app.css': ['css/app.css']
+          'assets/css/app.css': ['assets/css/app.css']
         }
       }
     },
     copy: {
       main: {
         files: [
-          {src: ['bower_components/foundation/js/vendor/custom.modernizr.js'], dest: 'js/modernizr.js', filter: 'isFile'},
+          {src: ['bower_components/foundation/js/vendor/custom.modernizr.js'], dest: 'assets/js/modernizr.js', filter: 'isFile'},
 
           /* Issue with 'mouse' events on 1.0.0rc1
              Rolled back to 1.0, maybe bower is getting too hot of a version
@@ -63,11 +63,11 @@ module.exports = function(grunt) {
              $ coffee make dist
              $ MODULES="polyfill zepto detect event ajax form fx touch" ./make dist
           */
-          {src: ['bower_components/zepto/zepto.min.js'], dest: 'js/zepto.js', filter: 'isFile'},
+          {src: ['bower_components/zepto/zepto.min.js'], dest: 'assets/js/zepto.js', filter: 'isFile'},
 
-          {src: ['bower_components/jquery/jquery.min.js'], dest: 'js/jquery.js', filter: 'isFile'},
-          {src: ['_assets/js/app/app.js'], dest: 'js/app.js', filter: 'isFile'},
-          {expand: true, flatten: true, src: ['bower_components/font-awesome/font/*-webfont*'], dest: 'font/', filter: 'isFile'}
+          {src: ['bower_components/jquery/jquery.min.js'], dest: 'assets/js/jquery.js', filter: 'isFile'},
+          {src: ['_assets/js/app/app.js'], dest: 'assets/js/app.js', filter: 'isFile'},
+          {expand: true, flatten: true, src: ['bower_components/font-awesome/font/*-webfont*'], dest: 'assets/font/', filter: 'isFile'}
         ]
       }
     },
@@ -89,7 +89,7 @@ module.exports = function(grunt) {
           'bower_components/foundation/js/foundation/foundation.tooltips.js'
           /* 'bower_components/foundation/js/foundation/foundation.topbar.js', */
         ],
-        dest: 'js/vendor.js'
+        dest: 'assets/js/vendor.js'
       }
       /*
       app_js: {
@@ -123,15 +123,15 @@ module.exports = function(grunt) {
         report: 'min'
       },
       foundation: {
-        src: 'js/vendor.js',
-        dest: 'js/vendor.js',
+        src: 'assets/js/vendor.js',
+        dest: 'assets/js/vendor.js',
         options: {
-          banner: '/*! foundation.js v4.1.1 | MIT License | foundation.zurb.com */\n'
+          banner: '/*! foundation.js v4.1.5 | MIT License | foundation.zurb.com */\n'
         }
       },
       app: {
-        src: 'js/app.js',
-        dest: 'js/app.js',
+        src: 'assets/js/app.js',
+        dest: 'assets/js/app.js',
         options: {
           banner: '<%= banner %>'
         }

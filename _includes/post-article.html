@@ -27,7 +27,7 @@
       {% elsif page.feature.gallery %}
 
         {% if page.feature.image %}
-          <img src="{{ page.feature.image.src | to_baseurl }}" alt="{{ page.title | escape_once }}" />
+          <img src="{{ page.feature.image.src | to_cdnurl }}" alt="{{ page.title | escape_once }}" />
         {% endif %}
 
         <ul class="clearing-thumbs" data-clearing>
@@ -38,7 +38,7 @@
 
       {% elsif page.feature.image %}
 
-        <img src="{{ page.feature.image.src | to_baseurl }}" alt="{{ page.title | escape_once }}" />
+        <img src="{{ page.feature.image.src | to_cdnurl }}" alt="{{ page.title | escape_once }}" />
 
       {% endif %}
     </figure><!-- .article-feature -->

@@ -8,11 +8,11 @@ excerpt: |
 
 ### Opting In for Free Information
 
-By requesting a free offer, you are granting permission to be contacted by telephone regarding the offer. If you are not interested in receiving telephone calls from the company represented in this advertisement, you are advised not to respond to this advertisement.
+By requesting an offer or opting in you are granting permission to be contacted by email and/or telephone regarding the offer. If you are not interested in receiving communications from the company represented in the advertisement, you are advised not to respond to the advertisement.
 
-The contact information you provide us to receive your __FREE__ information will be used in the following manner:
+The contact information you provide in response to an offer will be used in the following manner:
 
-  To share your information with an individual in the company affiliated with the ad. This individual may contact you, by email or phone, to provide you more information about the offer advertised.
+  - To share your information with the company affiliated with the ad. This company may contact you, by email and/or phone, to provide you more information about the offer advertised.
 
 ### What information do we collect?
 
@@ -26,19 +26,19 @@ Google, as a third party vendor, uses cookies to serve ads on your site. Google'
 
 Any of the information we collect from you may be used in one of the following ways:
 
-  To personalize your experience (your information helps us to better respond to your individual needs)
+  - To personalize your experience (your information helps us to better respond to your individual needs)
 
-  To improve our website (we continually strive to improve our website offerings based on the information and feedback we receive from you)
+  - To improve our website (we continually strive to improve our website offerings based on the information and feedback we receive from you)
 
-  To improve customer service (your information helps us to more effectively respond to your customer service requests and support needs)
+  - To improve customer service (your information helps us to more effectively respond to your customer service requests and support needs)
 
-  To process transactions. Your information, whether public or private, will not be sold, exchanged, transferred, or given to any other company for any reason whatsoever, without your consent, other than for the express purpose of delivering the purchased product or service requested.
+  - To process transactions. Your information, whether public or private, will not be sold, exchanged, transferred, or given to any other company for any reason whatsoever, without your consent, other than for the express purpose of delivering the purchased product or service requested.
 
-  To send periodic emails. The email address you provide for order processing, will only be used to send you information and updates pertaining to your order.
+  - To send periodic emails. The email address you provide for order processing, will only be used to send you information and updates pertaining to your order.
 
-  If you decide to opt-in to our mailing list, you will receive emails that may include company news, updates, related product or service information, etc.
+  - If you decide to opt-in to our mailing list, you will receive emails that may include company news, updates, related product or service information, etc.
 
-  Note: If at any time you would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.
+Note: If at any time you would like to unsubscribe from receiving future emails, we include detailed unsubscribe instructions at the bottom of each email.
 
 ### How Do We Protect Your Information?
 
@@ -74,7 +74,7 @@ We are in compliance with the requirements of COPPA (Childrens Online Privacy Pr
 
 ### Terms of Use
 
-Please also visit our Terms policy establishing the use, disclaimers, and limitations of liability governing the use of our website at <a href="{{ '/terms/' | to_baseurl }}">http://{{ site.constants.domain }}/terms/</a>.
+Please also visit our Terms policy establishing the use, disclaimers, and limitations of liability governing the use of our website at [http://{{ site.constants.domain }}/terms/](/terms/).
 
 ### Your Consent
 
@@ -86,6 +86,6 @@ If we decide to change our privacy policy, we will post those changes on this pa
 
 ### Contacting Us
 
-If there are any questions regarding this privacy policy you may <a href="{{ '/contact/' | to_baseurl }}">contact us</a>.
+If there are any questions regarding this privacy policy you may [contact us](/contact/).
 
 This policy was last modified on May 01, 2013

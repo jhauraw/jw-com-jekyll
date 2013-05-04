@@ -58,39 +58,39 @@ Trademarks, service marks, and logos appearing in this site are the property of 
 
 You may not post, send, submit, publish, or transmit in connection with this site any material that:
 
-  you do not have the right to post, including proprietary material of any third party;
+  - you do not have the right to post, including proprietary material of any third party;
 
-  advocates illegal activity or discusses an intent to commit an illegal act;
+  - advocates illegal activity or discusses an intent to commit an illegal act;
 
-  is vulgar, obscene, pornographic, or indecent;
+  - is vulgar, obscene, pornographic, or indecent;
 
-  does not pertain directly to this site;
+  - does not pertain directly to this site;
 
-  threatens or abuses others, libels, defames, invades privacy, stalks, is obscene, pornographic, racist, abusive, harassing, threatening or offensive;
+  - threatens or abuses others, libels, defames, invades privacy, stalks, is obscene, pornographic, racist, abusive, harassing, threatening or offensive;
 
-  seeks to exploit or harm children by exposing them to inappropriate content, asking for personally identifiable details or otherwise;
+  - seeks to exploit or harm children by exposing them to inappropriate content, asking for personally identifiable details or otherwise;
 
-  infringes any intellectual property or other right of any entity or person, including violating anyone's copyrights or trademarks or their rights of publicity;
+  - infringes any intellectual property or other right of any entity or person, including violating anyone's copyrights or trademarks or their rights of publicity;
 
-  violates any law or may be considered to violate any law;
+  - violates any law or may be considered to violate any law;
 
-  impersonates or misrepresents your connection to any other entity or person or otherwise manipulates headers or identifiers to disguise the origin of the content;
+  - impersonates or misrepresents your connection to any other entity or person or otherwise manipulates headers or identifiers to disguise the origin of the content;
 
-  advertises any commercial endeavor (e.g., offering for sale products or services) or otherwise engages in any commercial activity (e.g., conducting raffles or contests, displaying sponsorship banners, and/or soliciting goods or services) except as may be specifically authorized on this site;
+  - advertises any commercial endeavor (e.g., offering for sale products or services) or otherwise engages in any commercial activity (e.g., conducting raffles or contests, displaying sponsorship banners, and/or soliciting goods or services) except as may be specifically authorized on this site;
 
-  solicits funds, advertisers or sponsors;
+  - solicits funds, advertisers or sponsors;
 
-  includes programs which contain viruses, worms and/or Trojan horses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications;
+  - includes programs which contain viruses, worms and/or Trojan horses or any other computer code, files or programs designed to interrupt, destroy or limit the functionality of any computer software or hardware or telecommunications;
 
-  disrupts the normal flow of dialogue, causes a screen to scroll faster than other users are able to type, or otherwise act in a way which affects the ability of other people to engage in real time activities via this site;
+  - disrupts the normal flow of dialogue, causes a screen to scroll faster than other users are able to type, or otherwise act in a way which affects the ability of other people to engage in real time activities via this site;
 
-  includes MP3 format files;
+  - includes MP3 format files;
 
-  amounts to a "pyramid" or similar scheme;
+  - amounts to a "pyramid" or similar scheme;
 
-  disobeys any policy or regulations established from time to time regarding use of this site or any networks connected to this site; or
+  - disobeys any policy or regulations established from time to time regarding use of this site or any networks connected to this site; or
 
-  contains hyper-links to other sites that contain content that falls within the descriptions set forth above.
+  - contains hyper-links to other sites that contain content that falls within the descriptions set forth above.
 
 Although under no obligation to do so, our _Company_ reserves the right to monitor use of this site to determine compliance with these Terms of Use, as well the right to remove or refuse any information for any reason. Notwithstanding these rights, you remain solely responsible for the content of your submissions. You acknowledge and agree that neither _Company_ nor any third party that provides Content to _Company_ will assume or have any liability for any action or inaction by _Company_ or such third party with respect to any submission.
 

@@ -74,6 +74,15 @@ is_post: false
 is_page: false
 is_single: false
 
+# CDN ================================================================ #
+# Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
+# Change to CNAME hosts if you don't need SSL.
+cdn_hosts:
+  - d4yblnny9djlk.cloudfront.net
+  - d1hhryxrxet0hj.cloudfront.net
+  - d2821b5m3tucp6.cloudfront.net
+  - d3dfdi6g2ekadr.cloudfront.net
+
 # Jekyll Config ====================================================== #
 
 # Set the timezone (TZ ENV variable) you want the site to run from.

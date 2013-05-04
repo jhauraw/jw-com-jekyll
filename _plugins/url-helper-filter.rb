@@ -23,13 +23,13 @@ module Jekyll
       input = "#{get_url}#{get_baseurl}#{input}"
     end
 
-    # Prepend a 'virtual versioned' CDN URL for any relative URL resource,
+    # Prepend a CDN 'virtual versioned' URL for any relative URL resource,
     #
     # Example input value for a relative image resource:
     # /images/dog.jpg
     #
     # Example return value for an Amazon Cloudfront CDN URL:
-    # //xxx.cloudfront.net/BASE_URL/RELEASE/images/dog.jpg
+    # //xxx.cloudfront.net/BASE_URL/PREFIX+RELEASE/images/dog.jpg
     #
     # Using crc32 to return consistent cross-machine numeric value of string.
     # input.hash sucks and returns diff value for same string, even on same

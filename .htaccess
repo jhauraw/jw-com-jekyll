@@ -12,7 +12,9 @@ ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 RewriteEngine On
 RewriteBase {{ '/' | to_baseurl }}
 
-RewriteRule ^/(assets)-\d+/(img|js|css|pdf|font)/(.*)$ /$1/$2/$3 [L]
+# CDN Virtual Versioned URLs
+#RewriteRule ^/(assets)-\d+/(img|js|css|pdf|font)/(.*)$ /$1/$2/$3 [L]
+RewriteRule ^/v\d{6,6}/(.*)$ /$1 [L]
 
 # remove www
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]

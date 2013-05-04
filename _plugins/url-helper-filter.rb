@@ -40,6 +40,14 @@ module Jekyll
     #
     # Release id, f not set or null, the current day's date will be used with
     # two digit century; given 2025/01/15, release will equal 250115
+    #
+    # Prefix. Release id is prefixed with this value, for catching in
+    # an .htaccess RewriteRule such as:
+    #
+    # RewriteRule ^/v\d+/(img|js|css|pdf|font)/(.*)$ /$1/$2 [L]
+    #
+    # or, more aggressive:
+    # RewriteRule ^/v\d{6,6}/(.*)$ /$1 [L]
     def to_cdnurl(input)
 
       require 'zlib'
@@ -57,9 +65,11 @@ module Jekyll
         release = @context.registers[:site].time.strftime('%y%m%d')
       end
 
-      # puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/v#{release}#{input}\n"
+      prefix = 'v-'
 
-      input = "//#{cdn_host}#{get_baseurl}/v#{release}#{input}"
+      #puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
+
+      input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"
     end
 
     def sub_baseurl(input)

@@ -5,9 +5,9 @@
 # one to use 'invalidate' on every site update and syncs automatically
 # with Cloudfront, so you don't need to use S3.
 #
-# Minimum 6 digit integer. Increment by 1 for every LIVE release.
+# Exactly 6 digit integer. Increment by 1 for every LIVE release.
 #
-# Release id, f not set or null, the current day's date will be used
+# Release id, if not set or null, the current day's date will be used
 # with two digit century; given 2025/01/15, release will equal 250115
 
 release: 100001

@@ -13,14 +13,13 @@ RewriteEngine On
 RewriteBase {{ '/' | to_baseurl }}
 
 # CDN Virtual Versioned URLs
-# RewriteRule ^/(assets)-\d+/(img|js|css|pdf|font)/(.*)$ /$1/$2/$3 [L]
-RewriteRule ^/v\d{6,6}/(.*)$ /$1 [L]
+RewriteRule ^v[0-9]{6,6}/(.*)$ /$1 [L]
 
 # remove www
-# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-# RewriteRule ^(.*)$ http://%1/$1 [R=301,QSA,L]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,QSA,L]
 
 # index.html to /
-# RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
-# RewriteRule ^(.*)index\.html$ /$1 [R=301,QSA,L]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*index\.html\ HTTP/
+RewriteRule ^(.*)index\.html$ /$1 [R=301,QSA,L]
 </IfModule>

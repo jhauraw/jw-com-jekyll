@@ -74,7 +74,7 @@ We are in compliance with the requirements of COPPA (Childrens Online Privacy Pr
 
 ### Terms of Use
 
-Please also visit our Terms policy establishing the use, disclaimers, and limitations of liability governing the use of our website at [http://{{ site.constants.domain }}/terms/](/terms/).
+Please also visit our Terms policy establishing the use, disclaimers, and limitations of liability governing the use of our website at [http://{{ site.constants.domain }}{{ '/terms/' | to_baseurl }}]({{ '/terms/' | to_baseurl }}).
 
 ### Your Consent
 
@@ -86,6 +86,6 @@ If we decide to change our privacy policy, we will post those changes on this pa
 
 ### Contacting Us
 
-If there are any questions regarding this privacy policy you may [contact us](/contact/).
+If there are any questions regarding this privacy policy you may [contact us]({{ '/contact/' | to_baseurl }}).
 
 This policy was last modified on May 01, 2013

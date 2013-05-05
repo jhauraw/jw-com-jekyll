@@ -65,7 +65,7 @@ module Jekyll
         release = @context.registers[:site].time.strftime('%y%m%d')
       end
 
-      prefix = 'v-'
+      prefix = 'v'
 
       #puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
 

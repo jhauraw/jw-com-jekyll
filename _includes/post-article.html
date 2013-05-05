@@ -32,7 +32,7 @@
 
         <ul class="clearing-thumbs" data-clearing>
           {% for t in page.feature.gallery.items %}
-            <li><a href="{{ t.src | to_baseurl }}"><img src="{{ 'need thumb src here' }}" data-caption="{{ t.caption | escape_once }}" /></li>
+            <li><a href="{{ t.src | to_cdnurl }}"><img src="{{ 'need thumb src here' }}" data-caption="{{ t.caption | escape_once }}" /></li>
           {% endfor %}
         </ul>
 
@@ -63,7 +63,7 @@
     <div class="row">
       <div class="large-8 large-centered columns">
 
-        {{ content | sub_baseurl }}
+        {{ content }}
 
       </div><!-- .columns -->
     </div><!-- .row -->

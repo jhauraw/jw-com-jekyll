@@ -15,17 +15,17 @@
   <meta property="fb:admins" content="{{ site.constants.facebook-admin }}" />
   <link rel="publisher" href="https://plus.google.com/{{ site.constants.gplus-publisher }}" />
 
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ '/img/apple-touch-icon-114.png' | to_baseurl }}">
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/img/apple-touch-icon-72.png' | to_baseurl }}">
-  <link rel="apple-touch-icon-precomposed" href="{{ '/img/apple-touch-icon-precomposed.png' | to_baseurl }}">
-  <link rel="shortcut icon" href="{{ '/img/apple-touch-icon.png' | to_baseurl }}">
-  <link rel="shortcut icon" href="{{ '/favicon.ico' | to_baseurl }}">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ '/media/app/apple-touch-icon-114.png' | to_cdnurl }}">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/media/app/apple-touch-icon-72.png' | to_cdnurl }}">
+  <link rel="apple-touch-icon-precomposed" href="{{ '/media/app/apple-touch-icon-precomposed.png' | to_cdnurl }}">
+  <link rel="shortcut icon" href="{{ '/media/app/apple-touch-icon.png' | to_cdnurl }}">
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | to_cdnurl }}">
 
   <!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,800" /> -->
-  <link rel="stylesheet" href="{{ '/css/vendor.css' | to_baseurl }}" />
-  <link rel="stylesheet" href="{{ '/css/app.css' | to_baseurl }}" />
+  <link rel="stylesheet" href="{{ '/assets/vendor.css' | to_cdnurl }}" />
+  <link rel="stylesheet" href="{{ '/assets/app.css' | to_cdnurl }}" />
 
-  <script src="{{ '/js/modernizr.js' | to_baseurl }}"></script>
+  <script src="{{ '/assets/modernizr.js' | to_cdnurl }}"></script>
 
   {% include og.html %}
 
@@ -53,9 +53,9 @@
   <div id="fb-root"></div>
   {% include analytics.html %}
 
-  <script>document.write('<script src="{{ '/js/' | to_baseurl }}' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js"><\/script>')</script>
+  <script>document.write('<script src="{{ '/assets/' | to_cdnurl }}' + ('__proto__' in {} ? 'zepto' : 'jquery') + '.js"><\/script>')</script>
 
-  <script src="{{ '/js/vendor.js' | to_baseurl }}"></script>
-  <script src="{{ '/js/app.js' | to_baseurl }}"></script>
+  <script src="{{ '/assets/vendor.js' | to_cdnurl }}"></script>
+  <script src="{{ '/assets/app.js' | to_cdnurl }}"></script>
 </body>
 </html>

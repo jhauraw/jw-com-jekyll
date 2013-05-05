@@ -10,13 +10,14 @@
         <li class="logo">
           <a class="brand" href="{{ '/' | to_baseurl }}">
             <span>{{ site.constants.name }}</span>
-            <img src="{{ '/img/logo-light.svg' | to_baseurl }}" alt="{{ site.constants.name }}" />
+            <img src="{{ '/media/app/logo-light.svg' | to_cdnurl }}" alt="{{ site.constants.name }}" />
           </a>
         </li> <!-- .logo -->
       </ul> <!-- .title-area -->
 
       <section class="navsection">
         <ul class="left navmenu">
+          <!--
           <li class="submenu">
             <a href="{{ '/articles/' | to_baseurl }}">Articles</a>
 
@@ -38,7 +39,7 @@
                     {% for page in site.posts limit: 5 %}
                     <li>
                       {% if page.feature.image.src %}
-                        <a href="{{ page.url | to_baseurl }}"><img src="{{ page.feature.image.src | to_baseurl }}" alt="{{ page.title | escape_once }}" /></a>
+                        <a href="{{ page.url | to_baseurl }}"><img src="{{ page.feature.image.src | to_cdnurl }}" alt="{{ page.title | escape_once }}" /></a>
                       {% endif %}
                       <a class="title" href="{{ page.url | to_baseurl }}">{{ page.title }}</a>
                     </li>
@@ -48,6 +49,7 @@
               </div>
             </div>
           </li>
+          -->
           <li><a href="{{ '/portfolio/' | to_baseurl }}">Portfolio</a></li>
           <li><a href="{{ '/resume/' | to_baseurl }}">Résumé</a></li>
           <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>

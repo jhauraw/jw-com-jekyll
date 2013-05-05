@@ -9,7 +9,13 @@ module.exports = function(grunt) {
     ' <%= grunt.template.today("yyyy-mm-dd") %> -' +
     '<%= pkg.homepage ? " " + pkg.homepage + " -" : "" %>' +
     ' Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> -' +
-    ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+    ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */',
+
+    vendor_js_banner: '/*! foundation.js v4.1.5 | MIT License | foundation.zurb.com */',
+
+    vendor_css_banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.5 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */',
+
+    yaml_banner: '---\nlayout: nil\n---\n',
 
     compass: {
       all: {
@@ -17,7 +23,7 @@ module.exports = function(grunt) {
           /* require: 'zurb-foundation', */
           sassDir: '_assets/sass',
           importPath: ['bower_components/foundation/scss', 'bower_components/font-awesome/sass'],
-          cssDir: 'css',
+          cssDir: 'assets',
           outputStyle: 'expanded',
           noLineComments: false,
           environment: 'development'
@@ -26,31 +32,31 @@ module.exports = function(grunt) {
     },
     cssmin: {
       options: {
-        keepSpecialComments: 1,
+        keepSpecialComments: 0,
         report: 'min'
       },
       vendor: {
         options: {
           /* Because cssmin won't keepSpecialComments :( */
-          banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.5 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */'
+          banner: '<%= yaml_banner %>' + '<%= vendor_css_banner %>'
         },
         files: {
-          'assets/css/vendor.css': ['assets/css/vendor.css']
+          'assets/vendor.css': ['assets/vendor.css']
         }
       },
       app: {
         options: {
-          banner: '<%= banner %>'
+          banner: '<%= yaml_banner %>' + '<%= banner %>'
         },
         files: {
-          'assets/css/app.css': ['assets/css/app.css']
+          'assets/app.css': ['assets/app.css']
         }
       }
     },
     copy: {
       main: {
         files: [
-          {src: ['bower_components/foundation/js/vendor/custom.modernizr.js'], dest: 'assets/js/modernizr.js', filter: 'isFile'},
+          {src: ['bower_components/foundation/js/vendor/custom.modernizr.js'], dest: 'assets/modernizr.js'},
 
           /* Issue with 'mouse' events on 1.0.0rc1
              Rolled back to 1.0, maybe bower is getting too hot of a version
@@ -63,16 +69,16 @@ module.exports = function(grunt) {
              $ coffee make dist
              $ MODULES="polyfill zepto detect event ajax form fx touch" ./make dist
           */
-          {src: ['bower_components/zepto/zepto.min.js'], dest: 'assets/js/zepto.js', filter: 'isFile'},
+          {src: ['bower_components/zepto/zepto.min.js'], dest: 'assets/zepto.js'},
 
-          {src: ['bower_components/jquery/jquery.min.js'], dest: 'assets/js/jquery.js', filter: 'isFile'},
-          {src: ['_assets/js/app/app.js'], dest: 'assets/js/app.js', filter: 'isFile'},
-          {expand: true, flatten: true, src: ['bower_components/font-awesome/font/*-webfont*'], dest: 'assets/font/', filter: 'isFile'}
+          {src: ['bower_components/jquery/jquery.min.js'], dest: 'assets/jquery.js'},
+          {src: ['_assets/js/app/app.js'], dest: 'assets/app.js'},
+          {expand: true, flatten: true, src: ['bower_components/font-awesome/font/*-webfont*'], dest: 'assets/'}
         ]
       }
     },
     concat: {
-      founation_js: {
+      vendor_js: {
         src: [
           'bower_components/foundation/js/foundation/foundation.js',
           'bower_components/foundation/js/foundation/foundation.alerts.js',
@@ -89,7 +95,7 @@ module.exports = function(grunt) {
           'bower_components/foundation/js/foundation/foundation.tooltips.js'
           /* 'bower_components/foundation/js/foundation/foundation.topbar.js', */
         ],
-        dest: 'assets/js/vendor.js'
+        dest: 'assets/vendor.js'
       }
       /*
       app_js: {
@@ -123,15 +129,15 @@ module.exports = function(grunt) {
         report: 'min'
       },
       foundation: {
-        src: 'assets/js/vendor.js',
-        dest: 'assets/js/vendor.js',
+        src: 'assets/vendor.js',
+        dest: 'assets/vendor.js',
         options: {
-          banner: '/*! foundation.js v4.1.5 | MIT License | foundation.zurb.com */\n'
+          banner: '<%= vendor_js_banner %>'
         }
       },
       app: {
-        src: 'assets/js/app.js',
-        dest: 'assets/js/app.js',
+        src: 'assets/app.js',
+        dest: 'assets/app.js',
         options: {
           banner: '<%= banner %>'
         }

@@ -120,7 +120,9 @@ timezone: America/Los_Angeles
 # Be sure to use http://
 #
 # NO Trailing-Slash
-url: http://localhost:4000
+# DEV: localhost:4000
+# PROD: jhaurawachsman.com
+url: http://jhaurawachsman.com
 
 # To run the ENTIRE site from a sub-dir, e.g., /sub
 #
@@ -151,4 +153,4 @@ markdown: redcarpet
 pygments: true
 
 include: ['.htaccess']
-exclude: ['CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']
+exclude: ['TODO.md', 'CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

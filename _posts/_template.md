@@ -24,7 +24,7 @@ feature:
   gallery:
     items: # YAML array of gallery images
       -
-        src: # image source URL
+        src: # image source URL, e.g., /media/YYYY/dog.jpg
         caption: # textual information about image
       -
         src:

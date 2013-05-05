@@ -11,9 +11,21 @@
 # with two digit century; given 2025/01/15, release will equal 250115
 release: 100002
 
-# App Mode. Switches some URL paths to Relative, Absolute or CDN.
+# Mode =============================================================== #
+
+# Switches some URL paths to Relative, Absolute or CDN.
 # Options: (development|production)
 mode: development
+
+# CDN ================================================================ #
+
+# Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
+# Change to CNAME hosts if you don't need SSL.
+cdn_hosts:
+  - d4yblnny9djlk.cloudfront.net
+  - d1hhryxrxet0hj.cloudfront.net
+  - d2821b5m3tucp6.cloudfront.net
+  - d3dfdi6g2ekadr.cloudfront.net
 
 # Site CONSTANTS ===================================================== #
 
@@ -84,23 +96,6 @@ constants:
       slug: search
       name: Search
       icon: search
-
-# Dynamic Include Helpers ============================================ #
-
-is_home: false
-is_post: false
-is_page: false
-is_single: false
-
-# CDN ================================================================ #
-
-# Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
-# Change to CNAME hosts if you don't need SSL.
-cdn_hosts:
-  - d4yblnny9djlk.cloudfront.net
-  - d1hhryxrxet0hj.cloudfront.net
-  - d2821b5m3tucp6.cloudfront.net
-  - d3dfdi6g2ekadr.cloudfront.net
 
 # Jekyll Config ====================================================== #
 

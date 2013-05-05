@@ -11,7 +11,8 @@
 # with two digit century; given 2025/01/15, release will equal 250115
 release: 100002
 
-# App Mode (development|production)
+# App Mode. Switches some URL paths to Relative, Absolute or CDN.
+# Options: (development|production)
 mode: development
 
 # Site CONSTANTS ===================================================== #

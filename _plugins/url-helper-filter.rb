@@ -67,8 +67,12 @@ module Jekyll
 
       #puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
 
-      #input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"
-      input
+      # If developing locally, point URLs locally, instead of CDN
+      if @context.registers[:site].config['mode'] == 'development'
+        input = to_baseurl(input)
+      else
+        input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"
+      end
     end
 
     def sub_baseurl(input)

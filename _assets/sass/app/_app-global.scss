@@ -1,3 +1,22 @@
+// Special for an a href tag to have a link around an object > svg, when
+// used as an image. Otherwise links won't be clickable.
+@mixin a-osvg {
+  line-height: 0;
+  position: relative;
+  display: inline-block;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+  object {
+    height: auto;
+  }
+}
+
 /* =Theme SCSS Syntax ================================================== */
 html, body {
   height: 100%;
@@ -21,7 +40,8 @@ html #peek, body #peek {
 }
 
 #scrollable {
-  // pad-bottom keeps content above footer
+  // pad-bottom keeps content above footer need to
+  // adjust padding-bottom if footer height changes.
   padding: emCalc(44px) 0 emCalc(200px);
   z-index: 5;
 }
@@ -131,11 +151,15 @@ html #peek, body #peek {
 
   ul.title-area {
     li.menu-icon {
-      padding: 10px;
+      line-height: 0;
       background-color: #2693ba;
       a {
-        padding: 12px;
-        background-image: url(/img/menu-icon.svg);
+        padding: 10px; // padding + svg/img = 44px total
+        @include a-osvg;
+        object {
+          //max-width: 24px;
+          //padding: 10px;
+        }
       }
     } // .menu-icon
   } // .title-area
@@ -333,6 +357,8 @@ html #peek, body #peek {
       z-index: 10001;
       margin: 0;
       padding: 0;
+      height: 44px;
+      min-height: 44px;
       border-bottom: 1px solid #656b74;
       &:hover {
         border-bottom: 1px solid #3b3f44;
@@ -372,19 +398,19 @@ html #peek, body #peek {
 
 #navbar .title-area, #navpanel .navmenu {
   > li.logo {
+    line-height: 0;
     a.brand {
-      line-height: 0;
+      // padding + svg/img = 44px total
+      padding-top: 9px;
+      padding-bottom: 10px;
       span {
         display: none;
       }
-      img {
-        width: 50px;
-        padding: 10px 0 9px;
-        vertical-align: middle;
+      &:hover path {
+        fill: #ccff00;
       }
+      @include a-osvg;
     } // a.brand
-    a.brand:hover {
-    }
   } // > li.logo
 }
 

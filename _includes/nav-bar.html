@@ -5,12 +5,16 @@
 
       <!-- Title / Menu Section -->
       <ul class="title-area">
-        <li class="toggle-menu menu-icon"><a href="#"></a></li>
+        <li class="toggle-menu menu-icon">
+          <a href="#">
+            <object type="image/svg+xml" data="{{ '/media/app/menu-icon.svg' | to_cdnurl }}">Menu</object>
+          </a>
+        </li>
 
         <li class="logo">
           <a class="brand" href="{{ '/' | to_baseurl }}">
             <span>{{ site.constants.name }}</span>
-            <img src="{{ '/media/app/logo-light.svg' | to_cdnurl }}" alt="{{ site.constants.name }}" />
+            <object type="image/svg+xml" data="{{ '/media/app/logo-light.svg' | to_cdnurl }}">{{ site.constants.name }}</object>
           </a>
         </li> <!-- .logo -->
       </ul> <!-- .title-area -->

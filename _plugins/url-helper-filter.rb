@@ -44,10 +44,8 @@ module Jekyll
     # Prefix. Release id is prefixed with this value, for catching in
     # an .htaccess RewriteRule such as:
     #
-    # RewriteRule ^/v\d+/(img|js|css|pdf|font)/(.*)$ /$1/$2 [L]
-    #
-    # or, more aggressive:
-    # RewriteRule ^/v\d{6,6}/(.*)$ /$1 [L]
+    # # CDN Virtual Versioned URLs
+    # RewriteRule ^v[0-9]{6,6}/(.*)$ /$1 [L]
     def to_cdnurl(input)
 
       require 'zlib'
@@ -69,25 +67,24 @@ module Jekyll
 
       #puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
 
-      input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"
+      #input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"
+      input
     end
 
     def sub_baseurl(input)
 
-      # Append @baseurl to Root-Relative URLs in templates
+      # Prepend @baseurl to Root-Relative URLs in templates
       # to make a Root-Base-Relative URL. Looks for ="/ in
       # href or src tags
-      #input.gsub(/(href|src)="\//, '\1="' + get_baseurl + '/')
-      input
+      input.gsub(/(href|src)="\//, "\\1=\"#{get_baseurl}/")
     end
 
     def sub_absurl(input)
 
-      # Append @url and @baseurl to Root-Relative URLs in
+      # Prepend @url and @baseurl to Root-Relative URLs in
       # templates to make an Absolute URL. Looks for ="/ in
       # href or src tags.
-      #input.gsub(/(href|src)="\//, '\1="' + get_url + get_baseurl + '/')
-      input
+      input.gsub(/(href|src)="\//, "\\1=\"#{get_url}#{get_baseurl}/")
     end
   end
 end

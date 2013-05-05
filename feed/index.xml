@@ -1,5 +1,6 @@
 ---
 layout: nil
+type: feed
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
@@ -16,11 +17,11 @@ layout: nil
   <author>
     <name>{{ site.constants.name }}</name>
     <email>{{ site.constants.email }}</email>
-    <uri>{{ '/about/' | to_absurl }}</uri>
+    <uri>{{ '/' | to_absurl }}</uri>
   </author>
 
   <icon>{{ '/favicon.ico' | to_absurl }}</icon>
-  <logo>{{ '/img/rss-logo.png' | to_absurl }}</logo>
+  <logo>{{ '/media/app/rss-logo.png' | to_cdnurl }}</logo>
 
   {% for post in site.posts %}
     <entry>
@@ -32,7 +33,7 @@ layout: nil
       <link href="{{ post.url | to_absurl }}"/>
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | to_absurl }}</id>
-      {% if post.image.url %}<logo>{{ post.image.url | to_absurl }}</logo>{% endif %}
+      {% if post.feature.image.src %}<logo>{{ post.feature.image.src | to_cdnurl }}</logo>{% endif %}
       <content type="html">{{ post.content | sub_absurl | xml_escape }}</content>
     </entry>
   {% endfor %}

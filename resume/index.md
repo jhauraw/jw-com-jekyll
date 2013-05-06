@@ -16,7 +16,6 @@ Jhaura is a senior level web developer with management skills which allows him t
 **Tools Used**: Sublime Text editor. Git version control. Ruby, Gem development environment. Photoshop & Illustrator CS. Google Adwords and Adsense, Microsoft AdCenter. Amazon AWS and Cloudfront CDN. Amazon Seller and Ads. Google Analytics and Webmaster tools for understanding where profit can be made from traffic and where more value can be created for users.
 
 ## Experience
-
 ### Web Developer, Internet Marketer at Consultant
 
 June 2005 - Present (8 years)
@@ -111,7 +110,6 @@ Started out as Sales Associate, promoted to manager. Managed a team of 10 crew m
 * Created a high standard of customer service
 
 ## Education
-
 ### University of California, Santa Barbara
 
 - Bachelor of Arts, Religious Studies, 1996 - 1998

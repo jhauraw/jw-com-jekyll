@@ -157,7 +157,10 @@ module.exports = function(grunt) {
         }
       }
     },
-    clean: ['_tmp/**/*'], // CAUTION! DELETES with NO TRASH (Recovory)
+    clean: { // CAUTION! DELETES with NO TRASH (Recovory)
+      pre: ['.sass-cache', 'assets/**/*'],
+      post: ['_tmp/**/*']
+    },
     watch: {
       js: {
         files: '_assets/js/**/*.js',
@@ -203,14 +206,14 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['shell:jekyll_serve', 'watch']); // 'livereload-start'
 
   // DEV Mode: Run this first one time to build out the _assets into /css and /js
-  grunt.registerTask('build-dev', ['compass', 'jshint', 'concat', 'copy', 'clean', 'shell:jekyll_build']);
+  grunt.registerTask('build-dev', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'clean:post', 'shell:jekyll_build']);
 
    /*
     PROD Mode: Run this when you are ready to DEPLOY.
     Be sure to change your site.url option in _config.yml
     from your DEV to your PROD url.
   */
-  grunt.registerTask('build-prod', ['compass', 'jshint', 'concat', 'copy', 'cssmin', 'uglify', 'clean', 'shell:jekyll_build']);
+  grunt.registerTask('build-prod', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'cssmin', 'uglify', 'clean:post', 'shell:jekyll_build']);
 
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');

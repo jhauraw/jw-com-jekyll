@@ -8,6 +8,18 @@ IndexIgnore *
 ErrorDocument 404 {{ '/404.html' | to_baseurl }}
 ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 
+AddType application/vnd.ms-fontobject .eot
+AddType font/truetype .ttf
+AddType font/opentype .otf
+AddType font/opentype .woff
+AddType image/svg+xml .svg .svgz
+AddEncoding gzip .svgz
+<FilesMatch "\.(ttf|otf|eot|woff|svg)$">
+  <IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+  </IfModule>
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase {{ '/' | to_baseurl }}

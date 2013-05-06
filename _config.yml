@@ -9,13 +9,13 @@
 #
 # Release id, if not set or null, the current day's date will be used
 # with two digit century; given 2025/01/15, release will equal 250115
-release: 100002
+release: 100003
 
 # Mode =============================================================== #
 
 # Switches some URL paths to Relative, Absolute or CDN.
 # Options: (development|production)
-mode: development
+mode: production
 
 # CDN ================================================================ #
 

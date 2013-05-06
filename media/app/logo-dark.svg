@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="logosvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50px" height="25px" viewBox="0 0 50 25" enable-background="new 0 0 50 25" xml:space="preserve">
+<svg version="1.1" id="logosvg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" preserveAspectRatio="xMinYMin meet" width="50px" height="25px" viewBox="0 0 50 25" enable-background="new 0 0 50 25" xml:space="preserve">
 <path fill="#000000" stroke="none" id="logopath" d="M40.625,0v6.25h-6.25V0H12.5v9.375h6.25v6.25H0V25h50V0H40.625z M25,21.875H3.125V18.75h18.75V6.25h-6.25V3.125H25V21.875z M46.875,21.875h-18.75V3.125h3.125V18.75h6.25V9.375h3.125v9.375h3.125V3.125h3.125V21.875z"/>
 </svg>

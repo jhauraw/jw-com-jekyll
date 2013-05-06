@@ -719,7 +719,7 @@ article.aside {
   background: #fff;
   @include box-shadow(0px 1px 3px #aaa inset);
   @include translateZ(0); /* to prevent flash in mobile w/.panel */
-  p, ul {
+  ul, p {
     font-size: emCalc(12px);
   }
   a {
@@ -728,22 +728,36 @@ article.aside {
       color: #ccc;
     }
   }
-  .logo {
-    margin-bottom: 0.25em;
-    img {
-      max-width: 25px;
+  .meta {
+    list-style: none;
+    margin: 0;
+    li {
+      list-style-type: none;
     }
-  }
-  .thanks {
-    margin-bottom: 0;
+    .logo {
+      margin-bottom: 0.25em;
+      a {
+        @include a-osvg;
+        object {
+          width: 25px;
+          height: 12.5px;
+        }
+      }
+    }
+    .copyright {
+      margin-bottom: 1.25em;
+    }
+    .thanks {
+      margin-bottom: 0;
+    }
   }
 }
 
 @media #{$small} {
   #footer {
     padding: emCalc(30px);
-    .footer-links {
-      float: right;
+    .links {
+      text-align: right;
     }
   }
 }

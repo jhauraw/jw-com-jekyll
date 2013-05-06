@@ -8,7 +8,7 @@ type: post
 
     {% include post-article.html %}
 
-    {% comment %}{% include post-comments.html %}{% endcomment %}
+    {% if mode == 'production' %}{% include post-comments.html %}{% endif %}
 
   </div><!-- #primary.columns.flex-col -->
 

@@ -1,4 +1,4 @@
-{% if site.constants.disqus-user %}
+{% if site.constants.disqus-user and site.mode == 'production' %}
 <section id="comments">
   <div class="row">
     <div class="columns">

@@ -15,4 +15,6 @@ Icon?
 _site
 _drafts
 
+# Private
 TODO*
+_deploy.sh

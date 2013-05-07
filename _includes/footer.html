@@ -1,6 +1,6 @@
 <footer id="footer" role="contentinfo">
   <div class="row collapse">
-    <div class="large-7 push-5 columns">
+    <div class="large-6 push-6 columns">
 
       <ul class="links inline-justified">
         <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>
@@ -10,25 +10,23 @@
       </ul>
 
     </div><!-- .columns -->
-    <div class="large-5 pull-7 columns">
+    <div class="large-6 pull-6 columns">
 
-      <ul class="meta">
-        <li class="logo">
+        <p class="logo">
           <a class="brand" href="{{ '/' | to_baseurl }}">
             <object type="image/svg+xml" data="{{ '/media/app/logo-dark.svg' | to_cdnurl }}">{{ site.constants.name }}</object>
           </a>
-        </li>
+        </p>
 
-        <li class="copyright">
-            &copy; 2000-{{ site.time | date: '%Y' }} {{site.constants.name }}.
-            <br />
-            {{ site.constants.tagline }}.
-        </li>
+        <p class="copyright">
+          &copy; 2000-{{ site.time | date: '%Y' }} {{site.constants.name }}.
+          <br />
+          Licensing: Code <a rel="nofollow" target="_blank" href="//gnu.org/licenses/gpl.html">GPLv3</a>. Articles / Content <a rel="nofollow" target="_blank" href="//creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
+        </p>
 
-        <li class="thanks">
-            Made with &amp; Thanks to: <a rel="nofollow" target="_blank" href="//jekyllrb.com/">Jekyll</a>, <a rel="nofollow" target="_blank" href="//foundation.zurb.com/">Zurb Foundation</a>, <a rel="nofollow" target="_blank" href="//sass-lang.com/">SaSS</a>, <a rel="nofollow" target="_blank" href="//gruntjs.com/">Grunt JS</a>, <a rel="nofollow" target="_blank" href="//sublimetext.com/">Sublime Text</a>.
-        </li>
-      </ul>
+        <p class="thanks">
+          Made &amp; Thanks: <a rel="nofollow" target="_blank" href="//jekyllrb.com/">Jekyll</a>, <a rel="nofollow" target="_blank" href="//foundation.zurb.com/">Zurb Foundation</a>, <a rel="nofollow" target="_blank" href="//sass-lang.com/">SaSS</a>, <a rel="nofollow" target="_blank" href="//gruntjs.com/">Grunt JS</a>, <a rel="nofollow" target="_blank" href="//sublimetext.com/">Sublime Text</a>.
+        </p>
 
     </div><!-- .columns -->
   </div><!-- .row -->

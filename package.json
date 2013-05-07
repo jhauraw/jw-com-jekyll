@@ -14,7 +14,9 @@
   "licenses": [
     {
       "type": "GPL",
-      "url": "http://github.com/jhauraw/jhaurawachsman.com/blob/master/LICENSE"
+      "url": "http://github.com/jhauraw/jhaurawachsman.com/blob/master/LICENSE",
+      "type": "CC BY",
+      "url": "http://creativecommons.org/licenses/by/3.0/"
     }
   ],
   "main": "Gruntfile.js",

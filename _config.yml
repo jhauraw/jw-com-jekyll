@@ -23,7 +23,7 @@ app:
   # MODE
   # Switches some URL paths to Relative, Absolute or CDN.
   # Options: (development|production)
-  mode: development
+  mode: production
 
   # CDN ==================================================== #
 
@@ -162,7 +162,7 @@ baseurl: null
 # YES Front-Slash. YES Trailing-Slash
 permalink: /:year/:title/
 
-#paginate_path: /articles/page:num
+paginate_path: /articles/page:num/
 paginate: 2
 
 #lsi: true

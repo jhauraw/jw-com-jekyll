@@ -6,28 +6,28 @@ type: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title>{{ site.constants.name }}</title>
-  <subtitle>{{ site.constants.tagline }}</subtitle>
+  <title>{{ site.app.name }}</title>
+  <subtitle>{{ site.app.tagline }}</subtitle>
   <link href="{{ '/feed/' | to_absurl }}" rel="self"/>
   <link href="{{ '/' | to_absurl }}"/>
-  <rights>{{ site.constants.domain | capitalize }} is licensed under GPL 3.0 for code and CC BY 3.0 for content. All Rights Reserved.</rights>
+  <rights>{{ site.app.domain | capitalize }} licensing: Code GPLv3, Content CC BY 3.0. All Rights Reserved.</rights>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ '/' | to_absurl }}</id>
 
   <author>
-    <name>{{ site.constants.name }}</name>
-    <email>{{ site.constants.email }}</email>
+    <name>{{ site.app.name }}</name>
+    <email>{{ site.app.email }}</email>
     <uri>{{ '/' | to_absurl }}</uri>
   </author>
 
   <icon>{{ '/favicon.ico' | to_absurl }}</icon>
-  <logo>{{ '/media/app/rss-logo.png' | to_cdnurl }}</logo>
+  <logo>{{ '/media/app/rss-logo.png' | to_absurl }}</logo>
 
   {% for post in site.posts %}
     <entry>
       <author>
-        <name>{% if post.author.name %}{{ post.author.name }}{% else %}{{ site.constants.author.name }}{% endif %}</name>
-        <uri>http://{% if post.author.domain %}{{ post.author.domain }}{% else %}{{ site.constants.author.domain }}{% endif %}/</uri>
+        <name>{% if post.author.name %}{{ post.author.name }}{% else %}{{ site.app.author.name }}{% endif %}</name>
+        <uri>http://{% if post.author.domain %}{{ post.author.domain }}{% else %}{{ site.app.author.domain }}{% endif %}/</uri>
       </author>
       <title>{{ post.title }}</title>
       <link href="{{ post.url | to_absurl }}"/>

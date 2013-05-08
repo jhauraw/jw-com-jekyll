@@ -74,7 +74,7 @@ We are in compliance with the requirements of COPPA (Childrens Online Privacy Pr
 
 ### Terms of Use
 
-Please also visit our Terms policy establishing the use, disclaimers, and limitations of liability governing the use of our website at [http://{{ site.constants.domain }}{{ '/terms/' | to_baseurl }}]({{ '/terms/' | to_baseurl }}).
+Please also visit our Terms policy establishing the use, disclaimers, and limitations of liability governing the use of our website at [http://{{ site.app.domain }}{{ '/terms/' | to_baseurl }}]({{ '/terms/' | to_baseurl }}).
 
 ### Your Consent
 

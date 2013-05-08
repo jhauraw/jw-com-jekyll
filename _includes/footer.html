@@ -14,12 +14,12 @@
 
         <p class="logo">
           <a class="brand" href="{{ '/' | to_baseurl }}">
-            <object type="image/svg+xml" data="{{ '/media/app/logo-dark.svg' | to_cdnurl }}">{{ site.constants.name }}</object>
+            <object type="image/svg+xml" data="{{ '/media/app/logo-dark.svg' | to_cdnurl }}">{{ site.app.name }}</object>
           </a>
         </p>
 
         <p class="copyright">
-          &copy; 2000-{{ site.time | date: '%Y' }} {{site.constants.name }}.
+          &copy; 2000-{{ site.time | date: '%Y' }} {{site.app.name }}.
           <br />
           Licensing: Code <a rel="nofollow" target="_blank" href="//gnu.org/licenses/gpl.html">GPLv3</a>. Content <a rel="nofollow" target="_blank" href="//creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.
         </p>

@@ -1,7 +1,7 @@
-{% if site.constants.google-analytics-id %}
+{% if site.app.google-analytics-id %}
 <script>
   var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', '{{ site.constants.google-analytics-id }}']);
+  _gaq.push(['_setAccount', '{{ site.app.google-analytics-id }}']);
   _gaq.push(['_trackPageview']);
 
   (function() {

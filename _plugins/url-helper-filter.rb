@@ -50,14 +50,14 @@ module Jekyll
 
       require 'zlib'
 
-      cdn_hosts = @context.registers[:site].config['cdn_hosts']
+      cdn_hosts = @context.registers[:site].config['app']['cdn_hosts']
 
       cdn_num = cdn_hosts.length
       hash = Zlib::crc32(input)
       cdn_sub = hash % cdn_num
       cdn_host = cdn_hosts[cdn_sub]
 
-      release = @context.registers[:site].config['release']
+      release = @context.registers[:site].config['app']['release']
 
       if !release
         release = @context.registers[:site].time.strftime('%y%m%d')
@@ -68,7 +68,7 @@ module Jekyll
       #puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
 
       # If developing locally, point URLs locally, instead of CDN
-      if @context.registers[:site].config['mode'] == 'development'
+      if @context.registers[:site].config['app']['mode'] == 'development'
         input = to_baseurl(input)
       else
         input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"

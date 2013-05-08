@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="{{ site.constants.lang }}" dir="{{ site.constants.dir }}"><![endif]-->
-<!--[if gt IE 8]><!--><html class="no-js" lang="{{ site.constants.lang }}" dir="{{ site.constants.dir }}"><!--<![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang="{{ site.app.lang }}" dir="{{ site.app.dir }}"><![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="{{ site.app.lang }}" dir="{{ site.app.dir }}"><!--<![endif]-->
 <head>
-  <meta charset="{{ site.constants.encoding }}" />
-  <meta name="viewport" content="{{ site.constants.viewport }}">
+  <meta charset="{{ site.app.encoding }}" />
+  <meta name="viewport" content="{{ site.app.viewport }}">
 
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.constants.name }}{% if page.type == 'home' %} - {{ site.constants.tagline }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.app.name }}{% if page.type == 'home' %} - {{ site.app.tagline }}{% endif %}</title>
 
   <link type="text/plain" rel="author" href="{{ '/humans.txt' | to_baseurl }}" />
 
-  <link rel="alternate" type="application/atom+xml" title="{{ site.constants.name }} - ATOM RSS Feed" href="//feeds.feedburner.com/{{ site.constants.feed-name }}" />
+  <link rel="alternate" type="application/atom+xml" title="{{ site.app.name }} - ATOM RSS Feed" href="//feeds.feedburner.com/{{ site.app.feed-name }}" />
 
-  <meta property="fb:app_id" content="{{ site.constants.facebook-appid }}" />
-  <meta property="fb:admins" content="{{ site.constants.facebook-admin }}" />
-  <link rel="publisher" href="https://plus.google.com/{{ site.constants.gplus-publisher }}" />
+  <meta property="fb:app_id" content="{{ site.app.facebook-appid }}" />
+  <meta property="fb:admins" content="{{ site.app.facebook-admin }}" />
+  <link rel="publisher" href="https://plus.google.com/{{ site.app.gplus-publisher }}" />
 
   <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ '/media/app/apple-touch-icon-114.png' | to_cdnurl }}">
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ '/media/app/apple-touch-icon-72.png' | to_cdnurl }}">

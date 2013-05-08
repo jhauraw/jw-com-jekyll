@@ -2,7 +2,7 @@
 # REQUIRED: layout, published, category, title, excerpt
 layout: (post|page|home)
 published: (true|false)
-category: (development|javascript|frontend|backend|news|howto)
+category: (web-development|internet-marketing|workflow|lifestyle|business|news)
 title:
 author:
   name:

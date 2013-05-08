@@ -88,4 +88,4 @@ If we decide to change our privacy policy, we will post those changes on this pa
 
 If there are any questions regarding this privacy policy you may [contact us]({{ '/contact/' | to_baseurl }}).
 
-This policy was last modified on May 01, 2013
+This policy is valid from May 01, 2013

@@ -6,6 +6,8 @@ type: post
 <div class="flex-row row">
   <div id="primary" class="large-9 columns flex-col" role="content">
 
+    {% include post-ribbon.html %}
+
     {% include post-article.html %}
 
     {% if mode == 'production' %}{% include post-comments.html %}{% endif %}

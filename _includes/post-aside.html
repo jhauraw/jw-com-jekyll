@@ -9,7 +9,7 @@
   {% endif %}
 
   <header class="article-header">
-    {% if page.category %}<aside class="article-meta article-category"><a href="{{ page.category | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a>{% for f in page.feature %}{% unless f[0] == 'image' %}&nbsp;&nbsp;<span class="radius label">{{ f[0] | downcase }}</span>{% endunless %}{% endfor %}</aside>{% endif %}
+    {% if page.category %}<aside class="article-meta article-category"><a href="{{ page.category | sanitize_str | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a>{% for f in page.feature %}{% unless f[0] == 'image' %}&nbsp;&nbsp;<span class="radius label">{{ f[0] | downcase }}</span>{% endunless %}{% endfor %}</aside>{% endif %}
     <h2 class="article-title"><a href="{{ page.url | to_baseurl }}">{{ page.title }}</a></h2>
   </header>
 

@@ -90,6 +90,10 @@ module Jekyll
       # href or src tags.
       input.gsub(/(href|src)="\//, "\\1=\"#{get_url}#{get_baseurl}/")
     end
+
+    def sanitize_str(input)
+      input.gsub(/[^a-z0-9 -]+/, '').gsub(/\s/, '-').gsub(/-{2,}/, '-').downcase
+    end
   end
 end
 

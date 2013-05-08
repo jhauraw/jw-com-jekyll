@@ -6,15 +6,7 @@ type: page
 <div class="row">
   <div id="primary" class="large-12 columns" role="content">
 
-    <hgroup class="page-header">
-      <div class="row">
-        <div class="columns large-offset-3">
-
-          <h1 class="page-title" itemprop="headline">{{ page.title }}</h1>
-
-        </div><!-- .columns -->
-      </div><!-- .row -->
-    </hgroup><!-- .page-header -->
+    {% include page-ribbon.html %}
 
     <article class="{{ page.type }} fulltext">
       <section class="article-content" itemprop="articleBody">

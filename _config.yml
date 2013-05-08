@@ -1,5 +1,6 @@
 # Release ============================================================ #
 
+# RELEASE
 # The current site version for use in 'virtual versioned' URLs and an
 # Origin Pull CDN setup such as CloudFront. This method does not require
 # one to use 'invalidate' on every site update and syncs automatically
@@ -13,12 +14,14 @@ release: 100008
 
 # Mode =============================================================== #
 
+# MODE
 # Switches some URL paths to Relative, Absolute or CDN.
 # Options: (development|production)
-mode: production
+mode: development
 
 # CDN ================================================================ #
 
+# CDN HOSTS
 # Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
 # Change to CNAME hosts if you don't need SSL.
 cdn_hosts:
@@ -26,6 +29,14 @@ cdn_hosts:
   - d1hhryxrxet0hj.cloudfront.net
   - d2821b5m3tucp6.cloudfront.net
   - d3dfdi6g2ekadr.cloudfront.net
+
+categories:
+  - 'web development'
+  - 'internet marketing'
+  - workflow
+  - lifestyle
+  - business
+  - news
 
 # Site CONSTANTS ===================================================== #
 
@@ -99,10 +110,12 @@ constants:
 
 # Jekyll Config ====================================================== #
 
+# TIMEZONE
 # Set the timezone (TZ ENV variable) you want the site to run from.
 # http://en.wikipedia.org/wiki/Tz_database
 timezone: America/Los_Angeles
 
+# URL
 # Used any place a where an absolute URL is required.
 #
 # REQUIRED if you want OG:TYPE meta tags, XML feed and
@@ -122,6 +135,7 @@ timezone: America/Los_Angeles
 # PROD: jhaurawachsman.com
 url: http://jhaurawachsman.com
 
+# BASEURL
 # To run the ENTIRE site from a sub-dir, e.g., /sub
 #
 # This theme uses ABSOLUTE URLs in places like the XML Feed and
@@ -132,6 +146,7 @@ url: http://jhaurawachsman.com
 # YES Front-Slash. NO Trailing-Slash. Otherwise set to null.
 baseurl: null
 
+# PERMALINK
 # You can use a directory name here to have just the _posts
 # served from an sub-directory, e.g., /blog/
 #

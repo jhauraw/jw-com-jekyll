@@ -73,25 +73,29 @@ html #peek, body #peek {
 */
 
 #main {
+  margin: 1em auto 0 auto;
   background-color: #fff;
+  border-width: 1px 0;
+  border-style: solid;
+  border-color: #e3e3e3;
   @include translateZ(0);
 }
 
 #primary {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  //padding-top: 1em;
+  //padding-bottom: 1em;
 }
 
 @media #{$large} {
   #main {
-    border: 1px solid #e3e3e3;
+    border-width: 1px;
   }
 }
 
 @media #{$small} {
   #main {
-    margin: 0 auto;
-    max-width: $row-width; }
+    max-width: $row-width;
+  }
 
   .flex-row {
     display: table;
@@ -432,6 +436,44 @@ html #peek, body #peek {
   }
 }
 
+/* =Page Header ======================================================== */
+.page-header {
+  .row {
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: #e3e3e3;
+    margin-bottom: 1.5em;
+  }
+  .page-title {
+    color: #8A8C8E;
+    font: bold emCalc(20px) arial, sans-serif;
+    margin: 0;
+    padding: .5em 0;
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -16px;
+      left: 21px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 16px 16px 0 16px;
+      border-color: #d6d6d6 transparent transparent transparent;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 22px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 15px 15px 0 15px;
+      border-color: #fff transparent transparent transparent;
+    }
+  }
+}
+
 /* =Article ============================================================ */
 article {
   position: relative;
@@ -474,10 +516,15 @@ article.fulltext {
   }
 }
 
-@media #{$small} {
+article.page {
+  .article-content {
+    h2:first-child {
+      margin-top: 0;
+    }
+  }
 }
 
-.article-content .connect {
+.article-content .connect { // sidebar in contact.html
   color: #999;
   list-style: none;
   margin: 0;

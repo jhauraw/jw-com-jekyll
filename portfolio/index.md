@@ -1,5 +1,5 @@
 ---
-layout: page-full
+layout: page
 subtype: portfolio
 title: Portfolio
 excerpt: |

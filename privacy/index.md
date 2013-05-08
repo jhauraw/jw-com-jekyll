@@ -1,5 +1,5 @@
 ---
-layout: page-full
+layout: page
 subtype: policy
 title: Privacy Policy
 excerpt: |

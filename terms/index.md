@@ -1,5 +1,5 @@
 ---
-layout: page-full
+layout: page
 subtype: policy
 title: Terms and Conditions
 excerpt: |

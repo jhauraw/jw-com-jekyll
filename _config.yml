@@ -1,65 +1,64 @@
-# Release ============================================================ #
+# App Config ========================================================= #
 
-# RELEASE
-# The current site version for use in 'virtual versioned' URLs and an
-# Origin Pull CDN setup such as CloudFront. This method does not require
-# one to use 'invalidate' on every site update and syncs automatically
-# with Cloudfront, so you don't need to use S3.
-#
-# Exactly 6 digit integer. Increment by 1 for every LIVE release.
-#
-# Release id, if not set or null, the current day's date will be used
-# with two digit century; given 2025/01/15, release will equal 250115
-release: 100008
+app:
 
-# Mode =============================================================== #
+  # Release ================================================ #
 
-# MODE
-# Switches some URL paths to Relative, Absolute or CDN.
-# Options: (development|production)
-mode: development
+  # RELEASE
+  # The current site version for use in 'virtual versioned' URLs
+  # and an Origin Pull CDN setup such as CloudFront. This method
+  # does not require one to use 'invalidate' on every site update
+  # and syncs automatically with Cloudfront, so you don't need to
+  # use S3.
+  #
+  # Exactly 6 digit integer. Increment by 1 for every LIVE release.
+  #
+  # Release id, if not set or null, the current day's date will be
+  # used with two digit century; given 2025/01/15, release will
+  # equal 250115
+  release: 100008
 
-# CDN ================================================================ #
+  # Mode =================================================== #
 
-# CDN HOSTS
-# Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
-# Change to CNAME hosts if you don't need SSL.
-cdn_hosts:
-  - d4yblnny9djlk.cloudfront.net
-  - d1hhryxrxet0hj.cloudfront.net
-  - d2821b5m3tucp6.cloudfront.net
-  - d3dfdi6g2ekadr.cloudfront.net
+  # MODE
+  # Switches some URL paths to Relative, Absolute or CDN.
+  # Options: (development|production)
+  mode: development
 
-categories:
-  - 'web development'
-  - 'internet marketing'
-  - workflow
-  - lifestyle
-  - business
-  - news
+  # CDN ==================================================== #
 
-# Site CONSTANTS ===================================================== #
+  # CDN HOSTS
+  # Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
+  # Change to CNAME hosts if you don't need SSL.
+  cdn_hosts:
+    - d4yblnny9djlk.cloudfront.net
+    - d1hhryxrxet0hj.cloudfront.net
+    - d2821b5m3tucp6.cloudfront.net
+    - d3dfdi6g2ekadr.cloudfront.net
 
-constants:
-
-  # Locale and encoding
+  # Locale and encoding ==================================== #
   dir: rtl
   lang: en-US
   locale: en_US
   encoding: utf-8
   viewport: width=device-width
 
-  # Name (Brand), Tagline and Meta Image (Og)
+  # Name (Brand), Tagline and Meta Image (Og) ============== #
   name: Jhaura Wachsman
   tagline: 'Web Developer, Internet Marketer'
   description: |
     Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 
-  # Contact and Domain
+  # Contact and Domain ===================================== #
   email: jw@jhaurawachsman.com
   domain: jhaurawachsman.com
 
-  # Social Media User Names (Not full URL)
+  # Default author for Posts =============================== #
+  author:
+    name: Jhaura Wachsman
+    domain: jhaurawachsman.com
+
+  # Social Media User Names (Not full URL) ================= #
   github: jhauraw
   twitter: JhauraWachsman
   facebook: JhauraWachsman
@@ -69,23 +68,28 @@ constants:
   linkedin: jhaurawachsman
   stacko: 2201020
 
-  # Feedburner Feed Name
+  # Feedburner Feed Name =================================== #
   feed-name: jhaurawachsman
 
-  # Meta Admin / Verify IDs
+  # Meta Admin / Verify IDs =================================#
   facebook-admin: 1550453047
   facebook-appid: 251689391563684
   gplus-publisher: 103492502746159725544
   disqus-user: jhaurawachsman
 
-  # Analytics / Metrics
+  # Analytics / Metrics ==================================== #
   google-analytics-id: UA-17276272-1
 
-  # Default author for Posts
-  author:
-    name: Jhaura Wachsman
-    domain: jhaurawachsman.com
+  # Categories ============================================= #
+  categories:
+    - web development
+    - internet marketing
+    - workflow
+    - lifestyle
+    - business
+    - news
 
+  # Nav Panel ============================================== #
   navpanel:
     -
       slug: articles
@@ -158,8 +162,8 @@ baseurl: null
 # YES Front-Slash. YES Trailing-Slash
 permalink: /:year/:title/
 
-paginate_path: /page/:num/
-paginate: 25
+#paginate_path: /articles/page:num
+paginate: 2
 
 #lsi: true
 markdown: redcarpet

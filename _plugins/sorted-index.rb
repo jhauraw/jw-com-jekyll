@@ -17,7 +17,7 @@ module Jekyll
       self.process(@name)
       self.read_yaml(File.join(base, '_layouts'), 'sorted-index.html')
       self.data['group'] = group
-      self.data['title'] = group
+      self.data['title'] = group.split(' ').map(&:capitalize).join(' ')
       self.data['excerpt'] = "Indexed list of all articles in &#39;"+group+"&#39;."
     end
   end

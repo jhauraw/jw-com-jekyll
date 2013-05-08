@@ -11,11 +11,11 @@ subtype: sorted
 
   <ul class="item-index item-grid large-block-grid-5">
     {% for page in paginator.posts %}
-        <li>
+      <li>
 
-          {% include post-aside.html %}
+        {% include post-aside.html %}
 
-        </li>
+      </li>
     {% endfor %}
   </ul><!-- .sorted.archive -->
   {% assign pagebase = page.group %}

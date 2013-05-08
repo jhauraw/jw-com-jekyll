@@ -468,6 +468,7 @@ html #peek, body #peek {
   .ribbon-title {
     color: #8A8C8E;
     font: bold emCalc(20px) arial, sans-serif;
+    text-transform: capitalize;
     margin: 0;
     padding: .5em 0;
   }

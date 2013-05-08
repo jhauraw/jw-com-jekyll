@@ -6,6 +6,13 @@ excerpt: |
   Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 ---
 
+<ul class="inline-justified text-right">
+  <li><i class="icon-file-alt"></i> Download as:</li>
+  <li><a class="label round secondary" href="{{ '/media/pdf/Jhaura-Wachsman-Resume.pdf' | to_cdnurl }}">PDF</a></li>
+  <!-- <li><a class="label round secondary" href="{{ '/media/pdf/Jhaura-Wachsman-Resume.doc' | to_cdnurl }}">Word</a></li> -->
+  <!-- <li><a class="label round secondary" href="{{ '/media/pdf/Jhaura-Wachsman-Resume.txt' | to_cdnurl }}">Text</a></li> -->
+</ul>
+
 ## Jhaura Wachsman
 ### Web Developer, Internet Marketer
 

@@ -654,6 +654,7 @@ article.aside {
 /* =Item Index ========================================================= */
 .item-index {
   list-style: none;
+  line-height: 1;
   margin-bottom: 0;
   li {
     list-style-type: none;
@@ -679,6 +680,10 @@ article.aside {
 
 .item-muted {
   background: #f6f5f2;
+}
+
+.item-ad {
+  text-align: center;
 }
 
 @media #{$small} {

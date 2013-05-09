@@ -761,15 +761,113 @@ article.aside {
 }
 
 /* =Home =============================================================== */
-.masthead {
-  margin-top: $half-gutter;
+.home-body {
+  #home-masthead {
+    > .row {
+      position: relative;
+      color: #fff;
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 30px rgba(0,0,0,.075);
+      padding-top: 3em;
+      padding-bottom: 3em;
+
+      background: #333; // Old browsers
+
+      // #336600, #ccff00 green/yellow
+      @include background-image(linear-gradient(45deg, #333 0%, #ccc 100%));
+
+      overflow: hidden;
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url("{{ '/media/pages/max-pattern.png' | to_cdnurl }}") repeat center center;
+        opacity: .4;
+      }
+
+      > .columns {
+        z-index: 2;
+        position: relative;
+      }
+    }
+
+    h1, h2 {
+      color: #fff;
+      margin: 0;
+      line-height: 1;
+    }
+
+    h1 {
+      font-weight: bold;
+      letter-spacing: -1px;
+      margin-bottom: .2em;
+    }
+  }
+
+  #home-connect {
+    > .row {
+      margin-bottom: 1em;
+      padding-top: 1.25em;
+      padding-bottom: 1.25em;
+      border-bottom: 1px solid #e3e3e3;
+      background: #f3f3f3;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+    ul, li {
+      height: 20px;
+    }
+  }
 }
 
 @media #{$small} {
-  .masthead {
-    margin: -$half-gutter;
-    margin-top: 0;
-    margin-bottom: 0;
+
+  .home-body {
+    #home-masthead {
+      > .row {
+        padding-top: 4em;
+        padding-bottom: 4em;
+      }
+
+      h1 {
+        font-size: 4em;
+        letter-spacing: -2px;
+      }
+
+      #home-info {
+        text-align: right;
+
+        hgroup {
+          text-align: center;
+
+          h1, h2 {
+            display: inline-block;
+          }
+        }
+      }
+
+      #home-media {
+        text-align: left;
+      }
+    }
+  }
+}
+
+@media #{$medium} {
+
+  .home-body {
+    #home-masthead {
+      #home-info {
+        padding-top: 4.5em;
+      }
+    }
   }
 }
 

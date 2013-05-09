@@ -3,21 +3,39 @@ layout: default
 type: home
 ---
 
-<div class="row">
+<div class="row home-body">
   <div id="primary" class="large-12 columns" role="content">
 
-    <section class="masthead">
-      <div class="row collapse">
-        <div class="columns">
-          <img src="{{ '/media/pages/mast.jpg' | to_cdnurl }}">
+    <section id="home-masthead">
+      <div class="row">
+        <div id="home-info" class="large-5 large-offset-1 columns">
+
+          <hgroup>
+            <h1>Jhaura Wachsman</h1>
+            <h2>Web Developer, Internet Marketer</h2>
+          </hgroup>
+
+        </div><!-- .columns -->
+        <div id="home-media" class="large-6 columns hide-for-small">
+          <img class="th" src="{{ '/media/pages/selfy-out.jpg' | to_cdnurl }}" alt="" />
         </div><!-- .columns -->
       </div><!-- .row -->
     </section><!-- .masthead -->
 
-    <section class="connect">
+    <section id="home-connect">
+      <div class="row">
+        <div class="columns">
+          <ul class="inline-justified">
+            <li>
+              <a href="//twitter.com/JhauraWachsman" class="twitter-follow-button" data-show-count="true">Follow @JhauraWachsman</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="JhauraWachsman">Tweet</a>
+            </li>
+          </ul>
+        </div><!-- .columns -->
+      </div><!-- .row -->
     </section><!-- .connect -->
-
-    <hr />
 
     <section class="panels">
       <div class="row">
@@ -56,4 +74,4 @@ type: home
     </section><!-- .panels -->
 
   </div><!-- #primary.columns -->
-</div><!-- .row -->
+</div><!-- .row .home-body -->

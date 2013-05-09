@@ -8,6 +8,7 @@ IndexIgnore *
 ErrorDocument 404 {{ '/404.html' | to_baseurl }}
 ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 
+# Webfonts for CDN, cross-domain policy
 AddType application/vnd.ms-fontobject .eot
 AddType font/truetype .ttf
 AddType font/opentype .otf

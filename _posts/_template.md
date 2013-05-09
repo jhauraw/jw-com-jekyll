@@ -6,7 +6,7 @@ category: (web-development|internet-marketing|workflow|lifestyle|business|news)
 title:
 author:
   name:
-  domain:
+  link:
 feature:
   # required for video, audio and gallery
   image:

@@ -56,7 +56,7 @@ app:
   # Default author for Posts =============================== #
   author:
     name: Jhaura Wachsman
-    domain: jhaurawachsman.com
+    link: twitter.com/JhauraWachsman
 
   # Social Media User Names (Not full URL) ================= #
   github: jhauraw

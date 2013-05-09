@@ -3,6 +3,7 @@
 
 // Compass settings and mixins
 @import "compass/support";
+@import "compass/css3/images";
 @import "compass/css3/transition";
 @import "compass/css3/transform";
 @import "compass/css3/box-shadow";
@@ -11,20 +12,9 @@
 $experimental-support-for-microsoft: false;
 $experimental-support-for-opera: false;
 
-// Required global settings and mixins for Foundation
-@import "foundation/components/global";
-
 // Foundation Overrides
 // _grid.scss: Wider row
 $row-width: 90.000em; // 90em = 1440px
-
-// _grid.scss: Not overriding these, but putting them
-// here for use in app.css
-$column-gutter: emCalc(30px) !default;
-$total-columns: 12 !default;
-
-// _grid.scss. Not an override, just a helper:
-$half-gutter: $column-gutter / 2;
 
 // Commenting out because it messes up ul, ol tags
 // which use the $paragraph-font-size var too.
@@ -36,5 +26,5 @@ $half-gutter: $column-gutter / 2;
 // 480, 768 and 1024 breakpoints would be best.
 
 // Font Awesome Overrides
-// No trailing slash, because prepending.
+// No trailing slash on '/assets', because prepending.
 $fontAwesomePath: "{{ '/assets' | to_cdnurl }}"

@@ -1,31 +1,8 @@
-// Special for an a href tag to have a link around an object > svg, when
-// used as an image. Otherwise links won't be clickable.
-@mixin a-osvg {
-  line-height: 0;
-  position: relative;
-  display: inline-block;
-  &:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  }
-  object {
-    height: auto;
-  }
-}
-
 // Faded out hr
 hr.faded {
   height: 1px;
   margin: 70px 0;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0));
-  border: 0;
+  @include background-image(linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,.1), rgba(0,0,0,0)));
 }
 
 /* =Theme SCSS Syntax ================================================== */

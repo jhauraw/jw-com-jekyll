@@ -13,7 +13,7 @@ module.exports = function(grunt) {
 
     vendor_js_banner: '/*! foundation.js v4.1.5 | MIT License | foundation.zurb.com */',
 
-    vendor_css_banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.5 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */',
+    vendor_css_banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.6 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */',
 
     yaml_banner: '---\nlayout: nil\n---\n',
 

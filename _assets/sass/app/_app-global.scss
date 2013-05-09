@@ -444,6 +444,13 @@ $ribbon-height: 43px;
   min-height: $ribbon-height;
 }
 
+h1, h2 {
+  &.ribbon {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+  }
+}
+
 .section-ribbon {
   font-size: 1em;
   color: #555;
@@ -467,9 +474,7 @@ $ribbon-height: 43px;
 
 .primary-ribbon {
   color: #8A8C8E;
-  font-weight: bold;
   font-size: emCalc(20px);
-  font-family: arial, sans-serif;
   text-transform: capitalize;
   margin: 0;
 }

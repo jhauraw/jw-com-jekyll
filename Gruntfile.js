@@ -186,16 +186,6 @@ module.exports = function(grunt) {
           interrupt: true
         }
       }
-      /*
-      site: {
-        files: '_site/index.html',
-        tasks: [], // 'livereload'
-        options: {
-          nospawn: true,
-          interrupt: true
-        }
-      }
-      */
     },
 
     gruntfile: {
@@ -217,7 +207,6 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-livereload');
 
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-concat');

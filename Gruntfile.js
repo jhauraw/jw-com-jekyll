@@ -162,6 +162,9 @@ module.exports = function(grunt) {
       post: ['_tmp/**/*']
     },
     watch: {
+      options: {
+        livereload: true
+      },
       js: {
         files: '_assets/js/**/*.js',
         tasks: ['jshint', 'concat', 'copy', 'clean', 'shell:jekyll_serve'],
@@ -193,7 +196,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['shell:jekyll_serve', 'watch']); // 'livereload-start'
+  grunt.registerTask('default', ['shell:jekyll_serve', 'watch']);
 
   // DEV Mode: Run this first one time to build out the _assets into /css and /js
   grunt.registerTask('build-dev', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'clean:post', 'shell:jekyll_build']);

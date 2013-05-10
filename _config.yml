@@ -16,7 +16,7 @@ app:
   # Release id, if not set or null, the current day's date will be
   # used with two digit century; given 2025/01/15, release will
   # equal 250115
-  release: 100008
+  release: 100009
 
   # Mode =================================================== #
 

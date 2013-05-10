@@ -23,7 +23,7 @@ app:
   # MODE
   # Switches some URL paths to Relative, Absolute or CDN.
   # Options: (development|production)
-  mode: development
+  mode: production
 
   # CDN ==================================================== #
 
@@ -170,4 +170,4 @@ markdown: redcarpet
 pygments: true
 
 include: ['.htaccess']
-exclude: ['TODO.md', 'CHANGELOG.md', 'README.md', 'LICENSE', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']
+exclude: ['TODO.md', 'CHANGELOG.md', 'README.md', 'LICENSE-GPL', 'LICENSE-CCA', 'Gruntfile.js', '*.json', 'node_modules', 'bower_components']

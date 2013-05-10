@@ -8,6 +8,18 @@ IndexIgnore *
 ErrorDocument 404 {{ '/404.html' | to_baseurl }}
 ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 
+# Redirects ============================================================ */
+
+Redirect 301 /affirmations-network-marketers http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+
+Redirect 302 /craigslist-image-ads http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+
+Redirect 302 /facebook-timeline-cover-photo http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+
+Redirect 302 /flyers-powerpoint http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+
+# END ================================================================== */
+
 # Webfonts for CDN, cross-domain policy
 AddType application/vnd.ms-fontobject .eot
 AddType font/truetype .ttf

@@ -75,7 +75,7 @@ app:
   facebook-admin: 1550453047
   facebook-appid: 251689391563684
   gplus-publisher: 103492502746159725544
-  disqus-user: jhaurawachsman
+  disqus_user: jhaurawachsman
 
   # Analytics / Metrics ==================================== #
   google-analytics-id: UA-17276272-1

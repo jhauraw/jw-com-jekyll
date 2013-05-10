@@ -712,7 +712,7 @@ article.aside {
   border-top: 1px dashed #e3e3e3;
 
   #disqus_thread {
-    margin-bottom: -1em;
+    //margin-bottom: -1em;
   }
 }
 
@@ -759,6 +759,7 @@ article.aside {
   #home-info {
     h1, h2 {
       color: #fff;
+      font-family: inherit;
       margin: 0;
       line-height: 1;
     }

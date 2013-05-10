@@ -733,7 +733,7 @@ article.aside {
       padding-bottom: 3em;
 
       background: #333; // Old browsers
-      @include background-image(linear-gradient(45deg, #333 0%, #999 100%));
+      @include background-image(linear-gradient(45deg, #222 0%, #777 100%));
 
       overflow: hidden;
 

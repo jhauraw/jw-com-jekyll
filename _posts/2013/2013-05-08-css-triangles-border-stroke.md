@@ -59,11 +59,11 @@ For kicks, we'll call the downward-facing triangle a _nubbin_ (I've seen it call
 
 Here is the CSS and HTML markup you need to create this effect in your own project.
 
-{% highlight scss linenos %}
+{% highlight css linenos %}
 <style type="text/css">
 .tri-down {
 
-    /* Just for styling element, not required */
+    /* Styling block element, not required */
     position: relative;
     margin-bottom: 2em;
     padding: 1em;
@@ -71,7 +71,7 @@ Here is the CSS and HTML markup you need to create this effect in your own proje
     background: #f3f3f3;
   }
 
-  /* Required CSS for Down Triangle */
+  /* Required for Down Triangle */
   .tri-down:before, .tri-down:after {
     content: "";
     position: absolute;
@@ -100,8 +100,10 @@ Here is the CSS and HTML markup you need to create this effect in your own proje
     border-width: 15px;
   }
 </style>
+{% endhighlight %}
 
-/* The element you want to add a down triangle too. */
+{% highlight html linenos %}
+<!-- Element you want to add a down triangle too. -->
 <div class="tri-down">Box with Down Triangle a.k.a. "Nubbin"</div>
 {% endhighlight %}
 
@@ -109,8 +111,8 @@ Here is the CSS and HTML markup you need to create this effect in your own proje
 
   - Style the `.tri-down` element any way you like. A `border-bottom` to match the _nubbin_ bottom connects unifies the two items.
 
-  - Stroke: Increase the stroke `bottom` and `border-width` values so that they are different than your fill dimensions by whatever stroke width you want. In the example above, I have chosen a stroke of `1px`. Do the opposite with your stroke `left` value.
+  - Stroke: Increase the `.tri-down:before` &raquo; `bottom` and `border-width` values so that they are different than your fill dimensions by whatever stroke width you want. In the example above, I have chosen a stroke of `1px`. Do the opposite with your stroke `left` value.
 
-  - Stroke: When using `1px` strokes, slightly darken the `color` value of the stroke compared to the `.tri-down:before` &raquo; `border-bottom-color`. At `1px` the _nubbin_ is slightly lighter than it should be because of the angle of the sides.
+  - Stroke: When using `1px` strokes, slightly darken `.tri-down:before` &raquo; `border-top-color` compared to the `.tri-down` &raquo; `border-bottom-color`. At `1px` the _nubbin_ is slightly lighter than it should be because of the angle of the sides.
 
 As you might imagine, by varying the border sides you can easily create upward and sideways facing triangles using this same technique.

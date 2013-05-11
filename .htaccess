@@ -10,13 +10,20 @@ ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 
 # Redirects ============================================================ */
 
+Redirect 301 /affirmations-network-marketers/ http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 Redirect 301 /affirmations-network-marketers http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 
-Redirect 302 /craigslist-image-ads http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+Redirect 302 /flyers-powerpoint/ http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+Redirect 302 /flyers-powerpoint http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 
+Redirect 302 /facebook-timeline-cover-photo/ http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 Redirect 302 /facebook-timeline-cover-photo http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 
-Redirect 302 /flyers-powerpoint http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
+Redirect 302 /my-lead-system-pro/ http://proelite.mlsp.com/intro
+Redirect 302 /my-lead-system-pro http://proelite.mlsp.com/intro
+
+Redirect 302 /craigslist-image-ads/ http://proelite.mlsp.com/intro
+Redirect 302 /craigslist-image-ads http://proelite.mlsp.com/intro
 
 # END ================================================================== */
 

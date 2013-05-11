@@ -456,68 +456,83 @@ h1, h2 {
 }
 
 .nubbin {
-  &:before {
+
+  &:before, &:after {
     content: "";
     position: absolute;
-    bottom: -16px;
-    left: 21px;
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 16px 16px 0 16px;
-    border-color: #d6d6d6 transparent transparent transparent;
+    border-color: transparent;
+    border-bottom: 0;
+  }
+
+  &:before {
+    bottom: -16px;
+    left: 21px;
+    border-top-color: #d6d6d6;
+    border-width: 16px;
   }
 
   &:after {
-    content: "";
-    position: absolute;
     bottom: -15px;
     left: 22px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 15px 15px 0 15px;
-    border-color: #fff transparent transparent transparent;
+    border-top-color: #fff;
+    border-width: 15px;
   }
 }
 
 /* =Article ============================================================ */
 article {
   position: relative;
+
   ul, ol, dl {
     margin-left: 2em;
   }
+
+  pre {
+    margin-bottom: $paragraph-margin-bottom;
+  }
+
   .article-title {
     line-height: 1.2;
     margin-top: 0;
   }
+
   .article-meta {
     font-size: emCalc(13px);
     color: #888;
+
     a, a:active, a:visited {
       color: #888;
     }
+
     a:hover {
       color: #ccc;
     }
   }
+
   .article-feature {
+
     img {
       vertical-align: middle;
     }
   }
+
   .article-content {
-    color: #555;
+    color: #666;
   }
 }
 
 /* =Single/Page Article ================================================ */
 article.fulltext {
+
   .article-feature {
     max-width: emCalc(910px);
     margin: 0 auto 3em;
 
   }
+
   .article-meta {
     margin-bottom: emCalc(20px);
   }
@@ -525,6 +540,7 @@ article.fulltext {
 
 article.page {
   .article-content {
+
     h2:first-child {
       margin-top: 0;
     }

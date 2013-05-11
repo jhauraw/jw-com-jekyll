@@ -7,22 +7,24 @@ feature:
   image:
     src: /media/2012/affirmations-entrepreneurs.jpg
 excerpt: |
-  The use of affirmations yield powerful results for entrepreneurs who diligently apply them in daily practice. Are you cultivating a positive mindset?
+  The use of affirmations yield powerful results for entrepreneurs who diligently apply them in daily practice. Are you cultivating a positive mindset? Or allowing circumstances to toss you to and fro?
 ---
 
-It's been said that between the __95% who fail__ and the __5% who succeed__ as __entrepreneurs__ there lies one significant difference: __MINDSET__. In this article, let's explore _a well-proven method_ for creating the mindset of a __5%'er__, a $10K, $20K, $30K per month earner, a person who _consciously achieves success_ and benefits others around him/her!
+It's been said that between the __95% who fail__ and the __5% who succeed__ as __entrepreneurs__ there lies one significant difference, which can best be described as __MINDSET__. Let's explore together _a well-proven method_ for creating and cultivating the mindset of a __5%'er__, a high five-figure monthly earner, who _consciously achieves success_ and is able to benefit the world in ways that were before out of reach!
 
-### But first, what exactly is mindset?
+Why not be more effective and deliberate in the path we travel? Why not choose to offer more than we take and overflow with abundance? Affirmations allow you to draw the best route you can imagine on the map of your life, rather than follow a random one like the steel ball in the pinball machine.
+
+### First, what exactly is mindset?
 
 > Your mindset is the programmed pattern of beliefs, thoughts and emotions that primarily run on autopilot every minute of everyday – for better or for worse – that you (or those around you) have consciously or in most cases unconsciously installed in your mind as a program beginning with your birth.
 
-### You Will Reap What You Sow
+### You will reap what you sow
 
 Perhaps like most people, your mindset has been created without skillful guidance, and as a result runs a default program based on the significant events in your life - again for better or for worse. The tragedy is -- due to conditioning and upbringing -- most of us end up with a mindset that results in manifesting a life of struggle and mediocrity, the mindset of a 95%'er. Sound at all familiar? Fret not, there is __a proven and simple solution!__
 
-Earlier this year, I attended a _Success Seminar_ with a $20 million dollar earner who runs his own home-based business and learned hands on just how important a role mindset plays in determining whether we become 95%'ers or 5%'ers, fail or succeed, lose money or earn $10,000 per month in our business endeavors. As a result:
+Earlier last year, I attended a _Success Seminar_ with a $20 million dollar earner who runs his own home-based business and learned hands on just how important a role mindset plays in determining whether we become 95%'ers or 5%'ers, fail or succeed, lose money or earn $30,000 per month in our business endeavors. As a result:
 
-> I discovered how to use _Affirmations_ to consciously create the mindset of a 5%'er, to re-program the default born-to-fail cycle into a __success-driven__ mindset!
+> I discovered how to use _affirmations_ to consciously create the mindset of a 5%'er, to re-program the default born-to-fail cycle into a __success-driven__ mindset!
 
 How do you know if you need to re-program your mindset? Easy, look at your results. What have you reaped this year so far? Are you struggling in your work or business? Repeating the same disappointing cycle over and over? Partnering with quitters? Falling into negative emotional patterns that hinder your progress? Getting ready to get ready? Jumping from project to project? Paralyzed with fear to pick up the phone? As a matter of fact, __we must continue to cultivate our mindset even when we reach success__. In short, WE ALL NEED TO CULTIVATE OUR MINDSET CONTINUALLY.
 
@@ -30,7 +32,7 @@ How do you know if you need to re-program your mindset? Easy, look at your resul
 
 > -- [The Secret](http://facebook.com/thesecret) Daily Teachings
 
-### Begin Where You Are, Start Now
+### Begin where you are, start now
 
 To begin, let's look at some of the key factors that differentiate the 5%'ers from the 95%'ers:
 
@@ -50,7 +52,7 @@ The _95%'ers_:
 
 Now, if you are an entrepreneur, you've got the first point covered: Building your own future. But what about the other points? Chances are you may be missing some of the knowledge from the 5%'er list, such as philosophies.
 
-### Meaningful Philosophies
+### Meaningful philosophies
 
 You need to be guided by meaningful philosophies to succeed. Here are the three most important philosophies for becoming a 5%'er with the help of affirmations:
 
@@ -66,7 +68,7 @@ Just like a farmer choosing to plant crops at the optimum time, you can utilize 
 
 As you will see in a minute, many of the specific tasks the 5%'ers do are just plain boring, especially after years of repetition. It's been said that "in the moment of decision a life is changed." However, that life quickly goes back to the way it was before if that decision is not managed. Weightloss anyone? Managing the decision once made, is what makes a 5%'er.
 
-### Becoming a 5%'er in the Mind
+### Becoming a 5%'er in the mind
 
 __Figure 1__ describes how 88% of life is lived below the line, mostly in the subconscious, and that only 12% is lived consciously! It is in the subconscious mind that our mindset is created and stored. It is there that we must work to create the mindset of a 5%'er.
 
@@ -74,9 +76,9 @@ __T Harv Eker__ in his book [Secrets of the Millionaire Mind](http://www.amazon.
 
 __Einstein__ has a famous saying which can be paraphrased as "the definition of insanity is doing the same thing over and over again and expecting different results." If we look at Eker's model of the __printout__, most people are completely insane because they complain about failure over and over again, yet they NEVER bother to change the subconscious!
 
-For example, if you say you want to earn $30K per month as an entrepreneur, but your subconscious input is planting seeds of $3,000, no matter how hard you try, you will not earn more than $3,000 and you will feel the sting of failure, not to mention qualify as insane according to Einstein. You cannot plant corn and expect wheat.
+For example, if you say you want to earn $30,000 per month as an entrepreneur, but your subconscious input is planting seeds of $3,000, no matter how hard you try, you will not earn more than $3,000 and you will feel the sting of failure, not to mention qualify as insane according to Einstein. You cannot plant corn and expect wheat.
 
-### How Do We Change the Program?
+### How do we change the program?
 
 Psychologists have discovered that we can modify the patterns in the subconscious mind in two ways:
 
@@ -92,11 +94,11 @@ The two most accessible and common forms of space repetition top earning entrepr
   - Reading books
   - Repeating affirmations
 
-### Readers are Leaders
+### Leaders are readers
 
-While this article is focused on affirmations, it bears noting that _those who read, lead_. How much you read, is not as critical as that you do read consistently. As a matter of fact, just 10 pages per night and you'll stack up 2-3 books per month on your bedside table!
+While this article is focused on affirmations, it bears noting that _those who lead, read_. How much you read is not as critical as that you do read consistently. As a matter of fact, just 10 pages per night and you'll stack up 2-3 books per month on your bedside table!
 
-### Space Repetition with Affirmations
+### Space repetition with affirmations
 
 In his book [Outliers: The Story of Success](http://www.amazon.com/dp/0316017930?tag=0190-20), Malcolm Gladwell concludes that it takes 10 years or 10,000 hours to become a true master of something. Using space repetition with affirmations, you can make large headways into entrepreneurial mastery in just 2-5 years, and see results almost immediately.
 

@@ -15,6 +15,9 @@ $total-columns: 12 !default;
 // _grid.scss. Not an override, just a helper:
 $half-gutter: $column-gutter / 2;
 
+// for other elements we want similar margins on
+$paragraph-margin-bottom: emCalc(20px);
+
 // Special for an a href tag to have a link around an object > svg, when
 // used as an image. Otherwise links won't be clickable.
 @mixin a-osvg {

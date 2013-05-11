@@ -7,10 +7,10 @@ feature:
   image:
     src: /media/2013/css-triangles-border-stroke.png
 excerpt: |
-  How to quickly and easily create 100% pure CSS triangles with border stroke and color fill. No images, no font-icons and no javascript needed. Useful for navigation and pointer UI elements.
+  How to quickly and easily create 100% pure CSS triangles with border stroke and color fill. No images, no font-icons and no JavaScript needed. Useful for navigation and pointer UI elements.
 ---
 
-How to quickly and easily create 100% pure CSS triangles with border stroke and color fill. No images, no font-icons and no javascript needed. Useful for navigation and pointer UI elements.
+How to quickly and easily create 100% pure CSS triangles with border stroke and color fill. No images, no font-icons and no JavaScript needed. Useful for navigation and pointer UI elements.
 
 Often, to achieve this effect, an image or font-icon is used, because in the normal CSS triangle markup you can't add a stroke color. As you might guess, a pure CSS solution eliminates the overhead associated with external resources.
 
@@ -111,6 +111,6 @@ Here is the CSS and HTML markup you need to create this effect in your own proje
 
   - Stroke: Increase the stroke `bottom` and `border-width` values so that they are different than your fill dimensions by whatever stroke width you want. In the example above, I have chosen a stroke of `1px`. Do the opposite with your stroke `left` value.
 
-  - Stroke: When using `1px` strokes, slightly darken the `color` value of the stroke compared to the `.tri-down:before` &raquo; `border-bottom-color`. At `1px` the _nubbin_ is slighly lighter than it should be because of the angle of the sides.
+  - Stroke: When using `1px` strokes, slightly darken the `color` value of the stroke compared to the `.tri-down:before` &raquo; `border-bottom-color`. At `1px` the _nubbin_ is slightly lighter than it should be because of the angle of the sides.
 
 As you might imagine, by varying the border sides you can easily create upward and sideways facing triangles using this same technique.

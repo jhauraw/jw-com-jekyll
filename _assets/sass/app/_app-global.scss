@@ -533,8 +533,8 @@ article.fulltext {
 
   }
 
-  .article-meta {
-    margin-bottom: emCalc(20px);
+  .article-meta, .article-content {
+    margin-bottom: $paragraph-margin-bottom;
   }
 }
 
@@ -724,11 +724,12 @@ article.aside {
 
 /* =Comments =========================================================== */
 #comments {
+  margin-bottom: $paragraph-margin-bottom;
   padding-top: 1em;
   border-top: 1px dashed #e3e3e3;
 
   #disqus_thread {
-    //margin-bottom: -1em;
+    margin-bottom: -1em;
   }
 }
 

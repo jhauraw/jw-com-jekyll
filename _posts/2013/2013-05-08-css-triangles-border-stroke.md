@@ -109,7 +109,7 @@ Here is the CSS and HTML markup you need to create this effect in your own proje
 
 #### Notes and Tips
 
-  - Style the `.tri-down` element any way you like. A `border-bottom` to match the _nubbin_ bottom connects unifies the two items.
+  - Style the `.tri-down` element any way you like. A `border-bottom` to match the _nubbin_ bottom connects and unifies the two items.
 
   - Stroke: Increase the `.tri-down:before` &raquo; `bottom` and `border-width` values so that they are different than your fill dimensions by whatever stroke width you want. In the example above, I have chosen a stroke of `1px`. Do the opposite with your stroke `left` value.
 

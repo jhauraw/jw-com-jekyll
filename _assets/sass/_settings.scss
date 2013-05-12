@@ -19,7 +19,7 @@ $row-width: 90.000em; // 90em = 1440px
 // _global.scss: class tablets into 'small' grid breakpoint
 // adding 1px to width of $small-screen. Now tablets will
 // get 'small' grid settings:
-$small-screen: emCalc(769px);
+$small-screen: 48.063em; // need to get foundation/_global.scss above here so emCalc(769px); works
 
 // Commenting out because it messes up ul, ol tags
 // which use the $paragraph-font-size var too.

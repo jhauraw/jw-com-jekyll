@@ -7,15 +7,19 @@
 $include-html-global-classes: false;
 @import "foundation/components/global";
 
-// _grid.scss: Not overriding these, but putting them here for use in
+// foundation/_grid.scss: Not overriding these, but putting them here for use in
 // app.css
 $column-gutter: emCalc(30px) !default;
 $total-columns: 12 !default;
 
-// _grid.scss. Not an override, just a helper:
+// foundation/_grid.scss. Not an override, just a helper:
 $half-gutter: $column-gutter / 2;
 
-// for other elements we want similar margins on
+// foundation/_top-bar.scss, copied top bar breakpoint:
+$topbar-breakpoint: emCalc(940px);
+$topbar-media-query: "only screen and (min-width:"#{$topbar-breakpoint}")";
+
+// foundation/type.scss, for other elements we want similar margins on
 $paragraph-margin-bottom: emCalc(20px);
 
 // Special for an a href tag to have a link around an object > svg, when
@@ -37,5 +41,5 @@ $paragraph-margin-bottom: emCalc(20px);
   }
 }
 
-// App SCSS
+// App Global SCSS
 @import "app/app-global";

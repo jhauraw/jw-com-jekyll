@@ -41,7 +41,7 @@ app:
   lang: en-US
   locale: en_US
   encoding: utf-8
-  viewport: width=device-width
+  viewport: 'width=device-width'
 
   # Name (Brand), Tagline and Meta Image (Og) ============== #
   name: Jhaura Wachsman

@@ -184,7 +184,7 @@ html #peek, body #peek {
   } // .navsection
 } // #navbar
 
-@media only screen and (min-width:emCalc(940px)) {
+@media #{$topbar-media-query} {
 
   .navwrap {
     border-bottom: 1px solid #2693ba;

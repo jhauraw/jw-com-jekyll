@@ -7,6 +7,10 @@
 
   <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.app.name }}{% if page.type == 'home' %} - {{ site.app.tagline }}{% endif %}</title>
 
+  {% if site.app.mode == 'production' %}<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,800" /> -->{% endif %}
+  <link rel="stylesheet" href="{{ '/assets/vendor.css' | to_cdnurl }}" />
+  <link rel="stylesheet" href="{{ '/assets/app.css' | to_cdnurl }}" />
+
   <link type="text/plain" rel="author" href="{{ '/humans.txt' | to_baseurl }}" />
 
   <link rel="alternate" type="application/atom+xml" title="{{ site.app.name }} - ATOM RSS Feed" href="//feeds.feedburner.com/{{ site.app.feed-name }}" />
@@ -21,13 +25,9 @@
   <link rel="shortcut icon" href="{{ '/media/app/apple-touch-icon.png' | to_cdnurl }}">
   <link rel="shortcut icon" href="{{ '/favicon.ico' | to_baseurl }}">
 
-  {% if site.app.mode == 'production' %}<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,800" />{% endif %}
-  <link rel="stylesheet" href="{{ '/assets/vendor.css' | to_cdnurl }}" />
-  <link rel="stylesheet" href="{{ '/assets/app.css' | to_cdnurl }}" />
+  {% include og.html %}
 
   <script src="{{ '/assets/modernizr.js' | to_cdnurl }}"></script>
-
-  {% include og.html %}
 
 </head>
 <body class="{{ page.type }}">
@@ -57,6 +57,6 @@
 
   <script src="{{ '/assets/vendor.js' | to_cdnurl }}"></script>
   <script src="{{ '/assets/app.js' | to_cdnurl }}"></script>
-  <script src="//platform.twitter.com/widgets.js"></script>
+  {% if site.app.mode == 'production' %}<script src="//platform.twitter.com/widgets.js"></script>{% endif %}
 </body>
 </html>

@@ -40,6 +40,18 @@ AddEncoding gzip .svgz
   </IfModule>
 </FilesMatch>
 
+# Cache Control max-age for assets/media CDN
+<FilesMatch "(.*)\.(ico|jpg|jpeg|png|gif|js|css|swf|svg|ttf|otf|woff)$">
+  Header unset Pragma
+  FileETag none
+  Header unset ETag
+
+  ExpiresActive on
+  ExpiresDefault "access plus 1 year"
+  Header set Cache-Control "max-age=31536000, public"
+  Header unset Last-Modified
+</FilesMatch>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase {{ '/' | to_baseurl }}

@@ -134,11 +134,11 @@ html #peek, body #peek {
       line-height: 0;
       background-color: #2693ba;
       a {
-        padding: 10px; // padding + svg/img = 44px total
+        padding: 10px; // padding height + svg/img height = exactly 44px
         @include a-osvg;
-        object {
-          //max-width: 24px;
-          //padding: 10px;
+        object, svg {
+          width: 24px;
+          height: 24px;
         }
       }
     } // .menu-icon
@@ -380,7 +380,7 @@ html #peek, body #peek {
   > li.logo {
     line-height: 0;
     a.brand {
-      // padding + svg/img = 44px total
+      // padding height + svg/img height = exactly 44px
       padding-top: 9px;
       padding-bottom: 10px;
       span {
@@ -390,6 +390,10 @@ html #peek, body #peek {
         fill: #ccff00;
       }
       @include a-osvg;
+      object, svg {
+        width: 50px;
+        height: 25px;
+      }
     } // a.brand
   } // > li.logo
 }
@@ -536,6 +540,12 @@ article.fulltext {
   .article-meta, .article-content {
     margin-bottom: $paragraph-margin-bottom;
   }
+
+  .article-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 article.page {
@@ -604,17 +614,29 @@ article.aside {
 .item-index {
   list-style: none;
   margin-bottom: 0;
+
   li {
+    // needed to make box fill width when not a lot of content
+    // also on firefox so images scale down otherwise they go too wide
+    // but adding width here, the desktop layout, width is overriden.
+    // so for now hacking img to 100% width instead.
+    // width: 100%;
     list-style-type: none;
     padding-bottom: $half-gutter;
+
+    img {
+      width: 100%; // temp fix for above issue
+    }
   }
 }
 
 .item-list {
   padding: $half-gutter;
+
   &:last-child {
     //padding-bottom: 0;
   }
+
   li {
     &:last-child {
       padding-bottom: 0;
@@ -637,10 +659,12 @@ article.aside {
 
 @media #{$small} {
   .item-index {
+
     article {
       .article-title {
         font-size: emCalc(22px);
       }
+
       .article-content p {
         font-size: emCalc(14px);
       }
@@ -655,12 +679,15 @@ article.aside {
     border-style: solid;
     border-width: 0 0 1px 0; // puts border only on sides
   }
+
   .item-hot {
     background: #fdfcfc;
   }
+
   .item-trend {
     background: #f3f3f3;
   }
+
   .ribbon {
     border-width: 1px 0;
   }
@@ -668,9 +695,11 @@ article.aside {
 
 @media #{$small} {
   .related {
+
     > .row {
       //border-width: 0;
     }
+
     /*
     .item-index {
       li {
@@ -681,6 +710,7 @@ article.aside {
       padding: $column-gutter;
     }
     */
+
     .flex-col {
       border-right: 1px solid #ccc;
       @include box-shadow(3px 0 12px -7px rgba(0, 0, 0, 0.7) inset);
@@ -688,11 +718,14 @@ article.aside {
       &:last-child {
         border-right: 0 none;
       }
+
       .item-index {
         @include box-shadow(0 3px 12px -7px rgba(0, 0, 0, 0.7) inset);
       }
+
       .item-list {
         padding: $column-gutter;
+
         li {
           padding-bottom: $column-gutter;
 
@@ -929,28 +962,6 @@ article.aside {
 }
 
 /* =Footer ============================================================= */
-.inline-justified {
-  text-align: center;
-  list-style: none;
-  margin-left: 0;
-  li {
-    list-style-type: none;
-    display: inline-block;
-    margin-left: emCalc(22px);
-
-    &:first-child {
-      margin-left: 0;
-    }
-  }
-}
-
-.inline-stack {
-  li {
-    display: block;
-    margin-left: 0;
-  }
-}
-
 #footer {
   z-index: 5;
   position: absolute;
@@ -986,7 +997,7 @@ article.aside {
     margin-bottom: 0.25em;
     a {
       @include a-osvg;
-      object {
+      object, svg {
         width: 25px;
         height: 12.5px;
       }
@@ -1023,4 +1034,26 @@ h2.fancy {
   color: #666;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 5px rgba(0,0,0,.075);
+}
+
+.inline-justified {
+  text-align: center;
+  list-style: none;
+  margin-left: 0;
+  li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: emCalc(22px);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.inline-stack {
+  li {
+    display: block;
+    margin-left: 0;
+  }
 }

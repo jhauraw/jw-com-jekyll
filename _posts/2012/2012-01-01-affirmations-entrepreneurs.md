@@ -74,6 +74,8 @@ __Figure 1__ describes how 88% of life is lived below the line, mostly in the su
 
 __T Harv Eker__ in his book [Secrets of the Millionaire Mind](http://www.amazon.com/dp/0060763280?tag=0190-20), tells us that life as we experience it, from our health, relationships, material items and success or lack thereof are only a printout of the program stored in our subconscious mind. __Figure 2__ illustrates this concept. What we input, we output. My mentor likes to say "you can't export what you don't import." So in this example, if you sow corn, corn is what you will reap.
 
+![Affirmations Figures]({{ '/media/2012/affirmations-figures.png' | to_cdnurl }})
+
 __Einstein__ has a famous saying which can be paraphrased as "the definition of insanity is doing the same thing over and over again and expecting different results." If we look at Eker's model of the __printout__, most people are completely insane because they complain about failure over and over again, yet they NEVER bother to change the subconscious!
 
 For example, if you say you want to earn $30,000 per month as an entrepreneur, but your subconscious input is planting seeds of $3,000, no matter how hard you try, you will not earn more than $3,000 and you will feel the sting of failure, not to mention qualify as insane according to Einstein. You cannot plant corn and expect wheat.

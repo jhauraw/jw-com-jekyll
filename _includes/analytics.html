@@ -1,4 +1,4 @@
-{% if site.app.google-analytics-id %}
+{% if site.app.google-analytics-id and site.app.mode == 'production' %}
 <script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '{{ site.app.google-analytics-id }}']);

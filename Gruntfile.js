@@ -3,8 +3,10 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    /* PKG ============================================================= */
     pkg: grunt.file.readJSON('package.json'),
 
+    /* BANNERS ========================================================= */
     banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> -' +
     ' <%= grunt.template.today("yyyy-mm-dd") %> -' +
     '<%= pkg.homepage ? " " + pkg.homepage + " -" : "" %>' +
@@ -17,6 +19,7 @@ module.exports = function(grunt) {
 
     yaml_banner: '---\nlayout: nil\n---\n',
 
+    /* COMPASS ========================================================= */
     compass: {
       all: {
         options: {
@@ -30,6 +33,8 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    /* CSS MIN ========================================================= */
     cssmin: {
       options: {
         keepSpecialComments: 0,
@@ -53,6 +58,49 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    /* HTML MIN ======================================================== */
+    /* CAUTION! Can overwrite working directory files. Make sure to set the
+       'dest:' option with your output directory, e.g., _site as is shown.
+    */
+    htmlmin: {
+      options: {
+        removeComments: true,
+        collapseWhitespace: true
+      },
+      dist: {
+        files: [{
+          expand: true,
+          dot: false,
+          cwd: '_site',
+          dest: '_site/', // CAUTION! MUST SET!
+          src: '**/*.html'
+        }]
+      }
+    },
+
+    /* UGLIFY ========================================================== */
+    uglify: {
+      options: {
+        report: 'min'
+      },
+      foundation: {
+        src: 'assets/vendor.js',
+        dest: 'assets/vendor.js',
+        options: {
+          banner: '<%= vendor_js_banner %>'
+        }
+      },
+      app: {
+        src: 'assets/app.js',
+        dest: 'assets/app.js',
+        options: {
+          banner: '<%= banner %>'
+        }
+      }
+    },
+
+    /* COPY ============================================================ */
     copy: {
       main: {
         files: [
@@ -77,6 +125,8 @@ module.exports = function(grunt) {
         ]
       }
     },
+
+    /* CONCAT ========================================================== */
     concat: {
       vendor_js: {
         src: [
@@ -108,7 +158,9 @@ module.exports = function(grunt) {
       }
       */
     },
-    'jshint': {
+
+    /* JS HINT ========================================================= */
+    jshint: {
       all: ['_assets/js/app/*.js', '!_assets/js/vendor/**/*.js'],
       options: {
         browser: true,
@@ -124,25 +176,8 @@ module.exports = function(grunt) {
         undef: false
       }
     },
-    uglify: {
-      options: {
-        report: 'min'
-      },
-      foundation: {
-        src: 'assets/vendor.js',
-        dest: 'assets/vendor.js',
-        options: {
-          banner: '<%= vendor_js_banner %>'
-        }
-      },
-      app: {
-        src: 'assets/app.js',
-        dest: 'assets/app.js',
-        options: {
-          banner: '<%= banner %>'
-        }
-      }
-    },
+
+    /* SHELL =========================================================== */
     shell: {
       jekyll_build: {
         command: 'jekyll build --trace',
@@ -157,10 +192,14 @@ module.exports = function(grunt) {
         }
       }
     },
+
+    /* CLEAN =========================================================== */
     clean: { // CAUTION! DELETES with NO TRASH (Recovory)
       pre: ['.sass-cache', 'assets/**/*'],
       post: ['_tmp/**/*']
     },
+
+    /* WATCH =========================================================== */
     watch: {
       options: {
         livereload: true
@@ -206,7 +245,7 @@ module.exports = function(grunt) {
     Be sure to change your site.url option in _config.yml
     from your DEV to your PROD url.
   */
-  grunt.registerTask('build-prod', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'cssmin', 'uglify', 'clean:post', 'shell:jekyll_build']);
+  grunt.registerTask('build-prod', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'cssmin', 'uglify', 'clean:post', 'shell:jekyll_build', 'htmlmin']);
 
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');
@@ -217,6 +256,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');

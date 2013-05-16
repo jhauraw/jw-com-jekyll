@@ -5,7 +5,7 @@
 
       <ul class="item-index item-list">
         {% if site.posts != empty %}
-          {% for page in site.posts limit: 3 %}
+          {% for page in site.posts limit: 1 %}
             <li>
 
               {% include post-aside.html %}
@@ -20,7 +20,7 @@
       <h1 class="ribbon section-ribbon hot">Trending</h1>
 
       <ul class="item-index item-list">
-        {% for page in site.posts limit: 5 offset: 3 %}
+        {% for page in site.posts limit: 1 offset: 1 %}
           <li>
 
             {% include post-aside.html %}
@@ -34,7 +34,7 @@
       <h1 class="ribbon section-ribbon">What's Hot</h1>
 
       <ul class="item-index item-list">
-        {% for page in site.posts limit: 2 offset: 8 %}
+        {% for page in site.posts limit: 1 offset: 1 %}
           <li>
 
             {% assign showexcerpt = true %}

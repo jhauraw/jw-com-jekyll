@@ -21,7 +21,6 @@
 
       <section class="navsection">
         <ul class="left navmenu">
-          <!--
           <li class="submenu">
             <a href="{{ '/articles/' | to_baseurl }}">Articles</a>
 
@@ -31,12 +30,11 @@
                   <li>
                     <ul class="submenu-categories">
                       <li><a href="{{ '/articles/' | to_baseurl }}">All Articles</a></li>
-                      <li><a href="{{ '/news/' | to_baseurl }}">Industry News</a></li>
-                      <li><a href="{{ '/web-development/' | to_baseurl }}">Web Development</a></li>
-                      <li><a href="{{ '/internet-marketing/' | to_baseurl }}">Internet Marketing</a></li>
-                      <li><a href="{{ '/workflow/' | to_baseurl }}">Workflow</a></li>
-                      <li><a href="{{ '/lifestyle/' | to_baseurl }}">Lifestyle</a></li>
-                      <li><a href="{{ '/business/' | to_baseurl }}">Business</a></li>
+
+                      {% for cat in site.categories limit: 5 %}
+                      <li><a href="{{ cat[0] | sanitize_str | prepend: '/' | append: '/' | to_baseurl }}">{{ cat[0] }}</a></li>
+                      {% endfor %}
+
                     </ul>
                   </li>
                   {% if site.posts != empty %}
@@ -53,7 +51,6 @@
               </div>
             </div>
           </li>
-          -->
           <li><a href="{{ '/portfolio/' | to_baseurl }}">Portfolio</a></li>
           <li><a href="{{ '/resume/' | to_baseurl }}">Résumé</a></li>
           <li><a href="{{ '/contact/' | to_baseurl }}">Contact</a></li>

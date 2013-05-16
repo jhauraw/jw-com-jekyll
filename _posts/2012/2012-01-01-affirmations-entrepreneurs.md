@@ -127,7 +127,7 @@ Included in the download, you will find:
   - __Sample Affirmations__: Ten favorite affirmations that I use daily.
 
 <p class="text-center">
-  <a class="button secondary radius large" style="margin-bottom: 0;" href="{{ '/media/skus/2012/Affirmations-Kit-v1.zip' | to_cdnurl }}">
+  <a class="button secondary radius large" style="margin-bottom: 0;" onclick="_gaq.push(['_trackEvent', 'Downloads', 'Affirmations Kit v1']);" href="{{ '/media/skus/2012/Affirmations-Kit-v1.zip' | to_cdnurl }}">
   Affirmations Kit for Entrepreneurs
   <br />
   <small><i class="icon-cloud-download"></i> Free Download</small>

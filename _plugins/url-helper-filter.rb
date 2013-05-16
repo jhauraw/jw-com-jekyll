@@ -85,10 +85,12 @@ module Jekyll
 
     def sub_absurl(input)
 
-      # Prepend @url and @baseurl to Root-Relative URLs in
-      # templates to make an Absolute URL. Looks for ="/ in
-      # href or src tags.
-      input.gsub(/(href|src)="\//, "\\1=\"#{get_url}#{get_baseurl}/")
+      # Step 1: Prepend http: protocol to // URLs (protocol anonymous).
+
+      # Step 2: Prepend @url and @baseurl to Root-Relative URLs
+      # in templates to make an Absolute URL. Looks for ="/ in
+      # href or src tags, not directly followed by a / (look ahead)
+      input.gsub(/(href|src)="\/\//, "\\1=\"http://").gsub(/(href|src)="\/(?!\/)/, "\\1=\"#{get_url}#{get_baseurl}/")
     end
 
     def sanitize_str(input)

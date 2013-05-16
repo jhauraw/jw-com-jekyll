@@ -1,6 +1,6 @@
 # JhauraWachsman.com
 
-You've landed on the source file repo for my professional website. Welcome!
+You've landed on the source file repo for my professional website.
 
 I'm a Web Developer and Internet Marketer focusing on mobile first responsive design.
 
@@ -35,4 +35,4 @@ Integrated Foundation with Jekyll, develop and build automation with Grunt and L
 
   - JhauraWachsman.com is licensed: Code [GPLv3](//gnu.org/licenses/gpl.html). Content [CC BY 3.0](//creativecommons.org/licenses/by/3.0/).
 
-  &copy; 2001-2013 Jhaura Wachsman. All Rights Reserved.
+&copy; 2001-2013 Jhaura Wachsman. All Rights Reserved.

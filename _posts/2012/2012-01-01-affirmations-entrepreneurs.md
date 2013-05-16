@@ -2,15 +2,19 @@
 layout: post
 published: true
 category: business
-title: Affirmations for Entrepreneurs and Leaders
+title: Affirmations for Entrepreneurs - Free Download
 feature:
   image:
     src: /media/2012/affirmations-entrepreneurs.jpg
 excerpt: |
-  The use of affirmations yield powerful results for entrepreneurs who diligently apply them in daily practice. Are you cultivating a positive mindset? Or allowing circumstances to toss you to and fro?
+  The use of affirmations yield powerful results for entrepreneurs who diligently apply them in daily practice. Download your free Affirmations Kit. Are you cultivating a positive mindset? Or allowing circumstances to toss you to and fro?
 ---
 
 It's been said that between the __95% who fail__ and the __5% who succeed__ as __entrepreneurs__ there lies one significant difference, which can best be described as __MINDSET__. Let's explore together _a well-proven method_ for creating and cultivating the mindset of a __5%'er__, a high five-figure monthly earner, who _consciously achieves success_ and is able to benefit the world in ways that were before out of reach!
+
+<p class="text-center">
+  <span class="label radius secondary">Bonus</span> <a href="#kit-download"><i class="icon-cloud-download"></i> Download</a> your free <strong>Affirmations Kit</strong> below!
+</p>
 
 Why not be more effective and deliberate in the path we travel? Why not choose to offer more than we take and overflow with abundance? Affirmations allow you to draw the best route you can imagine on the map of your life, rather than follow a random one like the steel ball in the pinball machine.
 
@@ -113,5 +117,23 @@ After just a few days of doing your affirmations you can expect:
   - Doing things that before you did not have the will power to do, like making phone calls to potential business partners
 
 Cultivating results-based habits through the use of affirmations is just a conscious way of farming the _crop_ of our life. Just as a farmer who wants to sell a crop of wheat begins by purchasing wheat seeds in advance, you too can purchase the seeds of your success in advance with the currency of due diligence, space repetition with affirmations and reading books on a regular basis.
+
+### <a name="kit-download"></a>Download your Free Affirmations Kit
+
+Included in the download, you will find:
+
+  - __Instructions Sheet__: Details on how to create and use your cards.
+  - __Word Template__: Pre-sized for 3" x 5" Index cards for easy printing.
+  - __Sample Affirmations__: Ten favorite affirmations that I use daily.
+
+<p class="text-center">
+  <a class="button secondary radius large" style="margin-bottom: 0;" href="{{ '/media/skus/2012/Affirmations-Kit-v1.zip' | to_cdnurl }}">
+  Affirmations Kit for Entrepreneurs
+  <br />
+  <small><i class="icon-cloud-download"></i> Free Download</small>
+  </a>
+  <br />
+  <small>Version 1. Updated May 2013</small>
+</p>
 
 What positive results have you benefited from using techniques like those shared in this article? Please share your experiences in the comments!

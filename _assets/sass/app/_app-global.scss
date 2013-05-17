@@ -3,12 +3,6 @@ html, body {
   height: 100%;
 }
 
-/* =Typography ========================================================= */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-}
-
 /* =Containers ========================================================= */
 html #peek, body #peek {
   min-height: 100%;
@@ -500,6 +494,8 @@ article {
   }
 
   .article-title {
+    color: #333;
+    font-weight: 300;
     line-height: 1.2;
     margin-top: 0;
   }
@@ -525,7 +521,11 @@ article {
   }
 
   .article-content {
-    color: #666;
+    color: #444;
+    h1, h2, h3, h4, h5, h6 {
+      color: #333;
+      font-weight: 300;
+    }
   }
 }
 
@@ -824,6 +824,7 @@ article.aside {
     }
 
     h2 {
+      //font-size: 1.25em;
       margin-bottom: .5em;
     }
 
@@ -871,6 +872,22 @@ article.aside {
       margin-bottom: 0;
     }
   }
+
+  .panel {
+    h2 {
+      color: rgba(0, 0, 0, .2);
+      text-shadow: 1px 1px 3px rgba(255, 255, 255, .9);
+    }
+
+    p {
+      color: #666;
+      //text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+    }
+
+    .button {
+      color: #666;
+    }
+  }
 }
 
 @media #{$small} {
@@ -896,6 +913,10 @@ article.aside {
         h1 {
           font-size: 4em;
           letter-spacing: -2px;
+        }
+
+        h2 {
+
         }
       }
     }

@@ -2,7 +2,7 @@
 layout: post
 published: true
 category: business
-title: Affirmations for Entrepreneurs — Free Download
+title: Affirmations for Entrepreneurs – Free Download
 feature:
   image:
     src: /media/2012/affirmations-entrepreneurs.jpg
@@ -20,11 +20,11 @@ Why not be more effective and deliberate in the path we travel? Why not choose t
 
 ### First, what exactly is mindset?
 
-> Your mindset is the programmed pattern of beliefs, thoughts and emotions that primarily run on autopilot every minute of everyday — for better or for worse — that you (or those around you) have consciously or in most cases unconsciously installed in your mind as a program beginning with your birth.
+> Your mindset is the programmed pattern of beliefs, thoughts and emotions that primarily run on autopilot every minute of everyday – for better or for worse – that you (or those around you) have consciously or in most cases unconsciously installed in your mind as a program beginning with your birth.
 
 ### You will reap what you sow
 
-Perhaps like most people, your mindset has been created without skillful guidance, and as a result runs a default program based on the significant events in your life — again for better or for worse. The tragedy is — due to conditioning and upbringing — most of us end up with a mindset that results in manifesting a life of struggle and mediocrity, the mindset of a 95%'er. Sound at all familiar? Fret not, there is __a proven and simple solution!__
+Perhaps like most people, your mindset has been created without skillful guidance, and as a result runs a default program based on the significant events in your life – again for better or for worse. The tragedy is – due to conditioning and upbringing – most of us end up with a mindset that results in manifesting a life of struggle and mediocrity, the mindset of a 95%'er. Sound at all familiar? Fret not, there is __a proven and simple solution!__
 
 Earlier last year, I attended a _Success Seminar_ with a $20 million dollar earner who runs his own home-based business and learned hands on just how important a role mindset plays in determining whether we become 95%'ers or 5%'ers, fail or succeed, lose money or earn $30,000 per month in our business endeavors. As a result:
 
@@ -34,7 +34,7 @@ How do you know if you need to re-program your mindset? Easy, look at your resul
 
 > Do you know that as you try and work out "how" your desire will come about, you are actually pushing your desire away from you? As you try and work out "how" you can make your desire happen, you are sending a message to the Universe that you do not have your desire. If you're not emanating the exact frequency of having your desire within you, how can the Universe possibly find your signal to deliver your desire?
 
-> — [The Secret](http://facebook.com/thesecret) Daily Teachings
+– [The Secret](http://facebook.com/thesecret) Daily Teachings
 
 ### Begin where you are, start now
 

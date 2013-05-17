@@ -5,7 +5,7 @@
   <meta charset="{{ site.app.encoding }}" />
   <meta name="viewport" content="{{ site.app.viewport }}">
 
-  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.app.name }}{% if page.type == 'home' %} - {{ site.app.tagline }}{% endif %}</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.app.name }}{% if page.type == 'home' %} {{ site.app.tagline }}{% endif %}</title>
 
   {% if site.app.mode == 'production' %}<!-- <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,800" /> -->{% endif %}
   <link rel="stylesheet" href="{{ '/assets/vendor.css' | to_cdnurl }}" />

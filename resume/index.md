@@ -3,7 +3,7 @@ layout: page
 subtype: resume
 title: Résumé
 excerpt: |
-  View Jhaura Wachsman's Résumé online or download as PDF. Jhaura is a senior level web developer with a focus on modern mobile-first front-end technologies and responsive design. Contract / Freelance web developer for hire. 
+  View Jhaura Wachsman's Résumé online or download as PDF. Jhaura is a senior level web developer with a focus on modern mobile-first front-end technologies and responsive design. Contract / Freelance web developer for hire.
 ---
 
 <ul class="inline-justified text-right">

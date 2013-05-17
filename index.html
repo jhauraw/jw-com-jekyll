@@ -13,8 +13,8 @@ type: home
             <div id="home-info" class="large-7 columns">
 
               <hgroup>
-                <h1>Jhaura Wachsman</h1>
-                <h2>Web Developer, Internet Marketer</h2>
+                <h1>{{ site.app.name }}</h1>
+                <h2>{{ site.app.tagline }}</h2>
               </hgroup>
 
               <ul class="inline-justified">
@@ -45,10 +45,10 @@ type: home
         <div class="columns">
           <ul class="inline-justified">
             <li>
-              <a href="//twitter.com/JhauraWachsman" class="twitter-follow-button" data-show-count="true">Follow @JhauraWachsman</a>
+              <a href="//twitter.com/{{ site.app.twitter }}" class="twitter-follow-button" data-show-count="true">Follow @{{ site.app.twitter }}</a>
             </li>
             <li>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-via="JhauraWachsman">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.app.twitter }}">Tweet</a>
             </li>
           </ul>
         </div><!-- .columns -->

@@ -96,13 +96,13 @@ app:
       name: Articles
       icon: beaker
     -
-      slug: portfolio
-      name: Portfolio
+      slug: work
+      name: Work
       icon: picture
     -
       slug: resume
       name: Résumé
-      icon: file-alt
+      icon: briefcase
     -
       slug: contact
       name: Contact

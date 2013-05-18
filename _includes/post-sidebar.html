@@ -1,6 +1,6 @@
 <div id="secondary" class="sidebar large-3 columns flex-col" role="complementary">
 
-  <section class="ribbon section-ribbon follow">Follow <a rel="nofollow" target="_blank" href="//twitter.com/{{ site.app.twitter }}">@{{ site.app.twitter }}</a></section>
+  <section class="ribbon section-ribbon follow"><i class="icon-twitter"></i> Follow <a rel="nofollow" target="_blank" href="//twitter.com/{{ site.app.twitter }}">@{{ site.app.twitter }}</a></section>
 
   <ul class="item-index item-list item-muted">
     <li class="item-ad hide-for-small">
@@ -14,7 +14,7 @@
   </ul>
 
   {% if site.posts != empty %}
-    <h1 class="ribbon section-ribbon hot">What's Hot</h1>
+    <h1 class="ribbon section-ribbon hot"><i class="icon-fire"></i> What's Hot</h1>
 
     <ul class="item-index item-list">
       {% for page in site.posts limit: 3 %}

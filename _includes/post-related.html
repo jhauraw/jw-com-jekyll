@@ -1,7 +1,7 @@
 <section class="related">
   <div class="row flex-row collapse">
     <div class="item-new large-3 columns flex-col">
-      <h1 class="ribbon section-ribbon">The New Stuff</h1>
+      <h1 class="ribbon section-ribbon"><i class="icon-globe"></i> The New Stuff</h1>
 
       <ul class="item-index item-list">
         {% if site.posts != empty %}
@@ -17,7 +17,7 @@
     </div><!-- .columns -->
 
     <div class="item-hot large-4 columns flex-col">
-      <h1 class="ribbon section-ribbon hot">Trending</h1>
+      <h1 class="ribbon section-ribbon hot"><i class="icon-signal"></i> Trending</h1>
 
       <ul class="item-index item-list">
         {% for page in site.posts limit: 1 offset: 1 %}
@@ -31,7 +31,7 @@
     </div><!-- .columns -->
 
     <div class="item-trend large-5 columns flex-col">
-      <h1 class="ribbon section-ribbon">What's Hot</h1>
+      <h1 class="ribbon section-ribbon"><i class="icon-fire"></i> What's Hot</h1>
 
       <ul class="item-index item-list">
         {% for page in site.posts limit: 1 offset: 1 %}

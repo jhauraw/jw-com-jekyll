@@ -17,13 +17,13 @@ html #peek, body #peek {
 #scrollable {
   // pad-bottom keeps content above footer need to
   // adjust padding-bottom if footer height changes.
-  padding: emCalc(44px) 0 emCalc(200px);
+  padding: emCalc(44px) 0 emCalc(224px);
   z-index: 5;
 }
 
 @media #{$small} {
   #scrollable {
-    padding-bottom: emCalc(176px);
+    padding-bottom: emCalc(190px);
   }
 }
 
@@ -151,7 +151,7 @@ html #peek, body #peek {
         li {
           border-left: solid 1px #248cb1;
           &:hover a {
-            color: #ccff00;
+            //color: #ccff00;
           }
           i {
             font-size: 1.1em;
@@ -167,7 +167,7 @@ html #peek, body #peek {
         &:hover {
           background-color: #48b4da;
           > a {
-            color: #ccff00;
+            //color: #ccff00;
           }
         }
         > a {
@@ -382,7 +382,7 @@ html #peek, body #peek {
         display: none;
       }
       &:hover path {
-        fill: #ccff00;
+        //fill: #ccff00;
       }
       @include a-osvg;
       object, svg {
@@ -426,13 +426,18 @@ h1, h2 {
   background-color: #fff;
 
   &.hot {
-    color: #fff;
-    border-color: #70b03e;
-    background-color: #7fc04c;
+    //color: #fff;
+    //border-color: #70b03e;
+    //background-color: #7fc04c;
   }
 
   &.follow {
     font-size: emCalc(13px);
+  }
+
+  [class^="icon-"], [class*=" icon-"] {
+    color: #999;
+    margin-right: .25em;
   }
 }
 
@@ -478,6 +483,17 @@ h1, h2 {
     left: 22px;
     border-top-color: #fff;
     border-width: 15px;
+  }
+}
+
+@media #{$small} {
+
+  .sidebar .section-ribbon {
+    border-top-width: 1px;
+
+    &:first-child {
+      border-top: 0;
+    }
   }
 }
 
@@ -562,8 +578,10 @@ article.page {
 /* =Aside Article ====================================================== */
 article.aside {
   background: #fff;
-  border: 1px solid #ccc;
-  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #e3e3e3;
+  //border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
 
   .article-feature {
     margin: 0;
@@ -602,7 +620,7 @@ article.aside {
 
 @media #{$small} {
   article.aside {
-    @include box-shadow(1px 1px 2px 0 #d0d0d0);
+    //@include box-shadow(1px 1px 2px 0 #d0d0d0);
 
     .article-info {
       p {
@@ -676,10 +694,11 @@ article.aside {
 
 /* =Related ====================================================== */
 .related {
+
   > .row {
-    border-color: #e3e3e3;
-    border-style: solid;
-    border-width: 0 0 1px 0; // puts border only on sides
+    //border-color: #e3e3e3;
+    //border-style: solid;
+    //border-width: 0 0 1px 0; // puts border only on sides
   }
 
   .item-hot {
@@ -697,6 +716,7 @@ article.aside {
 
 @media #{$small} {
   .related {
+    overflow: hidden;
 
     > .row {
       //border-width: 0;
@@ -714,15 +734,15 @@ article.aside {
     */
 
     .flex-col {
-      border-right: 1px solid #ccc;
-      @include box-shadow(3px 0 12px -7px rgba(0, 0, 0, 0.7) inset);
+      border-right: 1px solid #e3e3e3;
+      //@include box-shadow(3px 0 12px -7px rgba(0, 0, 0, 0.7) inset);
 
       &:last-child {
         border-right: 0 none;
       }
 
       .item-index {
-        @include box-shadow(0 3px 12px -7px rgba(0, 0, 0, 0.7) inset);
+        //@include box-shadow(0 3px 12px -7px rgba(0, 0, 0, 0.7) inset);
       }
 
       .item-list {
@@ -750,10 +770,9 @@ article.aside {
   .sidebar.flex-col {
     display: table-cell;
     padding: 0;
-    border-left: 1px solid #eaeaea;
-    border-bottom: 1px solid #e0e0e0;
+    border-left: 1px solid #e3e3e3;
     background: #fff;
-    @include box-shadow(2px 2px 6px -2px #ddd inset);
+    //@include box-shadow(2px 2px 6px -2px #ddd inset);
   }
 }
 
@@ -770,8 +789,8 @@ article.aside {
 
 /* =Home =============================================================== */
 .home #main {
-  margin-top: 0;
-  border-top: 0 none;
+  //margin-top: 0;
+  //border-top: 0 none;
 }
 
 .home-body {
@@ -859,9 +878,12 @@ article.aside {
   }
 
   #home-connect {
+    margin-bottom: 2em;
+
     > .row {
-      margin-bottom: 2em;
-      border-bottom: 1px solid #e3e3e3;
+      border-width: 1px 0;
+      border-style: solid;
+      border-color: #e3e3e3;
       background: #f3f3f3;
 
       > .columns {
@@ -875,17 +897,37 @@ article.aside {
     }
   }
 
-  .panel {
+  #home-services {
+    text-align: center;
+    margin-bottom: 2em;
+
+    .columns {
+      padding: 0 1.5em;
+    }
+
+    aside {
+      font-size: 8em;
+      color: #888;
+    }
+
+    h1 {
+      font-weight: 300;
+      color: #555;
+      letter-spacing: -1px;
+      margin: 0 0 0.1em;
+    }
+
+    h3 {
+      margin: 0 0 2em;
+    }
+
     h2 {
-      color: rgba(0, 0, 0, .2);
-      text-shadow: 1px 1px 3px rgba(255, 255, 255, .9);
+      color: #555;
+      font-weight: 300;
+      margin-bottom: 0.1em;
     }
 
     p {
-      color: #666;
-    }
-
-    .button {
       color: #666;
     }
   }
@@ -915,10 +957,6 @@ article.aside {
           font-size: 4em;
           letter-spacing: -2px;
         }
-
-        h2 {
-
-        }
       }
     }
 
@@ -928,6 +966,13 @@ article.aside {
 
       img {
         @include box-shadow(0px 0px 5px rgba(0, 0, 0, 0.3));
+      }
+    }
+
+    #home-services {
+
+      h1 {
+        font-size: 3.75em;
       }
     }
   }
@@ -994,11 +1039,12 @@ article.aside {
   color: #777;
   padding: emCalc(15px);
   background: #fff;
-  @include box-shadow(0px 1px 3px #aaa inset);
+  border-top: 1px solid #e3e3e3;
+  //@include box-shadow(0px 1px 3px #aaa inset);
   @include translateZ(0); /* to prevent flash in mobile w/.panel */
 
   ul, p {
-    font-size: emCalc(12px);
+    font-size: emCalc(14px);
   }
 
   a {

@@ -10,6 +10,8 @@ ErrorDocument 500 {{ '/500.html' | to_baseurl }}
 
 # Redirects ============================================================ */
 
+Redirect 301 /portfolio/ http://{{ site.app.domain }}/work/
+
 Redirect 301 /affirmations-network-marketers/ http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 Redirect 301 /affirmations-network-marketers http://{{ site.app.domain }}/2012/affirmations-entrepreneurs/
 

@@ -3,7 +3,7 @@ layout: default
 type: home
 ---
 
-<div class="row home-body">
+<div class="home-body row">
   <div id="primary" class="large-12 columns" role="content">
 
     <section id="home-masthead">
@@ -57,35 +57,45 @@ type: home
 
     <section id="home-services">
       <div class="row">
-        <div class="large-4 columns">
-          <div class="panel radius">
-            <h2><i class="icon-picture"></i> Portfolio</h2>
+        <div class="columns">
 
-            <p>Want more than just a brochure website? How about a web application that offers a killer-app feature that people willingly pay money to use? My team and I can help you turn your idea into profit.</p>
-
-            <a href="{{ '/portfolio/' | to_baseurl }}" class="button radius secondary">View Projects</a>
-          </div>
+          <h1>Mobile Responsive Revolution.</h1>
+          <h3 class="subheader">Is your site ready for the future?</h3>
 
         </div><!-- .columns -->
-        <div class="large-4 columns">
-          <div class="panel radius">
-            <h2><i class="icon-file-alt"></i> Résumé</h2>
+      </div><!-- .row -->
 
-            <p>With over 12 years in the Internet Industry building websites, email marketing platforms and subscription / continuity membership sites, my team and I bring valuable experience to your inspired project.</p>
+      <div class="row">
+        <div class="large-10 large-centered columns">
+          <div class="row">
+            <div class="large-4 columns">
 
-            <a href="{{ '/resume/' | to_baseurl }}" class="button radius secondary">View Résumé</a>
-          </div>
+              <aside><i class="icon-picture"></i></aside>
 
-        </div><!-- .columns -->
-        <div class="large-4 columns">
+              <h2>Work Strong.</h2>
 
-          <div class="panel radius">
-            <h2><i class="icon-envelope"></i> Connect</h2>
+              <p>Brochure websites don't drive business. How about a web application  people willingly pay money to use? I can help you turn <a href="{{ '/work/' | to_baseurl }}">your idea</a> into profit. See <a href="{{ '/work/' | to_baseurl }}">work</a> I've done for people just like you.</p>
 
-            <p>Let's connect for an informational pow-wow about your project or idea. Initial consultations are offered at no-cost to you! Just curious? Follow me on your favorite Social or Professional Network.</p>
+            </div><!-- .columns -->
+            <div class="large-4 columns">
 
-            <a href="{{ '/contact/' | to_baseurl }}" class="button radius secondary">Connect Options</a>
-          </div>
+              <aside><i class="icon-briefcase"></i></aside>
+
+              <h2>Big Experience.</h2>
+
+              <p>With over 12 years in the Internet Industry <a href="{{ '/resume/' | to_baseurl }}">building websites</a>, email marketing platforms and subscription / continuity membership sites, I bring <a href="{{ '/resume/' | to_baseurl }}">valuable experience</a> to your inspired project.</p>
+
+            </div><!-- .columns -->
+            <div class="large-4 columns">
+
+              <aside><i class="icon-envelope"></i></aside>
+
+              <h2>Reach Out.</h2>
+
+              <p>Let's <a href="{{ '/contact/' | to_baseurl }}">connect</a> for an informational pow-wow about your project or idea. Initial consultations are offered at no-cost to you! Just curious? <a href="{{ '/contact/' | to_baseurl }}">Follow me</a> on your favorite Social or Professional Network.</p>
+
+            </div><!-- .columns -->
+          </div><!-- .row -->
 
         </div><!-- .columns -->
       </div><!-- .row -->
@@ -93,3 +103,5 @@ type: home
 
   </div><!-- #primary.columns -->
 </div><!-- .row .home-body -->
+
+{% include post-related.html %}

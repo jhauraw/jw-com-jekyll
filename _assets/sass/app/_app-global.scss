@@ -259,7 +259,7 @@ html #peek, body #peek {
                       margin-bottom: .5em;
                     }
                     .title {
-                      font-family: 'Open Sans', sans-serif;
+                      //font-family: 'Open Sans', sans-serif;
                       font-size: emCalc(14px);
                       color: #333;
                       &:hover {
@@ -521,7 +521,8 @@ article {
   }
 
   .article-content {
-    color: #444;
+    color: #555;
+
     h1, h2, h3, h4, h5, h6 {
       color: #333;
       font-weight: 300;
@@ -825,6 +826,7 @@ article.aside {
 
     h2 {
       //font-size: 1.25em;
+      font-weight: 300;
       margin-bottom: .5em;
     }
 

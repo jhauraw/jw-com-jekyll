@@ -899,11 +899,7 @@ article.aside {
 
   #home-services {
     text-align: center;
-    margin-bottom: 2em;
-
-    .columns {
-      padding: 0 1.5em;
-    }
+    margin-bottom: 1em;
 
     aside {
       font-size: 8em;
@@ -918,7 +914,7 @@ article.aside {
     }
 
     h3 {
-      margin: 0 0 2em;
+      margin: 0 0 1em;
     }
 
     h2 {
@@ -970,9 +966,18 @@ article.aside {
     }
 
     #home-services {
+      margin-bottom: 1.5em;
+
+      .columns {
+        padding: 0 1.5em;
+      }
 
       h1 {
         font-size: 3.75em;
+      }
+
+      h3 {
+        margin: 0 0 1.5em;
       }
     }
   }

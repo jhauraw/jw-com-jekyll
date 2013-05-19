@@ -36,23 +36,39 @@ AddType font/opentype .otf
 AddType font/opentype .woff
 AddType image/svg+xml .svg .svgz
 AddEncoding gzip .svgz
+
 <FilesMatch "\.(ttf|otf|eot|woff|svg)$">
   <IfModule mod_headers.c>
     Header set Access-Control-Allow-Origin "*"
   </IfModule>
 </FilesMatch>
 
-# Cache Control max-age for assets/media CDN
-<FilesMatch "(.*)\.(ico|jpg|jpeg|png|gif|js|css|swf|svg|ttf|otf|woff)$">
+<IfModule mod_expires.c>
   Header unset Pragma
   FileETag none
   Header unset ETag
 
   ExpiresActive on
-  ExpiresDefault "access plus 1 year"
-  Header set Cache-Control "max-age=31536000, public"
-  Header unset Last-Modified
-</FilesMatch>
+
+  # Expires and Cache Control max-age for HTML
+  <FilesMatch "(.*)\.(html)$">
+    ExpiresDefault "access plus 60 seconds"
+    Header set Cache-Control "max-age=60, public"
+    Header unset Last-Modified
+  </FilesMatch>
+
+  # Expires and Cache Control max-age for ASSETS/MEDIA CDN
+  <FilesMatch "(.*)\.(ico|jpg|jpeg|png|gif|js|css|swf|svg|ttf|otf|woff)$">
+    ExpiresDefault "access plus 1 year"
+    Header set Cache-Control "max-age=31536000, public"
+    Header unset Last-Modified
+  </FilesMatch>
+</IfModule>
+
+# GZIP
+<ifmodule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript
+</ifmodule>
 
 <IfModule mod_rewrite.c>
 RewriteEngine On

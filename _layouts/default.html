@@ -54,6 +54,6 @@
 
   <script src="{{ '/assets/vendor.js' | to_cdnurl }}"></script>
   <script src="{{ '/assets/app.js' | to_cdnurl }}"></script>
-  {% if site.app.mode == 'production' %}<script src="//platform.twitter.com/widgets.js"></script>{% endif %}
+  {% if site.app.mode == 'production' and page.type == 'home' %}<script src="//platform.twitter.com/widgets.js"></script>{% endif %}
 </body>
 </html>

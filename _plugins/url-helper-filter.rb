@@ -75,6 +75,25 @@ module Jekyll
       end
     end
 
+    # Append image size to images for use is sidebares etc.
+    #
+    # Default usage:
+    # <img src="{{ '/img/dog.jpg' | sub_imgurl }}" />
+    #
+    # Specify @size:
+    # <img src="{{ '/img/dog.jpg' | sub_imgurl: '300x300' }}" />
+    #
+    # Specify @size and @hires:
+    # <img src="{{ '/img/dog.jpg' | sub_imgurl: '300x300', true }}" />
+    def sub_imgurl(input, size = '150x150', hires = nil)
+
+      if hires === true
+        hires = "@2x"
+      end
+
+      input.sub(/\.(jpg|png|gif)/, "_#{size}#{hires}.\\1")
+    end
+
     def sub_baseurl(input)
 
       # Prepend @baseurl to Root-Relative URLs in templates

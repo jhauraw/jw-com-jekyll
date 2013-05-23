@@ -4,7 +4,7 @@
 
   {% if page.feature.image.src %}
   <figure class="feature article-feature">
-    <a href="{{ page.url | to_baseurl }}"><img src="{{ page.feature.image.src | to_cdnurl }}" alt="{{ page.title | escape_once }}" /></a>
+    <a href="{{ page.url | to_baseurl }}"><img src="{{ page.feature.image.src | sub_imgurl:'416x234' | to_cdnurl }}" alt="{{ page.title | escape_once }}" /></a>
   </figure><!-- .article-feature -->
   {% endif %}
 

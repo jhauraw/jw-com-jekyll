@@ -8,8 +8,8 @@ type: feed
 
   <title>{{ site.app.name }}</title>
   <subtitle>{{ site.app.tagline }}</subtitle>
-  <link href="{{ '/feed/' | to_absurl }}" rel="self"/>
-  <link href="{{ '/' | to_absurl }}"/>
+  <link href="{{ '/feed/' | to_absurl }}" rel="self" />
+  <link href="{{ '/' | to_absurl }}" />
   <rights>{{ site.app.domain | capitalize }} licensing: Code GPLv3, Content CC BY 3.0. All Rights Reserved.</rights>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ '/' | to_absurl }}</id>
@@ -30,7 +30,7 @@ type: feed
         <uri>http://{% if post.author.link %}{{ post.author.link }}{% else %}{{ site.app.author.link }}{% endif %}/</uri>
       </author>
       <title>{{ post.title }}</title>
-      <link href="{{ post.url | to_absurl }}"/>
+      <link href="{{ post.url | to_absurl }}" />
       <updated>{{ post.date | date_to_xmlschema }}</updated>
       <id>{{ post.id | to_absurl }}</id>
       {% if post.feature.image.src %}<logo>{{ post.feature.image.src | to_cdnurl }}</logo>{% endif %}

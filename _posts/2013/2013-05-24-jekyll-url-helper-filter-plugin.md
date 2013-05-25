@@ -46,7 +46,7 @@ Example:
 
 In `_config.yml` you have:
 
-```yaml
+```ruby
 baseurl: /blog
 ```
 

@@ -13,7 +13,7 @@ module.exports = function(grunt) {
     ' Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> -' +
     ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */',
 
-    vendor_js_banner: '/*! foundation.js v4.1.5 | MIT License | foundation.zurb.com */',
+    vendor_js_banner: '/*! foundation.js v4.1.6 | MIT License | foundation.zurb.com */',
 
     vendor_css_banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.6 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */',
 
@@ -76,7 +76,7 @@ module.exports = function(grunt) {
           expand: true,
           dot: false,
           cwd: '_site',
-          dest: '_site/', // CAUTION! MUST SET!
+          dest: '_site/', // CAUTION! MUST SET, otherwise you can overwrite /
           src: '**/*.html'
         }]
       }

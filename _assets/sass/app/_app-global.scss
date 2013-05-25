@@ -576,6 +576,19 @@ article {
         background: transparent;
       }
     }
+  } // end GitHub style
+}
+
+@media #{$small} {
+  article {
+
+    .article-content {
+
+      p, ul, ol, dl {
+        font-size: emCalc(15px);
+        line-height: 1.5;
+      }
+    }
   }
 }
 
@@ -1081,8 +1094,9 @@ article.aside {
   //@include box-shadow(0px 1px 3px #aaa inset);
   @include translateZ(0); /* to prevent flash in mobile w/.panel */
 
-  ul, p {
-    font-size: emCalc(14px);
+  p, ul, ol, dl {
+    font-size: emCalc(13px);
+    line-height: 1.4;
   }
 
   a {

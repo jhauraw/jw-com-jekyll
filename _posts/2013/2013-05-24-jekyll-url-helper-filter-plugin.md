@@ -124,7 +124,7 @@ Note: `http:` is intentionally left off for protocol anonymous URLs.
 
 See the documentation in the [plugin code](https://github.com/jhauraw/jekyll-url-helper-filter-plugin/blob/master/url-helper-filter.rb) for this method for more information.
 
-## Methods that begin with sub\_
+### Methods that begin with sub\_
 
 Methods that begin with `sub_` do single or global regex string replacement on the input.
 

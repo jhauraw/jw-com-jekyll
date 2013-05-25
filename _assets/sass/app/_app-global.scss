@@ -543,6 +543,39 @@ article {
       color: #333;
       font-weight: 300;
     }
+
+    // GitHub style code and pre formatting
+    code {
+      color: #222;
+      font-size: emCalc(12px);
+      font-weight: 300;
+    }
+
+    pre, code {
+      border: 1px solid #ddd;
+      background-color: #f8f8f8;
+      border-radius: 3px;
+    }
+
+    p {
+      code {
+        margin: 0 2px;
+        padding: 1px 5px 0px;
+        white-space: nowrap;
+      }
+    }
+
+    pre {
+      padding: 8px 10px;
+      white-space: pre;
+      overflow: auto;
+
+      code {
+        font-size: emCalc(13px);
+        border: 0 none;
+        background: transparent;
+      }
+    }
   }
 }
 

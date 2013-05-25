@@ -46,15 +46,21 @@ Example:
 
 In `_config.yml` you have:
 
-    baseurl: /blog
+```yaml
+baseurl: /blog
+```
 
 In `_layouts` -> `default.html` you will likely have a CSS file linked, so we can add the _filter_ to the _Liquid_ tag to abstract the URL:
 
-    <link rel="stylesheet" href="{% raw %}{{ '/css/site.css' | to_baseurl }}{% endraw %}" />
+```html
+<link rel="stylesheet" href="{% raw %}{{ '/css/site.css' | to_baseurl }}{% endraw %}" />
+```
 
 When you _generate_ your site, the result is:
 
-    <link rel="stylesheet" href="/blog/css/site.css" />
+```html
+<link rel="stylesheet" href="/blog/css/site.css" />
+```
 
 ### method: to\_absurl
 
@@ -66,19 +72,27 @@ Example:
 
 In `_config.yml` you have:
 
-    url: http://www.domain.tld
+```yaml
+url: http://www.domain.tld
+```
 
 In `feed/index.xml` you will likely have a _self_ link, so we can add the _filter_ in a _Liquid_ tag to make it an _absolute_ and _abstracted_ URL:
 
-    <link href="{% raw %}{{ '/feed/index.xml' | to_absurl }}{% endraw %}" rel="self" />
+```html
+<link href="{% raw %}{{ '/feed/index.xml' | to_absurl }}{% endraw %}" rel="self" />
+```
 
 When you _generate_ your site, the result is:
 
-    <link href="http://www.domain.tld/feed/index.xml" rel="self" />
+```html
+<link href="http://www.domain.tld/feed/index.xml" rel="self" />
+```
 
 If you also have `baseurl` set in `_config.yml` then `to_baseurl` will be run before and you'll get:
 
-    <link href="http://www.domain.tld/blog/feed/index.xml" rel="self" />
+```html
+<link href="http://www.domain.tld/blog/feed/index.xml" rel="self" />
+```
 
 ### method: to\_cdnurl
 
@@ -88,19 +102,23 @@ In your templates and optionally in your Markdown files use the `to_cdnurl` meth
 
 Jekyll's `_config.yml` does not have a `cdn_hosts` parameter, so we need to add our own first. There will likely be other _user specified_ parameters that you will need, so we can namespace all of them in a hash called `app`:
 
-    app:
-      release: 100000
-      prefix:
-      mode: development
-      cdn_hosts:
-        - xxxxxxxxxxxxx0.cloudfront.net
-        - xxxxxxxxxxxxx1.cloudfront.net
-        - xxxxxxxxxxxxx2.cloudfront.net
-        - xxxxxxxxxxxxx3.cloudfront.net
+```yaml
+app:
+  release: 100000
+  prefix:
+  mode: development
+  cdn_hosts:
+    - xxxxxxxxxxxxx0.cloudfront.net
+    - xxxxxxxxxxxxx1.cloudfront.net
+    - xxxxxxxxxxxxx2.cloudfront.net
+    - xxxxxxxxxxxxx3.cloudfront.net
+```
 
 You will also need a __RewriteRule__ in `.htaccess` to create the 'virtual version' match to the actual asset (assumes `prefix` is 'v'):
 
-    RewriteRule ^v[0-9]{6,6}/(.*)$ /$1 [L]
+```aconf
+RewriteRule ^v[0-9]{6,6}/(.*)$ /$1 [L]
+```
 
 Note: You do not actually have to rename any files or folders to use 'virtual versioned' URLs. You only need to make sure your 'href' and 'src' attributes point to the virtual version URL. The method does exactly that for you.
 
@@ -110,15 +128,21 @@ Example:
 
 In your `_layouts` -> `default.html` template file you have your __logo__ at the top of the page. You want to serve it from the CDN:
 
-    <object type="image/svg+xml" data="{% raw %}{{ '/img/logo.svg' | to_cdnurl }}{% endraw %}">Project Name</object>
+```html
+<object type="image/svg+xml" data="{% raw %}{{ '/img/logo.svg' | to_cdnurl }}{% endraw %}">Project Name</object>
+```
 
 When you _generate_ your site, the result is:
 
-    <object type="image/svg+xml" data="//xxxxxxxxxxxxx1.cloudfront.net/v100000/img/logo.svg">Project Name</object>
+```html
+<object type="image/svg+xml" data="//xxxxxxxxxxxxx1.cloudfront.net/v100000/img/logo.svg">Project Name</object>
+```
 
 Depending on the path given to the method, a different CDN host will be chosen using crc32. The final URL is put together like this:
 
-    //xxxxxxxxxxxxxN.cloudfront.net/BASE_URL/PREFIX+RELEASE/img/dog.jpg
+```html
+//xxxxxxxxxxxxxN.cloudfront.net/BASE_URL/PREFIX+RELEASE/img/dog.jpg
+```
 
 Note: `http:` is intentionally left off for protocol anonymous URLs.
 
@@ -138,27 +162,31 @@ Example:
 
 One place the `sub_absurl` method is very handy is in your feed xml file. Use it on the `post.content` to make any _relative_ URLs _absolute_.
 
-    post.content (in Markdown):
+```html
+post.content (in Markdown):
 
-      Lorem ipsum dolor sit amet, consectetur adipisicing. ![Dog Image](/img/dog.jpg)
+  Lorem ipsum dolor sit amet, consectetur adipisicing. ![Dog Image](/img/dog.jpg)
 
-    feed.xml (entries loop):
+feed.xml (entries loop):
 
-    {% raw %}{% for post in site.posts %}
-      <entry>
-        ...
-        <content type="html">{{ post.content | sub_absurl | xml_escape }}</content>
-      </entry>
-    {% endfor %}{% endraw %}
+{% raw %}{% for post in site.posts %}
+  <entry>
+    ...
+    <content type="html">{{ post.content | sub_absurl | xml_escape }}</content>
+  </entry>
+{% endfor %}{% endraw %}
+```
 
 When you _generate_ your site, the result is:
 
-    <entry>
-      ...
-      <content type="html">
-        Lorem ipsum dolor sit amet, consectetur adipisicing. &lt;a href=&quot;http://domain.tld/img/dog.jpg&quot;&gt;
-      </content>
-    </entry>
+```html
+<entry>
+  ...
+  <content type="html">
+    Lorem ipsum dolor sit amet, consectetur adipisicing. &lt;a href=&quot;http://domain.tld/img/dog.jpg&quot;&gt;
+  </content>
+</entry>
+```
 
 ### method: sub\_imgurl
 
@@ -177,27 +205,39 @@ Arguments:
 
 Example:
 
-    <img src="{% raw %}{{ '/img/dog.jpg' | sub_imgurl }}{% endraw %}" />
+```html
+<img src="{% raw %}{{ '/img/dog.jpg' | sub_imgurl }}{% endraw %}" />
+```
 
 When you _generate_ your site, the result is:
 
-    <img src="/img/dog_150x150.jpg" />
+```html
+<img src="/img/dog_150x150.jpg" />
+```
 
 Specify __size__:
 
-    <img src="{% raw %}{{ '/img/dog.jpg' | sub_imgurl: '300x300' }}{% endraw %}" />
+```html
+<img src="{% raw %}{{ '/img/dog.jpg' | sub_imgurl: '300x300' }}{% endraw %}" />
+```
 
 Result:
 
-    <img src="/img/dog_300x300.jpg" />
+```html
+<img src="/img/dog_300x300.jpg" />
+```
 
 Specify __size__ and __hires__:
 
-    <img src="{% raw %}{{ '/img/dog.jpg' | sub_imgurl: '300x300', true }}{% endraw %}" />
+```html
+<img src="{% raw %}{{ '/img/dog.jpg' | sub_imgurl: '300x300', true }}{% endraw %}" />
+```
 
 Result:
 
-    <img src="/img/dog_300x300@2x.jpg" />
+```html
+<img src="/img/dog_300x300@2x.jpg" />
+```
 
 ### method: sanitize\_str
 
@@ -207,13 +247,17 @@ Category or Tag names with spaces, capital letters, etc. will break your URLs. T
 
 Example:
 
-    page.category: Web Development
+```html
+page.category: Web Development
 
-    <a href="/{% raw %}{{ page.category | sanitize_str }}{% endraw %}/">...</a>
+<a href="/{% raw %}{{ page.category | sanitize_str }}{% endraw %}/">...</a>
+```
 
 When you _generate_ your site, the result is:
 
-    <a href="/web-development/">...</a>
+```html
+<a href="/web-development/">...</a>
+```
 
 ## Summary
 

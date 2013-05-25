@@ -59,7 +59,7 @@ For kicks, we'll call the downward-facing triangle a _nubbin_ (I've seen it call
 
 Here is the CSS and HTML markup you need to create this effect in your own project.
 
-{% highlight css linenos %}
+```css
 <style type="text/css">
 .tri-down {
 
@@ -100,12 +100,12 @@ Here is the CSS and HTML markup you need to create this effect in your own proje
     border-width: 15px;
   }
 </style>
-{% endhighlight %}
+```
 
-{% highlight html linenos %}
+```html
 <!-- Element you want to add a down triangle too. -->
 <div class="tri-down">Box with Down Triangle a.k.a. "Nubbin"</div>
-{% endhighlight %}
+```
 
 #### Notes and Tips
 

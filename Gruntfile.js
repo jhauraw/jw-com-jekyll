@@ -60,8 +60,11 @@ module.exports = function(grunt) {
     },
 
     /* HTML MIN ======================================================== */
-    /* CAUTION! Can overwrite working directory files. Make sure to set the
+    /*
+      CAUTION! Can overwrite working directory files. Make sure to set the
        'dest:' option with your output directory, e.g., _site as is shown.
+
+       EDIT: Inline <code> tags were getting space stripped away. Added string 'code' to line 383 of function collapseWhitespaceSmart in ./node_modules/grunt-contrib-htmlmin/node_modules/html-minifier/dist/all.js
     */
     htmlmin: {
       options: {

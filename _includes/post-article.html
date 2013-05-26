@@ -56,7 +56,31 @@
 
         </div><!-- .columns -->
       </div><!-- .row -->
-    </aside><!-- .article-info -->
+    </aside><!-- .article-meta -->
+
+    <aside class="article-share">
+      <div class="row">
+        <div class="large-8 large-centered columns">
+          <ul class="inline-list">
+            <li class="share-facebook">
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label radius"><i class="icon-facebook"></i> Share</span></a>
+            </li>
+
+            <li class="share-twitter">
+              <a target="_blank" href="https://twitter.com/intent/tweet?url={{ page.url | to_absurl | escape_once }}&amp;text={{ page.title | escape_once }}&amp;via={{ site.app.twitter }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=275,width=600');return false;"><span class="label radius"><i class="icon-twitter"></i> Tweet</span></a>
+            </li>
+
+            <li class="share-gplus">
+              <a target="_blank" href="https://plus.google.com/share?url={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label radius"><i class="icon-google-plus"></i> Share</span></a>
+            </li>
+
+            <li class="share-email">
+              <a href="mailto:?subject={{ page.title | escape_once }}&amp;body={{ site.app.name | prepend: 'Check out this post from ' | append: ', ' | append: site.app.tagline | append: ':' | escape_once }}%0A%0A{{ page.url | to_absurl | escape_once }}"><span class="label radius"><i class="icon-envelope"></i> Email</span></a>
+            </li>
+          </ul>
+        </div><!-- .columns -->
+      </div><!-- .row -->
+    </aside><!-- .article-share -->
   </header><!-- .article-header -->
 
   <section class="article-content" itemprop="articleBody">

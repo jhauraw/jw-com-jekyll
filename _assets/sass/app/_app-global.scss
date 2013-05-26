@@ -516,6 +516,54 @@ article {
     margin-top: 0;
   }
 
+  .article-share {
+
+    ul {
+      margin-left: -.5em;
+
+      li {
+        margin-left: .5em;
+      }
+    }
+
+    .label {
+      font-size: emCalc(10px);
+      text-transform: uppercase;
+      padding: .25em .4em .3em;
+      border: 1px solid #ddd;
+      background: #f3f3f3;
+
+      &:hover {
+        background: #fff;
+      }
+    }
+
+    [class^="icon-"], [class*=" icon-"] {
+      font-size: 1.2em;
+      width: auto;
+    }
+
+    .share-facebook .label {
+      color: #3b5998;
+      border-color: rgba(59, 89, 152, .3);
+    }
+
+    .share-twitter .label {
+      color: #01b7ee;
+      border-color: rgba(1, 183, 238, .3);
+    }
+
+    .share-gplus .label {
+      color: #dd4a38;
+      border-color: rgba(221, 74, 56, .3);
+    }
+
+    .share-email .label {
+      color: #666;
+      border-color: rgba(102, 102, 102, .3);
+    }
+  }
+
   .article-meta {
     font-size: emCalc(13px);
     color: #888;

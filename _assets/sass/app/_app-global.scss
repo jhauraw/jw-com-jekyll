@@ -527,15 +527,16 @@ article {
     }
 
     .label {
-      font-size: emCalc(10px);
+      font-size: emCalc(11px);
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: #666;
-      padding: .4em .5em;
+      color: #888;
+      padding: .7em .5em;
       border: 0 none;
       background: #f3f3f3;
 
       &:hover {
-        color: #999;
+        color: #aaa;
         background: #fafafa;
       }
     }

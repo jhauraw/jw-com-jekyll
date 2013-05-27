@@ -184,6 +184,63 @@ function getParameterByName(name) {
   }); // extend
 })(window.Zepto || window.jQuery);
 
+/**
+ * Load disqus comments when visitor scroll down page to comments
+ *
+ * Usage:
+ * Add a div with id "disqus_thread" and data attributes for every disqus parameter:
+ *
+ * <div id="disqus_thread" data-disqus-shortname="username" data-disqus-url="http://example.com/post/post-name/"></div>
+ *
+ * <div id="disqus_thread" data-disqus-shortname="{{ site.app.disqus_user }}" data-disqus-url="{{ page.url | to_absurl }}"></div>
+ *
+ * @author: Murat Corlu
+ * @link: https://gist.github.com/gists/2290198
+ */
+
+/*
+;(function($){
+  'use strict';
+
+  $.extend($.fn, {
+
+    disqusLoad : function(){
+
+      var disqus_elm = $("#disqus_thread");
+
+      if (disqus_elm.size() > 0 ) {
+
+        var ds_loaded = false,
+        top = disqus_elm.offset().top, // WHERE TO START LOADING
+        disqus_data = disqus_elm.data(),
+
+        check = function(){
+
+          if ( !ds_loaded && $(window).scrollTop() + $(window).height() > top ) {
+            ds_loaded = true;
+
+            for (var key in disqus_data) {
+              if (key.substr(0,6) == 'disqus') {
+                window['disqus_' + key.replace('disqus', '').toLowerCase()] = disqus_data[key];
+              }
+            }
+
+            var dsq = document.createElement('script');
+            dsq.async = true;
+            dsq.src = '//' + window.disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          }
+        }; // check
+
+        $(window).scroll(check);
+        check();
+      } // if
+
+    } // disqusLoad
+  }); // extend
+})(window.Zepto || window.jQuery);
+*/
+
 ;(function($){
   'use strict';
 
@@ -227,4 +284,5 @@ function getParameterByName(name) {
 $(document).foundation();
 $(document).navmenu();
 $(document).panelexpose();
+// $(document).disqusLoad();
 $(document).iosfix();

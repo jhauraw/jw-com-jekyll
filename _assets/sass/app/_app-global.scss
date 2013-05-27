@@ -519,22 +519,24 @@ article {
   .article-share {
 
     ul {
-      margin-left: -.5em;
+      margin-left: emCalc(-3px);
 
       li {
-        margin-left: .5em;
+        margin-left: emCalc(3px);
       }
     }
 
     .label {
       font-size: emCalc(10px);
       text-transform: uppercase;
-      padding: .25em .4em .3em;
-      border: 1px solid #ddd;
+      color: #666;
+      padding: .4em .5em;
+      border: 0 none;
       background: #f3f3f3;
 
       &:hover {
-        background: #fff;
+        color: #999;
+        background: #fafafa;
       }
     }
 
@@ -543,24 +545,28 @@ article {
       width: auto;
     }
 
-    .share-facebook .label {
-      color: #3b5998;
-      border-color: rgba(59, 89, 152, .3);
+    .share-facebook {
+      [class^="icon-"], [class*=" icon-"] {
+        color: #3b5998;
+      }
     }
 
-    .share-twitter .label {
-      color: #01b7ee;
-      border-color: rgba(1, 183, 238, .3);
+    .share-twitter {
+      [class^="icon-"], [class*=" icon-"] {
+        color: #01b7ee;
+      }
     }
 
-    .share-gplus .label {
-      color: #dd4a38;
-      border-color: rgba(221, 74, 56, .3);
+    .share-gplus {
+      [class^="icon-"], [class*=" icon-"] {
+        color: #dd4a38;
+      }
     }
 
-    .share-email .label {
-      color: #666;
-      border-color: rgba(102, 102, 102, .3);
+    .share-email {
+      [class^="icon-"], [class*=" icon-"] {
+        color: #666;
+      }
     }
   }
 

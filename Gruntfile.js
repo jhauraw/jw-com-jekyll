@@ -13,9 +13,9 @@ module.exports = function(grunt) {
     ' Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %> -' +
     ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */',
 
-    vendor_js_banner: '/*! foundation.js v4.1.6 | MIT License | foundation.zurb.com */',
+    vendor_js_banner: '/*! foundation.js v4.2.0 | MIT License | foundation.zurb.com */',
 
-    vendor_css_banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.1.6 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */',
+    vendor_css_banner: '/*! Normalize v2.1.0 | MIT License | git.io/normalize *//*! Zurb Foundation v4.2.0 | MIT License | foundation.zurb.com *//*! Font Awesome 3.0.2 | OFL, MIT, CC BY | fortawesome.github.io/Font-Awesome *//*! pygments.css v1.6 | BSD License | pygments.org */',
 
     yaml_banner: '---\nlayout: nil\n---\n',
 
@@ -25,7 +25,7 @@ module.exports = function(grunt) {
         options: {
           /* require: 'zurb-foundation', */
           sassDir: '_assets/sass',
-          importPath: ['bower_components/foundation/scss', 'bower_components/font-awesome/sass'],
+          importPath: ['bower_components/zurb-foundation/scss', 'bower_components/font-awesome/sass'],
           cssDir: 'assets',
           outputStyle: 'expanded',
           noLineComments: false,
@@ -107,7 +107,7 @@ module.exports = function(grunt) {
     copy: {
       main: {
         files: [
-          {src: ['bower_components/foundation/js/vendor/custom.modernizr.js'], dest: 'assets/modernizr.js'},
+          {src: ['bower_components/zurb-foundation/js/vendor/custom.modernizr.js'], dest: 'assets/modernizr.js'},
 
           /* Issue with 'mouse' events on 1.0.0rc1
              Rolled back to 1.0, maybe bower is getting too hot of a version
@@ -133,20 +133,21 @@ module.exports = function(grunt) {
     concat: {
       vendor_js: {
         src: [
-          'bower_components/foundation/js/foundation/foundation.js',
-          'bower_components/foundation/js/foundation/foundation.alerts.js',
-          'bower_components/foundation/js/foundation/foundation.clearing.js',
-          'bower_components/foundation/js/foundation/foundation.cookie.js',
-          'bower_components/foundation/js/foundation/foundation.dropdown.js',
-          'bower_components/foundation/js/foundation/foundation.forms.js',
-          'bower_components/foundation/js/foundation/foundation.joyride.js',
-          'bower_components/foundation/js/foundation/foundation.magellan.js',
-          'bower_components/foundation/js/foundation/foundation.orbit.js',
-          'bower_components/foundation/js/foundation/foundation.placeholder.js',
-          'bower_components/foundation/js/foundation/foundation.reveal.js',
-          'bower_components/foundation/js/foundation/foundation.section.js',
-          'bower_components/foundation/js/foundation/foundation.tooltips.js'
-          /* 'bower_components/foundation/js/foundation/foundation.topbar.js', */
+          'bower_components/zurb-foundation/js/foundation/foundation.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.alerts.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.clearing.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.cookie.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.dropdown.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.forms.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.interchange.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.joyride.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.magellan.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.orbit.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.placeholder.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.reveal.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.section.js',
+          'bower_components/zurb-foundation/js/foundation/foundation.tooltips.js'
+          /* 'bower_components/zurb-foundation/js/foundation/foundation.topbar.js', */
         ],
         dest: 'assets/vendor.js'
       }

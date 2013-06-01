@@ -16,20 +16,45 @@ excerpt: |
 ## Jhaura Wachsman
 ### Web Developer, Internet Marketer
 
-Jhaura is a senior level web developer with management skills which allows him to interface directly with clients and communicate effectively. His reputation for accuracy, timeliness and honesty make Jhaura an asset to the project.
+Experienced Web Developer and Internet Marketer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user expreiences and profitable bottom lines. 
 
-**Core Areas of Expertise**: Web Development (LAMP), PHP, MySQL, Wordpress (Templates, Plugins and Integration), Responsive frameworks (Foundation & Bootstrap), HTML5, CSS3 (Compass & SaSS), eCommerce, SSL, SEO, Internet Marketing, Email Marketing, Direct Marketing, Affiliate Marketing, Facebook Apps, Social Media integration and niche/startup business development.
+Specialized in communication, team leading and excellence in work ethic.
 
-**Tools Used**: Sublime Text editor. Git version control. Ruby, Gem development environment. Photoshop & Illustrator CS. Google Adwords and Adsense, Microsoft AdCenter. Amazon AWS and Cloudfront CDN. Amazon Seller and Ads. Google Analytics and Webmaster tools for understanding where profit can be made from traffic and where more value can be created for users.
+__Contact__
 
-## Experience
-### Web Developer, Internet Marketer at Consultant
+  - Email: <jw@jhaurawachsman.com>
+  - Web: [JhauraWachsman.com](http://{{ site.app.domain }})
+
+__Network__
+
+  - Twitter: [twitter.com/{{ site.app.twitter }}]({{ '/twitter/' | to_absurl }})
+  - LinkedIn: [linkedin.com/in/{{ site.app.linkedin }}]({{ '/linkedin/' | to_absurl }})
+  - GitHub: [github.com/{{ site.app.github }}]({{ '/github/' | to_absurl }})
+
+* * *
+
+### Skills
+
+__Building Web Apps__: Responsive frameworks (Zurb Foundation, Twitter Bootstrap). Single Page Applications (SPA, w/ Angular.js, Backbone.js), Static Site Generation (Jekyll, Nanoc), PHP/MySQL (LAMP), HTML5, CSS3, PCI, Payment Gateways, e-commerce and SSL.
+
+__WordPress / Octopress__: Custom templates, plugins and integration with e-commerce solutions. Joomla when required.
+
+__High Scalability__: Breaking the 1 second to load benchmark using CDNs, virtual version caching, GZip, optimization, concatenation and minification.
+
+__Internet Marketing__: SEO, Affiliate, Adwords, Adsense, Analytics and Web Master Tools __expertise__ increases monetization, profit and user experience.
+
+__Workflow__: Yeoman with Grunt.js for automation, build and deploy. Bower and NPM for package management. Compass and SaSS for CSS. Sublime Text and iTerm for IDE and shell. GIT and GitHub for distributed version control, team work and open-source development.
+
+* * *
+
+### Experience
+
+#### Web Developer, Internet Marketer as Consultant
 
 June 2005 - Present (8 years)
 
 Web Development and Programming
 
-* Wordpress **EXPERT**, Joomla, Drupal and Magento strengths
 * Nine years hand coding PHP (OOP), MySQL, HTML, JavaScript and CSS
 * Full knowledge of WC3 standards for authoring validated code
 * Section 508 and WAI relating to the Americans with Disabilities Act
@@ -67,7 +92,7 @@ Linux System Administration
 
 * Six years Linux system administration experience - local and remote
 
-### Principal, Founder, Web Developer/Programmer at Consultlogic, Inc.
+#### Principal, Founder, Web Developer/Programmer at Consultlogic, Inc.
 
 April 2000 - January 2005 (4 years 10 months)
 
@@ -80,7 +105,7 @@ Conceptualized, engineered and programmed PHP/MySQL Web application credited for
 * Designed and coded over 100 HTML email newsletters and over 50 Websites
 * Conducted usability and QA testing on over 50 MUAs (mail user agents)
 
-### Adjunct Web Development/Design Instructor at Santa Barbara City College
+#### Adjunct Web Development/Design Instructor at Santa Barbara City College
 
 December 2001 - January 2003 (1 year 2 months)
 
@@ -94,7 +119,7 @@ Created three department websites, including the SBCC Radio property. Provided i
 * Helped with student job placement and internships at local companies
 * Improved and polished public speaking and presentation skills
 
-### Web Product Manager at The Hendricks Institute, Inc.
+#### Web Product Manager at The Hendricks Institute, Inc.
 
 July 1999 - May 2001 (1 year 11 months)
 
@@ -105,7 +130,7 @@ Project manager responsible for IIS/SQL E-Commerce site deployment. Implemented 
 * Produced CD, VHS, cassette and book products sold internationally
 * Presented new products at seminars to groups of 20-100 people
 
-### Store Manager at Channel Islands Surfboards
+#### Store Manager at Channel Islands Surfboards
 
 June 1990 - July 1998 (8 years 2 months)
 
@@ -116,14 +141,17 @@ Started out as Sales Associate, promoted to manager. Managed a team of 10 crew m
 * Worked with sales representatives in store and at trade shows
 * Created a high standard of customer service
 
-## Education
-### University of California, Santa Barbara
+* * *
+
+### Education
+
+#### University of California, Santa Barbara
 
 - Bachelor of Arts, Religious Studies, 1996 - 1998
 - Certificate, eCommerce, Web Development and Design, 2000 - 2001
 - Activities and Societies: Study abroad in India. Extension studies for professional development.
 
-### Santa Barbara City College
+#### Santa Barbara City College
 
 - Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
 - Activities and Societies: Study abroad in Mexico. Presidential honors.
@@ -133,6 +161,8 @@ Started out as Sales Associate, promoted to manager. Managed a team of 10 crew m
 ### Interests
 
 Surfing, ultralight backpacking, meditation, traveling the world and gardening. Nature, the ocean and rivers, spirituality, Helping others create abundance in their lives. Philanthropy.
+
+* * *
 
 ### Recommendations from LinkedIn
 

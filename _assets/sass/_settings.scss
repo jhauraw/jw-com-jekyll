@@ -16,6 +16,13 @@ $experimental-support-for-opera: false;
 // _grid.scss: Wider row
 $row-width: 90.000em; // 90em = 1440px
 
+// _global.scss. Messed up cursor:
+$cursor-default-value: auto;
+
+// _type.scss: no left margins on lists
+$list-side-margin: 0;
+$list-nested-margin: 0;
+
 // _global.scss: class tablets into 'small' grid breakpoint
 // adding 1px to width of $small-screen. Now tablets will
 // get 'small' grid settings:

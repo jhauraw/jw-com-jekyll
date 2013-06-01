@@ -14,7 +14,7 @@ excerpt: |
 </ul>
 
 ## Jhaura Wachsman
-### Web Developer, Internet Marketer
+## Web Developer, Internet Marketer
 
 Experienced Web Developer and Internet Marketer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user expreiences and profitable bottom lines. 
 
@@ -33,7 +33,7 @@ __Network__
 
 * * *
 
-### Skills
+## Skills
 
 __Building Web Apps__: Responsive frameworks (Zurb Foundation, Twitter Bootstrap). Single Page Applications (SPA, w/ Angular.js, Backbone.js), Static Site Generation (Jekyll, Nanoc), PHP/MySQL (LAMP), HTML5, CSS3, PCI, Payment Gateways, e-commerce and SSL.
 
@@ -47,13 +47,14 @@ __Workflow__: Yeoman with Grunt.js for automation, build and deploy. Bower and N
 
 * * *
 
-### Experience
+## Experience
 
-#### Web Developer, Internet Marketer as Consultant
+### Web Developer, Internet Marketer
 
-June 2005 - Present (8 years)
+[Wachsman Enterprises](http://{{ site.app.domain }}), Ojai, CA  
+Current
 
-Web Development and Programming
+__Web Development and Programming__
 
 * Nine years hand coding PHP (OOP), MySQL, HTML, JavaScript and CSS
 * Full knowledge of WC3 standards for authoring validated code
@@ -63,21 +64,21 @@ Web Development and Programming
 * Amazon AWS and Cloudfront CDN (Content Delivery Network)
 * Skilled in session management, cookies, frames, forms and debugging
 
-Web Design
+__Web Design__
 
 * Nine years Photoshop/Image Ready, Flash and Illustrator design experience
 * Expert at making Web pages load faster with image optimization and slices
 * Able to bridge the gap between design and coding departments
 * Re/designed over 50 Websites and over 100 graphic email newsletters
 
-Email Newsletter Design, Development and Systems
+__Email Newsletter Design, Development and Systems__
 
 * Photoshop design and HTML/CSS coding 100s of HTML/Text email newsletters
 * Experience with all major ESPs such as Constant Contact and Aweber
 * User experience, web-mail and Outlook tested designs and code
 * Email newsletter optimization to decrease bandwidth costs
 
-Internet Marketing, Direct Response Marketing
+__Internet Marketing, Direct Response Marketing__
 
 * Proven profit making campaigns with Google Adwords, Yahoo! and Microsoft
 * Ebay, Amazon Seller, Ads, Associates and API setup and integration
@@ -88,12 +89,15 @@ Internet Marketing, Direct Response Marketing
 * SEO for natural search ranking and user experience
 * Facebook, Twitter social media App building and integration
 
-Linux System Administration
+__Linux/Unix System Administration__
 
 * Six years Linux system administration experience - local and remote
 
-#### Principal, Founder, Web Developer/Programmer at Consultlogic, Inc.
+* * *
 
+### Founder, Lead Web Developer
+
+[Consultlogic, Inc.](http://ndic.com/), Santa Barbara, CA  
 April 2000 - January 2005 (4 years 10 months)
 
 Conceptualized, engineered and programmed PHP/MySQL Web application credited for generating 95% of the business revenue. Setup, optimized, secured and maintained multiple local and remote Linux file, database, email and Web servers responsible for running the core business applications with 99.9% uptime. Simultaneously served as president, CEO, software engineer and customer service agent for four years.
@@ -105,8 +109,11 @@ Conceptualized, engineered and programmed PHP/MySQL Web application credited for
 * Designed and coded over 100 HTML email newsletters and over 50 Websites
 * Conducted usability and QA testing on over 50 MUAs (mail user agents)
 
-#### Adjunct Web Development/Design Instructor at Santa Barbara City College
+* * *
 
+### Instructor Web Development, Adjunct
+
+[Santa Barbara City College](http://sbcc.edu/), Santa Barbara, CA  
 December 2001 - January 2003 (1 year 2 months)
 
 Created Web-based curriculum for MAT 108 Web Design Tools & Techniques and MAT 122 Web Design I. Instructed both courses in semester format lasting close to four months each. Quickly earned a reputation for being a precise and knowledgeable instructor of Web design and development.
@@ -119,8 +126,11 @@ Created three department websites, including the SBCC Radio property. Provided i
 * Helped with student job placement and internships at local companies
 * Improved and polished public speaking and presentation skills
 
-#### Web Product Manager at The Hendricks Institute, Inc.
+* * *
 
+### Web Products Manager
+
+[The Hendricks Institute, Inc.](http://hendricks.com/), Carpinteria, CA  
 July 1999 - May 2001 (1 year 11 months)
 
 Project manager responsible for IIS/SQL E-Commerce site deployment. Implemented marketing strategies through Affiliate Marketing increasing product placement on the Web. Deployed and managed third-party email marketing solution which increased seminar enrollment and product sales each month. Developed vendor and consumer relations policies centered around customer satisfaction.
@@ -130,11 +140,14 @@ Project manager responsible for IIS/SQL E-Commerce site deployment. Implemented 
 * Produced CD, VHS, cassette and book products sold internationally
 * Presented new products at seminars to groups of 20-100 people
 
-#### Store Manager at Channel Islands Surfboards
+* * *
 
+### Retail Store Manager
+
+[Channel Islands Surfboards](http://cisurfboards.com/), Santa Barbara, CA  
 June 1990 - July 1998 (8 years 2 months)
 
-Started out as Sales Associate, promoted to manager. Managed a team of 10 crew members under high-stress peak season retail conditions. Successfully cultivated a new era of customer service excellence by setting personal examples with difficult customers. Known as the 'goto' person who could make even the most irate customer return happy and satisfied.
+Began as Sales Associate, promoted to manager. Managed a team of 10 crew members under high-stress peak season retail conditions. Successfully cultivated a new era of customer service excellence by setting personal examples with difficult customers. Known as the 'goto' person who could make even the most irate customer return happy and satisfied.
 
 * Contributed to sales increases of 50-500% in key departments
 * Exceeded each days sales goals on a regular basis
@@ -143,15 +156,15 @@ Started out as Sales Associate, promoted to manager. Managed a team of 10 crew m
 
 * * *
 
-### Education
+## Education
 
-#### University of California, Santa Barbara
+### University of California, Santa Barbara
 
-- Bachelor of Arts, Religious Studies, 1996 - 1998
+- Bachelor of Arts, Humanities, 1996 - 1998
 - Certificate, eCommerce, Web Development and Design, 2000 - 2001
 - Activities and Societies: Study abroad in India. Extension studies for professional development.
 
-#### Santa Barbara City College
+### City College, Santa Barbara
 
 - Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
 - Activities and Societies: Study abroad in Mexico. Presidential honors.

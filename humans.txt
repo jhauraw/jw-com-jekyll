@@ -18,8 +18,8 @@ Components:
   * Grunt
   * Jekyll
   * Zurb Foundation
+  * Font Awesome
   * SaSS
-  * CoffeeScript
   * Compass
   * Zepto
   * jQuery

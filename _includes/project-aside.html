@@ -1,0 +1,22 @@
+<article class="page aside" role="article">
+
+  <figure class="feature article-feature">
+    <a href="{{ p.url | to_baseurl }}"><img src="{{ p.image | to_cdnurl }}" alt="{{ p.title | escape_once }}" /></a>
+  </figure><!-- .article-feature -->
+
+  <!-- <header class="article-header">
+    <h2 class="article-title"><a href="{{ p.url | to_baseurl }}">{{ p.title }}</a></h2>
+  </header> -->
+
+  <section class="article-content" itemprop="articleBody">
+    <p>{{ p.excerpt | strip_html | strip_newlines | truncatewords: 25 }}</p>
+  </section>
+
+  <footer class="article-footer" style="font-size: 11px;">
+    Skills:&nbsp;
+
+    {% for s in p.skills %}
+      <span class="label secondary radius">{{ s }}</span>
+    {% endfor %}
+  </footer><!-- .article-footer .article-info -->
+</article>

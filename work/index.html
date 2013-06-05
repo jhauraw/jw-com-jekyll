@@ -1,11 +1,29 @@
 ---
-layout: page
+layout: archive
 subtype: work
 title: Work
 excerpt: |
   Work and portfolio for Jhaura Wachsman, a Southern California based Web Developer. Producing top quality mobile-first responsive web design.
+
+projects:
+  -
+    title: Mime Mail PHP Class
+    url: /work/mimemail/
+    image: /media/work/2004/mimemail-php-class.png
+    skills: [php, oop, mime, rfc2821]
+    excerpt: |
+      PHP Class object for use in generating RFC MIME compliant email message headers and bodies. Supports plain text, HTML or Multipart message formats.
 ---
 
+<ul class="item-index item-grid large-block-grid-5">
+  {% for p in page.projects %}
+  <li>
+    {% include project-aside.html %}
+  </li>
+  {% endfor %}
+</ul><!-- .work -->
+
+<!--
 ## Examples of work...
 
 **Recent Sites** (most completed 100% from start to finish; graphics and
@@ -18,3 +36,4 @@ coding):
   * [FamilyLegalHelp.org](http://familylegalhelp.org)  -  *Wordpress, custom template, Geo-based Lead generation and allocation to clients, 25% conversion rate*
 
 __NB__: May 9, 2013. __Work__ is a _lot_ on the light side right now, sorry. I'm going to be getting up more of my past projects asap, such as newsletter development for companies like GE Supra and Airstream; PHP OOP Classes; complete email publishing systems and more.
+-->

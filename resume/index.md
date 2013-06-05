@@ -3,7 +3,7 @@ layout: page
 subtype: resume
 title: Résumé
 excerpt: |
-  View Jhaura Wachsman's Résumé online or download as PDF. Jhaura is a senior level web developer with a focus on modern mobile-first front-end technologies and responsive design. Contract / Freelance web developer for hire.
+  Jhaura is a senior level web developer rooted in LAMP (PHP / MySQL) with a focus on modern mobile-first front-end technologies and responsive design. Contract, freelance web developer for hire, seeking full-time position. View online, download as PDF.
 ---
 
 <ul class="inline-justified text-right">
@@ -14,100 +14,105 @@ excerpt: |
 </ul>
 
 ## Jhaura Wachsman
-## Web Developer, Internet Marketer
+## Web Developer
 
-Experienced Web Developer and Internet Marketer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user expreiences and profitable bottom lines. 
+Experienced modern web developer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user expreiences and profitable bottom lines. 
 
 Specialized in communication, team leading and excellence in work ethic.
 
-__Contact__
+Currently seeking a full-time position on a team to mastermind excellent code at an awesome company aligned with modern web technologies. Let's connect.
 
-  - Email: <jw@jhaurawachsman.com>
-  - Web: [JhauraWachsman.com](http://{{ site.app.domain }})
+**Contact**
 
-__Network__
+  * Email: <jw@jhaurawachsman.com>
+  * Web: [JhauraWachsman.com](http://{{ site.app.domain }})
 
-  - Twitter: [twitter.com/{{ site.app.twitter }}]({{ '/twitter/' | to_absurl }})
-  - LinkedIn: [linkedin.com/in/{{ site.app.linkedin }}]({{ '/linkedin/' | to_absurl }})
-  - GitHub: [github.com/{{ site.app.github }}]({{ '/github/' | to_absurl }})
+**Network**
+
+  * Twitter: [twitter.com/{{ site.app.twitter }}]({{ '/twitter/' | to_absurl }})
+  * LinkedIn: [linkedin.com/in/{{ site.app.linkedin }}]({{ '/linkedin/' | to_absurl }})
+  * GitHub: [github.com/{{ site.app.github }}]({{ '/github/' | to_absurl }})
 
 * * *
 
 ## Skills
 
-__Building Web Apps__: Responsive frameworks (Zurb Foundation, Twitter Bootstrap). Single Page Applications (SPA, w/ Angular.js, Backbone.js), Static Site Generation (Jekyll, Nanoc), PHP/MySQL (LAMP), HTML5, CSS3, PCI, Payment Gateways, e-commerce and SSL.
+**Building Web Apps**: Responsive frameworks (Zurb Foundation, Twitter Bootstrap). Single Page Applications (SPA), Replicated marketing systems with user customization and billing, Static Site Generation (Jekyll, Nanoc), PHP/MySQL (LAMP), HTML5, CSS3, PCI, Payment Gateways, e-commerce and SSL. Rapidly accelerating JavaScript and Ruby skillset.
 
-__WordPress / Octopress__: Custom templates, plugins and integration with e-commerce solutions. Joomla when required.
+**WordPress / Octopress**: Custom templates, plugins and integration with open-source frameworks, e-commerce and membership solutions.
 
-__High Scalability__: Breaking the 1 second to load benchmark using CDNs, virtual version caching, GZip, optimization, concatenation and minification.
+**High Scalability**: Breaking the 1 second to load benchmark using CDNs, virtual version caching, GZip, optimization, concatenation and minification.
 
-__Internet Marketing__: SEO, Affiliate, Adwords, Adsense, Analytics and Web Master Tools __expertise__ increases monetization, profit and user experience.
+**Internet Marketing**: SEO, Affiliate, Adwords, Adsense, Analytics and Web Master Tools **expertise** increases monetization, profit and user experience.
 
-__Workflow__: Yeoman with Grunt.js for automation, build and deploy. Bower and NPM for package management. Compass and SaSS for CSS. Sublime Text and iTerm for IDE and shell. GIT and GitHub for distributed version control, team work and open-source development.
+**Workflow**: Yeoman with Grunt.js for task automation, build and deploy scipts. Bower, NPM, GEM for package management. Compass and SaSS for CSS. Sublime Text IDE and iTerm shell. GIT and GitHub for distributed version control, team work and open-source development. Photoshop and Illustrator (Sketch, now) for bitmap and vector graphics.
 
 * * *
 
 ## Experience
 
-### Web Developer, Internet Marketer
+### Web Developer
 
 [Wachsman Enterprises](http://{{ site.app.domain }}), Ojai, CA  
 Current
 
-__Web Development and Programming__
+Industry consultant and contract web developer. Foundations in LAMP (PHP / MySQL), accellerating into the future with new front-end technologies and responsive mobile-first methods. Full competency in responsive frameworks such as Twitter Bootstrap and Zurb Foundation and merging them into popular CMS applications such as Wordpress. Competency working in Angular.js, Backbone.js, RUBY and NODE.
 
-* Nine years hand coding PHP (OOP), MySQL, HTML, JavaScript and CSS
-* Full knowledge of WC3 standards for authoring validated code
-* Section 508 and WAI relating to the Americans with Disabilities Act
-* Demonstrated work in Internationalization (i18n) and Localization (l10n)
-* Eight years SSL, credit card authorization and E-Commerce experience
-* Amazon AWS and Cloudfront CDN (Content Delivery Network)
-* Skilled in session management, cookies, frames, forms and debugging
+**Web Development and Programming**
 
-__Web Design__
+  * Nine years hand coding PHP (OOP), MySQL, HTML and CSS. Competent in JavaScript
+  * Full knowledge of WC3 standards for authoring validated code
+  * Section 508 and WAI relating to the Americans with Disabilities Act
+  * Demonstrated work in Internationalization (i18n) and Localization (l10n)
+  * Eight years SSL, credit card authorization and E-Commerce experience
+  * Amazon AWS and Cloudfront CDN (Content Delivery Network)
+  * Skilled in session management, cookies, frames, forms and debugging
 
-* Nine years Photoshop/Image Ready, Flash and Illustrator design experience
-* Expert at making Web pages load faster with image optimization and slices
-* Able to bridge the gap between design and coding departments
-* Re/designed over 50 Websites and over 100 graphic email newsletters
+**Web Design**
 
-__Email Newsletter Design, Development and Systems__
+  * Nine years Photoshop/Image Ready, Flash and Illustrator design experience
+  * Expert at making Web pages load faster with image optimization and slices
+  * Able to bridge the gap between design and coding departments
+  * Re/designed over 50 Websites and over 100 graphic email newsletters
 
-* Photoshop design and HTML/CSS coding 100s of HTML/Text email newsletters
-* Experience with all major ESPs such as Constant Contact and Aweber
-* User experience, web-mail and Outlook tested designs and code
-* Email newsletter optimization to decrease bandwidth costs
+**Email Newsletter Design, Development and Systems**
 
-__Internet Marketing, Direct Response Marketing__
+  * Photoshop design and HTML/CSS coding 100s of HTML/Text email newsletters
+  * Experience with all major ESPs such as Constant Contact and Aweber
+  * User experience, web-mail and Outlook tested designs and code
+  * Email newsletter optimization to decrease bandwidth costs
 
-* Proven profit making campaigns with Google Adwords, Yahoo! and Microsoft
-* Ebay, Amazon Seller, Ads, Associates and API setup and integration
-* PPC, CPM, Adsense, banners, direct mail and email marketing channels
-* Keyword research, market analysis, niche discovery and intelligence
-* Google Analytics custom report creation for conversion performance
-* Tapping every last drop of ROI and profit from revenue sources
-* SEO for natural search ranking and user experience
-* Facebook, Twitter social media App building and integration
+**Internet Marketing, Direct Response Marketing**
 
-__Linux/Unix System Administration__
+  * Proven profit making campaigns with Google Adwords, Yahoo! and Microsoft
+  * Ebay, Amazon Seller, Ads, Associates and API setup and integration
+  * PPC, CPM, Adsense, banners, direct mail and email marketing channels
+  * Keyword research, market analysis, niche discovery and intelligence
+  * Google Analytics custom report creation for conversion performance
+  * Tapping every last drop of ROI and profit from revenue sources
+  * SEO for natural search ranking and user experience
+  * Facebook, Twitter social media App building and integration
 
-* Six years Linux system administration experience - local and remote
+**Linux/Unix System Administration**
+
+  * Six years Linux system administration experience - local and remote
 
 * * *
 
 ### Founder, Lead Web Developer
 
-[Consultlogic, Inc.](http://ndic.com/), Santa Barbara, CA  
+Consultlogic, Inc., Santa Barbara, CA  
 April 2000 - January 2005 (4 years 10 months)
 
 Conceptualized, engineered and programmed PHP/MySQL Web application credited for generating 95% of the business revenue. Setup, optimized, secured and maintained multiple local and remote Linux file, database, email and Web servers responsible for running the core business applications with 99.9% uptime. Simultaneously served as president, CEO, software engineer and customer service agent for four years.
 
-* Created one of the earliest Email Publishing cloud-based services similar to Constant Contact
-* Became known as an expert in email publishing and HTML email
-* Consulted by numerous authors and industry experts on email publishing
-* Solely responsible for tripling new customer growth in two quarters
-* Designed and coded over 100 HTML email newsletters and over 50 Websites
-* Conducted usability and QA testing on over 50 MUAs (mail user agents)
+  * Sold to a Santa Barbara Web Development company in 2005.
+  * Created one of the earliest Email Publishing cloud-based services similar to Constant Contact
+  * Became known as an expert in email publishing and HTML email
+  * Consulted by numerous authors and industry experts on email publishing
+  * Solely responsible for tripling new customer growth in two quarters
+  * Designed and coded over 100 HTML email newsletters and over 50 Websites
+  * Conducted usability and QA testing on over 50 MUAs (mail user agents)
 
 * * *
 
@@ -120,11 +125,11 @@ Created Web-based curriculum for MAT 108 Web Design Tools & Techniques and MAT 1
 
 Created three department websites, including the SBCC Radio property. Provided implementation strategy on web initiatives, Internet business development, web design and web standards to staff.
 
-* Curriculum is still used today by subsequent instructors
-* Students successfully published over 30 live Websites each class
-* Brought in local industry leaders and experts to share experiences
-* Helped with student job placement and internships at local companies
-* Improved and polished public speaking and presentation skills
+  * Curriculum is still used today by subsequent instructors
+  * Students successfully published over 30 live Websites each class
+  * Brought in local industry leaders and experts to share experiences
+  * Helped with student job placement and internships at local companies
+  * Improved and polished public speaking and presentation skills
 
 * * *
 
@@ -135,10 +140,10 @@ July 1999 - May 2001 (1 year 11 months)
 
 Project manager responsible for IIS/SQL E-Commerce site deployment. Implemented marketing strategies through Affiliate Marketing increasing product placement on the Web. Deployed and managed third-party email marketing solution which increased seminar enrollment and product sales each month. Developed vendor and consumer relations policies centered around customer satisfaction.
 
-* Designed and coded graphically rich HTML marketing emails
-* Designed product graphics and copy for use in E-Commerce and marketing
-* Produced CD, VHS, cassette and book products sold internationally
-* Presented new products at seminars to groups of 20-100 people
+  * Designed and coded graphically rich HTML marketing emails
+  * Designed product graphics and copy for use in E-Commerce and marketing
+  * Produced CD, VHS, cassette and book products sold internationally
+  * Presented new products at seminars to groups of 20-100 people
 
 * * *
 
@@ -149,10 +154,10 @@ June 1990 - July 1998 (8 years 2 months)
 
 Began as Sales Associate, promoted to manager. Managed a team of 10 crew members under high-stress peak season retail conditions. Successfully cultivated a new era of customer service excellence by setting personal examples with difficult customers. Known as the 'goto' person who could make even the most irate customer return happy and satisfied.
 
-* Contributed to sales increases of 50-500% in key departments
-* Exceeded each days sales goals on a regular basis
-* Worked with sales representatives in store and at trade shows
-* Created a high standard of customer service
+  * Contributed to sales increases of 50-500% in key departments
+  * Exceeded each days sales goals on a regular basis
+  * Worked with sales representatives in store and at trade shows
+  * Created a high standard of customer service
 
 * * *
 
@@ -160,14 +165,14 @@ Began as Sales Associate, promoted to manager. Managed a team of 10 crew members
 
 ### University of California, Santa Barbara
 
-- Bachelor of Arts, Humanities, 1996 - 1998
-- Certificate, eCommerce, Web Development and Design, 2000 - 2001
-- Activities and Societies: Study abroad in India. Extension studies for professional development.
+  * Bachelor of Arts, Humanities, 1996 - 1998
+  * Certificate, E-Commerce, Web Development and Design, 2000 - 2001
+  * Activities and Societies: Study abroad in India. Extension studies for professional development.
 
 ### City College, Santa Barbara
 
-- Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
-- Activities and Societies: Study abroad in Mexico. Presidential honors.
+  * Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
+  * Activities and Societies: Study abroad in Mexico. Presidential honors.
 
 * * *
 

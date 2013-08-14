@@ -3,7 +3,7 @@ layout: page
 subtype: resume
 title: Résumé
 excerpt: |
-  Jhaura is a senior level web developer rooted in LAMP (PHP / MySQL) with a focus on modern mobile-first front-end technologies and responsive design. Contract, freelance web developer for hire, seeking full-time position. View online, download as PDF.
+  Jhaura is a senior level web developer rooted in LAMP (PHP / MySQL) with a focus on modern mobile-first front-end technologies, responsive design and JavaScript client-side applications. He is a contract/freelance web developer for hire locally and remote. View his résumé online and/or download as PDF.
 ---
 
 <ul class="inline-justified text-right">
@@ -16,11 +16,11 @@ excerpt: |
 ## Jhaura Wachsman
 ## Web Developer
 
-Experienced modern web developer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user expreiences and profitable bottom lines. 
+Experienced modern web developer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user experiences and profitable bottom lines. 
 
 Specialized in communication, team leading and excellence in work ethic.
 
-Currently seeking a full-time position on a team to mastermind excellent code at an awesome company aligned with modern web technologies. Let's connect.
+Currently seeking contract/project work to mastermind excellent code for an awesome company aligned with modern web technologies. Let's connect.
 
 **Contact**
 
@@ -45,7 +45,7 @@ Currently seeking a full-time position on a team to mastermind excellent code at
 
 **Internet Marketing**: SEO, Affiliate, Adwords, Adsense, Analytics and Web Master Tools **expertise** increases monetization, profit and user experience.
 
-**Workflow**: Yeoman with Grunt.js for task automation, build and deploy scipts. Bower, NPM, GEM for package management. Compass and SaSS for CSS. Sublime Text IDE and iTerm shell. GIT and GitHub for distributed version control, team work and open-source development. Photoshop and Illustrator (Sketch, now) for bitmap and vector graphics.
+**Workflow**: Yeoman with Grunt.js for task automation, build and deploy scripts. Bower, NPM, GEM for package management. Compass/SaSS/LESS for efficient CSS. Sublime Text IDE and iTerm shell. GIT and GitHub/Bitbucket for distributed version control, team work and open-source development. Photoshop and Illustrator (Sketch, now) for bitmap and vector graphics.
 
 * * *
 
@@ -56,7 +56,7 @@ Currently seeking a full-time position on a team to mastermind excellent code at
 [Wachsman Enterprises](http://{{ site.app.domain }}), Ojai, CA  
 Current
 
-Industry consultant and contract web developer. Foundations in LAMP (PHP / MySQL), accellerating into the future with new front-end technologies and responsive mobile-first methods. Full competency in responsive frameworks such as Twitter Bootstrap and Zurb Foundation and merging them into popular CMS applications such as Wordpress. Competency working in Angular.js, Backbone.js, RUBY and NODE.
+Industry consultant and contract web developer. Foundations in LAMP (PHP / MySQL), accelerating into the future with new front-end technologies and responsive mobile-first methods. Full competency in responsive frameworks such as Twitter Bootstrap and Zurb Foundation and merging them into popular CMS applications such as Wordpress. Competency working in Angular.js, Backbone.js, RUBY and NODE.
 
 **Web Development and Programming**
 

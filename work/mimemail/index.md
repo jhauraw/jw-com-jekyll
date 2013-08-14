@@ -28,15 +28,45 @@ Create a new instance of the `MimeMail` class:
 
 ```php
 <?php
-  $hpart =& $mmime->part(array(
-    'type'     => 'text/html',
-    'data'     => $htmlmsg,
-    'charset'  => 'iso-8859-1',
-    'encoding' => 'quoted-printable'));
+$textmsg = <<<END
+Hello World,
 
-  echo $mmime->hdrs2Str();
-  echo "\n";
-  echo $mmime->body2Str();
+Messages created with MimeMail are RFC compliant!
+
+All the best,
+The Author
+END;
+
+$htmlmsg = <<<END
+<html>
+  <head>
+    <title>PHP MimeMail Documentation</title>
+  </head>
+  <body>
+    <b>Hello World</b>,
+    <p>
+      Messages created with MimeMail are RFC compliant!
+    </p>
+    All the best,
+    <br />
+    The Author
+  </body>
+</html>
+END;
+
+$mmime =& new MimeMail(array('type' => 'multipart/alternative'));
+
+$tpart =& $mmime->part(array(
+  'type'     => 'text/plain',
+  'data'     => $textmsg,
+  'charset'  => 'us-ascii',
+  'encoding' => '7bit'));
+
+$hpart =& $mmime->part(array(
+  'type'     => 'text/html',
+  'data'     => $htmlmsg,
+  'charset'  => 'iso-8859-1',
+  'encoding' => 'quoted-printable'));
 ?>
 ```
 
@@ -78,7 +108,6 @@ Content-Length: 235
   <head>
     <title>MIME Class 1.0 Documentation HTML Example</title>
   </head>
-
   <body>
     <b>Hello World</b>,
     <p>
@@ -91,6 +120,24 @@ Content-Length: 235
 </html>
 
 --_----=_Part_278ec89a148a9ff6fd2faf2e9798d0db_--
+```
+
+Send the message via PHP's `mail()` function:
+
+```php
+<?php
+# Setup variables with desired values.
+$to      = 'sue@dev.null';     # our friend Sue, the recipient
+$subject = 'Hello Sue!';       # subject
+$message = $mmime->body2Str(); # output message body to string
+$headers = $mmime->hdrs2Str(); # output message headers to string
+
+# Input into PHP's mail() function.
+$res = mail($to, $subject, $message, $headers); # send mail
+
+# Verify mail was sent.
+echo ($res) ? 'Mail Sent!' : 'Mail Error!';
+?>
 ```
 
 See the documentation via the _Project URL_ above for full usage and examples.

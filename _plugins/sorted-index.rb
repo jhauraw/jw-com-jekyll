@@ -39,7 +39,7 @@ module Jekyll
 
       pages = Pager.calculate_pages(posts[1], site.config['paginate'].to_i)
       (1..pages).each do |num_page|
-        pager = Pager.new(site.config, num_page, posts[1], pages)
+        pager = Pager.new(site, num_page, posts[1], pages)
 
         category = sanitize_str(posts[0])
 

@@ -2,9 +2,7 @@
 # https://github.com/realjenius/realjenius.com/blob/master/_plugins/cat_and_tag_generator.rb
 
 # REQUIRES plugin url-helper-filter.rb
-# So we can use url-helper-filter.rb method sanitize_str to clean up
-# any non-standard category names.
-include Jekyll::Filters
+require_relative 'url-helper-filter'
 
 module Jekyll
   class SortedIndex < Page
@@ -35,13 +33,15 @@ module Jekyll
 
     def write_sorted_index(site, posts)
 
+      SortedGenerator.extend(UrlHelperFilter)
+
       posts[1] = posts[1].sort_by { |p| -p.date.to_f }
 
       pages = Pager.calculate_pages(posts[1], site.config['paginate'].to_i)
       (1..pages).each do |num_page|
         pager = Pager.new(site, num_page, posts[1], pages)
 
-        category = sanitize_str(posts[0])
+        category = SortedGenerator.sanitize_str(posts[0])
 
         path = "/#{category}"
 

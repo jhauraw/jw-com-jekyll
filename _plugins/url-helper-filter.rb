@@ -1,10 +1,13 @@
 # Jekyll URL Helper Filter Plugin with CDN Support
-# Version: 1.0.0
+# Version: 1.5.0
+# Version Date: 2013-08-27
 # Release Date: 2013-05-24
 # License: MIT
 # (c) Copyright Jhaura Wachsman, http://jhaurawachsman.com
 module Jekyll
-  module Filters
+  module UrlHelperFilter
+
+    @@sc = Jekyll.configuration({})
 
     # See the README for usage examples.
 
@@ -12,12 +15,12 @@ module Jekyll
 
     # Internal: Get the 'url' variable value from _config.yml.
     def get_url
-      url = @context.registers[:site].config['url']
+      url = @@sc['url']
     end
 
     # Internal: Get the 'baseurl' variable value from _config.yml.
     def get_baseurl
-      baseurl = @context.registers[:site].config['baseurl']
+      baseurl = @@sc['baseurl']
     end
 
     # The to_ methods transform a root-relative path into the path
@@ -100,21 +103,22 @@ module Jekyll
     def to_cdnurl(input)
 
       require 'zlib'
+      require 'date'
 
-      cdn_hosts = @context.registers[:site].config['app']['cdn_hosts']
+      cdn_hosts = @@sc['app']['cdn_hosts']
 
       cdn_num = cdn_hosts.length
       hash = Zlib::crc32(input)
       cdn_sub = hash % cdn_num
       cdn_host = cdn_hosts[cdn_sub]
 
-      release = @context.registers[:site].config['app']['release']
+      release = @@sc['app']['release']
 
       if !release
-        release = @context.registers[:site].time.strftime('%y%m%d')
+        release = Time.now.strftime('%y%m%d')
       end
 
-      prefix = @context.registers[:site].config['app']['prefix']
+      prefix = @@sc['app']['prefix']
 
       if !prefix
         prefix = 'v'
@@ -124,7 +128,7 @@ module Jekyll
       # puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
 
       # If developing locally, point URLs locally, instead of CDN
-      if @context.registers[:site].config['app']['mode'] == 'development'
+      if @@sc['app']['mode'] == 'development'
         input = to_baseurl(input)
       else
         input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"
@@ -165,4 +169,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_filter(Jekyll::Filters)
+Liquid::Template.register_filter(Jekyll::UrlHelperFilter)

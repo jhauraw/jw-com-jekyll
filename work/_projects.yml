@@ -1,0 +1,32 @@
+-
+  code:
+    -
+      title: Mime Mail PHP Class
+      url: /work/mimemail/
+      image: /media/work/2004/mimemail-php-class.png
+      skills: [php, oop, mime, rfc2821]
+      excerpt: |
+        PHP Class object for use in generating RFC MIME compliant email message headers and bodies. Supports plain text, HTML or Multipart message formats.
+    -
+      title: Jekyll URL Helper Filter Plugin
+      url: /2013/jekyll-url-helper-filter-plugin/
+      image: /media/work/2013/jekyll-url-helper-filter-plugin.png
+      skills: [ruby, jekyll, liquid, regex]
+      excerpt: |
+        A Ruby Jekyll plugin with a Liquid Filter and support for CDN (Content Delivery Networks) that allows you to abstract your sites URLs. By using this plugin you only ever have to change your URL components in one place.
+-
+  websites:
+    -
+      title: MotionUnlimited.net
+      url: /work/websites/#motionunlimited-net
+      image: /media/work/2013/motionunlimited-net.jpg
+      skills: [wordpress, php, aweber, css3]
+      excerpt: |
+        A port from Joomla to Wordpress with a customized third-party theme which integrates with MotionUnlimted's scheduling and booking software. Switched from MailChimp to Aweber and integrated sign-up forms.
+    -
+      title: LiteTrail.com
+      url: /work/websites/#litetrail-com
+      image: /media/work/2012/litetrail-com.jpg
+      skills: [wordpress, php, authorize-net, open-cart]
+      excerpt: |
+        Wordpress and OpenCart e-commerce with custom templates, and global header / footer integration for unified UI across the two software platforms. Unique "Gear Guide" section showcasing Pinterest style blocks with individual detail pages.

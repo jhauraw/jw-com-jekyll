@@ -263,6 +263,8 @@ module.exports = function(grunt) {
 
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
+  grunt.loadNpmTasks('grunt-responsive-images');
+
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 };

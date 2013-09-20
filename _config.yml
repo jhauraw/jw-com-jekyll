@@ -23,7 +23,7 @@ app:
   # MODE
   # Switches some URL paths to Relative, Absolute or CDN.
   # Options: (development|production)
-  mode: development
+  mode: production
 
   # CDN ==================================================== #
 

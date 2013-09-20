@@ -49,15 +49,15 @@
         <div class="large-8 large-centered columns">
           <ul class="inline-list">
             <li class="share-facebook">
-              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label"><i class="icon-facebook-sign"></i> Share</span></a>
+              <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label"><i class="icon-facebook-sign"></i> Share <span class="share-count">{{ page.url | to_absurl | get_stats_facebook }}</span></span></a>
             </li>
 
             <li class="share-twitter">
-              <a target="_blank" href="https://twitter.com/intent/tweet?url={{ page.url | to_absurl | escape_once }}&amp;text={{ page.title | escape_once }}&amp;via={{ site.app.twitter }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=275,width=600');return false;"><span class="label"><i class="icon-twitter"></i> Tweet</span></a>
+              <a target="_blank" href="https://twitter.com/intent/tweet?url={{ page.url | to_absurl | escape_once }}&amp;text={{ page.title | escape_once }}&amp;via={{ site.app.twitter }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=275,width=600');return false;"><span class="label"><i class="icon-twitter"></i> Tweet <span class="share-count">{{ page.url | to_absurl | get_stats_twitter }}</span></span></a>
             </li>
 
             <li class="share-gplus">
-              <a target="_blank" href="https://plus.google.com/share?url={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label"><i class="icon-google-plus"></i> Share</span></a>
+              <a target="_blank" href="https://plus.google.com/share?url={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label"><i class="icon-google-plus"></i> Share <span class="share-count">{{ page.url | to_absurl | get_stats_gplus }}</span></span></a>
             </li>
 
             <li class="share-email">

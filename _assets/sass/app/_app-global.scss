@@ -569,6 +569,15 @@ article {
         color: #666;
       }
     }
+
+    .share-count {
+      border: 1px solid #ddd;
+      padding: .1em .3em;
+      color: #666;
+      text-shadow: none;
+      font-weight: normal;
+      border-radius: 1px;
+    }
   }
 
   .article-meta {

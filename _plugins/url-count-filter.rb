@@ -59,14 +59,12 @@ module Jekyll
 
         data = open(apiurl).read
 
-        data.split('window.__SSR = {')[1]
+        data = data.split('window.__SSR = {')[1]
 
-        data.split('};')[0]
+        data = data.split('};')[0]
 
-        if %w( c: ).include?(data)
-          data.split("c:")[1]
-
-          data.split(",")[0].strip.to_i
+        if data.include? 'c:'
+          data = data.split('c:')[1].split(',')[0].strip.to_i
         else
           data = 0
         end

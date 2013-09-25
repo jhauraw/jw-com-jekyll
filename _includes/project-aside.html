@@ -1,7 +1,7 @@
 <article class="page aside" role="article">
 
   <figure class="feature article-feature">
-    <a href="{{ p.url | to_baseurl }}"><img src="{{ p.image }}" alt="{{ p.title | escape_once }}" /></a>
+    <a href="{{ p.url | to_baseurl }}"><img src="{{ p.image | to_cdnurl }}" alt="{{ p.title | escape_once }}" /></a>
   </figure><!-- .article-feature -->
 
   <header class="article-header">

@@ -63,6 +63,7 @@ module Jekyll
 
         data = data.split('};')[0]
 
+        # if no shares yet, 'c:' string is not present
         if data.include? 'c:'
           data = data.split('c:')[1].split(',')[0].strip.to_i
         else

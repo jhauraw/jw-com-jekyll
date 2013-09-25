@@ -183,14 +183,26 @@ module.exports = function(grunt) {
 
     /* SHELL =========================================================== */
     shell: {
-      jekyll_build: {
-        command: 'jekyll build --trace',
+      jekyll_build_dev: {
+        command: 'jekyll build --trace --config _config.yml,_config_dev.yml',
         options: {
           stdout: true
         }
       },
-      jekyll_serve: {
-        command: 'jekyll serve --trace',
+      jekyll_serve_dev: {
+        command: 'jekyll serve --trace --config _config.yml,_config_dev.yml',
+        options: {
+          stdout: true
+        }
+      },
+      jekyll_build_prod: {
+        command: 'jekyll build --trace --config _config.yml,_config_prod.yml',
+        options: {
+          stdout: true
+        }
+      },
+      jekyll_serve_prod: {
+        command: 'jekyll serve --trace --config _config.yml,_config_prod.yml',
         options: {
           stdout: true
         }
@@ -210,7 +222,7 @@ module.exports = function(grunt) {
       },
       js: {
         files: '_assets/js/**/*.js',
-        tasks: ['jshint', 'concat', 'copy', 'clean', 'shell:jekyll_serve'],
+        tasks: ['jshint', 'concat', 'copy', 'clean', 'shell:jekyll_serve_dev'],
         options: {
           nospawn: true,
           interrupt: true
@@ -218,7 +230,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: '_assets/sass/**/*.scss',
-        tasks: ['compass', 'clean', 'shell:jekyll_serve'],
+        tasks: ['compass', 'clean', 'shell:jekyll_serve_dev'],
         options: {
           nospawn: true,
           interrupt: true
@@ -226,7 +238,7 @@ module.exports = function(grunt) {
       },
       ext: {
         files: ['!_site/**/*', '!_assets/**/*', '!node_modules/**/*', '!bower_components/**/*', '**/*.md', '**/*.html', '**/*.yml', '**/*.txt', '**/*.xml'],
-        tasks: ['shell:jekyll_serve'],
+        tasks: ['shell:jekyll_serve_dev'],
         options: {
           nospawn: true,
           interrupt: true
@@ -239,17 +251,17 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['shell:jekyll_serve', 'watch']);
+  grunt.registerTask('default', ['shell:jekyll_serve_dev', 'watch']);
 
   // DEV Mode: Run this first one time to build out the _assets into /css and /js
-  grunt.registerTask('build-dev', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'clean:post', 'shell:jekyll_build']);
+  grunt.registerTask('build-dev', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'clean:post', 'shell:jekyll_build_dev']);
 
    /*
     PROD Mode: Run this when you are ready to DEPLOY.
     Be sure to change your site.url option in _config.yml
     from your DEV to your PROD url.
   */
-  grunt.registerTask('build-prod', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'cssmin', 'uglify', 'clean:post', 'shell:jekyll_build', 'htmlmin']);
+  grunt.registerTask('build-prod', ['clean:pre', 'compass', 'jshint', 'concat', 'copy', 'cssmin', 'uglify', 'clean:post', 'shell:jekyll_build_prod', 'htmlmin']);
 
   grunt.loadNpmTasks('grunt-shell');
   grunt.loadNpmTasks('grunt-contrib-watch');

@@ -18,13 +18,6 @@ app:
   # equal 250115
   release: 100017
 
-  # Mode =================================================== #
-
-  # MODE
-  # Switches some URL paths to Relative, Absolute or CDN.
-  # Options: (development|production)
-  mode: production
-
   # CDN ==================================================== #
 
   # CDN HOSTS

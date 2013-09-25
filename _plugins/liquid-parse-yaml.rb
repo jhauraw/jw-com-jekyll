@@ -28,6 +28,8 @@ module Jekyll
 
     def render(context)
 
+      info = { :registers => { :site => context.registers[:site] } }
+
       template = File.read(@template_path)
       parsed = Liquid::Template.parse(template)
 
@@ -41,7 +43,7 @@ module Jekyll
             projects.each do |p|
 
               output += '<li>'
-              output += parsed.render('p' => p)
+              output += parsed.render({'p' => p}, info)
               output += '</li>'
             end
           end

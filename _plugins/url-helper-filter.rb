@@ -7,20 +7,18 @@
 module Jekyll
   module UrlHelperFilter
 
-    @@sc = Jekyll.configuration({})
-
     # See the README for usage examples.
 
     # The get_ methods grabs/returns a value from _config.yml.
 
     # Internal: Get the 'url' variable value from _config.yml.
     def get_url
-      url = @@sc['url']
+      url = @context.registers[:site].config['url']
     end
 
     # Internal: Get the 'baseurl' variable value from _config.yml.
     def get_baseurl
-      baseurl = @@sc['baseurl']
+      baseurl = @context.registers[:site].config['baseurl']
     end
 
     # The to_ methods transform a root-relative path into the path
@@ -28,15 +26,11 @@ module Jekyll
 
     # Public: Append the 'baseurl' variable to 'input'.
     def to_baseurl(input)
-
-      # baseurl << input # wouldn't work, created a huge concat chain
       input = "#{get_baseurl}#{input}"
     end
 
     # Public: Append the 'url' variable to 'input'.
     def to_absurl(input)
-
-      # url + baseurl << input
       input = "#{get_url}#{get_baseurl}#{input}"
     end
 
@@ -105,20 +99,20 @@ module Jekyll
       require 'zlib'
       require 'date'
 
-      cdn_hosts = @@sc['app']['cdn_hosts']
+      cdn_hosts = @context.registers[:site].config['app']['cdn_hosts']
 
       cdn_num = cdn_hosts.length
       hash = Zlib::crc32(input)
       cdn_sub = hash % cdn_num
       cdn_host = cdn_hosts[cdn_sub]
 
-      release = @@sc['app']['release']
+      release = @context.registers[:site].config['app']['release']
 
       if !release
         release = Time.now.strftime('%y%m%d')
       end
 
-      prefix = @@sc['app']['prefix']
+      prefix = @context.registers[:site].config['app']['prefix']
 
       if !prefix
         prefix = 'v'
@@ -128,7 +122,7 @@ module Jekyll
       # puts "\nInput: #{input}\nCDN Host: #{cdn_host}\nCDN Sub: #{cdn_sub}\nCDN Num: #{cdn_num}\nRelease: #{release}\nHash: #{hash}\n//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}\n"
 
       # If developing locally, point URLs locally, instead of CDN
-      if @@sc['app']['mode'] == 'development'
+      if @context.registers[:site].config['app']['mode'] == 'development'
         input = to_baseurl(input)
       else
         input = "//#{cdn_host}#{get_baseurl}/#{prefix}#{release}#{input}"

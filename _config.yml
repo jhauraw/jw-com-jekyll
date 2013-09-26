@@ -18,6 +18,9 @@ app:
   # equal 250115
   release: 100017
 
+  # MODE =================================================== #
+  # Set in separate config files: _config_dev.yml, _config_prod.yml
+
   # CDN ==================================================== #
 
   # CDN HOSTS

@@ -60,6 +60,10 @@
               <a target="_blank" href="https://plus.google.com/share?url={{ page.url | to_absurl | escape_once }}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="label"><i class="icon-google-plus"></i> Share <span class="share-count">{{ page.url | to_absurl | get_stats_gplus }}</span></span></a>
             </li>
 
+            <li class="share-pinterest">
+              <a target="_blank" href="http://pinterest.com/pin/create/button/?url={{ page.url | remove: 'index.html' | to_absurl | escape_once }}&amp;description={{ page.excerpt | escape_once }}{% if page.feature.image.src %}&amp;media={{ page.feature.image.src | to_absurl | escape_once }}{% endif %}" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=275,width=600');return false;"><span class="label"><i class="icon-pinterest"></i> Pin <span class="share-count">{{ page.url | remove: 'index.html' | to_absurl | get_stats_pinterest }}</span></span></a>
+            </li>
+
             <li class="share-email">
               <a href="mailto:?subject={{ page.title | escape_once }}&amp;body={{ site.app.name | prepend: 'Check out this post from ' | append: ', ' | append: site.app.tagline | append: ':' | escape_once }}%0A%0A{{ page.url | to_absurl | escape_once }}"><span class="label"><i class="icon-envelope"></i> Email</span></a>
             </li>
@@ -72,7 +76,7 @@
       <div class="row">
         <div class="large-8 large-centered columns">
 
-          <time class="published updated tdn" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: '%b %d %Y' }}</time>&nbsp;&nbsp;/&nbsp;&nbsp;by <a rel="author" href="http://{% if page.author.link %}{{ page.author.link }}{% else %}{{ site.app.author.link }}{% endif %}" class="url fn tdn" target="_blank"><span class="author">{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.app.author.name }}{% endif %}</span></a>{% if page.category %}&nbsp;&nbsp;/&nbsp;&nbsp;<a href="{{ page.category | sanitize_str | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a>{% endif %}
+          <time class="published updated" datetime="{{ page.date | date: '%Y-%m-%d' }}" pubdate>{{ page.date | date: '%b %d %Y' }}</time>&nbsp;&nbsp;/&nbsp;&nbsp;by <a href="http://{% if page.author.link %}{{ page.author.link }}{% else %}{{ site.app.author.link }}{% endif %}" target="_blank"><span class="author">{% if page.author.name %}{{ page.author.name }}{% else %}{{ site.app.author.name }}{% endif %}</span></a>{% if page.category %}&nbsp;&nbsp;/&nbsp;&nbsp;<a href="{{ page.category | sanitize_str | prepend: '/' | append: '/' | to_baseurl }}">{{ page.category | upcase }}</a>{% endif %}
 
         </div><!-- .columns -->
       </div><!-- .row -->

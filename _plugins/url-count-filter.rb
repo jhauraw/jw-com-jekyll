@@ -21,9 +21,14 @@ module Jekyll
       begin
         raise 'Bad URL' if %w( http https ).include?(url)
 
-        data = open(apiurl).read
-        data = JSON.parse(data)
-        data[url]['shares']
+        if @context.registers[:site].config['app']['mode'] == 'development'
+          0
+        else
+          data = open(apiurl).read
+          data = JSON.parse(data)
+
+          data[url]['shares'] ||= 0
+        end
 
       rescue Exception => e
         puts "get_stats_facebook -> #{e} : #{url}"
@@ -39,12 +44,44 @@ module Jekyll
       begin
         raise 'Bad URL' if %w( http https ).include?(url)
 
-        data = open(apiurl).read
-        data = JSON.parse(data)
-        data['count']
+        if @context.registers[:site].config['app']['mode'] == 'development'
+          0
+        else
+          data = open(apiurl).read
+          data = JSON.parse(data)
+
+          data['count'] ||= 0
+        end
 
       rescue Exception => e
         puts "get_stats_twitter -> #{e} : #{url}"
+        data = 0
+      end
+    end
+
+    def get_stats_pinterest(url)
+
+      apistub = 'http://api.pinterest.com/v1/urls/count.json?url='
+      apiurl = "#{apistub}#{URI.escape(url)}"
+
+      begin
+        raise 'Bad URL' if %w( http https ).include?(url)
+
+        if @context.registers[:site].config['app']['mode'] == 'development'
+          0
+        else
+          data = open(apiurl).read
+
+          data.strip!
+          data.sub! 'receiveCount(', ''
+          data.chop!
+          data = JSON.parse(data)
+
+          data['count'] ||= 0
+        end
+
+      rescue Exception => e
+        puts "get_stats_pinterest -> #{e} : #{url}"
         data = 0
       end
     end
@@ -57,17 +94,21 @@ module Jekyll
       begin
         raise 'Bad URL' if %w( http https ).include?(url)
 
-        data = open(apiurl).read
-
-        data = data.split('window.__SSR = {')[1]
-
-        data = data.split('};')[0]
-
-        # if no shares yet, 'c:' string is not present
-        if data.include? 'c:'
-          data = data.split('c:')[1].split(',')[0].strip.to_i
+        if @context.registers[:site].config['app']['mode'] == 'development'
+          0
         else
-          data = 0
+          data = open(apiurl).read
+
+          data = data.split('window.__SSR = {')[1]
+
+          data = data.split('};')[0]
+
+          # if no shares yet, 'c:' string is not present
+          if data.include? 'c:'
+            data = data.split('c:')[1].split(',')[0].strip.to_i
+          else
+            data = 0
+          end
         end
 
       rescue Exception => e

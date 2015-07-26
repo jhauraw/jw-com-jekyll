@@ -1,6 +1,7 @@
 ---
 layout: page
 subtype: policy
+noindex: true
 title: Disclosure Statement
 excerpt: |
   Disclosure Statement for this website.

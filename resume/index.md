@@ -3,7 +3,7 @@ layout: page
 subtype: resume
 title: Résumé
 excerpt: |
-  Jhaura is a senior level web developer rooted in LAMP (PHP / MySQL) with a focus on modern mobile-first front-end technologies, responsive design and JavaScript client-side applications. He is a contract/freelance web developer for hire locally and remote. View his résumé online and/or download as PDF.
+  Jhaura is a senior level start-up entrepreneur with core skills as web developer rooted in LEMP|LAMP (PHP / MySQL) with a focus on modern mobile-first front-end technologies, responsive design, and Internet Marketing. View his résumé online and/or download as PDF.
 ---
 
 <ul class="inline-justified text-right">
@@ -14,13 +14,11 @@ excerpt: |
 </ul>
 
 ## Jhaura Wachsman
-## Web Developer
+## Entrepreneur, PHP Developer, Internet Marketer
 
-Experienced modern web developer mining the technical possibilities of the Internet to its full capacity, while pushing the limits in order to create excellent user experiences and profitable bottom lines. 
+Jhaura Wachsman is an Internet Entrepreneur with core skills in start-up founding, PHP development (Laravel), and Internet Marketing.
 
-Specialized in communication, team leading and excellence in work ethic.
-
-Currently seeking contract/project work to mastermind excellent code for an awesome company aligned with modern web technologies. Let's connect.
+Specialized in communication, team leading, and excellence in work ethic.
 
 **Contact**
 
@@ -37,7 +35,7 @@ Currently seeking contract/project work to mastermind excellent code for an awes
 
 ## Skills
 
-**Building Web Apps**: Responsive frameworks (Zurb Foundation, Twitter Bootstrap). Single Page Applications (SPA), Replicated marketing systems with user customization and billing, Static Site Generation (Jekyll, Nanoc), PHP/MySQL (LAMP), HTML5, CSS3, PCI, Payment Gateways, e-commerce and SSL. Rapidly accelerating JavaScript and Ruby skillset.
+**Building Web Apps**: Responsive frameworks (Twitter Bootstrap|Zurb Foundation). Single Page Applications (SPA), Replicated marketing systems with user customization and billing, Static Site Generation (Jekyll|Nanoc), PHP/MySQL (LEMP|LAMP), Laravel 4/5, HTML5, CSS3, PCI, Payment Gateways, e-commerce and SSL. Rapidly accelerating JavaScript and Ruby skillset.
 
 **WordPress / Octopress**: Custom templates, plugins and integration with open-source frameworks, e-commerce and membership solutions.
 
@@ -45,22 +43,23 @@ Currently seeking contract/project work to mastermind excellent code for an awes
 
 **Internet Marketing**: SEO, Affiliate, Adwords, Adsense, Analytics and Web Master Tools **expertise** increases monetization, profit and user experience.
 
-**Workflow**: Yeoman with Grunt.js for task automation, build and deploy scripts. Bower, NPM, GEM for package management. Compass/SaSS/LESS for efficient CSS. Sublime Text IDE and iTerm shell. GIT and GitHub/Bitbucket for distributed version control, team work and open-source development. Photoshop and Illustrator (Sketch, now) for bitmap and vector graphics.
+**Workflow**: Gulp|Grunt for task automation, build and deploy scripts. Bower, NPM, GEM for package management. LESS|Compass|SaSS for efficient CSS. PHPStorm|Sublime Text IDE and iTerm shell. GIT using GitHub|Bitbucket for distributed version control, team work and open-source development. Photoshop and Illustrator (Sketch) for bitmap and vector graphics.
 
 * * *
 
 ## Experience
 
-### Web Developer
+### Entrepreneur, SaSS Web Apps, Internet Marketing
 
-[Wachsman Enterprises](http://{{ site.app.domain }}), Ojai, CA  
+Self, Ojai, CA  
 Current
 
-Industry consultant and contract web developer. Foundations in LAMP (PHP / MySQL), accelerating into the future with new front-end technologies and responsive mobile-first methods. Full competency in responsive frameworks such as Twitter Bootstrap and Zurb Foundation and merging them into popular CMS applications such as Wordpress. Competency working in Angular.js, Backbone.js, RUBY and NODE.
+Coding with PHP and building startups as co-founder and CTO.
 
 **Web Development and Programming**
 
-  * Nine years hand coding PHP (OOP), MySQL, HTML and CSS. Competent in JavaScript
+  * Over 10 years hand coding PHP, MySQL, HTML, and CSS. Competent in JavaScript
+  * LEMP, LAMP, with a focus on Laravel 4/5 for SaSS web apps.
   * Full knowledge of WC3 standards for authoring validated code
   * Section 508 and WAI relating to the Americans with Disabilities Act
   * Demonstrated work in Internationalization (i18n) and Localization (l10n)
@@ -70,7 +69,7 @@ Industry consultant and contract web developer. Foundations in LAMP (PHP / MySQL
 
 **Web Design**
 
-  * Nine years Photoshop/Image Ready, Flash and Illustrator design experience
+  * Over 10 years Photoshop/Image Ready, Flash and Illustrator design experience
   * Expert at making Web pages load faster with image optimization and slices
   * Able to bridge the gap between design and coding departments
   * Re/designed over 50 Websites and over 100 graphic email newsletters
@@ -173,37 +172,3 @@ Began as Sales Associate, promoted to manager. Managed a team of 10 crew members
 
   * Associate of Arts, Liberal Studies / Spanish, 1993 - 1996
   * Activities and Societies: Study abroad in Mexico. Presidential honors.
-
-* * *
-
-### Interests
-
-Surfing, ultralight backpacking, meditation, traveling the world and gardening. Nature, the ocean and rivers, spirituality, Helping others create abundance in their lives. Philanthropy.
-
-* * *
-
-### Recommendations from LinkedIn
-
-*"Jhaura provided the necessary expertise that we lacked with our staff. Through a dedication to getting the job done right and training our staff, Jhaura left us with a better web presence than we could have ever expected."*
-
-— Stephen DaVega, Chair Multimedia Dept., Santa Barbara City College
-
-*"Jhaura explained everything in detail and it was really a pleasure to work with him. I hope we have the chance to work together again."*
-
-— Daniela Dimitrova, Graphic Designer
-
-*"Jhaura has outstanding capabilities and capacities as exemplified in his personality and his educational, technical and organizational achievements. With his background experiences, Jhaura utilizes the highest self motivation for goal accomplishment yet also exhibits an unselfish desire which empowers him to seek resources that will aide in the advancement and eventual success of the task at hand."*
-
-— Douglas Galati, Advisor, Board of Directors, Carpinteria Skate Foundation
-
-*"I have worked with Jhaura for a year and a half. I have always found him to be competent, enthusiastic, and accessible. Jhaura is a person who has a lot of wonderful ideas about business, and is extremely generous with them, always. But probably the most important thing I can say about Jhaura is that he is a person of high integrity at all times, and in all circumstances."*
-
-— Felicia Saunders, Sales Manager, Zrii
-
-*"Jhaura is a dedicated and innovative leader. He is always looking for ways to improve and expand himself, his business, and the people he works with. If you want to stay one step ahead, you should consider working with Jhaura. Top Notch!"*
-
-— Doug Conklin, Sales Manager, Zrii
-
-*"Thorough, smart and dedicated to making things happen. Jhaura is someone you want to associated with."*
-
-— Don Campbell, President, Inside Out Landscapes

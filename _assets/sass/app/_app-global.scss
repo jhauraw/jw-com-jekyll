@@ -178,7 +178,9 @@ html #peek, body #peek {
   } // .navsection
 } // #navbar
 
-@media #{$topbar-media-query} {
+// @media #{$topbar-media-query} {
+
+@media only screen and (min-width:58.75em) {
 
   .navwrap {
     border-bottom: 1px solid #2693ba;
@@ -527,11 +529,12 @@ article {
     }
 
     .label {
-      font-size: emCalc(11px);
+      font-size: emCalc(10px);
+      font-weight: normal;
       letter-spacing: 1px;
       text-transform: uppercase;
       color: #888;
-      padding: .7em .5em;
+      padding: .4em .4em;
       border: 0 none;
       background: #f3f3f3;
 
@@ -561,6 +564,12 @@ article {
     .share-gplus {
       [class^="icon-"], [class*=" icon-"] {
         color: #dd4a38;
+      }
+    }
+
+    .share-pinterest {
+      [class^="icon-"], [class*=" icon-"] {
+        color: #cc2127;
       }
     }
 

@@ -26,11 +26,15 @@ app:
   # CDN HOSTS
   # Order matters. Pos 1 is host 0, Pos 2 is host 1 etc.
   # Change to CNAME hosts if you don't need SSL.
+  # d4yblnny9djlk.cloudfront.net
+  # d1hhryxrxet0hj.cloudfront.net
+  # d2821b5m3tucp6.cloudfront.net
+  # d3dfdi6g2ekadr.cloudfront.net
   cdn_hosts:
-    - d4yblnny9djlk.cloudfront.net
-    - d1hhryxrxet0hj.cloudfront.net
-    - d2821b5m3tucp6.cloudfront.net
-    - d3dfdi6g2ekadr.cloudfront.net
+    - jhaurawachsman.com
+    - jhaurawachsman.com
+    - jhaurawachsman.com
+    - jhaurawachsman.com
 
   # Locale and encoding ==================================== #
   dir: rtl
@@ -41,9 +45,12 @@ app:
 
   # Name (Brand), Tagline and Meta Image (Og) ============== #
   name: Jhaura Wachsman
-  tagline: 'Web Developer, Internet Marketer'
+  tagline: 'Entrepreneur, PHP Dev, Internet Marketer'
   description: |
-    Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
+    Jhaura Wachsman is an Internet Entrepreneur with core skills in start-up founding, PHP development (Laravel), and Internet Marketing.
+
+# description: |
+  #   Jhaura Wachsman is a web developer who delivers modern mobile-first web applications using today's most advanced technologies and techniques so that your website delivers an exceptional user experience.
 
   # Contact and Domain ===================================== #
   email: jw@jhaurawachsman.com
@@ -53,6 +60,7 @@ app:
   author:
     name: Jhaura Wachsman
     link: twitter.com/JhauraWachsman
+    gplus: 103492502746159725544
 
   # Social Media User Names (Not full URL) ================= #
   github: jhauraw
@@ -80,7 +88,7 @@ app:
   categories:
     - web development
     - internet marketing
-    - workflow
+    - digital nomad
     - lifestyle
     - business
     - news
@@ -91,10 +99,10 @@ app:
       slug: articles
       name: Articles
       icon: beaker
-    -
-      slug: work
-      name: Work
-      icon: picture
+    # -
+    #   slug: work
+    #   name: Work
+    #   icon: picture
     -
       slug: resume
       name: Résumé

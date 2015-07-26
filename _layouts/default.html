@@ -11,13 +11,14 @@
   <link rel="stylesheet" href="{{ '/assets/vendor.css' | to_cdnurl }}" />
   <link rel="stylesheet" href="{{ '/assets/app.css' | to_cdnurl }}" />
 
-  <link type="text/plain" rel="author" href="{{ '/humans.txt' | to_baseurl }}" />
-
   <link rel="alternate" type="application/atom+xml" title="{{ site.app.name }} - ATOM RSS Feed" href="//feeds.feedburner.com/{{ site.app.feed-name }}" />
 
   <meta property="fb:app_id" content="{{ site.app.facebook-appid }}" />
   <meta property="fb:admins" content="{{ site.app.facebook-admin }}" />
   <link rel="publisher" href="https://plus.google.com/{{ site.app.gplus-publisher }}" />
+  {% if page.type == 'post' %}<link rel="author" href="https://plus.google.com/{% if page.author.gplus %}{{ page.author.gplus }}{% else %}{{ site.app.author.gplus }}{% endif %}" />{% endif %}
+
+  <link type="text/plain" href="{{ '/humans.txt' | to_baseurl }}" />
 
   <link rel="apple-touch-icon" href="{{ '/media/app/apple-touch-icon.png' | to_cdnurl }}"/>
   <link rel="icon" href="{{ '/media/app/favicon.png' | to_cdnurl }}">

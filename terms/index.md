@@ -1,6 +1,7 @@
 ---
 layout: page
 subtype: policy
+noindex: true
 title: Terms and Conditions
 excerpt: |
   Terms and Conditions for this website.

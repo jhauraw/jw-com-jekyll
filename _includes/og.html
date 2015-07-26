@@ -1,4 +1,4 @@
-<meta name="robots" content="noodp,noydir" />
+<meta name="robots" content="noodp,noydir{% if page.noindex == true %},noindex,nofollow{% endif %}" />
   <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.app.name }} &#8211; {{ site.app.tagline }}{% endif %}" />
   <meta property="og:site_name" content="{{ site.app.name }}" />
   <meta property="og:url" content="{% if page.url %}{{ page.url | remove: 'index.html' | to_absurl }}{% endif %}" />

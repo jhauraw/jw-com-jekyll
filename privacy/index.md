@@ -1,6 +1,7 @@
 ---
 layout: page
 subtype: policy
+noindex: true
 title: Privacy Policy
 excerpt: |
   Privacy Policy for this website.

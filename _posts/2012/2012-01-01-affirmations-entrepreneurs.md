@@ -7,7 +7,7 @@ feature:
   image:
     src: /media/2012/affirmations-entrepreneurs.jpg
 excerpt: |
-  The use of affirmations yield powerful results for entrepreneurs who diligently apply them in daily practice. Download your free Affirmations Kit. Are you cultivating a positive mindset? Or allowing circumstances to toss you to and fro?
+  The use of affirmations yield powerful results for entrepreneurs who diligently apply them in daily practice. Download your free Affirmations Kit. Are you cultivating a positive mindset, or allowing circumstances to dictate your future?
 ---
 
 It's been said that between the __95% who fail__ and the __5% who succeed__ as __entrepreneurs__ there lies one significant difference, which can best be described as __MINDSET__. Let's explore together _a well-proven method_ for creating and cultivating the mindset of a __5%'er__, a high five-figure monthly earner, who _consciously achieves success_ and is able to benefit the world in ways that were before out of reach!

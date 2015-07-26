@@ -1,56 +1,39 @@
 module Jekyll
 
   class YamlToLiquid < Liquid::Tag
-    def initialize(tag_name, markup, tokens)
+    def initialize(tag_name, args, tokens)
       super
 
-      args = markup.split(' ')
+      args = args.split(' ')
 
-      arg0 = args[0].to_s.strip # yaml_path
-      arg1 = args[1].to_s.strip # template_path
-      arg2 = args[2].to_s.strip # category_node
+      arg0 = args[0].to_s.strip # yml_path
+      arg1 = args[1].to_s.strip # yml_path_1
+      arg2 = args[2].to_s.strip # yml_path_2
 
-      if arg0.length == 0 || arg1.length == 0
-        raise 'Please enter both a yaml file path and a template path.'
+      if arg0.length == 0
+        raise 'Please enter at least one yaml file path'
       else
-        @yaml_path = arg0
-        @template_path = arg1
+        @yml_path = arg0
       end
 
-      @cat_node = nil
-
-      if args.length > 2
-        arg2 = args[2].to_s.strip
-
-        @cat_node = arg2 unless arg2.length == 0
-      end
+      @yml_path_1 = arg1 unless arg1.length == 0
+      @yml_path_2 = arg2 unless arg2.length == 0
     end
 
     def render(context)
 
-      info = { :registers => { :site => context.registers[:site] } }
+      yml = YAML::load(File.read(@yml_path))
+      context.registers[:page]['yml'] = yml
 
-      template = File.read(@template_path)
-      parsed = Liquid::Template.parse(template)
-
-      hash = YAML::load(File.read(@yaml_path))
-
-      output = ''
-
-      hash.each do |cats|
-        cats.each do |cat, projects|
-          if (@cat_node == nil || cat == @cat_node)
-            projects.each do |p|
-
-              output += '<li>'
-              output += parsed.render({'p' => p}, info)
-              output += '</li>'
-            end
-          end
-        end
+      unless @yml_path_1 == nil
+        yml1 = YAML::load(File.read(@yml_path_1))
+        context.registers[:page]['yml1'] = yml1
       end
 
-      output
+      unless @yml_path_2 == nil
+        yml2 = YAML::load(File.read(@yml_path_2))
+        context.registers[:page]['yml2'] = yml2
+      end
     end
   end
 end
